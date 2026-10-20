@@ -1,0 +1,122 @@
+{
+  "origem": "EXEMPLO",
+  "acoesPorAlerta": {
+    "meta": [
+      "Ligar o anúncio do jantar às 18h para recuperar o dia",
+      "Disparar a oferta do dia para quem tem opt-in e não pede há 30 dias"
+    ],
+    "margem": [
+      "Revisar a promoção do iFood que mais vendeu ontem",
+      "Conferir o preço do queijo na última nota fiscal"
+    ],
+    "pedidos": [
+      "Conferir se a loja ficou pausada no iFood ontem",
+      "Mandar mensagem para quem pediu no mesmo dia da semana passada"
+    ],
+    "ifood": [
+      "Mandar cupom do site para quem pediu no iFood esta semana",
+      "Colocar o QR do site no folheto da sacola do iFood"
+    ],
+    "ticket": [
+      "Oferecer borda recheada em toda pizza grande hoje",
+      "Destacar o combo de maior margem no topo do cardápio"
+    ]
+  },
+  "acoesPadrao": [
+    "Destacar no iFood a pizza de maior margem",
+    "Postar story do prato do dia com link do site",
+    "Conferir se os pedidos de ontem foram baixados no PDV"
+  ],
+  "acoes": [
+    {
+      "id": "a01",
+      "pilar": "ifood",
+      "acao": "Tirar o 30% off da 5 Queijos e passar o desconto para a Margherita (CMV menor)",
+      "responsavel": "Consultor",
+      "prazo": "2026-10-03",
+      "situacao": "fazendo",
+      "resultadoEsperadoMes": 1800
+    },
+    {
+      "id": "a02",
+      "pilar": "ifood",
+      "acao": "Refazer foto e descrição dos 5 pratos que mais vendem",
+      "responsavel": "Gerente",
+      "prazo": "2026-10-08",
+      "situacao": "a_fazer",
+      "resultadoEsperadoMes": 900
+    },
+    {
+      "id": "a03",
+      "pilar": "canal-proprio",
+      "acao": "Pausar o criativo de pior custo por pedido e dobrar o melhor",
+      "responsavel": "Consultor",
+      "prazo": "2026-10-02",
+      "situacao": "feito",
+      "resultadoEsperadoMes": 600
+    },
+    {
+      "id": "a04",
+      "pilar": "canal-proprio",
+      "acao": "Folheto com QR do site em toda sacola do iFood",
+      "responsavel": "Dono",
+      "prazo": "2026-10-05",
+      "situacao": "a_fazer",
+      "resultadoEsperadoMes": 1500
+    },
+    {
+      "id": "a05",
+      "pilar": "crm",
+      "acao": "Disparo semanal para o segmento Em risco (só opt-in)",
+      "responsavel": "Consultor",
+      "prazo": "2026-10-06",
+      "situacao": "fazendo",
+      "resultadoEsperadoMes": 1200
+    },
+    {
+      "id": "a06",
+      "pilar": "crm",
+      "acao": "Pedir opt-in no balcão e no site em todo pedido",
+      "responsavel": "Gerente",
+      "prazo": "2026-10-04",
+      "situacao": "feito",
+      "resultadoEsperadoMes": 0
+    },
+    {
+      "id": "a07",
+      "pilar": "whatsapp",
+      "acao": "Ativar regra de borda recheada nas pizzas grandes",
+      "responsavel": "Consultor",
+      "prazo": "2026-10-01",
+      "situacao": "feito",
+      "resultadoEsperadoMes": 700
+    },
+    {
+      "id": "a08",
+      "pilar": "lucro",
+      "acao": "Atualizar ficha técnica com a nota fiscal do queijo de outubro",
+      "responsavel": "Dono",
+      "prazo": "2026-10-07",
+      "situacao": "a_fazer",
+      "resultadoEsperadoMes": 400
+    },
+    {
+      "id": "a09",
+      "pilar": "lucro",
+      "acao": "Subir R$ 3 na Portuguesa (CMV acima de 35%)",
+      "responsavel": "Dono",
+      "prazo": "2026-10-09",
+      "situacao": "a_fazer",
+      "resultadoEsperadoMes": 350
+    },
+    {
+      "id": "a10",
+      "pilar": "metricas",
+      "acao": "Equipe dar baixa de todo pedido no PDV no fechamento",
+      "responsavel": "Gerente",
+      "prazo": "2026-10-02",
+      "situacao": "fazendo",
+      "resultadoEsperadoMes": 0
+    }
+  ]
+}

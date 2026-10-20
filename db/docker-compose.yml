@@ -1,0 +1,55 @@
+# Postgres local da plataforma Alavanca.
+#
+# Porta 5433 no host (5432 dentro do container) para nao conflitar com nenhum
+# Postgres ja instalado. O bind e 127.0.0.1: o banco nao fica exposto na rede.
+# Este banco e SEPARADO do Postgres do n8n do Helio -- nada aqui toca producao.
+#
+# Uso:
+#   cp .env.example .env    (e preencha as senhas)
+#   docker compose up -d
+#   ./aplicar.sh            (ou .\aplicar.ps1 no Windows)
+
+name: alavanca-db
+
+services:
+  db:
+    image: postgres:17.6-alpine
+    container_name: alavanca-postgres
+    restart: unless-stopped
+    shm_size: 256mb
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-alavanca}
+      POSTGRES_USER: ${POSTGRES_USER:-alavanca_owner}
+      # Sem valor padrao de proposito: o compose recusa subir sem a senha no .env.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no arquivo .env}
+      POSTGRES_INITDB_ARGS: "--auth-host=scram-sha-256 --auth-local=scram-sha-256"
+      TZ: America/Sao_Paulo
+      PGTZ: America/Sao_Paulo
+    command:
+      - postgres
+      - -c
+      - timezone=America/Sao_Paulo
+      - -c
+      - log_statement=ddl
+      - -c
+      - log_min_duration_statement=500
+      - -c
+      - max_connections=100
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - alavanca_pgdata:/var/lib/postgresql/data
+      # Somente leitura: o aplicar.sh/.ps1 roda psql de dentro do container.
+      - ./migrations:/migrations:ro
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U "${POSTGRES_USER:-alavanca_owner}" -d "${POSTGRES_DB:-alavanca}"
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+
+volumes:
+  alavanca_pgdata:
+    name: alavanca_pgdata

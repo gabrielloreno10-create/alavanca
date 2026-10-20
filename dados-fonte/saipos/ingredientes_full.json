@@ -1,0 +1,572 @@
+[
+  {
+    "nome": "alcool",
+    "min": "0,00",
+    "estoque_atual": "1.000,00",
+    "custo_medio": "0,10"
+  },
+  {
+    "nome": "Alho",
+    "min": "0,00",
+    "estoque_atual": "300,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Aliche",
+    "min": "0,00",
+    "estoque_atual": "1.000,00",
+    "custo_medio": "0,50"
+  },
+  {
+    "nome": "Azeite de oliva",
+    "min": "0,00",
+    "estoque_atual": "5.000,00",
+    "custo_medio": "0,15"
+  },
+  {
+    "nome": "Azeite trufado",
+    "min": "0,00",
+    "estoque_atual": "4.000,00",
+    "custo_medio": "0,20"
+  },
+  {
+    "nome": "Azeitona",
+    "min": "0,00",
+    "estoque_atual": "500,00",
+    "custo_medio": "0,03"
+  },
+  {
+    "nome": "Azeitonas azappas",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Açúcar",
+    "min": "0,00",
+    "estoque_atual": "12.000,00",
+    "custo_medio": "0,03"
+  },
+  {
+    "nome": "Bacon",
+    "min": "0,00",
+    "estoque_atual": "3.000,00",
+    "custo_medio": "0,05"
+  },
+  {
+    "nome": "Batata frita",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,10"
+  },
+  {
+    "nome": "caixa de pizza",
+    "min": "0,00",
+    "estoque_atual": "800,00",
+    "custo_medio": "0,18"
+  },
+  {
+    "nome": "Calabresa",
+    "min": "0,00",
+    "estoque_atual": "20.000,00",
+    "custo_medio": "0,20"
+  },
+  {
+    "nome": "Canela",
+    "min": "0,00",
+    "estoque_atual": "45,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Carne bovina 90 gramas",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Carne bovina moída",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Carne moída",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Carne seca",
+    "min": "0,00",
+    "estoque_atual": "1.500,00",
+    "custo_medio": "0,40"
+  },
+  {
+    "nome": "Cebola",
+    "min": "0,00",
+    "estoque_atual": "50,00",
+    "custo_medio": "0,50"
+  },
+  {
+    "nome": "Cebola roxa",
+    "min": "0,00",
+    "estoque_atual": "50,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Cebola roxa crua",
+    "min": "0,00",
+    "estoque_atual": "50,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Cogumelos",
+    "min": "0,00",
+    "estoque_atual": "3.000,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Cogumelos salteados",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Cream cheese",
+    "min": "0,00",
+    "estoque_atual": "15.868,00",
+    "custo_medio": "0,03"
+  },
+  {
+    "nome": "desngordurante",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Detergente",
+    "min": "0,00",
+    "estoque_atual": "7.000,00",
+    "custo_medio": "0,04"
+  },
+  {
+    "nome": "Doce de leite cremoso",
+    "min": "0,00",
+    "estoque_atual": "2.880,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Embalagem de hambúrguer",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,50"
+  },
+  {
+    "nome": "Embalagem fritura",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,30"
+  },
+  {
+    "nome": "Ervas",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Esponja",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "2,00"
+  },
+  {
+    "nome": "Farinha de rosca",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Farinha de trigo",
+    "min": "0,00",
+    "estoque_atual": "65.000,00",
+    "custo_medio": "0,02"
+  },
+  {
+    "nome": "Farinha para empanar",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Fermento biológico",
+    "min": "0,00",
+    "estoque_atual": "1.000,00",
+    "custo_medio": "0,15"
+  },
+  {
+    "nome": "Fonduta de parmesão",
+    "min": "0,00",
+    "estoque_atual": "2.100,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Fonduta de queijo",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Frango",
+    "min": "0,00",
+    "estoque_atual": "15.000,00",
+    "custo_medio": "0,12"
+  },
+  {
+    "nome": "Frango desfiado",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,12"
+  },
+  {
+    "nome": "Goiabada",
+    "min": "0,00",
+    "estoque_atual": "2.260,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Ketchup",
+    "min": "0,00",
+    "estoque_atual": "2.000,00",
+    "custo_medio": "0,08"
+  },
+  {
+    "nome": "Lascas de parmesão",
+    "min": "0,00",
+    "estoque_atual": "-15,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Linguiça calabresa",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Linguiça de costela cara preta",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Lombinho canadense",
+    "min": "0,00",
+    "estoque_atual": "2.850,00",
+    "custo_medio": "0,35"
+  },
+  {
+    "nome": "luva",
+    "min": "0,00",
+    "estoque_atual": "100,00",
+    "custo_medio": "0,50"
+  },
+  {
+    "nome": "Maionese da casa",
+    "min": "0,00",
+    "estoque_atual": "1.000,00",
+    "custo_medio": "0,20"
+  },
+  {
+    "nome": "Manjericão",
+    "min": "0,00",
+    "estoque_atual": "187,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Massa de pizza",
+    "min": "0,00",
+    "estoque_atual": "14.190,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Mel",
+    "min": "0,00",
+    "estoque_atual": "10.000,00",
+    "custo_medio": "0,20"
+  },
+  {
+    "nome": "Mel trufado",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Mel trufado",
+    "min": "0,00",
+    "estoque_atual": "-140,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Mix de cogumelos salteados",
+    "min": "0,00",
+    "estoque_atual": "3.060,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho américa",
+    "min": "0,00",
+    "estoque_atual": "1.000,00",
+    "custo_medio": "0,20"
+  },
+  {
+    "nome": "Molho barbecue",
+    "min": "0,00",
+    "estoque_atual": "7.000,00",
+    "custo_medio": "0,20"
+  },
+  {
+    "nome": "Molho de tomate",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho de tomate",
+    "min": "0,00",
+    "estoque_atual": "-300,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho de tomate",
+    "min": "0,00",
+    "estoque_atual": "-3.370,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho formaggio",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho formaggio da casa",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho marinara",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Molho pomodoro pelati",
+    "min": "0,00",
+    "estoque_atual": "5.000,00",
+    "custo_medio": "0,14"
+  },
+  {
+    "nome": "Mostarda",
+    "min": "0,00",
+    "estoque_atual": "1.200,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Muçarela de búfala",
+    "min": "0,00",
+    "estoque_atual": "1.210,00",
+    "custo_medio": "0,33"
+  },
+  {
+    "nome": "Nuggets crocantes 6 unidades único",
+    "min": "0,00",
+    "estoque_atual": "3,00",
+    "custo_medio": "5,00"
+  },
+  {
+    "nome": "Nutella",
+    "min": "0,00",
+    "estoque_atual": "1.340,00",
+    "custo_medio": "0,39"
+  },
+  {
+    "nome": "Orégano",
+    "min": "0,00",
+    "estoque_atual": "248,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Ovo",
+    "min": "0,00",
+    "estoque_atual": "4,00",
+    "custo_medio": "0,50"
+  },
+  {
+    "nome": "Papel térmico hambúrguer",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,10"
+  },
+  {
+    "nome": "Pepperoni",
+    "min": "0,00",
+    "estoque_atual": "1.860,00",
+    "custo_medio": "0,32"
+  },
+  {
+    "nome": "Perfex",
+    "min": "0,00",
+    "estoque_atual": "1,00",
+    "custo_medio": "2,00"
+  },
+  {
+    "nome": "Picles",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,10"
+  },
+  {
+    "nome": "Pimenta do reino",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Pimentão",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Pote de molho",
+    "min": "0,00",
+    "estoque_atual": "650,00",
+    "custo_medio": "0,18"
+  },
+  {
+    "nome": "Presunto parma",
+    "min": "0,00",
+    "estoque_atual": "5.050,00",
+    "custo_medio": "0,69"
+  },
+  {
+    "nome": "Pão brioche",
+    "min": "0,00",
+    "estoque_atual": "216,00",
+    "custo_medio": "2,43"
+  },
+  {
+    "nome": "Queijo cheddar",
+    "min": "0,00",
+    "estoque_atual": "6.000,00",
+    "custo_medio": "0,03"
+  },
+  {
+    "nome": "Queijo gorgonzola",
+    "min": "0,00",
+    "estoque_atual": "1.650,00",
+    "custo_medio": "0,09"
+  },
+  {
+    "nome": "Queijo muçarela",
+    "min": "0,00",
+    "estoque_atual": "149.720,00",
+    "custo_medio": "0,03"
+  },
+  {
+    "nome": "Queijo parmesão",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "Queijo parmesão ralado",
+    "min": "0,00",
+    "estoque_atual": "-110,00",
+    "custo_medio": "0,98"
+  },
+  {
+    "nome": "Queijo prato",
+    "min": "0,00",
+    "estoque_atual": "2.270,00",
+    "custo_medio": "0,03"
+  },
+  {
+    "nome": "Refrigerante Coca Cola Zero Lata 350ml Único",
+    "min": "0,00",
+    "estoque_atual": "24,00",
+    "custo_medio": "3,39"
+  },
+  {
+    "nome": "Refrigerante Coca-Cola Lata 350ml Único",
+    "min": "0,00",
+    "estoque_atual": "26,00",
+    "custo_medio": "3,39"
+  },
+  {
+    "nome": "Refrigerante Guaraná Antarctica Lata 350ml Único",
+    "min": "0,00",
+    "estoque_atual": "21,00",
+    "custo_medio": "2,69"
+  },
+  {
+    "nome": "Rúcula",
+    "min": "0,00",
+    "estoque_atual": "200,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "saco de lixo",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "1,00"
+  },
+  {
+    "nome": "Sal",
+    "min": "0,00",
+    "estoque_atual": "8.000,00",
+    "custo_medio": "0,01"
+  },
+  {
+    "nome": "Smash burger (carne bovina)",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "5,00"
+  },
+  {
+    "nome": "Spaghetti",
+    "min": "0,00",
+    "estoque_atual": "4.000,00",
+    "custo_medio": "0,02"
+  },
+  {
+    "nome": "Tomate",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "1,50"
+  },
+  {
+    "nome": "Trufa",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  },
+  {
+    "nome": "vinagre",
+    "min": "0,00",
+    "estoque_atual": "4.000,00",
+    "custo_medio": "0,05"
+  },
+  {
+    "nome": "Óleo de soja",
+    "min": "0,00",
+    "estoque_atual": "6.000,00",
+    "custo_medio": "0,08"
+  },
+  {
+    "nome": "Óleo para fritura",
+    "min": "0,00",
+    "estoque_atual": "0,00",
+    "custo_medio": "0,00"
+  }
+]

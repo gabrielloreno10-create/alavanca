@@ -1,0 +1,1043 @@
+{
+  "origem": "EXEMPLO",
+  "dias": [
+    {
+      "data": "2026-08-09",
+      "conversas": 23,
+      "pedidos": 8,
+      "faturamento": 808.05,
+      "sugestoes": 7,
+      "sugestoesAceitas": 3,
+      "valorAdicionais": 53.47,
+      "followups": 5,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Dúvida de alergia": 2
+      }
+    },
+    {
+      "data": "2026-08-10",
+      "conversas": 7,
+      "pedidos": 2,
+      "faturamento": 184.62,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 15.55,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-08-11",
+      "conversas": 12,
+      "pedidos": 4,
+      "faturamento": 373.59,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.78,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1,
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-08-12",
+      "conversas": 12,
+      "pedidos": 3,
+      "faturamento": 310.67,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 18.52,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-08-13",
+      "conversas": 11,
+      "pedidos": 3,
+      "faturamento": 315.49,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 20.87,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-08-14",
+      "conversas": 18,
+      "pedidos": 6,
+      "faturamento": 607.77,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 36.45,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-15",
+      "conversas": 26,
+      "pedidos": 8,
+      "faturamento": 770.15,
+      "sugestoes": 7,
+      "sugestoesAceitas": 3,
+      "valorAdicionais": 63.51,
+      "followups": 6,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Pediu para falar com pessoa": 2
+      }
+    },
+    {
+      "data": "2026-08-16",
+      "conversas": 24,
+      "pedidos": 7,
+      "faturamento": 738.48,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 28.69,
+      "followups": 4,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-17",
+      "conversas": 8,
+      "pedidos": 2,
+      "faturamento": 188.22,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 15.64,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-18",
+      "conversas": 11,
+      "pedidos": 4,
+      "faturamento": 439.27,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.75,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-08-19",
+      "conversas": 12,
+      "pedidos": 3,
+      "faturamento": 289.35,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 17.98,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-08-20",
+      "conversas": 14,
+      "pedidos": 4,
+      "faturamento": 420.45,
+      "sugestoes": 4,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 39.87,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-21",
+      "conversas": 21,
+      "pedidos": 6,
+      "faturamento": 588.46,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 28.71,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-22",
+      "conversas": 32,
+      "pedidos": 10,
+      "faturamento": 964.82,
+      "sugestoes": 9,
+      "sugestoesAceitas": 3,
+      "valorAdicionais": 61.37,
+      "followups": 6,
+      "followupsRespondidos": 3,
+      "pedidosRecuperados": 1,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-23",
+      "conversas": 22,
+      "pedidos": 7,
+      "faturamento": 712.62,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 41.14,
+      "followups": 5,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-24",
+      "conversas": 7,
+      "pedidos": 2,
+      "faturamento": 180.75,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 14.06,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-08-25",
+      "conversas": 12,
+      "pedidos": 3,
+      "faturamento": 287.87,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 21.87,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-26",
+      "conversas": 10,
+      "pedidos": 3,
+      "faturamento": 273.07,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 16.19,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-27",
+      "conversas": 14,
+      "pedidos": 4,
+      "faturamento": 372.07,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.54,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-28",
+      "conversas": 25,
+      "pedidos": 8,
+      "faturamento": 885.62,
+      "sugestoes": 7,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 41.4,
+      "followups": 5,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-08-29",
+      "conversas": 37,
+      "pedidos": 10,
+      "faturamento": 977.48,
+      "sugestoes": 10,
+      "sugestoesAceitas": 4,
+      "valorAdicionais": 60.29,
+      "followups": 7,
+      "followupsRespondidos": 3,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-08-30",
+      "conversas": 26,
+      "pedidos": 9,
+      "faturamento": 877.27,
+      "sugestoes": 8,
+      "sugestoesAceitas": 3,
+      "valorAdicionais": 47.99,
+      "followups": 4,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-08-31",
+      "conversas": 7,
+      "pedidos": 2,
+      "faturamento": 212.79,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 20.36,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-01",
+      "conversas": 9,
+      "pedidos": 2,
+      "faturamento": 211.02,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 14.43,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-09-02",
+      "conversas": 14,
+      "pedidos": 4,
+      "faturamento": 382.24,
+      "sugestoes": 4,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 40.08,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-03",
+      "conversas": 16,
+      "pedidos": 5,
+      "faturamento": 517.84,
+      "sugestoes": 5,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.97,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-04",
+      "conversas": 18,
+      "pedidos": 5,
+      "faturamento": 531.84,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.56,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Pedido para evento": 1,
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-09-05",
+      "conversas": 19,
+      "pedidos": 5,
+      "faturamento": 525.07,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 17.6,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-09-06",
+      "conversas": 23,
+      "pedidos": 6,
+      "faturamento": 609.05,
+      "sugestoes": 5,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 31.3,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-09-07",
+      "conversas": 7,
+      "pedidos": 2,
+      "faturamento": 206.58,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 14.72,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-08",
+      "conversas": 10,
+      "pedidos": 3,
+      "faturamento": 301.12,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.22,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-09",
+      "conversas": 8,
+      "pedidos": 2,
+      "faturamento": 193.35,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 20.3,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-09-10",
+      "conversas": 12,
+      "pedidos": 3,
+      "faturamento": 299.09,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 15.55,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-09-11",
+      "conversas": 24,
+      "pedidos": 7,
+      "faturamento": 756.9,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 28.47,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-09-12",
+      "conversas": 24,
+      "pedidos": 6,
+      "faturamento": 636.65,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 34.81,
+      "followups": 4,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-13",
+      "conversas": 21,
+      "pedidos": 6,
+      "faturamento": 597.6,
+      "sugestoes": 5,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 37.01,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Pedido para evento": 1,
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-09-14",
+      "conversas": 10,
+      "pedidos": 3,
+      "faturamento": 284.87,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 16.53,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-15",
+      "conversas": 8,
+      "pedidos": 2,
+      "faturamento": 184.21,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.3,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-09-16",
+      "conversas": 14,
+      "pedidos": 4,
+      "faturamento": 387.85,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 14.26,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1,
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-09-17",
+      "conversas": 15,
+      "pedidos": 5,
+      "faturamento": 517.08,
+      "sugestoes": 5,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 16.94,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1
+      }
+    },
+    {
+      "data": "2026-09-18",
+      "conversas": 27,
+      "pedidos": 7,
+      "faturamento": 654.28,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 43.61,
+      "followups": 6,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-19",
+      "conversas": 30,
+      "pedidos": 9,
+      "faturamento": 834.49,
+      "sugestoes": 8,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 35.63,
+      "followups": 5,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-09-20",
+      "conversas": 20,
+      "pedidos": 7,
+      "faturamento": 674.65,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 40.55,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-21",
+      "conversas": 9,
+      "pedidos": 3,
+      "faturamento": 277.72,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 20.7,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1,
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-09-22",
+      "conversas": 7,
+      "pedidos": 2,
+      "faturamento": 242.16,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 15.19,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1,
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-09-23",
+      "conversas": 12,
+      "pedidos": 4,
+      "faturamento": 379.2,
+      "sugestoes": 4,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 37.12,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pediu para falar com pessoa": 2
+      }
+    },
+    {
+      "data": "2026-09-24",
+      "conversas": 12,
+      "pedidos": 3,
+      "faturamento": 297.84,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 21.23,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-25",
+      "conversas": 16,
+      "pedidos": 5,
+      "faturamento": 530.09,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 19.26,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Reclamação de pedido": 1,
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-09-26",
+      "conversas": 21,
+      "pedidos": 7,
+      "faturamento": 806.58,
+      "sugestoes": 7,
+      "sugestoesAceitas": 3,
+      "valorAdicionais": 64.96,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pediu para falar com pessoa": 1,
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-09-27",
+      "conversas": 23,
+      "pedidos": 7,
+      "faturamento": 683.29,
+      "sugestoes": 7,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 40.79,
+      "followups": 5,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Pedido para evento": 1
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "conversas": 6,
+      "pedidos": 2,
+      "faturamento": 221.19,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 14.71,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-09-29",
+      "conversas": 13,
+      "pedidos": 4,
+      "faturamento": 434.64,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 15.02,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Pediu para falar com pessoa": 1
+      }
+    },
+    {
+      "data": "2026-09-30",
+      "conversas": 9,
+      "pedidos": 2,
+      "faturamento": 195.54,
+      "sugestoes": 2,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 17.63,
+      "followups": 1,
+      "followupsRespondidos": 0,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-10-01",
+      "conversas": 14,
+      "pedidos": 4,
+      "faturamento": 392.73,
+      "sugestoes": 4,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 14.94,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-10-02",
+      "conversas": 19,
+      "pedidos": 5,
+      "faturamento": 564.45,
+      "sugestoes": 5,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 30.61,
+      "followups": 3,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-10-03",
+      "conversas": 24,
+      "pedidos": 7,
+      "faturamento": 705.74,
+      "sugestoes": 7,
+      "sugestoesAceitas": 3,
+      "valorAdicionais": 61.16,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-10-04",
+      "conversas": 26,
+      "pedidos": 7,
+      "faturamento": 699.16,
+      "sugestoes": 6,
+      "sugestoesAceitas": 2,
+      "valorAdicionais": 29.83,
+      "followups": 4,
+      "followupsRespondidos": 2,
+      "pedidosRecuperados": 1,
+      "transferencias": {}
+    },
+    {
+      "data": "2026-10-05",
+      "conversas": 10,
+      "pedidos": 3,
+      "faturamento": 308.58,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 21.42,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-10-06",
+      "conversas": 9,
+      "pedidos": 3,
+      "faturamento": 327.22,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 15.13,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {
+        "Dúvida de alergia": 1
+      }
+    },
+    {
+      "data": "2026-10-07",
+      "conversas": 10,
+      "pedidos": 3,
+      "faturamento": 269.43,
+      "sugestoes": 3,
+      "sugestoesAceitas": 1,
+      "valorAdicionais": 20.38,
+      "followups": 2,
+      "followupsRespondidos": 1,
+      "pedidosRecuperados": 0,
+      "transferencias": {}
+    }
+  ],
+  "conversas": [
+    {
+      "id": "c4821",
+      "cliente": "Cliente 4821",
+      "inicio": "2026-10-07T20:14",
+      "desfecho": "pedido",
+      "mensagens": [
+        {
+          "autor": "cliente",
+          "texto": "Boa noite! Quero uma pizza grande pra entrega"
+        },
+        {
+          "autor": "ia",
+          "texto": "Boa noite! Qual sabor? A mais pedida hoje é a 5 Queijos com Parma 🍕"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Pode ser essa"
+        },
+        {
+          "autor": "ia",
+          "texto": "Ótima escolha. Quer borda recheada de catupiry por R$ 12? Fica bem cremosa com essa pizza."
+        },
+        {
+          "autor": "cliente",
+          "texto": "Quero sim"
+        },
+        {
+          "autor": "ia",
+          "texto": "Fechado: 5 Queijos com Parma grande + borda de catupiry, R$ 121,90. Confirma o endereço da Rua das Flores, 120?"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Isso"
+        },
+        {
+          "autor": "ia",
+          "texto": "Pedido confirmado! Chega em 40 a 50 minutos. Obrigado 😊"
+        }
+      ]
+    },
+    {
+      "id": "c3307",
+      "cliente": "Cliente 3307",
+      "inicio": "2026-10-07T19:52",
+      "desfecho": "pedido",
+      "mensagens": [
+        {
+          "autor": "cliente",
+          "texto": "Vcs tem pizza sem lactose?"
+        },
+        {
+          "autor": "ia",
+          "texto": "Temos a Vegana, feita sem nenhum derivado de leite. Quer ver os ingredientes?"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Manda"
+        },
+        {
+          "autor": "ia",
+          "texto": "Molho de tomate, abobrinha, berinjela, cogumelos, rúcula e azeite. R$ 89,90 a grande."
+        },
+        {
+          "autor": "cliente",
+          "texto": "Fechou, uma grande"
+        },
+        {
+          "autor": "ia",
+          "texto": "Anotado! Quer um refrigerante 2L junto por R$ 16,90?"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Não, obrigado"
+        },
+        {
+          "autor": "ia",
+          "texto": "Sem problema. Pedido confirmado, chega em até 50 minutos."
+        }
+      ]
+    },
+    {
+      "id": "c9154",
+      "cliente": "Cliente 9154",
+      "inicio": "2026-10-07T18:40",
+      "desfecho": "humano",
+      "mensagens": [
+        {
+          "autor": "cliente",
+          "texto": "Meu pedido de ontem veio frio"
+        },
+        {
+          "autor": "ia",
+          "texto": "Poxa, sinto muito. Vou chamar alguém da equipe para resolver isso com você agora."
+        },
+        {
+          "autor": "humano",
+          "texto": "Oi, aqui é a Ana, da pizzaria. Me passa o número do pedido? Vamos resolver."
+        }
+      ]
+    },
+    {
+      "id": "c2290",
+      "cliente": "Cliente 2290",
+      "inicio": "2026-10-06T21:05",
+      "desfecho": "sem_pedido",
+      "mensagens": [
+        {
+          "autor": "cliente",
+          "texto": "Qual o horário de vocês?"
+        },
+        {
+          "autor": "ia",
+          "texto": "Hoje até 23h30. Quer adiantar seu pedido? A Margherita sai em 35 minutos."
+        },
+        {
+          "autor": "cliente",
+          "texto": "Hoje não, valeu"
+        }
+      ]
+    },
+    {
+      "id": "c6612",
+      "cliente": "Cliente 6612",
+      "inicio": "2026-10-06T20:31",
+      "desfecho": "pedido",
+      "mensagens": [
+        {
+          "autor": "cliente",
+          "texto": "Quero 2 pizzas médias"
+        },
+        {
+          "autor": "ia",
+          "texto": "Claro! Temos o Combo 2 Pizzas 25cm por R$ 99,90. Quais sabores?"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Calabresa e frango com catupiry"
+        },
+        {
+          "autor": "ia",
+          "texto": "Perfeito. Quer adicionar uma Pizza de Nutella pequena por R$ 29,90 para a sobremesa?"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Bora"
+        },
+        {
+          "autor": "ia",
+          "texto": "Pedido fechado: Combo (Calabresa + Frango com Catupiry) + Nutella pequena, R$ 129,80. Confirmado!"
+        }
+      ]
+    },
+    {
+      "id": "c7740",
+      "cliente": "Cliente 7740",
+      "inicio": "2026-10-05T19:12",
+      "desfecho": "recuperado",
+      "mensagens": [
+        {
+          "autor": "ia",
+          "texto": "Oi! Vi que você montou um pedido ontem e não finalizou. Quer que eu deixe pronto pra hoje?"
+        },
+        {
+          "autor": "cliente",
+          "texto": "Ah verdade, quero sim, a mesma"
+        },
+        {
+          "autor": "ia",
+          "texto": "Feito: Pizza Pepperoni grande, R$ 89,90. Confirmado para entrega às 20h!"
+        }
+      ]
+    }
+  ],
+  "regras": [
+    "Sempre oferecer borda recheada nas pizzas grandes",
+    "Sugerir a pizza de maior margem quando o cliente pede indicação",
+    "Oferecer bebida em todo pedido sem bebida",
+    "Nunca oferecer desconto que não esteja na campanha ativa",
+    "Passar para uma pessoa em reclamação, alergia ou pedido acima de 5 pizzas",
+    "Follow-up só para quem conversou nas últimas 24 horas (regra da API oficial)"
+  ]
+}

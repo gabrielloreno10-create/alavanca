@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* Tokens da Plataforma Alavanca. Regras em DESIGN.md. */
+:root {
+  --bancada: #f2f3ef;
+  --papel: #ffffff;
+  --grafite: #18222b;
+  --grafite-2: #5b6670;
+  --comanda: #2b4acb;
+  --comanda-claro: #e9edfb;
+  --manjericao: #2f7d57;
+  --acafrao: #c98a12;
+  --acafrao-texto: #7a5208;
+  --acafrao-fundo: #fbf3e1;
+  --tomate: #c93b2b;
+  --linha: #daddd6;
+  --cinza-grafico: #a3aaa1;
+}
+
+@theme inline {
+  --color-bancada: var(--bancada);
+  --color-papel: var(--papel);
+  --color-grafite: var(--grafite);
+  --color-grafite-2: var(--grafite-2);
+  --color-comanda: var(--comanda);
+  --color-comanda-claro: var(--comanda-claro);
+  --color-manjericao: var(--manjericao);
+  --color-acafrao: var(--acafrao);
+  --color-acafrao-texto: var(--acafrao-texto);
+  --color-acafrao-fundo: var(--acafrao-fundo);
+  --color-tomate: var(--tomate);
+  --color-linha: var(--linha);
+  --color-cinza-grafico: var(--cinza-grafico);
+
+  --font-sans: var(--font-instrument), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-instrument), sans-serif;
+
+  /* escala 32 / 24 / 18 / 15 / 13 */
+  --text-3xl: 32px;
+  --text-3xl--line-height: 1.15;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 1.25;
+  --text-lg: 18px;
+  --text-lg--line-height: 1.35;
+  --text-base: 15px;
+  --text-base--line-height: 1.5;
+  --text-sm: 13px;
+  --text-sm--line-height: 1.45;
+
+  --radius-painel: 10px;
+  --radius-botao: 6px;
+}
+
+html {
+  background: var(--bancada);
+}
+
+body {
+  background: var(--bancada);
+  color: var(--grafite);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* números sempre tabulares */
+body,
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--comanda);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* A Comanda do dia: o único elemento com tratamento especial.
+   Papel com borda serrilhada em cima e embaixo, recortada por máscara. */
+.comanda-borda {
+  filter: drop-shadow(0 0 0.5px #b5bab1) drop-shadow(0 1px 0 #d3d6cf);
+}
+.comanda {
+  --dente: 12px;
+  --raio: 5px;
+  background: var(--papel);
+  padding-block: calc(var(--raio) + 18px);
+  -webkit-mask:
+    radial-gradient(circle at 50% 0, #0000 var(--raio), #000 calc(var(--raio) + 0.5px)) top / var(--dente) 51% repeat-x,
+    radial-gradient(circle at 50% 100%, #0000 var(--raio), #000 calc(var(--raio) + 0.5px)) bottom / var(--dente) 51% repeat-x;
+  mask:
+    radial-gradient(circle at 50% 0, #0000 var(--raio), #000 calc(var(--raio) + 0.5px)) top / var(--dente) 51% repeat-x,
+    radial-gradient(circle at 50% 100%, #0000 var(--raio), #000 calc(var(--raio) + 0.5px)) bottom / var(--dente) 51% repeat-x;
+}
+
+/* linha pontilhada entre rótulo e valor, como numa comanda */
+.pontilhado {
+  flex: 1;
+  border-bottom: 1.5px dotted var(--linha);
+  transform: translateY(-4px);
+  min-width: 12px;
+}
+
+dialog::backdrop {
+  background: rgb(24 34 43 / 0.35);
+}

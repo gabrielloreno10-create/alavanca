@@ -1,0 +1,137 @@
+[
+  {
+    "nome": "Monte seu Burguer",
+    "qtde": 111,
+    "valor": 7021
+  },
+  {
+    "nome": "Smash Cheese & Bacon (1º Hambúrguer)",
+    "qtde": 84,
+    "valor": 5353.5
+  },
+  {
+    "nome": "Jerrys Smash Trufado  (1º Hambúrguer)",
+    "qtde": 69,
+    "valor": 4857.9
+  },
+  {
+    "nome": "Classic Smash (1º Hambúrguer)",
+    "qtde": 72,
+    "valor": 4143.6
+  },
+  {
+    "nome": "Porção de Fritas | 300g",
+    "qtde": 152,
+    "valor": 3798.48
+  },
+  {
+    "nome": "Diversos - Tibauulf Trufado",
+    "qtde": 36,
+    "valor": 2635
+  },
+  {
+    "nome": "Chicken Burger",
+    "qtde": 41,
+    "valor": 1935
+  },
+  {
+    "nome": "Diversos - Jerrys Jr.",
+    "qtde": 36,
+    "valor": 1438
+  },
+  {
+    "nome": "2 Hambúrgueres + 2 Refrigerantes 350ml",
+    "qtde": 11,
+    "valor": 1424.3
+  },
+  {
+    "nome": "Jerrys Burger (1º Hambúrguer)",
+    "qtde": 22,
+    "valor": 1299.02
+  },
+  {
+    "nome": "1 Hamburguer + 1 Refrigerante 350ml",
+    "qtde": 18,
+    "valor": 1151.7
+  },
+  {
+    "nome": "Nuggets Crocantes - 12 unidades",
+    "qtde": 29,
+    "valor": 986
+  },
+  {
+    "nome": "1 Hamburguer + 1 Porção de 6 Nuggets + 1 Refrigerante 350ml",
+    "qtde": 9,
+    "valor": 771.59
+  },
+  {
+    "nome": "2 Hambúrgueres + 1 Porção de 12 Nuggets + 2 Refrigerantes 350ml",
+    "qtde": 5,
+    "valor": 769.8
+  },
+  {
+    "nome": "Pizza de Nutella",
+    "qtde": 6,
+    "valor": 372
+  },
+  {
+    "nome": "Nuggets Crocantes - 12 unidades + 1 Refrigerante 350ml",
+    "qtde": 7,
+    "valor": 335.3
+  },
+  {
+    "nome": "Refrigerante Coca Cola Zero Lata 350ml",
+    "qtde": 38,
+    "valor": 303.62
+  },
+  {
+    "nome": "Nuggets Crocantes - 6 unidades",
+    "qtde": 12,
+    "valor": 272
+  },
+  {
+    "nome": "Nuggets Crocantes - 6 unidades + 1 Refrigerante 350ml",
+    "qtde": 7,
+    "valor": 195.93
+  },
+  {
+    "nome": "Pizza Doce de Leite Cremoso e Canela - 25 Centímetros",
+    "qtde": 4,
+    "valor": 168
+  },
+  {
+    "nome": "2 Hambúrgueres + 1 Porção de 6 Nuggets + 2 Refrigerantes 350ml",
+    "qtde": 1,
+    "valor": 137.71
+  },
+  {
+    "nome": "Diversos - Coca Cola 2l",
+    "qtde": 5,
+    "valor": 99.5
+  },
+  {
+    "nome": "Refrigerante Coca-Cola Lata 350ml",
+    "qtde": 12,
+    "valor": 95.88
+  },
+  {
+    "nome": "Diversos - Coca-Cola Zero 2L ",
+    "qtde": 3,
+    "valor": 59.7
+  },
+  {
+    "nome": "Guaraná Antárctica Zero 350ml",
+    "qtde": 7,
+    "valor": 55.93
+  },
+  {
+    "nome": "Nuggets Crocantes - 12 unidades + 2 Refrigerante 350ml",
+    "qtde": 1,
+    "valor": 52.9
+  },
+  {
+    "nome": "Refrigerante Guaraná Antarctica Lata 350ml",
+    "qtde": 6,
+    "valor": 47.94
+  }
+]

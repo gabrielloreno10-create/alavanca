@@ -1,0 +1,6 @@
+# Cluster local e senhas de desenvolvimento: nunca versionar.
+cluster/
+dados/
+.env.local
+node_modules/
+postgres.log

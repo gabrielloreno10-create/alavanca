@@ -1,0 +1,24 @@
+produto,marca,custo_P_ou_unico,custo_G,qtd_90d,receita_90d,preco_medio,custo_usado,cmv_%,margem_R$,base
+Pizza 5 Queijos ao Mel Trufado e Parma,Pizzaria,17.88,28.71,389,41670.3,107.12,28.71,26.8,78.41,ficha Saipos 03/10 + caixa
+Pizza Parma e Cogumelos,Pizzaria,15.91,23.62,123,11625.7,94.52,23.62,25.0,70.9,ficha Saipos 03/10 + caixa
+Pizza Marguerita,Pizzaria,6.76,10.35,87,7380.1,84.83,6.76,8.0,78.07,ficha Saipos 03/10 + caixa
+Pizza Pepperoni,Pizzaria,10.07,19.87,139,10816.2,77.81,10.07,12.9,67.74,sem ficha; base + pepperoni 5/13 fatias (Hélio)
+Pizza 5 Queijos com Mel Trufado e Pepperoni,Pizzaria,14.47,26.9,71,6468.2,91.1,26.9,29.5,64.2,sem ficha; base + pepperoni 5/13 fatias (Hélio)
+Pizza Cinco Queijos ao Mel Trufado,Pizzaria,11.46,20.34,76,7387.1,97.2,20.34,20.9,76.86,ficha Saipos 03/10 + caixa
+Pizza Calabresa com Mel Trufado e Gorgonzola,Pizzaria,10.49,19.08,54,5505.2,101.95,19.08,18.7,82.87,ESTIMADO (ficha atual é de carne seca)
+Pizza Frango com Cream Cheese,Pizzaria,10.02,17.33,72,6335.3,87.99,17.33,19.7,70.66,ficha Saipos 03/10 + caixa
+Pizza A Moda Le Tre,Pizzaria,8.82,15.01,68,6321.7,92.97,15.01,16.1,77.96,ficha Saipos 03/10 + caixa
+Pizza Carne Seca,Pizzaria,14.1,26.31,25,2235.4,89.42,26.31,29.4,63.11,ficha Saipos 03/10 + caixa
+Pizza Parma e Rúcula,Pizzaria,14.07,21.22,72,6548.7,90.95,21.22,23.3,69.73,ficha Saipos 03/10 + caixa
+Pizza Lombinho Canadense,Pizzaria,11.42,20.53,43,3879.9,90.23,20.53,22.8,69.7,ficha Saipos 03/10 + caixa
+Pizza Cogumelos Formaggi Trufado,Pizzaria,10.08,16.99,24,2290.3,95.43,16.99,17.8,78.44,ficha Saipos 03/10 + caixa
+"Monte seu Burguer (Smash M 2x80g, queijo, molho)",Jerry's,9.53,,350,23184.0,66.24,9.53,14.4,56.71,cardápio do bot + fatias 14/10 g (pesquisa)
+Smash Cheese & Bacon,Jerry's,11.15,,216,13833.0,64.04,11.15,17.4,52.89,cardápio do bot + fatias 14/10 g (pesquisa)
+Jerrys Smash Trufado,Jerry's,11.07,,182,12837.0,70.53,11.07,15.7,59.46,cardápio do bot + fatias 14/10 g (pesquisa)
+Classic Smash,Jerry's,10.38,,183,10641.0,58.15,10.38,17.9,47.77,cardápio do bot + fatias 14/10 g (pesquisa)
+Tibauulf Trufado,Jerry's,11.97,,120,9033.6,75.28,11.97,15.9,63.31,cardápio do bot + fatias 14/10 g (pesquisa)
+Jerrys Jr.,Jerry's,6.28,,89,3769.9,42.36,6.28,14.8,36.08,cardápio do bot + fatias 14/10 g (pesquisa)
+Chicken Burger,Jerry's,6.71,,102,5115.4,50.15,6.71,13.4,43.44,ficha Saipos (150 g frango)
+Porção de Fritas 300g,Jerry's,4.8,,266,6597.39,24.8,4.8,19.4,20.0,"batata NF + óleo estimado R$ 0,30/porção"
+Nuggets Crocantes 6 un,Jerry's,5.3,,31,700.0,22.58,5.3,23.5,17.28,cardápio do bot + fatias 14/10 g (pesquisa)
+Nuggets Crocantes 12 un,Jerry's,10.3,,73,2734.7,37.46,10.3,27.5,27.16,cardápio do bot + fatias 14/10 g (pesquisa)

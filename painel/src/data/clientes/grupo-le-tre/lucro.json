@@ -1,0 +1,158 @@
+{
+  "origem": "REAL",
+  "metaCmvPct": null,
+  "metaMargemPct": null,
+  "metaFaturamentoMes": null,
+  "fichas": [
+    {
+      "id": "f01",
+      "nome": "Pizza 5 Queijos ao Mel Trufado e Parma",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 107.12,
+      "custo": 28.71,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f07",
+      "nome": "Pizza Pepperoni",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 77.81,
+      "custo": 10.07,
+      "estimado": true,
+      "base": "Sem ficha técnica; custo montado pela receita base"
+    },
+    {
+      "id": "f08",
+      "nome": "Pizza Parma e Cogumelos",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 94.52,
+      "custo": 23.62,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f12",
+      "nome": "Pizza Marguerita",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 84.83,
+      "custo": 6.76,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f13",
+      "nome": "Pizza Cinco Queijos ao Mel Trufado",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 97.2,
+      "custo": 20.34,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f15",
+      "nome": "Pizza Frango com Cream Cheese",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 87.99,
+      "custo": 17.33,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f16",
+      "nome": "Pizza Parma e Rúcula",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 90.95,
+      "custo": 21.22,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f17",
+      "nome": "Pizza 5 Queijos com Mel Trufado e Pepperoni",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 91.1,
+      "custo": 26.9,
+      "estimado": true,
+      "base": "Sem ficha técnica; custo montado pela receita base"
+    },
+    {
+      "id": "f18",
+      "nome": "Pizza A Moda Le Tre",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 92.97,
+      "custo": 15.01,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f19",
+      "nome": "Pizza Calabresa com Mel Trufado e Gorgonzola",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 101.95,
+      "custo": 19.08,
+      "estimado": true,
+      "base": "Ficha cadastrada não corresponde ao prato; custo estimado"
+    },
+    {
+      "id": "f20",
+      "nome": "Pizza Lombinho Canadense",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 90.23,
+      "custo": 20.53,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f22",
+      "nome": "Pizza Carne Seca",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 89.42,
+      "custo": 26.31,
+      "estimado": false,
+      "base": null
+    },
+    {
+      "id": "f23",
+      "nome": "Pizza Cogumelos Formaggi Trufado",
+      "categoria": "Pizzas",
+      "operacao": "Le Tre Farine",
+      "preco": 95.43,
+      "custo": 16.99,
+      "estimado": false,
+      "base": null
+    }
+  ],
+  "vendasPratosDia": [],
+  "vendasPratos": {
+    "inicio": "2026-07-03",
+    "fim": "2026-10-01",
+    "qtd": {
+      "f01": 389,
+      "f07": 139,
+      "f08": 123,
+      "f12": 87,
+      "f13": 76,
+      "f15": 72,
+      "f16": 72,
+      "f17": 71,
+      "f18": 68,
+      "f19": 54,
+      "f20": 43,
+      "f22": 25,
+      "f23": 24
+    }
+  }
+}

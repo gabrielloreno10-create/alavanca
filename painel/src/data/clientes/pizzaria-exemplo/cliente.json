@@ -1,0 +1,40 @@
+{
+  "origem": "EXEMPLO",
+  "slug": "pizzaria-exemplo",
+  "nome": "Pizzaria Exemplo",
+  "segmento": "Pizzaria com delivery e salão",
+  "metaPorDiaSemana": {
+    "seg": 2500,
+    "ter": 2500,
+    "qua": 2800,
+    "qui": 3400,
+    "sex": 6500,
+    "sab": 7500,
+    "dom": 6500
+  },
+  "impostoPct": 0.06,
+  "canais": {
+    "ifood": {
+      "nome": "iFood",
+      "taxaPct": 0.262,
+      "custoPorPedido": 3
+    },
+    "proprio": {
+      "nome": "Próprio",
+      "taxaPct": 0.03,
+      "custoPorPedido": 8
+    },
+    "salao": {
+      "nome": "Salão",
+      "taxaPct": 0.025,
+      "custoPorPedido": 0
+    }
+  },
+  "limites": {
+    "metaMinimaPct": 0.8,
+    "margemMinimaPct": 0.35,
+    "quedaPedidosPct": 0.2,
+    "ifoodMaximoPct": 0.6,
+    "quedaTicketPct": 0.1
+  }
+}

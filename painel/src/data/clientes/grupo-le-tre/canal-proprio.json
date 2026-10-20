@@ -1,0 +1,7157 @@
+{
+  "origem": "EXEMPLO",
+  "metaPctCanalProprio": 0.3,
+  "campanhas": [
+    {
+      "id": "c1",
+      "nome": "Le Tre · Jantar sex–dom",
+      "status": "ativa",
+      "objetivo": "Vendas no site",
+      "orcamentoDia": 120
+    },
+    {
+      "id": "c2",
+      "nome": "Le Tre · Remarketing quente",
+      "status": "ativa",
+      "objetivo": "Vendas no site",
+      "orcamentoDia": 60
+    },
+    {
+      "id": "c3",
+      "nome": "Le Tre · Terça em dobro",
+      "status": "em_analise",
+      "objetivo": "Vendas no site",
+      "orcamentoDia": 40
+    },
+    {
+      "id": "c4",
+      "nome": "Le Tre · Bairros novos",
+      "status": "pausada",
+      "objetivo": "Vendas no site",
+      "orcamentoDia": 50
+    }
+  ],
+  "criativos": [
+    {
+      "id": "k1",
+      "nome": "Vídeo · Forno a lenha",
+      "campanhaId": "c1",
+      "formato": "Vídeo"
+    },
+    {
+      "id": "k2",
+      "nome": "Vídeo · 5 Queijos derretendo",
+      "campanhaId": "c1",
+      "formato": "Vídeo"
+    },
+    {
+      "id": "k3",
+      "nome": "Foto · Margherita",
+      "campanhaId": "c1",
+      "formato": "Imagem"
+    },
+    {
+      "id": "k4",
+      "nome": "Carrossel · Cardápio",
+      "campanhaId": "c2",
+      "formato": "Carrossel"
+    },
+    {
+      "id": "k5",
+      "nome": "Vídeo · Depoimento cliente",
+      "campanhaId": "c2",
+      "formato": "Vídeo"
+    },
+    {
+      "id": "k6",
+      "nome": "Foto · Bairros",
+      "campanhaId": "c4",
+      "formato": "Imagem"
+    }
+  ],
+  "anunciosDia": [
+    {
+      "data": "2026-05-01",
+      "criativos": {
+        "k1": {
+          "investimento": 40.57,
+          "impressoes": 2491,
+          "cliques": 34,
+          "pedidos": 1,
+          "faturamento": 110.79
+        },
+        "k2": {
+          "investimento": 51.27,
+          "impressoes": 3238,
+          "cliques": 62,
+          "pedidos": 4,
+          "faturamento": 443.15
+        },
+        "k3": {
+          "investimento": 22.45,
+          "impressoes": 1625,
+          "cliques": 25,
+          "pedidos": 1,
+          "faturamento": 110.79
+        },
+        "k4": {
+          "investimento": 27.17,
+          "impressoes": 1839,
+          "cliques": 30,
+          "pedidos": 1,
+          "faturamento": 110.79
+        },
+        "k5": {
+          "investimento": 21.75,
+          "impressoes": 1250,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 110.79
+        },
+        "k6": {
+          "investimento": 23.86,
+          "impressoes": 1679,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-02",
+      "criativos": {
+        "k1": {
+          "investimento": 38.26,
+          "impressoes": 2501,
+          "cliques": 42,
+          "pedidos": 2,
+          "faturamento": 206.67
+        },
+        "k2": {
+          "investimento": 50.4,
+          "impressoes": 3007,
+          "cliques": 47,
+          "pedidos": 2,
+          "faturamento": 206.67
+        },
+        "k3": {
+          "investimento": 20.86,
+          "impressoes": 1189,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 31.81,
+          "impressoes": 2284,
+          "cliques": 42,
+          "pedidos": 1,
+          "faturamento": 103.33
+        },
+        "k5": {
+          "investimento": 23.81,
+          "impressoes": 1570,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 103.33
+        },
+        "k6": {
+          "investimento": 20.81,
+          "impressoes": 1356,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-03",
+      "criativos": {
+        "k1": {
+          "investimento": 49.59,
+          "impressoes": 3342,
+          "cliques": 45,
+          "pedidos": 2,
+          "faturamento": 236.35
+        },
+        "k2": {
+          "investimento": 55.37,
+          "impressoes": 3050,
+          "cliques": 58,
+          "pedidos": 3,
+          "faturamento": 354.53
+        },
+        "k3": {
+          "investimento": 26.99,
+          "impressoes": 1700,
+          "cliques": 26,
+          "pedidos": 1,
+          "faturamento": 118.18
+        },
+        "k4": {
+          "investimento": 26.1,
+          "impressoes": 1854,
+          "cliques": 25,
+          "pedidos": 1,
+          "faturamento": 118.18
+        },
+        "k5": {
+          "investimento": 22.27,
+          "impressoes": 1352,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 118.18
+        },
+        "k6": {
+          "investimento": 24.99,
+          "impressoes": 1683,
+          "cliques": 34,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-04",
+      "criativos": {
+        "k1": {
+          "investimento": 12.74,
+          "impressoes": 834,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 18.76,
+          "impressoes": 1154,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 7.58,
+          "impressoes": 509,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 7.91,
+          "impressoes": 562,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 7.36,
+          "impressoes": 407,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 6.99,
+          "impressoes": 516,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-05-05",
+      "criativos": {
+        "k1": {
+          "investimento": 12.37,
+          "impressoes": 863,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 14.91,
+          "impressoes": 950,
+          "cliques": 13,
+          "pedidos": 1,
+          "faturamento": 103.9
+        },
+        "k3": {
+          "investimento": 9.77,
+          "impressoes": 558,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.66,
+          "impressoes": 822,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.71,
+          "impressoes": 371,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.36,
+          "impressoes": 509,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-06",
+      "criativos": {
+        "k1": {
+          "investimento": 12.89,
+          "impressoes": 731,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 15.64,
+          "impressoes": 1077,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 132.1
+        },
+        "k3": {
+          "investimento": 7.08,
+          "impressoes": 417,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.62,
+          "impressoes": 495,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.75,
+          "impressoes": 431,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.49,
+          "impressoes": 547,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-07",
+      "criativos": {
+        "k1": {
+          "investimento": 15.64,
+          "impressoes": 1056,
+          "cliques": 20,
+          "pedidos": 1,
+          "faturamento": 125.8
+        },
+        "k2": {
+          "investimento": 17.62,
+          "impressoes": 1288,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.69,
+          "impressoes": 536,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.32,
+          "impressoes": 704,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.73,
+          "impressoes": 405,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.53,
+          "impressoes": 438,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-08",
+      "criativos": {
+        "k1": {
+          "investimento": 49.1,
+          "impressoes": 3390,
+          "cliques": 73,
+          "pedidos": 3,
+          "faturamento": 302.4
+        },
+        "k2": {
+          "investimento": 47.62,
+          "impressoes": 3291,
+          "cliques": 46,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 26.84,
+          "impressoes": 1655,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 35.03,
+          "impressoes": 2040,
+          "cliques": 43,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 25.15,
+          "impressoes": 1489,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 16.84,
+          "impressoes": 1122,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-09",
+      "criativos": {
+        "k1": {
+          "investimento": 43.01,
+          "impressoes": 3055,
+          "cliques": 47,
+          "pedidos": 2,
+          "faturamento": 275.8
+        },
+        "k2": {
+          "investimento": 51.33,
+          "impressoes": 3801,
+          "cliques": 78,
+          "pedidos": 2,
+          "faturamento": 275.8
+        },
+        "k3": {
+          "investimento": 25.12,
+          "impressoes": 1798,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 24.49,
+          "impressoes": 1550,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 22.72,
+          "impressoes": 1252,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 19.96,
+          "impressoes": 1448,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-10",
+      "criativos": {
+        "k1": {
+          "investimento": 48.43,
+          "impressoes": 3448,
+          "cliques": 44,
+          "pedidos": 2,
+          "faturamento": 208.89
+        },
+        "k2": {
+          "investimento": 47.75,
+          "impressoes": 2660,
+          "cliques": 54,
+          "pedidos": 2,
+          "faturamento": 208.89
+        },
+        "k3": {
+          "investimento": 20.82,
+          "impressoes": 1253,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.49,
+          "impressoes": 1917,
+          "cliques": 33,
+          "pedidos": 1,
+          "faturamento": 104.45
+        },
+        "k5": {
+          "investimento": 22.62,
+          "impressoes": 1537,
+          "cliques": 23,
+          "pedidos": 1,
+          "faturamento": 104.45
+        },
+        "k6": {
+          "investimento": 19.47,
+          "impressoes": 1337,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-11",
+      "criativos": {
+        "k1": {
+          "investimento": 11.46,
+          "impressoes": 822,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 17.48,
+          "impressoes": 1264,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 7.9,
+          "impressoes": 569,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 9.83,
+          "impressoes": 628,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 7.82,
+          "impressoes": 568,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 8.05,
+          "impressoes": 456,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-05-12",
+      "criativos": {
+        "k1": {
+          "investimento": 14.61,
+          "impressoes": 1083,
+          "cliques": 20,
+          "pedidos": 1,
+          "faturamento": 100.62
+        },
+        "k2": {
+          "investimento": 17.77,
+          "impressoes": 1275,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 100.62
+        },
+        "k3": {
+          "investimento": 9.77,
+          "impressoes": 581,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.86,
+          "impressoes": 498,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.45,
+          "impressoes": 483,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.35,
+          "impressoes": 547,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-13",
+      "criativos": {
+        "k1": {
+          "investimento": 13.83,
+          "impressoes": 847,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.83,
+          "impressoes": 1152,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.59,
+          "impressoes": 496,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.33,
+          "impressoes": 830,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.21,
+          "impressoes": 544,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 8.33,
+          "impressoes": 513,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-14",
+      "criativos": {
+        "k1": {
+          "investimento": 13.33,
+          "impressoes": 763,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 125.8
+        },
+        "k2": {
+          "investimento": 15.34,
+          "impressoes": 945,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.31,
+          "impressoes": 571,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.62,
+          "impressoes": 600,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.55,
+          "impressoes": 488,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 8.28,
+          "impressoes": 566,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-15",
+      "criativos": {
+        "k1": {
+          "investimento": 36.8,
+          "impressoes": 2240,
+          "cliques": 43,
+          "pedidos": 2,
+          "faturamento": 201.7
+        },
+        "k2": {
+          "investimento": 52.15,
+          "impressoes": 3307,
+          "cliques": 47,
+          "pedidos": 2,
+          "faturamento": 201.7
+        },
+        "k3": {
+          "investimento": 25.35,
+          "impressoes": 1730,
+          "cliques": 34,
+          "pedidos": 1,
+          "faturamento": 100.85
+        },
+        "k4": {
+          "investimento": 24.82,
+          "impressoes": 1507,
+          "cliques": 20,
+          "pedidos": 1,
+          "faturamento": 100.85
+        },
+        "k5": {
+          "investimento": 21.68,
+          "impressoes": 1482,
+          "cliques": 22,
+          "pedidos": 1,
+          "faturamento": 100.85
+        },
+        "k6": {
+          "investimento": 17.54,
+          "impressoes": 1063,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-16",
+      "criativos": {
+        "k1": {
+          "investimento": 42.25,
+          "impressoes": 2620,
+          "cliques": 50,
+          "pedidos": 2,
+          "faturamento": 242.57
+        },
+        "k2": {
+          "investimento": 43.96,
+          "impressoes": 2922,
+          "cliques": 64,
+          "pedidos": 3,
+          "faturamento": 363.86
+        },
+        "k3": {
+          "investimento": 22.42,
+          "impressoes": 1328,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 121.29
+        },
+        "k4": {
+          "investimento": 32.22,
+          "impressoes": 2388,
+          "cliques": 45,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 25.14,
+          "impressoes": 1396,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 20.37,
+          "impressoes": 1458,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-17",
+      "criativos": {
+        "k1": {
+          "investimento": 40.79,
+          "impressoes": 2954,
+          "cliques": 36,
+          "pedidos": 1,
+          "faturamento": 96.17
+        },
+        "k2": {
+          "investimento": 41.42,
+          "impressoes": 2632,
+          "cliques": 46,
+          "pedidos": 2,
+          "faturamento": 192.34
+        },
+        "k3": {
+          "investimento": 23.91,
+          "impressoes": 1490,
+          "cliques": 20,
+          "pedidos": 1,
+          "faturamento": 96.17
+        },
+        "k4": {
+          "investimento": 27.87,
+          "impressoes": 1836,
+          "cliques": 25,
+          "pedidos": 1,
+          "faturamento": 96.17
+        },
+        "k5": {
+          "investimento": 17.73,
+          "impressoes": 1258,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.56,
+          "impressoes": 1227,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-18",
+      "criativos": {
+        "k1": {
+          "investimento": 15.4,
+          "impressoes": 1071,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 19.66,
+          "impressoes": 1084,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 9.32,
+          "impressoes": 668,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 9.71,
+          "impressoes": 542,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 5.74,
+          "impressoes": 429,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 8.19,
+          "impressoes": 483,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-05-19",
+      "criativos": {
+        "k1": {
+          "investimento": 15.43,
+          "impressoes": 953,
+          "cliques": 12,
+          "pedidos": 1,
+          "faturamento": 98.7
+        },
+        "k2": {
+          "investimento": 13.94,
+          "impressoes": 984,
+          "cliques": 16,
+          "pedidos": 1,
+          "faturamento": 98.7
+        },
+        "k3": {
+          "investimento": 7.3,
+          "impressoes": 465,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.85,
+          "impressoes": 725,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.37,
+          "impressoes": 583,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.81,
+          "impressoes": 474,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-20",
+      "criativos": {
+        "k1": {
+          "investimento": 14.12,
+          "impressoes": 988,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 14.98,
+          "impressoes": 887,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.53,
+          "impressoes": 484,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.24,
+          "impressoes": 520,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.62,
+          "impressoes": 397,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.71,
+          "impressoes": 362,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-21",
+      "criativos": {
+        "k1": {
+          "investimento": 11.68,
+          "impressoes": 656,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.66,
+          "impressoes": 1106,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 82.0
+        },
+        "k3": {
+          "investimento": 7.05,
+          "impressoes": 518,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.09,
+          "impressoes": 540,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.79,
+          "impressoes": 369,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.12,
+          "impressoes": 457,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-22",
+      "criativos": {
+        "k1": {
+          "investimento": 46.88,
+          "impressoes": 2649,
+          "cliques": 53,
+          "pedidos": 2,
+          "faturamento": 218.24
+        },
+        "k2": {
+          "investimento": 44.78,
+          "impressoes": 3312,
+          "cliques": 49,
+          "pedidos": 2,
+          "faturamento": 218.24
+        },
+        "k3": {
+          "investimento": 28.53,
+          "impressoes": 1801,
+          "cliques": 37,
+          "pedidos": 1,
+          "faturamento": 109.12
+        },
+        "k4": {
+          "investimento": 28.67,
+          "impressoes": 1680,
+          "cliques": 22,
+          "pedidos": 1,
+          "faturamento": 109.12
+        },
+        "k5": {
+          "investimento": 20.42,
+          "impressoes": 1219,
+          "cliques": 26,
+          "pedidos": 1,
+          "faturamento": 109.12
+        },
+        "k6": {
+          "investimento": 18.99,
+          "impressoes": 1089,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-23",
+      "criativos": {
+        "k1": {
+          "investimento": 37.31,
+          "impressoes": 2166,
+          "cliques": 45,
+          "pedidos": 1,
+          "faturamento": 111.07
+        },
+        "k2": {
+          "investimento": 46.49,
+          "impressoes": 3106,
+          "cliques": 64,
+          "pedidos": 3,
+          "faturamento": 333.2
+        },
+        "k3": {
+          "investimento": 25.8,
+          "impressoes": 1901,
+          "cliques": 31,
+          "pedidos": 1,
+          "faturamento": 111.07
+        },
+        "k4": {
+          "investimento": 32.75,
+          "impressoes": 2351,
+          "cliques": 41,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.52,
+          "impressoes": 1288,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.5,
+          "impressoes": 1608,
+          "cliques": 29,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-24",
+      "criativos": {
+        "k1": {
+          "investimento": 35.76,
+          "impressoes": 1983,
+          "cliques": 32,
+          "pedidos": 2,
+          "faturamento": 204.35
+        },
+        "k2": {
+          "investimento": 41.2,
+          "impressoes": 2508,
+          "cliques": 33,
+          "pedidos": 2,
+          "faturamento": 204.35
+        },
+        "k3": {
+          "investimento": 24.65,
+          "impressoes": 1541,
+          "cliques": 26,
+          "pedidos": 1,
+          "faturamento": 102.18
+        },
+        "k4": {
+          "investimento": 33.77,
+          "impressoes": 2224,
+          "cliques": 39,
+          "pedidos": 1,
+          "faturamento": 102.18
+        },
+        "k5": {
+          "investimento": 23.77,
+          "impressoes": 1322,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 102.18
+        },
+        "k6": {
+          "investimento": 22.53,
+          "impressoes": 1568,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-25",
+      "criativos": {
+        "k1": {
+          "investimento": 13.75,
+          "impressoes": 780,
+          "cliques": 12,
+          "pedidos": 1,
+          "faturamento": 112.9
+        },
+        "k2": {
+          "investimento": 18.99,
+          "impressoes": 1418,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.58,
+          "impressoes": 472,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.18,
+          "impressoes": 580,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.09,
+          "impressoes": 585,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.55,
+          "impressoes": 422,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-26",
+      "criativos": {
+        "k1": {
+          "investimento": 12.24,
+          "impressoes": 698,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 13.73,
+          "impressoes": 791,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.94,
+          "impressoes": 604,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.35,
+          "impressoes": 717,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.49,
+          "impressoes": 449,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.75,
+          "impressoes": 365,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-27",
+      "criativos": {
+        "k1": {
+          "investimento": 14.05,
+          "impressoes": 804,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 20.13,
+          "impressoes": 1505,
+          "cliques": 33,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.34,
+          "impressoes": 519,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.1,
+          "impressoes": 524,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.18,
+          "impressoes": 412,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.88,
+          "impressoes": 407,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-28",
+      "criativos": {
+        "k1": {
+          "investimento": 13.84,
+          "impressoes": 975,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.28,
+          "impressoes": 1129,
+          "cliques": 23,
+          "pedidos": 1,
+          "faturamento": 152.07
+        },
+        "k3": {
+          "investimento": 8.27,
+          "impressoes": 494,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.43,
+          "impressoes": 632,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.72,
+          "impressoes": 457,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.27,
+          "impressoes": 424,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-29",
+      "criativos": {
+        "k1": {
+          "investimento": 38.7,
+          "impressoes": 2492,
+          "cliques": 48,
+          "pedidos": 1,
+          "faturamento": 105.67
+        },
+        "k2": {
+          "investimento": 40.59,
+          "impressoes": 2771,
+          "cliques": 46,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 21.93,
+          "impressoes": 1469,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.4,
+          "impressoes": 1883,
+          "cliques": 41,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.08,
+          "impressoes": 1703,
+          "cliques": 35,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 24.12,
+          "impressoes": 1661,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-30",
+      "criativos": {
+        "k1": {
+          "investimento": 36.69,
+          "impressoes": 2021,
+          "cliques": 33,
+          "pedidos": 2,
+          "faturamento": 165.86
+        },
+        "k2": {
+          "investimento": 58.85,
+          "impressoes": 3646,
+          "cliques": 57,
+          "pedidos": 3,
+          "faturamento": 248.79
+        },
+        "k3": {
+          "investimento": 21.17,
+          "impressoes": 1388,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.88,
+          "impressoes": 1775,
+          "cliques": 28,
+          "pedidos": 2,
+          "faturamento": 165.86
+        },
+        "k5": {
+          "investimento": 21.86,
+          "impressoes": 1447,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.99,
+          "impressoes": 1525,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-05-31",
+      "criativos": {
+        "k1": {
+          "investimento": 50.14,
+          "impressoes": 3401,
+          "cliques": 45,
+          "pedidos": 1,
+          "faturamento": 86.5
+        },
+        "k2": {
+          "investimento": 42.62,
+          "impressoes": 2482,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 22.4,
+          "impressoes": 1234,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.77,
+          "impressoes": 1852,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 22.72,
+          "impressoes": 1324,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 17.29,
+          "impressoes": 1081,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-01",
+      "criativos": {
+        "k1": {
+          "investimento": 13.45,
+          "impressoes": 751,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.08,
+          "impressoes": 962,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.45,
+          "impressoes": 615,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.42,
+          "impressoes": 754,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.61,
+          "impressoes": 530,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.44,
+          "impressoes": 380,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-02",
+      "criativos": {
+        "k1": {
+          "investimento": 16.47,
+          "impressoes": 1180,
+          "cliques": 22,
+          "pedidos": 1,
+          "faturamento": 97.17
+        },
+        "k2": {
+          "investimento": 15.59,
+          "impressoes": 897,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 97.17
+        },
+        "k3": {
+          "investimento": 8.57,
+          "impressoes": 499,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.16,
+          "impressoes": 551,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.03,
+          "impressoes": 407,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 8.14,
+          "impressoes": 602,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-03",
+      "criativos": {
+        "k1": {
+          "investimento": 12.49,
+          "impressoes": 709,
+          "cliques": 14,
+          "pedidos": 1,
+          "faturamento": 122.2
+        },
+        "k2": {
+          "investimento": 15.04,
+          "impressoes": 882,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.75,
+          "impressoes": 504,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 7.93,
+          "impressoes": 550,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.48,
+          "impressoes": 456,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.17,
+          "impressoes": 458,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-04",
+      "criativos": {
+        "k1": {
+          "investimento": 14.3,
+          "impressoes": 788,
+          "cliques": 10,
+          "pedidos": 1,
+          "faturamento": 126.22
+        },
+        "k2": {
+          "investimento": 15.51,
+          "impressoes": 1147,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 126.22
+        },
+        "k3": {
+          "investimento": 8.74,
+          "impressoes": 635,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.32,
+          "impressoes": 663,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.22,
+          "impressoes": 376,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.97,
+          "impressoes": 365,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-05",
+      "criativos": {
+        "k1": {
+          "investimento": 40.99,
+          "impressoes": 2903,
+          "cliques": 48,
+          "pedidos": 2,
+          "faturamento": 220.33
+        },
+        "k2": {
+          "investimento": 50.09,
+          "impressoes": 3380,
+          "cliques": 66,
+          "pedidos": 3,
+          "faturamento": 330.49
+        },
+        "k3": {
+          "investimento": 27.3,
+          "impressoes": 1721,
+          "cliques": 23,
+          "pedidos": 1,
+          "faturamento": 110.16
+        },
+        "k4": {
+          "investimento": 34.25,
+          "impressoes": 2523,
+          "cliques": 34,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 20.37,
+          "impressoes": 1196,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 24.76,
+          "impressoes": 1686,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-06",
+      "criativos": {
+        "k1": {
+          "investimento": 48.73,
+          "impressoes": 2937,
+          "cliques": 45,
+          "pedidos": 2,
+          "faturamento": 192.65
+        },
+        "k2": {
+          "investimento": 46.0,
+          "impressoes": 3076,
+          "cliques": 63,
+          "pedidos": 2,
+          "faturamento": 192.65
+        },
+        "k3": {
+          "investimento": 28.3,
+          "impressoes": 2050,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.14,
+          "impressoes": 1661,
+          "cliques": 29,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 22.69,
+          "impressoes": 1325,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 24.96,
+          "impressoes": 1590,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-07",
+      "criativos": {
+        "k1": {
+          "investimento": 45.59,
+          "impressoes": 2906,
+          "cliques": 60,
+          "pedidos": 1,
+          "faturamento": 106.06
+        },
+        "k2": {
+          "investimento": 43.79,
+          "impressoes": 3194,
+          "cliques": 48,
+          "pedidos": 2,
+          "faturamento": 212.12
+        },
+        "k3": {
+          "investimento": 24.53,
+          "impressoes": 1485,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 106.06
+        },
+        "k4": {
+          "investimento": 33.41,
+          "impressoes": 1945,
+          "cliques": 35,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 22.22,
+          "impressoes": 1438,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 24.12,
+          "impressoes": 1541,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-08",
+      "criativos": {
+        "k1": {
+          "investimento": 11.77,
+          "impressoes": 750,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 77.5
+        },
+        "k2": {
+          "investimento": 17.68,
+          "impressoes": 1183,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.89,
+          "impressoes": 450,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.46,
+          "impressoes": 517,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.84,
+          "impressoes": 441,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.15,
+          "impressoes": 364,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-09",
+      "criativos": {
+        "k1": {
+          "investimento": 12.67,
+          "impressoes": 743,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 14.94,
+          "impressoes": 894,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 9.25,
+          "impressoes": 668,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 9.61,
+          "impressoes": 623,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 6.58,
+          "impressoes": 403,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 7.09,
+          "impressoes": 422,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-06-10",
+      "criativos": {
+        "k1": {
+          "investimento": 15.72,
+          "impressoes": 1100,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 51.0
+        },
+        "k2": {
+          "investimento": 17.01,
+          "impressoes": 1193,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 51.0
+        },
+        "k3": {
+          "investimento": 9.76,
+          "impressoes": 697,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.69,
+          "impressoes": 644,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.02,
+          "impressoes": 403,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.81,
+          "impressoes": 376,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-11",
+      "criativos": {
+        "k1": {
+          "investimento": 12.08,
+          "impressoes": 711,
+          "cliques": 14,
+          "pedidos": 1,
+          "faturamento": 104.53
+        },
+        "k2": {
+          "investimento": 16.36,
+          "impressoes": 1108,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.04,
+          "impressoes": 443,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.66,
+          "impressoes": 697,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.74,
+          "impressoes": 325,
+          "cliques": 4,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.83,
+          "impressoes": 538,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-12",
+      "criativos": {
+        "k1": {
+          "investimento": 44.39,
+          "impressoes": 3325,
+          "cliques": 50,
+          "pedidos": 2,
+          "faturamento": 250.19
+        },
+        "k2": {
+          "investimento": 58.8,
+          "impressoes": 4063,
+          "cliques": 74,
+          "pedidos": 2,
+          "faturamento": 250.19
+        },
+        "k3": {
+          "investimento": 27.62,
+          "impressoes": 2014,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.25,
+          "impressoes": 1868,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 19.99,
+          "impressoes": 1179,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 19.98,
+          "impressoes": 1306,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-13",
+      "criativos": {
+        "k1": {
+          "investimento": 43.45,
+          "impressoes": 2956,
+          "cliques": 43,
+          "pedidos": 3,
+          "faturamento": 291.27
+        },
+        "k2": {
+          "investimento": 43.41,
+          "impressoes": 2726,
+          "cliques": 49,
+          "pedidos": 2,
+          "faturamento": 194.18
+        },
+        "k3": {
+          "investimento": 26.24,
+          "impressoes": 1533,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 97.09
+        },
+        "k4": {
+          "investimento": 33.37,
+          "impressoes": 1917,
+          "cliques": 23,
+          "pedidos": 1,
+          "faturamento": 97.09
+        },
+        "k5": {
+          "investimento": 21.96,
+          "impressoes": 1499,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 20.49,
+          "impressoes": 1440,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-14",
+      "criativos": {
+        "k1": {
+          "investimento": 40.41,
+          "impressoes": 2632,
+          "cliques": 53,
+          "pedidos": 2,
+          "faturamento": 191.59
+        },
+        "k2": {
+          "investimento": 47.66,
+          "impressoes": 3382,
+          "cliques": 44,
+          "pedidos": 1,
+          "faturamento": 95.8
+        },
+        "k3": {
+          "investimento": 25.24,
+          "impressoes": 1710,
+          "cliques": 34,
+          "pedidos": 1,
+          "faturamento": 95.8
+        },
+        "k4": {
+          "investimento": 30.63,
+          "impressoes": 1728,
+          "cliques": 26,
+          "pedidos": 2,
+          "faturamento": 191.59
+        },
+        "k5": {
+          "investimento": 20.51,
+          "impressoes": 1368,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.53,
+          "impressoes": 1605,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-15",
+      "criativos": {
+        "k1": {
+          "investimento": 12.91,
+          "impressoes": 725,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.28,
+          "impressoes": 1025,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.0,
+          "impressoes": 547,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.63,
+          "impressoes": 592,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.03,
+          "impressoes": 400,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.63,
+          "impressoes": 407,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-16",
+      "criativos": {
+        "k1": {
+          "investimento": 12.93,
+          "impressoes": 775,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.44,
+          "impressoes": 1168,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.28,
+          "impressoes": 612,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.37,
+          "impressoes": 552,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.64,
+          "impressoes": 339,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.53,
+          "impressoes": 554,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-17",
+      "criativos": {
+        "k1": {
+          "investimento": 14.84,
+          "impressoes": 905,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.75,
+          "impressoes": 1164,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 91.89
+        },
+        "k3": {
+          "investimento": 9.94,
+          "impressoes": 625,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.45,
+          "impressoes": 692,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.44,
+          "impressoes": 469,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.99,
+          "impressoes": 391,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-18",
+      "criativos": {
+        "k1": {
+          "investimento": 11.41,
+          "impressoes": 646,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.19,
+          "impressoes": 1005,
+          "cliques": 16,
+          "pedidos": 1,
+          "faturamento": 136.7
+        },
+        "k3": {
+          "investimento": 9.72,
+          "impressoes": 624,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.7,
+          "impressoes": 852,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.09,
+          "impressoes": 346,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.94,
+          "impressoes": 502,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-19",
+      "criativos": {
+        "k1": {
+          "investimento": 42.86,
+          "impressoes": 3197,
+          "cliques": 64,
+          "pedidos": 3,
+          "faturamento": 250.44
+        },
+        "k2": {
+          "investimento": 46.14,
+          "impressoes": 2613,
+          "cliques": 37,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 29.73,
+          "impressoes": 1766,
+          "cliques": 29,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 30.94,
+          "impressoes": 2188,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 20.19,
+          "impressoes": 1208,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 20.32,
+          "impressoes": 1389,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-20",
+      "criativos": {
+        "k1": {
+          "investimento": 37.18,
+          "impressoes": 2088,
+          "cliques": 37,
+          "pedidos": 1,
+          "faturamento": 120.79
+        },
+        "k2": {
+          "investimento": 57.31,
+          "impressoes": 4028,
+          "cliques": 72,
+          "pedidos": 3,
+          "faturamento": 362.37
+        },
+        "k3": {
+          "investimento": 26.07,
+          "impressoes": 1895,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 28.21,
+          "impressoes": 2057,
+          "cliques": 34,
+          "pedidos": 1,
+          "faturamento": 120.79
+        },
+        "k5": {
+          "investimento": 18.15,
+          "impressoes": 1031,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 22.37,
+          "impressoes": 1381,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-21",
+      "criativos": {
+        "k1": {
+          "investimento": 38.47,
+          "impressoes": 2641,
+          "cliques": 33,
+          "pedidos": 2,
+          "faturamento": 207.8
+        },
+        "k2": {
+          "investimento": 50.54,
+          "impressoes": 2818,
+          "cliques": 41,
+          "pedidos": 1,
+          "faturamento": 103.9
+        },
+        "k3": {
+          "investimento": 29.67,
+          "impressoes": 1786,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.68,
+          "impressoes": 1899,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 24.53,
+          "impressoes": 1687,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 23.04,
+          "impressoes": 1579,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-22",
+      "criativos": {
+        "k1": {
+          "investimento": 12.37,
+          "impressoes": 845,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.33,
+          "impressoes": 1185,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.45,
+          "impressoes": 531,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 7.96,
+          "impressoes": 578,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.84,
+          "impressoes": 348,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.75,
+          "impressoes": 417,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-23",
+      "criativos": {
+        "k1": {
+          "investimento": 11.52,
+          "impressoes": 837,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.73,
+          "impressoes": 1192,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 103.9
+        },
+        "k3": {
+          "investimento": 6.81,
+          "impressoes": 489,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.76,
+          "impressoes": 633,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.66,
+          "impressoes": 408,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.75,
+          "impressoes": 501,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-24",
+      "criativos": {
+        "k1": {
+          "investimento": 11.78,
+          "impressoes": 671,
+          "cliques": 12,
+          "pedidos": 1,
+          "faturamento": 141.9
+        },
+        "k2": {
+          "investimento": 16.34,
+          "impressoes": 1064,
+          "cliques": 13,
+          "pedidos": 1,
+          "faturamento": 141.9
+        },
+        "k3": {
+          "investimento": 8.3,
+          "impressoes": 584,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.21,
+          "impressoes": 648,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.61,
+          "impressoes": 362,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.91,
+          "impressoes": 394,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-25",
+      "criativos": {
+        "k1": {
+          "investimento": 11.49,
+          "impressoes": 702,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 16.12,
+          "impressoes": 1173,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.17,
+          "impressoes": 594,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.41,
+          "impressoes": 586,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.73,
+          "impressoes": 348,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.59,
+          "impressoes": 524,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-26",
+      "criativos": {
+        "k1": {
+          "investimento": 48.89,
+          "impressoes": 2850,
+          "cliques": 42,
+          "pedidos": 3,
+          "faturamento": 323.95
+        },
+        "k2": {
+          "investimento": 57.2,
+          "impressoes": 3999,
+          "cliques": 77,
+          "pedidos": 1,
+          "faturamento": 107.98
+        },
+        "k3": {
+          "investimento": 27.92,
+          "impressoes": 1879,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 33.16,
+          "impressoes": 1891,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 24.79,
+          "impressoes": 1440,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 24.88,
+          "impressoes": 1512,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-27",
+      "criativos": {
+        "k1": {
+          "investimento": 46.97,
+          "impressoes": 2633,
+          "cliques": 35,
+          "pedidos": 3,
+          "faturamento": 440.98
+        },
+        "k2": {
+          "investimento": 40.34,
+          "impressoes": 2893,
+          "cliques": 54,
+          "pedidos": 1,
+          "faturamento": 146.99
+        },
+        "k3": {
+          "investimento": 23.45,
+          "impressoes": 1323,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.89,
+          "impressoes": 1668,
+          "cliques": 35,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 20.66,
+          "impressoes": 1447,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 17.81,
+          "impressoes": 1296,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-28",
+      "criativos": {
+        "k1": {
+          "investimento": 48.76,
+          "impressoes": 2735,
+          "cliques": 58,
+          "pedidos": 2,
+          "faturamento": 200.99
+        },
+        "k2": {
+          "investimento": 58.43,
+          "impressoes": 3426,
+          "cliques": 56,
+          "pedidos": 2,
+          "faturamento": 200.99
+        },
+        "k3": {
+          "investimento": 28.29,
+          "impressoes": 2110,
+          "cliques": 46,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.7,
+          "impressoes": 1776,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 22.48,
+          "impressoes": 1438,
+          "cliques": 29,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 18.34,
+          "impressoes": 1234,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-29",
+      "criativos": {
+        "k1": {
+          "investimento": 15.09,
+          "impressoes": 836,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 15.5,
+          "impressoes": 854,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.81,
+          "impressoes": 673,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.58,
+          "impressoes": 545,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.18,
+          "impressoes": 455,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.72,
+          "impressoes": 386,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-06-30",
+      "criativos": {
+        "k1": {
+          "investimento": 16.48,
+          "impressoes": 1113,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 121.2
+        },
+        "k2": {
+          "investimento": 14.79,
+          "impressoes": 987,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.24,
+          "impressoes": 513,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.1,
+          "impressoes": 513,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.82,
+          "impressoes": 436,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.83,
+          "impressoes": 478,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-01",
+      "criativos": {
+        "k1": {
+          "investimento": 11.86,
+          "impressoes": 667,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 16.76,
+          "impressoes": 1054,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 143.73
+        },
+        "k3": {
+          "investimento": 8.87,
+          "impressoes": 579,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.29,
+          "impressoes": 810,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.4,
+          "impressoes": 489,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.7,
+          "impressoes": 389,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-02",
+      "criativos": {
+        "k1": {
+          "investimento": 13.02,
+          "impressoes": 932,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.65,
+          "impressoes": 1246,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.3,
+          "impressoes": 439,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.62,
+          "impressoes": 754,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.99,
+          "impressoes": 507,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.66,
+          "impressoes": 424,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-03",
+      "criativos": {
+        "k1": {
+          "investimento": 45.06,
+          "impressoes": 2562,
+          "cliques": 47,
+          "pedidos": 2,
+          "faturamento": 252.98
+        },
+        "k2": {
+          "investimento": 46.57,
+          "impressoes": 2750,
+          "cliques": 43,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 27.07,
+          "impressoes": 1735,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 26.18,
+          "impressoes": 1601,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.18,
+          "impressoes": 1709,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 22.12,
+          "impressoes": 1323,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-04",
+      "criativos": {
+        "k1": {
+          "investimento": 50.24,
+          "impressoes": 3094,
+          "cliques": 49,
+          "pedidos": 3,
+          "faturamento": 300.72
+        },
+        "k2": {
+          "investimento": 55.06,
+          "impressoes": 3069,
+          "cliques": 52,
+          "pedidos": 1,
+          "faturamento": 100.24
+        },
+        "k3": {
+          "investimento": 26.83,
+          "impressoes": 1912,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 24.45,
+          "impressoes": 1450,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 24.36,
+          "impressoes": 1539,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 18.25,
+          "impressoes": 1079,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-05",
+      "criativos": {
+        "k1": {
+          "investimento": 42.46,
+          "impressoes": 2970,
+          "cliques": 46,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 46.87,
+          "impressoes": 2979,
+          "cliques": 39,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 23.44,
+          "impressoes": 1693,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 27.89,
+          "impressoes": 2083,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.14,
+          "impressoes": 1274,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 23.18,
+          "impressoes": 1337,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-06",
+      "criativos": {
+        "k1": {
+          "investimento": 15.47,
+          "impressoes": 871,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 15.28,
+          "impressoes": 913,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 8.01,
+          "impressoes": 540,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 10.55,
+          "impressoes": 671,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 7.0,
+          "impressoes": 465,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 7.37,
+          "impressoes": 488,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-07-07",
+      "criativos": {
+        "k1": {
+          "investimento": 15.1,
+          "impressoes": 1108,
+          "cliques": 14,
+          "pedidos": 1,
+          "faturamento": 86.95
+        },
+        "k2": {
+          "investimento": 17.31,
+          "impressoes": 1212,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.84,
+          "impressoes": 601,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.38,
+          "impressoes": 695,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.91,
+          "impressoes": 503,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.55,
+          "impressoes": 459,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-08",
+      "criativos": {
+        "k1": {
+          "investimento": 15.45,
+          "impressoes": 1097,
+          "cliques": 20,
+          "pedidos": 1,
+          "faturamento": 96.97
+        },
+        "k2": {
+          "investimento": 15.36,
+          "impressoes": 996,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 10.04,
+          "impressoes": 632,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.43,
+          "impressoes": 673,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.4,
+          "impressoes": 400,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.45,
+          "impressoes": 453,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-09",
+      "criativos": {
+        "k1": {
+          "investimento": 13.75,
+          "impressoes": 1002,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 19.63,
+          "impressoes": 1215,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.17,
+          "impressoes": 545,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.97,
+          "impressoes": 661,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.41,
+          "impressoes": 449,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.98,
+          "impressoes": 373,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-10",
+      "criativos": {
+        "k1": {
+          "investimento": 42.14,
+          "impressoes": 2678,
+          "cliques": 34,
+          "pedidos": 3,
+          "faturamento": 341.76
+        },
+        "k2": {
+          "investimento": 50.38,
+          "impressoes": 3140,
+          "cliques": 54,
+          "pedidos": 1,
+          "faturamento": 113.92
+        },
+        "k3": {
+          "investimento": 20.59,
+          "impressoes": 1306,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.66,
+          "impressoes": 1667,
+          "cliques": 35,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.97,
+          "impressoes": 1305,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 18.87,
+          "impressoes": 1112,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-11",
+      "criativos": {
+        "k1": {
+          "investimento": 45.04,
+          "impressoes": 2922,
+          "cliques": 60,
+          "pedidos": 2,
+          "faturamento": 204.31
+        },
+        "k2": {
+          "investimento": 41.49,
+          "impressoes": 2834,
+          "cliques": 41,
+          "pedidos": 2,
+          "faturamento": 204.31
+        },
+        "k3": {
+          "investimento": 24.96,
+          "impressoes": 1395,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 27.63,
+          "impressoes": 1788,
+          "cliques": 31,
+          "pedidos": 1,
+          "faturamento": 102.15
+        },
+        "k5": {
+          "investimento": 24.81,
+          "impressoes": 1678,
+          "cliques": 29,
+          "pedidos": 1,
+          "faturamento": 102.15
+        },
+        "k6": {
+          "investimento": 19.96,
+          "impressoes": 1219,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-12",
+      "criativos": {
+        "k1": {
+          "investimento": 34.93,
+          "impressoes": 2256,
+          "cliques": 45,
+          "pedidos": 1,
+          "faturamento": 110.87
+        },
+        "k2": {
+          "investimento": 55.91,
+          "impressoes": 3097,
+          "cliques": 52,
+          "pedidos": 3,
+          "faturamento": 332.6
+        },
+        "k3": {
+          "investimento": 22.17,
+          "impressoes": 1442,
+          "cliques": 31,
+          "pedidos": 1,
+          "faturamento": 110.87
+        },
+        "k4": {
+          "investimento": 28.93,
+          "impressoes": 2150,
+          "cliques": 31,
+          "pedidos": 1,
+          "faturamento": 110.87
+        },
+        "k5": {
+          "investimento": 19.63,
+          "impressoes": 1138,
+          "cliques": 16,
+          "pedidos": 1,
+          "faturamento": 110.87
+        },
+        "k6": {
+          "investimento": 22.2,
+          "impressoes": 1382,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-13",
+      "criativos": {
+        "k1": {
+          "investimento": 14.23,
+          "impressoes": 867,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 16.55,
+          "impressoes": 1000,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.51,
+          "impressoes": 559,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.19,
+          "impressoes": 612,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.78,
+          "impressoes": 395,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.72,
+          "impressoes": 329,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-14",
+      "criativos": {
+        "k1": {
+          "investimento": 16.47,
+          "impressoes": 1123,
+          "cliques": 16,
+          "pedidos": 1,
+          "faturamento": 107.45
+        },
+        "k2": {
+          "investimento": 16.2,
+          "impressoes": 1074,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.27,
+          "impressoes": 489,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 7.95,
+          "impressoes": 538,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.96,
+          "impressoes": 433,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.55,
+          "impressoes": 492,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-15",
+      "criativos": {
+        "k1": {
+          "investimento": 14.47,
+          "impressoes": 1041,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 14.35,
+          "impressoes": 1011,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.08,
+          "impressoes": 586,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.93,
+          "impressoes": 506,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.62,
+          "impressoes": 377,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.11,
+          "impressoes": 399,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-16",
+      "criativos": {
+        "k1": {
+          "investimento": 12.5,
+          "impressoes": 745,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 14.06,
+          "impressoes": 908,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 101.4
+        },
+        "k3": {
+          "investimento": 9.66,
+          "impressoes": 572,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.32,
+          "impressoes": 597,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.92,
+          "impressoes": 386,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.54,
+          "impressoes": 478,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-17",
+      "criativos": {
+        "k1": {
+          "investimento": 35.57,
+          "impressoes": 2488,
+          "cliques": 38,
+          "pedidos": 2,
+          "faturamento": 232.02
+        },
+        "k2": {
+          "investimento": 59.35,
+          "impressoes": 3951,
+          "cliques": 53,
+          "pedidos": 2,
+          "faturamento": 232.02
+        },
+        "k3": {
+          "investimento": 20.64,
+          "impressoes": 1246,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 28.47,
+          "impressoes": 1596,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 17.36,
+          "impressoes": 1038,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 18.04,
+          "impressoes": 1086,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-18",
+      "criativos": {
+        "k1": {
+          "investimento": 41.0,
+          "impressoes": 2520,
+          "cliques": 33,
+          "pedidos": 2,
+          "faturamento": 230.77
+        },
+        "k2": {
+          "investimento": 43.85,
+          "impressoes": 2517,
+          "cliques": 31,
+          "pedidos": 2,
+          "faturamento": 230.77
+        },
+        "k3": {
+          "investimento": 21.69,
+          "impressoes": 1215,
+          "cliques": 23,
+          "pedidos": 1,
+          "faturamento": 115.38
+        },
+        "k4": {
+          "investimento": 31.44,
+          "impressoes": 2301,
+          "cliques": 49,
+          "pedidos": 1,
+          "faturamento": 115.38
+        },
+        "k5": {
+          "investimento": 22.42,
+          "impressoes": 1434,
+          "cliques": 29,
+          "pedidos": 1,
+          "faturamento": 115.38
+        },
+        "k6": {
+          "investimento": 24.39,
+          "impressoes": 1558,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-19",
+      "criativos": {
+        "k1": {
+          "investimento": 47.17,
+          "impressoes": 3339,
+          "cliques": 52,
+          "pedidos": 2,
+          "faturamento": 230.92
+        },
+        "k2": {
+          "investimento": 56.8,
+          "impressoes": 3925,
+          "cliques": 78,
+          "pedidos": 1,
+          "faturamento": 115.46
+        },
+        "k3": {
+          "investimento": 29.92,
+          "impressoes": 1900,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 28.75,
+          "impressoes": 1915,
+          "cliques": 38,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.22,
+          "impressoes": 1338,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 20.23,
+          "impressoes": 1316,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-20",
+      "criativos": {
+        "k1": {
+          "investimento": 14.49,
+          "impressoes": 924,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 14.05,
+          "impressoes": 945,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.46,
+          "impressoes": 629,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.26,
+          "impressoes": 624,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.09,
+          "impressoes": 396,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.5,
+          "impressoes": 384,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-21",
+      "criativos": {
+        "k1": {
+          "investimento": 12.03,
+          "impressoes": 898,
+          "cliques": 13,
+          "pedidos": 1,
+          "faturamento": 87.5
+        },
+        "k2": {
+          "investimento": 18.04,
+          "impressoes": 1153,
+          "cliques": 22,
+          "pedidos": 1,
+          "faturamento": 87.5
+        },
+        "k3": {
+          "investimento": 9.08,
+          "impressoes": 538,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.58,
+          "impressoes": 695,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.89,
+          "impressoes": 482,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.03,
+          "impressoes": 376,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-22",
+      "criativos": {
+        "k1": {
+          "investimento": 14.81,
+          "impressoes": 867,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 90.22
+        },
+        "k2": {
+          "investimento": 14.83,
+          "impressoes": 1107,
+          "cliques": 22,
+          "pedidos": 1,
+          "faturamento": 90.22
+        },
+        "k3": {
+          "investimento": 9.79,
+          "impressoes": 734,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.18,
+          "impressoes": 588,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.76,
+          "impressoes": 468,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.12,
+          "impressoes": 454,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-23",
+      "criativos": {
+        "k1": {
+          "investimento": 12.86,
+          "impressoes": 836,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 133.5
+        },
+        "k2": {
+          "investimento": 18.98,
+          "impressoes": 1343,
+          "cliques": 25,
+          "pedidos": 1,
+          "faturamento": 133.5
+        },
+        "k3": {
+          "investimento": 6.9,
+          "impressoes": 482,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.08,
+          "impressoes": 559,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.82,
+          "impressoes": 393,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.97,
+          "impressoes": 459,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-24",
+      "criativos": {
+        "k1": {
+          "investimento": 47.86,
+          "impressoes": 2925,
+          "cliques": 64,
+          "pedidos": 3,
+          "faturamento": 338.26
+        },
+        "k2": {
+          "investimento": 48.34,
+          "impressoes": 3413,
+          "cliques": 68,
+          "pedidos": 3,
+          "faturamento": 338.26
+        },
+        "k3": {
+          "investimento": 27.31,
+          "impressoes": 1910,
+          "cliques": 41,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 30.64,
+          "impressoes": 2121,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 21.92,
+          "impressoes": 1308,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 20.01,
+          "impressoes": 1330,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-25",
+      "criativos": {
+        "k1": {
+          "investimento": 38.12,
+          "impressoes": 2573,
+          "cliques": 53,
+          "pedidos": 2,
+          "faturamento": 236.71
+        },
+        "k2": {
+          "investimento": 50.73,
+          "impressoes": 3090,
+          "cliques": 55,
+          "pedidos": 3,
+          "faturamento": 355.06
+        },
+        "k3": {
+          "investimento": 25.73,
+          "impressoes": 1431,
+          "cliques": 22,
+          "pedidos": 1,
+          "faturamento": 118.35
+        },
+        "k4": {
+          "investimento": 25.12,
+          "impressoes": 1859,
+          "cliques": 30,
+          "pedidos": 1,
+          "faturamento": 118.35
+        },
+        "k5": {
+          "investimento": 18.19,
+          "impressoes": 1136,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 118.35
+        },
+        "k6": {
+          "investimento": 23.83,
+          "impressoes": 1323,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-26",
+      "criativos": {
+        "k1": {
+          "investimento": 38.71,
+          "impressoes": 2764,
+          "cliques": 57,
+          "pedidos": 2,
+          "faturamento": 182.68
+        },
+        "k2": {
+          "investimento": 50.53,
+          "impressoes": 2939,
+          "cliques": 61,
+          "pedidos": 3,
+          "faturamento": 274.01
+        },
+        "k3": {
+          "investimento": 25.63,
+          "impressoes": 1561,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 91.34
+        },
+        "k4": {
+          "investimento": 28.76,
+          "impressoes": 1686,
+          "cliques": 25,
+          "pedidos": 1,
+          "faturamento": 91.34
+        },
+        "k5": {
+          "investimento": 19.52,
+          "impressoes": 1167,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.25,
+          "impressoes": 1426,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-27",
+      "criativos": {
+        "k1": {
+          "investimento": 11.73,
+          "impressoes": 821,
+          "cliques": 14,
+          "pedidos": 1,
+          "faturamento": 81.05
+        },
+        "k2": {
+          "investimento": 19.27,
+          "impressoes": 1279,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.82,
+          "impressoes": 565,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.55,
+          "impressoes": 630,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.33,
+          "impressoes": 355,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.95,
+          "impressoes": 369,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-28",
+      "criativos": {
+        "k1": {
+          "investimento": 13.76,
+          "impressoes": 936,
+          "cliques": 12,
+          "pedidos": 1,
+          "faturamento": 97.2
+        },
+        "k2": {
+          "investimento": 18.2,
+          "impressoes": 1038,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.11,
+          "impressoes": 598,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.01,
+          "impressoes": 669,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.8,
+          "impressoes": 420,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.44,
+          "impressoes": 473,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-29",
+      "criativos": {
+        "k1": {
+          "investimento": 12.78,
+          "impressoes": 937,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 17.06,
+          "impressoes": 984,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 9.92,
+          "impressoes": 633,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 7.84,
+          "impressoes": 469,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 7.71,
+          "impressoes": 567,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 6.02,
+          "impressoes": 434,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-07-30",
+      "criativos": {
+        "k1": {
+          "investimento": 14.43,
+          "impressoes": 1073,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 19.06,
+          "impressoes": 1137,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 117.44
+        },
+        "k3": {
+          "investimento": 9.35,
+          "impressoes": 687,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.34,
+          "impressoes": 563,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.45,
+          "impressoes": 459,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 8.32,
+          "impressoes": 575,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-07-31",
+      "criativos": {
+        "k1": {
+          "investimento": 33.75,
+          "impressoes": 2179,
+          "cliques": 44,
+          "pedidos": 1,
+          "faturamento": 128.72
+        },
+        "k2": {
+          "investimento": 51.75,
+          "impressoes": 2875,
+          "cliques": 49,
+          "pedidos": 3,
+          "faturamento": 386.17
+        },
+        "k3": {
+          "investimento": 24.89,
+          "impressoes": 1413,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 31.22,
+          "impressoes": 2121,
+          "cliques": 35,
+          "pedidos": 1,
+          "faturamento": 128.72
+        },
+        "k5": {
+          "investimento": 23.9,
+          "impressoes": 1760,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.33,
+          "impressoes": 1381,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-01",
+      "criativos": {
+        "k1": {
+          "investimento": 37.25,
+          "impressoes": 2370,
+          "cliques": 38,
+          "pedidos": 2,
+          "faturamento": 236.34
+        },
+        "k2": {
+          "investimento": 54.68,
+          "impressoes": 3600,
+          "cliques": 76,
+          "pedidos": 3,
+          "faturamento": 354.5
+        },
+        "k3": {
+          "investimento": 22.26,
+          "impressoes": 1331,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 28.24,
+          "impressoes": 1715,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 118.17
+        },
+        "k5": {
+          "investimento": 24.52,
+          "impressoes": 1735,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 23.19,
+          "impressoes": 1542,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-02",
+      "criativos": {
+        "k1": {
+          "investimento": 41.23,
+          "impressoes": 2974,
+          "cliques": 48,
+          "pedidos": 1,
+          "faturamento": 106.96
+        },
+        "k2": {
+          "investimento": 59.42,
+          "impressoes": 3652,
+          "cliques": 67,
+          "pedidos": 3,
+          "faturamento": 320.89
+        },
+        "k3": {
+          "investimento": 20.44,
+          "impressoes": 1420,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 26.24,
+          "impressoes": 1637,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 19.56,
+          "impressoes": 1303,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 23.11,
+          "impressoes": 1708,
+          "cliques": 36,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-03",
+      "criativos": {
+        "k1": {
+          "investimento": 15.22,
+          "impressoes": 1085,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 13.6,
+          "impressoes": 979,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 10.02,
+          "impressoes": 614,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 7.85,
+          "impressoes": 466,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.53,
+          "impressoes": 429,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.55,
+          "impressoes": 512,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-04",
+      "criativos": {
+        "k1": {
+          "investimento": 15.18,
+          "impressoes": 951,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 89.23
+        },
+        "k2": {
+          "investimento": 18.53,
+          "impressoes": 1147,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 6.77,
+          "impressoes": 379,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.91,
+          "impressoes": 636,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.09,
+          "impressoes": 426,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.68,
+          "impressoes": 543,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-05",
+      "criativos": {
+        "k1": {
+          "investimento": 12.52,
+          "impressoes": 733,
+          "cliques": 14,
+          "pedidos": 1,
+          "faturamento": 104.27
+        },
+        "k2": {
+          "investimento": 19.73,
+          "impressoes": 1219,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.34,
+          "impressoes": 561,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.05,
+          "impressoes": 627,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.0,
+          "impressoes": 449,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.56,
+          "impressoes": 414,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-06",
+      "criativos": {
+        "k1": {
+          "investimento": 12.28,
+          "impressoes": 843,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 116.13
+        },
+        "k2": {
+          "investimento": 14.3,
+          "impressoes": 913,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.13,
+          "impressoes": 633,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.16,
+          "impressoes": 685,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.28,
+          "impressoes": 359,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.39,
+          "impressoes": 440,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-07",
+      "criativos": {
+        "k1": {
+          "investimento": 43.42,
+          "impressoes": 2486,
+          "cliques": 41,
+          "pedidos": 3,
+          "faturamento": 238.68
+        },
+        "k2": {
+          "investimento": 59.16,
+          "impressoes": 4195,
+          "cliques": 70,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 23.99,
+          "impressoes": 1534,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 24.66,
+          "impressoes": 1633,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.82,
+          "impressoes": 1335,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 22.48,
+          "impressoes": 1422,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-08",
+      "criativos": {
+        "k1": {
+          "investimento": 35.9,
+          "impressoes": 2596,
+          "cliques": 44,
+          "pedidos": 2,
+          "faturamento": 215.14
+        },
+        "k2": {
+          "investimento": 46.12,
+          "impressoes": 2624,
+          "cliques": 47,
+          "pedidos": 3,
+          "faturamento": 322.71
+        },
+        "k3": {
+          "investimento": 21.77,
+          "impressoes": 1360,
+          "cliques": 24,
+          "pedidos": 1,
+          "faturamento": 107.57
+        },
+        "k4": {
+          "investimento": 26.3,
+          "impressoes": 1681,
+          "cliques": 34,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 21.03,
+          "impressoes": 1365,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 18.0,
+          "impressoes": 1072,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-09",
+      "criativos": {
+        "k1": {
+          "investimento": 34.79,
+          "impressoes": 1995,
+          "cliques": 28,
+          "pedidos": 2,
+          "faturamento": 201.84
+        },
+        "k2": {
+          "investimento": 59.83,
+          "impressoes": 4343,
+          "cliques": 72,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 26.0,
+          "impressoes": 1701,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 34.57,
+          "impressoes": 1989,
+          "cliques": 39,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 19.53,
+          "impressoes": 1156,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 24.63,
+          "impressoes": 1454,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-10",
+      "criativos": {
+        "k1": {
+          "investimento": 16.55,
+          "impressoes": 1157,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.92,
+          "impressoes": 991,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 122.62
+        },
+        "k3": {
+          "investimento": 6.8,
+          "impressoes": 505,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.76,
+          "impressoes": 668,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.38,
+          "impressoes": 498,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.04,
+          "impressoes": 433,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-11",
+      "criativos": {
+        "k1": {
+          "investimento": 14.4,
+          "impressoes": 1013,
+          "cliques": 21,
+          "pedidos": 1,
+          "faturamento": 116.63
+        },
+        "k2": {
+          "investimento": 15.37,
+          "impressoes": 1119,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 6.96,
+          "impressoes": 444,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.2,
+          "impressoes": 793,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.86,
+          "impressoes": 426,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 8.06,
+          "impressoes": 529,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-12",
+      "criativos": {
+        "k1": {
+          "investimento": 13.42,
+          "impressoes": 798,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 91.8
+        },
+        "k2": {
+          "investimento": 18.07,
+          "impressoes": 1181,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.63,
+          "impressoes": 503,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.33,
+          "impressoes": 570,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.09,
+          "impressoes": 456,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.57,
+          "impressoes": 449,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-13",
+      "criativos": {
+        "k1": {
+          "investimento": 12.32,
+          "impressoes": 753,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 20.03,
+          "impressoes": 1184,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.5,
+          "impressoes": 419,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.74,
+          "impressoes": 644,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.9,
+          "impressoes": 388,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.85,
+          "impressoes": 403,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-14",
+      "criativos": {
+        "k1": {
+          "investimento": 35.7,
+          "impressoes": 2596,
+          "cliques": 45,
+          "pedidos": 2,
+          "faturamento": 173.68
+        },
+        "k2": {
+          "investimento": 48.8,
+          "impressoes": 2917,
+          "cliques": 45,
+          "pedidos": 1,
+          "faturamento": 86.84
+        },
+        "k3": {
+          "investimento": 23.58,
+          "impressoes": 1513,
+          "cliques": 33,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 34.84,
+          "impressoes": 2241,
+          "cliques": 46,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.71,
+          "impressoes": 1142,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.67,
+          "impressoes": 1534,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-15",
+      "criativos": {
+        "k1": {
+          "investimento": 45.93,
+          "impressoes": 3024,
+          "cliques": 58,
+          "pedidos": 1,
+          "faturamento": 97.02
+        },
+        "k2": {
+          "investimento": 60.33,
+          "impressoes": 4204,
+          "cliques": 77,
+          "pedidos": 2,
+          "faturamento": 194.04
+        },
+        "k3": {
+          "investimento": 21.78,
+          "impressoes": 1268,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 33.15,
+          "impressoes": 2144,
+          "cliques": 43,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.99,
+          "impressoes": 1384,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 18.03,
+          "impressoes": 1174,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-16",
+      "criativos": {
+        "k1": {
+          "investimento": 44.73,
+          "impressoes": 3042,
+          "cliques": 39,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 53.56,
+          "impressoes": 3838,
+          "cliques": 65,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 29.67,
+          "impressoes": 1901,
+          "cliques": 42,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.69,
+          "impressoes": 1691,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.59,
+          "impressoes": 1548,
+          "cliques": 29,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.62,
+          "impressoes": 1555,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-17",
+      "criativos": {
+        "k1": {
+          "investimento": 11.85,
+          "impressoes": 757,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 19.95,
+          "impressoes": 1470,
+          "cliques": 32,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.38,
+          "impressoes": 466,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.83,
+          "impressoes": 558,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.06,
+          "impressoes": 438,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.0,
+          "impressoes": 424,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-18",
+      "criativos": {
+        "k1": {
+          "investimento": 13.96,
+          "impressoes": 1034,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 16.07,
+          "impressoes": 1035,
+          "cliques": 20,
+          "pedidos": 1,
+          "faturamento": 98.45
+        },
+        "k3": {
+          "investimento": 8.94,
+          "impressoes": 666,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 7.91,
+          "impressoes": 542,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.71,
+          "impressoes": 440,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.78,
+          "impressoes": 504,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-19",
+      "criativos": {
+        "k1": {
+          "investimento": 14.37,
+          "impressoes": 951,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 14.53,
+          "impressoes": 997,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 9.83,
+          "impressoes": 549,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 8.48,
+          "impressoes": 534,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 6.91,
+          "impressoes": 482,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 6.76,
+          "impressoes": 408,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-08-20",
+      "criativos": {
+        "k1": {
+          "investimento": 13.65,
+          "impressoes": 952,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 110.71
+        },
+        "k2": {
+          "investimento": 18.12,
+          "impressoes": 1012,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.92,
+          "impressoes": 520,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.76,
+          "impressoes": 551,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.32,
+          "impressoes": 537,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.33,
+          "impressoes": 470,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-21",
+      "criativos": {
+        "k1": {
+          "investimento": 39.76,
+          "impressoes": 2306,
+          "cliques": 46,
+          "pedidos": 2,
+          "faturamento": 206.13
+        },
+        "k2": {
+          "investimento": 48.63,
+          "impressoes": 3263,
+          "cliques": 66,
+          "pedidos": 1,
+          "faturamento": 103.07
+        },
+        "k3": {
+          "investimento": 29.9,
+          "impressoes": 2186,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.06,
+          "impressoes": 1661,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 17.14,
+          "impressoes": 1146,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 22.6,
+          "impressoes": 1569,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-22",
+      "criativos": {
+        "k1": {
+          "investimento": 43.09,
+          "impressoes": 3146,
+          "cliques": 47,
+          "pedidos": 2,
+          "faturamento": 229.7
+        },
+        "k2": {
+          "investimento": 50.2,
+          "impressoes": 3138,
+          "cliques": 53,
+          "pedidos": 2,
+          "faturamento": 229.7
+        },
+        "k3": {
+          "investimento": 25.37,
+          "impressoes": 1513,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 32.25,
+          "impressoes": 2127,
+          "cliques": 46,
+          "pedidos": 1,
+          "faturamento": 114.85
+        },
+        "k5": {
+          "investimento": 24.07,
+          "impressoes": 1801,
+          "cliques": 31,
+          "pedidos": 1,
+          "faturamento": 114.85
+        },
+        "k6": {
+          "investimento": 18.95,
+          "impressoes": 1069,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-23",
+      "criativos": {
+        "k1": {
+          "investimento": 41.87,
+          "impressoes": 2491,
+          "cliques": 32,
+          "pedidos": 2,
+          "faturamento": 215.95
+        },
+        "k2": {
+          "investimento": 47.75,
+          "impressoes": 3440,
+          "cliques": 73,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 28.53,
+          "impressoes": 1968,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 30.6,
+          "impressoes": 1820,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 20.14,
+          "impressoes": 1399,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 23.93,
+          "impressoes": 1452,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-24",
+      "criativos": {
+        "k1": {
+          "investimento": 15.98,
+          "impressoes": 959,
+          "cliques": 18,
+          "pedidos": 1,
+          "faturamento": 63.5
+        },
+        "k2": {
+          "investimento": 17.77,
+          "impressoes": 1196,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.17,
+          "impressoes": 396,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.19,
+          "impressoes": 558,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.49,
+          "impressoes": 417,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.04,
+          "impressoes": 426,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-25",
+      "criativos": {
+        "k1": {
+          "investimento": 12.58,
+          "impressoes": 937,
+          "cliques": 13,
+          "pedidos": 1,
+          "faturamento": 100.18
+        },
+        "k2": {
+          "investimento": 14.56,
+          "impressoes": 892,
+          "cliques": 14,
+          "pedidos": 1,
+          "faturamento": 100.18
+        },
+        "k3": {
+          "investimento": 7.33,
+          "impressoes": 426,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.87,
+          "impressoes": 703,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.39,
+          "impressoes": 488,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.26,
+          "impressoes": 385,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-26",
+      "criativos": {
+        "k1": {
+          "investimento": 16.6,
+          "impressoes": 1086,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.95,
+          "impressoes": 1090,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.23,
+          "impressoes": 662,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.18,
+          "impressoes": 515,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.27,
+          "impressoes": 481,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.59,
+          "impressoes": 445,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-27",
+      "criativos": {
+        "k1": {
+          "investimento": 16.56,
+          "impressoes": 991,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.09,
+          "impressoes": 997,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.04,
+          "impressoes": 670,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.09,
+          "impressoes": 597,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.54,
+          "impressoes": 391,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.11,
+          "impressoes": 360,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-28",
+      "criativos": {
+        "k1": {
+          "investimento": 34.22,
+          "impressoes": 1951,
+          "cliques": 27,
+          "pedidos": 1,
+          "faturamento": 112.9
+        },
+        "k2": {
+          "investimento": 55.25,
+          "impressoes": 3358,
+          "cliques": 65,
+          "pedidos": 2,
+          "faturamento": 225.8
+        },
+        "k3": {
+          "investimento": 24.18,
+          "impressoes": 1560,
+          "cliques": 19,
+          "pedidos": 1,
+          "faturamento": 112.9
+        },
+        "k4": {
+          "investimento": 24.34,
+          "impressoes": 1558,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 20.69,
+          "impressoes": 1296,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 17.24,
+          "impressoes": 1238,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-29",
+      "criativos": {
+        "k1": {
+          "investimento": 36.13,
+          "impressoes": 2615,
+          "cliques": 38,
+          "pedidos": 2,
+          "faturamento": 225.34
+        },
+        "k2": {
+          "investimento": 50.37,
+          "impressoes": 3642,
+          "cliques": 77,
+          "pedidos": 2,
+          "faturamento": 225.34
+        },
+        "k3": {
+          "investimento": 21.31,
+          "impressoes": 1228,
+          "cliques": 15,
+          "pedidos": 1,
+          "faturamento": 112.67
+        },
+        "k4": {
+          "investimento": 28.05,
+          "impressoes": 1999,
+          "cliques": 29,
+          "pedidos": 1,
+          "faturamento": 112.67
+        },
+        "k5": {
+          "investimento": 17.95,
+          "impressoes": 1095,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 19.4,
+          "impressoes": 1295,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-30",
+      "criativos": {
+        "k1": {
+          "investimento": 48.44,
+          "impressoes": 2955,
+          "cliques": 54,
+          "pedidos": 2,
+          "faturamento": 224.73
+        },
+        "k2": {
+          "investimento": 46.33,
+          "impressoes": 2898,
+          "cliques": 41,
+          "pedidos": 2,
+          "faturamento": 224.73
+        },
+        "k3": {
+          "investimento": 24.8,
+          "impressoes": 1754,
+          "cliques": 23,
+          "pedidos": 1,
+          "faturamento": 112.37
+        },
+        "k4": {
+          "investimento": 33.61,
+          "impressoes": 2052,
+          "cliques": 38,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 20.87,
+          "impressoes": 1441,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 19.76,
+          "impressoes": 1099,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-31",
+      "criativos": {
+        "k1": {
+          "investimento": 13.4,
+          "impressoes": 823,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 13.57,
+          "impressoes": 895,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.26,
+          "impressoes": 456,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.24,
+          "impressoes": 555,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.06,
+          "impressoes": 391,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.5,
+          "impressoes": 426,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-01",
+      "criativos": {
+        "k1": {
+          "investimento": 15.9,
+          "impressoes": 1192,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 19.98,
+          "impressoes": 1206,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.99,
+          "impressoes": 527,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.3,
+          "impressoes": 612,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.83,
+          "impressoes": 504,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.71,
+          "impressoes": 565,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-02",
+      "criativos": {
+        "k1": {
+          "investimento": 16.22,
+          "impressoes": 1168,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 14.15,
+          "impressoes": 1001,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 7.93,
+          "impressoes": 593,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 10.93,
+          "impressoes": 783,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 7.11,
+          "impressoes": 427,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k6": {
+          "investimento": 7.18,
+          "impressoes": 527,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-09-03",
+      "criativos": {
+        "k1": {
+          "investimento": 12.1,
+          "impressoes": 737,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.56,
+          "impressoes": 1198,
+          "cliques": 15,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.86,
+          "impressoes": 506,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.75,
+          "impressoes": 722,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.8,
+          "impressoes": 483,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 5.81,
+          "impressoes": 374,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-04",
+      "criativos": {
+        "k1": {
+          "investimento": 35.53,
+          "impressoes": 2535,
+          "cliques": 52,
+          "pedidos": 2,
+          "faturamento": 200.4
+        },
+        "k2": {
+          "investimento": 42.91,
+          "impressoes": 3174,
+          "cliques": 59,
+          "pedidos": 1,
+          "faturamento": 100.2
+        },
+        "k3": {
+          "investimento": 24.02,
+          "impressoes": 1444,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 27.87,
+          "impressoes": 1805,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 17.76,
+          "impressoes": 1033,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 19.28,
+          "impressoes": 1374,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-05",
+      "criativos": {
+        "k1": {
+          "investimento": 37.35,
+          "impressoes": 2063,
+          "cliques": 32,
+          "pedidos": 1,
+          "faturamento": 108.2
+        },
+        "k2": {
+          "investimento": 55.72,
+          "impressoes": 3701,
+          "cliques": 54,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 25.31,
+          "impressoes": 1619,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.24,
+          "impressoes": 1419,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.54,
+          "impressoes": 1323,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 22.67,
+          "impressoes": 1401,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-06",
+      "criativos": {
+        "k1": {
+          "investimento": 35.26,
+          "impressoes": 2144,
+          "cliques": 37,
+          "pedidos": 1,
+          "faturamento": 74.9
+        },
+        "k2": {
+          "investimento": 49.67,
+          "impressoes": 2973,
+          "cliques": 64,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 28.89,
+          "impressoes": 2005,
+          "cliques": 36,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 31.54,
+          "impressoes": 2172,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 19.41,
+          "impressoes": 1211,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 21.38,
+          "impressoes": 1266,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-07",
+      "criativos": {
+        "k1": {
+          "investimento": 15.28,
+          "impressoes": 1018,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.28,
+          "impressoes": 1188,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.66,
+          "impressoes": 512,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.87,
+          "impressoes": 569,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 8.2,
+          "impressoes": 473,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.91,
+          "impressoes": 501,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-08",
+      "criativos": {
+        "k1": {
+          "investimento": 14.32,
+          "impressoes": 1036,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 18.43,
+          "impressoes": 1087,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 6.9,
+          "impressoes": 443,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.53,
+          "impressoes": 638,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.19,
+          "impressoes": 450,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.15,
+          "impressoes": 487,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-09",
+      "criativos": {
+        "k1": {
+          "investimento": 12.35,
+          "impressoes": 810,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 13.73,
+          "impressoes": 867,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.09,
+          "impressoes": 678,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.81,
+          "impressoes": 561,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.52,
+          "impressoes": 463,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 7.04,
+          "impressoes": 486,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-10",
+      "criativos": {
+        "k1": {
+          "investimento": 12.28,
+          "impressoes": 761,
+          "cliques": 12,
+          "pedidos": 1,
+          "faturamento": 162.0
+        },
+        "k2": {
+          "investimento": 14.66,
+          "impressoes": 1081,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.52,
+          "impressoes": 489,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.33,
+          "impressoes": 636,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.59,
+          "impressoes": 444,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 6.43,
+          "impressoes": 416,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-11",
+      "criativos": {
+        "k1": {
+          "investimento": 48.49,
+          "impressoes": 3398,
+          "cliques": 49,
+          "pedidos": 3,
+          "faturamento": 400.7
+        },
+        "k2": {
+          "investimento": 56.44,
+          "impressoes": 4046,
+          "cliques": 67,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 27.68,
+          "impressoes": 1941,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 29.32,
+          "impressoes": 2121,
+          "cliques": 42,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 23.01,
+          "impressoes": 1656,
+          "cliques": 28,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 17.78,
+          "impressoes": 1004,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-12",
+      "criativos": {
+        "k1": {
+          "investimento": 48.79,
+          "impressoes": 2987,
+          "cliques": 66,
+          "pedidos": 3,
+          "faturamento": 424.82
+        },
+        "k2": {
+          "investimento": 40.74,
+          "impressoes": 2944,
+          "cliques": 37,
+          "pedidos": 3,
+          "faturamento": 424.82
+        },
+        "k3": {
+          "investimento": 22.56,
+          "impressoes": 1410,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.48,
+          "impressoes": 1622,
+          "cliques": 33,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 19.95,
+          "impressoes": 1212,
+          "cliques": 18,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k6": {
+          "investimento": 17.96,
+          "impressoes": 1197,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-13",
+      "criativos": {
+        "k1": {
+          "investimento": 37.0,
+          "impressoes": 2243,
+          "cliques": 37,
+          "pedidos": 1,
+          "faturamento": 124.3
+        },
+        "k2": {
+          "investimento": 55.79,
+          "impressoes": 3992,
+          "cliques": 74,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 20.91,
+          "impressoes": 1499,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 24.19,
+          "impressoes": 1406,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 22.28,
+          "impressoes": 1393,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-14",
+      "criativos": {
+        "k1": {
+          "investimento": 11.47,
+          "impressoes": 681,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 20.03,
+          "impressoes": 1319,
+          "cliques": 21,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 7.8,
+          "impressoes": 582,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 10.55,
+          "impressoes": 697,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 8.05,
+          "impressoes": 450,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-09-15",
+      "criativos": {
+        "k1": {
+          "investimento": 14.88,
+          "impressoes": 1045,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 17.92,
+          "impressoes": 1179,
+          "cliques": 16,
+          "pedidos": 1,
+          "faturamento": 159.3
+        },
+        "k3": {
+          "investimento": 10.04,
+          "impressoes": 654,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.71,
+          "impressoes": 647,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.82,
+          "impressoes": 399,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-16",
+      "criativos": {
+        "k1": {
+          "investimento": 16.07,
+          "impressoes": 1199,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 98.3
+        },
+        "k2": {
+          "investimento": 14.0,
+          "impressoes": 804,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 8.28,
+          "impressoes": 462,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.73,
+          "impressoes": 551,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.91,
+          "impressoes": 386,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-17",
+      "criativos": {
+        "k1": {
+          "investimento": 14.48,
+          "impressoes": 957,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 13.86,
+          "impressoes": 795,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 6.77,
+          "impressoes": 438,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.49,
+          "impressoes": 699,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.34,
+          "impressoes": 435,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-18",
+      "criativos": {
+        "k1": {
+          "investimento": 43.77,
+          "impressoes": 2871,
+          "cliques": 38,
+          "pedidos": 1,
+          "faturamento": 100.55
+        },
+        "k2": {
+          "investimento": 52.21,
+          "impressoes": 2968,
+          "cliques": 47,
+          "pedidos": 2,
+          "faturamento": 201.1
+        },
+        "k3": {
+          "investimento": 29.49,
+          "impressoes": 2088,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 32.15,
+          "impressoes": 1839,
+          "cliques": 30,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.35,
+          "impressoes": 1270,
+          "cliques": 25,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-19",
+      "criativos": {
+        "k1": {
+          "investimento": 44.14,
+          "impressoes": 2510,
+          "cliques": 42,
+          "pedidos": 2,
+          "faturamento": 206.5
+        },
+        "k2": {
+          "investimento": 52.62,
+          "impressoes": 3449,
+          "cliques": 67,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 26.22,
+          "impressoes": 1632,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 25.22,
+          "impressoes": 1624,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 25.03,
+          "impressoes": 1498,
+          "cliques": 24,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-20",
+      "criativos": {
+        "k1": {
+          "investimento": 41.96,
+          "impressoes": 2319,
+          "cliques": 37,
+          "pedidos": 2,
+          "faturamento": 209.45
+        },
+        "k2": {
+          "investimento": 49.09,
+          "impressoes": 3162,
+          "cliques": 65,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 27.93,
+          "impressoes": 1656,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 26.92,
+          "impressoes": 1570,
+          "cliques": 33,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 19.79,
+          "impressoes": 1455,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-21",
+      "criativos": {
+        "k1": {
+          "investimento": 14.93,
+          "impressoes": 1095,
+          "cliques": 17,
+          "pedidos": 1,
+          "faturamento": 112.13
+        },
+        "k2": {
+          "investimento": 14.7,
+          "impressoes": 1102,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.09,
+          "impressoes": 484,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 10.99,
+          "impressoes": 702,
+          "cliques": 12,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.11,
+          "impressoes": 431,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-22",
+      "criativos": {
+        "k1": {
+          "investimento": 11.68,
+          "impressoes": 816,
+          "cliques": 11,
+          "pedidos": 1,
+          "faturamento": 119.8
+        },
+        "k2": {
+          "investimento": 13.69,
+          "impressoes": 1021,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.73,
+          "impressoes": 539,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 11.0,
+          "impressoes": 663,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.03,
+          "impressoes": 389,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-23",
+      "criativos": {
+        "k1": {
+          "investimento": 15.28,
+          "impressoes": 1061,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 17.2,
+          "impressoes": 1223,
+          "cliques": 16,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 9.06,
+          "impressoes": 509,
+          "cliques": 7,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 10.57,
+          "impressoes": 626,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 5.96,
+          "impressoes": 381,
+          "cliques": 5,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-09-24",
+      "criativos": {
+        "k1": {
+          "investimento": 14.06,
+          "impressoes": 794,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 15.02,
+          "impressoes": 1026,
+          "cliques": 14,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.13,
+          "impressoes": 495,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.11,
+          "impressoes": 506,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 6.61,
+          "impressoes": 401,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-25",
+      "criativos": {
+        "k1": {
+          "investimento": 49.12,
+          "impressoes": 3626,
+          "cliques": 65,
+          "pedidos": 1,
+          "faturamento": 92.09
+        },
+        "k2": {
+          "investimento": 45.6,
+          "impressoes": 2713,
+          "cliques": 55,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 21.67,
+          "impressoes": 1545,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 23.6,
+          "impressoes": 1541,
+          "cliques": 27,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 25.16,
+          "impressoes": 1462,
+          "cliques": 31,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-26",
+      "criativos": {
+        "k1": {
+          "investimento": 41.8,
+          "impressoes": 2434,
+          "cliques": 41,
+          "pedidos": 1,
+          "faturamento": 171.2
+        },
+        "k2": {
+          "investimento": 55.39,
+          "impressoes": 3051,
+          "cliques": 66,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 27.75,
+          "impressoes": 2065,
+          "cliques": 40,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 31.79,
+          "impressoes": 2359,
+          "cliques": 39,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 21.07,
+          "impressoes": 1393,
+          "cliques": 23,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-27",
+      "criativos": {
+        "k1": {
+          "investimento": 41.96,
+          "impressoes": 2417,
+          "cliques": 35,
+          "pedidos": 1,
+          "faturamento": 105.2
+        },
+        "k2": {
+          "investimento": 48.37,
+          "impressoes": 2681,
+          "cliques": 54,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 20.48,
+          "impressoes": 1348,
+          "cliques": 19,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 34.63,
+          "impressoes": 2540,
+          "cliques": 55,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 18.21,
+          "impressoes": 1193,
+          "cliques": 26,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "criativos": {
+        "k1": {
+          "investimento": 14.1,
+          "impressoes": 927,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k2": {
+          "investimento": 14.5,
+          "impressoes": 896,
+          "cliques": 13,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k3": {
+          "investimento": 8.86,
+          "impressoes": 519,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k4": {
+          "investimento": 9.0,
+          "impressoes": 574,
+          "cliques": 9,
+          "pedidos": 0,
+          "faturamento": 0
+        },
+        "k5": {
+          "investimento": 6.4,
+          "impressoes": 410,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0
+        }
+      }
+    },
+    {
+      "data": "2026-09-29",
+      "criativos": {
+        "k1": {
+          "investimento": 14.54,
+          "impressoes": 919,
+          "cliques": 12,
+          "pedidos": 1,
+          "faturamento": 116.47
+        },
+        "k2": {
+          "investimento": 16.36,
+          "impressoes": 1073,
+          "cliques": 20,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 7.88,
+          "impressoes": 435,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 9.46,
+          "impressoes": 535,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 7.4,
+          "impressoes": 523,
+          "cliques": 10,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-30",
+      "criativos": {
+        "k1": {
+          "investimento": 15.87,
+          "impressoes": 1159,
+          "cliques": 22,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k2": {
+          "investimento": 14.01,
+          "impressoes": 839,
+          "cliques": 17,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k3": {
+          "investimento": 9.62,
+          "impressoes": 684,
+          "cliques": 11,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k4": {
+          "investimento": 8.2,
+          "impressoes": 601,
+          "cliques": 8,
+          "pedidos": 0,
+          "faturamento": 0.0
+        },
+        "k5": {
+          "investimento": 5.93,
+          "impressoes": 405,
+          "cliques": 6,
+          "pedidos": 0,
+          "faturamento": 0.0
+        }
+      }
+    }
+  ],
+  "alcance": {
+    "ontem": {
+      "atual": 2140,
+      "anterior": 2380
+    },
+    "7d": {
+      "atual": 11850,
+      "anterior": 10920
+    },
+    "30d": {
+      "atual": 31400,
+      "anterior": 28750
+    },
+    "mes": {
+      "atual": 11850,
+      "anterior": 12300
+    }
+  }
+}

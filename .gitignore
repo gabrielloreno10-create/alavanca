@@ -1,0 +1,42 @@
+# Alavanca — ignorados na raiz.
+# Cada pasta (db/, worker/, painel/) tem o seu .gitignore. Este existe para
+# garantir que um .env criado em QUALQUER lugar do repositorio nunca va para o
+# git, inclusive numa pasta nova que ainda nao tenha .gitignore proprio.
+
+# Segredos: nunca, em lugar nenhum.
+.env
+.env.*
+**/.env
+**/.env.*
+# O modelo vai para o git: so nomes de variaveis, nunca valor.
+!.env.example
+!**/.env.example
+
+# Dumps e backups de banco.
+*.dump
+*.sql.gz
+*.backup
+
+# Caches de linguagem.
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+.next/
+
+# Sistema operacional / editor.
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Banco local de desenvolvimento (db/dev): cluster, senhas e log do servidor.
+db/dev/cluster/
+db/dev/postgres.log
+
+# Material de referencia entregue pelo Helio (pacote de 18/10): exports do n8n, scripts
+# do PDCA, amostras do banco, agentes. Nao e codigo do produto, nao entra em build nenhum
+# e carrega identificadores e decisoes operacionais do negocio dele. Fica so na maquina.
+referencia/

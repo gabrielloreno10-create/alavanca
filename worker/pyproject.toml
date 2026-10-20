@@ -1,0 +1,16 @@
+[project]
+name = "alavanca-worker"
+version = "0.1.0"
+description = "Importadores da plataforma Alavanca: leva dado de fonte para o Postgres."
+requires-python = ">=3.11"
+# Uma dependência só, de propósito. Nada de ORM: o modelo é SQL puro com
+# migrations versionadas (db/migrations), e o importador escreve SQL.
+dependencies = [
+  "psycopg[binary]>=3.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+py-modules = ["alavanca_db", "importar_le_tre", "seed_exemplo", "verificar"]

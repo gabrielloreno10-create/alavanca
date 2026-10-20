@@ -1,0 +1,3219 @@
+{
+  "origem": "REAL",
+  "cmvEstimado": true,
+  "dias": [
+    {
+      "data": "2026-05-01",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1606.51,
+          "pedidos": 19,
+          "cmv": 356.48
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1661.83,
+          "pedidos": 15,
+          "cmv": 368.76
+        }
+      },
+      "cmv": 725.24
+    },
+    {
+      "data": "2026-05-02",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2818.77,
+          "pedidos": 28,
+          "cmv": 625.49
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1033.33,
+          "pedidos": 10,
+          "cmv": 229.3
+        }
+      },
+      "cmv": 854.79
+    },
+    {
+      "data": "2026-05-03",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2067.56,
+          "pedidos": 22,
+          "cmv": 458.79
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 2009.0,
+          "pedidos": 17,
+          "cmv": 445.8
+        }
+      },
+      "cmv": 904.59
+    },
+    {
+      "data": "2026-05-04",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 0.0
+    },
+    {
+      "data": "2026-05-05",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 941.46,
+          "pedidos": 10,
+          "cmv": 208.91
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 207.8,
+          "pedidos": 2,
+          "cmv": 46.11
+        }
+      },
+      "cmv": 255.02
+    },
+    {
+      "data": "2026-05-06",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1068.67,
+          "pedidos": 11,
+          "cmv": 237.14
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 264.2,
+          "pedidos": 2,
+          "cmv": 58.63
+        }
+      },
+      "cmv": 295.77
+    },
+    {
+      "data": "2026-05-07",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 508.0,
+          "pedidos": 7,
+          "cmv": 112.73
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 251.6,
+          "pedidos": 2,
+          "cmv": 55.83
+        }
+      },
+      "cmv": 168.56
+    },
+    {
+      "data": "2026-05-08",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2934.38,
+          "pedidos": 28,
+          "cmv": 651.14
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 604.8,
+          "pedidos": 6,
+          "cmv": 134.21
+        }
+      },
+      "cmv": 785.35
+    },
+    {
+      "data": "2026-05-09",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1527.16,
+          "pedidos": 17,
+          "cmv": 338.88
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1103.18,
+          "pedidos": 8,
+          "cmv": 244.8
+        }
+      },
+      "cmv": 583.68
+    },
+    {
+      "data": "2026-05-10",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1448.45,
+          "pedidos": 13,
+          "cmv": 321.41
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1148.9,
+          "pedidos": 11,
+          "cmv": 254.94
+        }
+      },
+      "cmv": 576.35
+    },
+    {
+      "data": "2026-05-11",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 0.0
+    },
+    {
+      "data": "2026-05-12",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 485.44,
+          "pedidos": 7,
+          "cmv": 107.72
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 402.5,
+          "pedidos": 4,
+          "cmv": 89.31
+        }
+      },
+      "cmv": 197.03
+    },
+    {
+      "data": "2026-05-13",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 770.92,
+          "pedidos": 11,
+          "cmv": 171.07
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 125.2,
+          "pedidos": 1,
+          "cmv": 27.78
+        }
+      },
+      "cmv": 198.85
+    },
+    {
+      "data": "2026-05-14",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 841.36,
+          "pedidos": 11,
+          "cmv": 186.7
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 251.6,
+          "pedidos": 2,
+          "cmv": 55.83
+        }
+      },
+      "cmv": 242.53
+    },
+    {
+      "data": "2026-05-15",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2942.98,
+          "pedidos": 25,
+          "cmv": 653.05
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1714.47,
+          "pedidos": 17,
+          "cmv": 380.44
+        }
+      },
+      "cmv": 1033.49
+    },
+    {
+      "data": "2026-05-16",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2597.65,
+          "pedidos": 25,
+          "cmv": 576.42
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1334.14,
+          "pedidos": 11,
+          "cmv": 296.05
+        }
+      },
+      "cmv": 872.47
+    },
+    {
+      "data": "2026-05-17",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3022.95,
+          "pedidos": 25,
+          "cmv": 670.79
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1827.27,
+          "pedidos": 19,
+          "cmv": 405.47
+        }
+      },
+      "cmv": 1076.26
+    },
+    {
+      "data": "2026-05-18",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 0.0
+    },
+    {
+      "data": "2026-05-19",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 795.52,
+          "pedidos": 7,
+          "cmv": 176.53
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 493.5,
+          "pedidos": 5,
+          "cmv": 109.51
+        }
+      },
+      "cmv": 286.04
+    },
+    {
+      "data": "2026-05-20",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1160.04,
+          "pedidos": 10,
+          "cmv": 257.41
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 74.0,
+          "pedidos": 1,
+          "cmv": 16.42
+        }
+      },
+      "cmv": 273.83
+    },
+    {
+      "data": "2026-05-21",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 803.76,
+          "pedidos": 11,
+          "cmv": 178.35
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 246.0,
+          "pedidos": 3,
+          "cmv": 54.59
+        }
+      },
+      "cmv": 232.94
+    },
+    {
+      "data": "2026-05-22",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2005.35,
+          "pedidos": 23,
+          "cmv": 444.99
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1745.88,
+          "pedidos": 16,
+          "cmv": 387.41
+        }
+      },
+      "cmv": 832.4
+    },
+    {
+      "data": "2026-05-23",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2924.74,
+          "pedidos": 31,
+          "cmv": 649.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 999.59,
+          "pedidos": 9,
+          "cmv": 221.81
+        }
+      },
+      "cmv": 870.81
+    },
+    {
+      "data": "2026-05-24",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2369.36,
+          "pedidos": 24,
+          "cmv": 525.76
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1226.12,
+          "pedidos": 12,
+          "cmv": 272.08
+        }
+      },
+      "cmv": 797.84
+    },
+    {
+      "data": "2026-05-25",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 338.71,
+          "pedidos": 3,
+          "cmv": 75.16
+        }
+      },
+      "cmv": 75.16
+    },
+    {
+      "data": "2026-05-26",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 174.32,
+          "pedidos": 2,
+          "cmv": 38.68
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 99.9,
+          "pedidos": 1,
+          "cmv": 22.17
+        }
+      },
+      "cmv": 60.85
+    },
+    {
+      "data": "2026-05-27",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 437.57,
+          "pedidos": 5,
+          "cmv": 97.1
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 139.2,
+          "pedidos": 1,
+          "cmv": 30.89
+        }
+      },
+      "cmv": 127.99
+    },
+    {
+      "data": "2026-05-28",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2260.33,
+          "pedidos": 22,
+          "cmv": 501.57
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 456.2,
+          "pedidos": 3,
+          "cmv": 101.23
+        }
+      },
+      "cmv": 602.8
+    },
+    {
+      "data": "2026-05-29",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1829.11,
+          "pedidos": 21,
+          "cmv": 405.88
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 317.0,
+          "pedidos": 3,
+          "cmv": 70.34
+        }
+      },
+      "cmv": 476.22
+    },
+    {
+      "data": "2026-05-30",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2413.21,
+          "pedidos": 28,
+          "cmv": 535.49
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1078.09,
+          "pedidos": 13,
+          "cmv": 239.23
+        }
+      },
+      "cmv": 774.72
+    },
+    {
+      "data": "2026-05-31",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3492.69,
+          "pedidos": 33,
+          "cmv": 775.03
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 173.0,
+          "pedidos": 2,
+          "cmv": 38.39
+        }
+      },
+      "cmv": 813.42
+    },
+    {
+      "data": "2026-06-01",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 55.0,
+          "pedidos": 1,
+          "cmv": 12.2
+        }
+      },
+      "cmv": 12.2
+    },
+    {
+      "data": "2026-06-02",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1100.14,
+          "pedidos": 9,
+          "cmv": 244.12
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 388.66,
+          "pedidos": 4,
+          "cmv": 86.24
+        }
+      },
+      "cmv": 330.36
+    },
+    {
+      "data": "2026-06-03",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2778.26,
+          "pedidos": 26,
+          "cmv": 616.5
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 393.83,
+          "pedidos": 9,
+          "cmv": 87.39
+        },
+        "letre-site": {
+          "faturamento": 366.6,
+          "pedidos": 3,
+          "cmv": 81.35
+        }
+      },
+      "cmv": 785.24
+    },
+    {
+      "data": "2026-06-04",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3046.31,
+          "pedidos": 25,
+          "cmv": 675.98
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 504.88,
+          "pedidos": 4,
+          "cmv": 112.03
+        }
+      },
+      "cmv": 788.01
+    },
+    {
+      "data": "2026-06-05",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2736.79,
+          "pedidos": 26,
+          "cmv": 607.29
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 1101.64,
+          "pedidos": 10,
+          "cmv": 244.45
+        }
+      },
+      "cmv": 851.74
+    },
+    {
+      "data": "2026-06-06",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2236.88,
+          "pedidos": 22,
+          "cmv": 496.36
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 674.27,
+          "pedidos": 7,
+          "cmv": 149.62
+        }
+      },
+      "cmv": 645.98
+    },
+    {
+      "data": "2026-06-07",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3349.2,
+          "pedidos": 31,
+          "cmv": 743.19
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 848.48,
+          "pedidos": 8,
+          "cmv": 188.28
+        }
+      },
+      "cmv": 931.47
+    },
+    {
+      "data": "2026-06-08",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 927.47,
+          "pedidos": 10,
+          "cmv": 205.81
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 155.0,
+          "pedidos": 2,
+          "cmv": 34.39
+        }
+      },
+      "cmv": 240.2
+    },
+    {
+      "data": "2026-06-09",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 804.93,
+          "pedidos": 6,
+          "cmv": 178.61
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 188.89,
+          "pedidos": 3,
+          "cmv": 41.91
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 220.52
+    },
+    {
+      "data": "2026-06-10",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 871.08,
+          "pedidos": 12,
+          "cmv": 193.29
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 132.49,
+          "pedidos": 1,
+          "cmv": 29.4
+        },
+        "letre-site": {
+          "faturamento": 204.0,
+          "pedidos": 4,
+          "cmv": 45.27
+        }
+      },
+      "cmv": 267.96
+    },
+    {
+      "data": "2026-06-11",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2447.06,
+          "pedidos": 19,
+          "cmv": 543.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 93.58,
+          "pedidos": 1,
+          "cmv": 20.77
+        },
+        "letre-site": {
+          "faturamento": 313.6,
+          "pedidos": 3,
+          "cmv": 69.59
+        }
+      },
+      "cmv": 633.36
+    },
+    {
+      "data": "2026-06-12",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3791.44,
+          "pedidos": 32,
+          "cmv": 841.32
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 492.77,
+          "pedidos": 3,
+          "cmv": 109.35
+        },
+        "letre-site": {
+          "faturamento": 1000.74,
+          "pedidos": 8,
+          "cmv": 222.06
+        }
+      },
+      "cmv": 1172.73
+    },
+    {
+      "data": "2026-06-13",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 4210.42,
+          "pedidos": 37,
+          "cmv": 934.29
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 212.48,
+          "pedidos": 1,
+          "cmv": 47.15
+        },
+        "letre-site": {
+          "faturamento": 1165.08,
+          "pedidos": 12,
+          "cmv": 258.53
+        }
+      },
+      "cmv": 1239.97
+    },
+    {
+      "data": "2026-06-14",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3045.29,
+          "pedidos": 29,
+          "cmv": 675.75
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 378.64,
+          "pedidos": 3,
+          "cmv": 84.02
+        },
+        "letre-site": {
+          "faturamento": 1053.76,
+          "pedidos": 11,
+          "cmv": 233.83
+        }
+      },
+      "cmv": 993.6
+    },
+    {
+      "data": "2026-06-15",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1096.08,
+          "pedidos": 11,
+          "cmv": 243.22
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 64.0,
+          "pedidos": 1,
+          "cmv": 14.2
+        }
+      },
+      "cmv": 257.42
+    },
+    {
+      "data": "2026-06-16",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 818.39,
+          "pedidos": 9,
+          "cmv": 181.6
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 136.73,
+          "pedidos": 2,
+          "cmv": 30.34
+        },
+        "letre-site": {
+          "faturamento": 99.9,
+          "pedidos": 1,
+          "cmv": 22.17
+        }
+      },
+      "cmv": 234.11
+    },
+    {
+      "data": "2026-06-17",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 811.68,
+          "pedidos": 8,
+          "cmv": 180.11
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 113.0,
+          "pedidos": 2,
+          "cmv": 25.07
+        },
+        "letre-site": {
+          "faturamento": 367.54,
+          "pedidos": 4,
+          "cmv": 81.56
+        }
+      },
+      "cmv": 286.74
+    },
+    {
+      "data": "2026-06-18",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 963.07,
+          "pedidos": 11,
+          "cmv": 213.71
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 114.61,
+          "pedidos": 1,
+          "cmv": 25.43
+        },
+        "letre-site": {
+          "faturamento": 546.8,
+          "pedidos": 4,
+          "cmv": 121.33
+        }
+      },
+      "cmv": 360.47
+    },
+    {
+      "data": "2026-06-19",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 6242.25,
+          "pedidos": 46,
+          "cmv": 1385.16
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 117.2,
+          "pedidos": 1,
+          "cmv": 26.01
+        },
+        "letre-site": {
+          "faturamento": 417.4,
+          "pedidos": 5,
+          "cmv": 92.62
+        }
+      },
+      "cmv": 1503.79
+    },
+    {
+      "data": "2026-06-20",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3301.0,
+          "pedidos": 34,
+          "cmv": 732.49
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 422.12,
+          "pedidos": 4,
+          "cmv": 93.67
+        },
+        "letre-site": {
+          "faturamento": 1087.12,
+          "pedidos": 9,
+          "cmv": 241.23
+        }
+      },
+      "cmv": 1067.39
+    },
+    {
+      "data": "2026-06-21",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3502.76,
+          "pedidos": 27,
+          "cmv": 777.26
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 133.22,
+          "pedidos": 2,
+          "cmv": 29.56
+        },
+        "letre-site": {
+          "faturamento": 519.49,
+          "pedidos": 5,
+          "cmv": 115.27
+        }
+      },
+      "cmv": 922.09
+    },
+    {
+      "data": "2026-06-22",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 345.96,
+          "pedidos": 5,
+          "cmv": 76.77
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 171.2,
+          "pedidos": 1,
+          "cmv": 37.99
+        }
+      },
+      "cmv": 114.76
+    },
+    {
+      "data": "2026-06-23",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 496.58,
+          "pedidos": 6,
+          "cmv": 110.19
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 207.8,
+          "pedidos": 2,
+          "cmv": 46.11
+        }
+      },
+      "cmv": 156.3
+    },
+    {
+      "data": "2026-06-24",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3033.9,
+          "pedidos": 21,
+          "cmv": 673.22
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 104.82,
+          "pedidos": 1,
+          "cmv": 23.26
+        },
+        "letre-site": {
+          "faturamento": 567.6,
+          "pedidos": 4,
+          "cmv": 125.95
+        }
+      },
+      "cmv": 822.43
+    },
+    {
+      "data": "2026-06-25",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 969.22,
+          "pedidos": 9,
+          "cmv": 215.07
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 428.06,
+          "pedidos": 5,
+          "cmv": 94.99
+        },
+        "letre-site": {
+          "faturamento": 0.01,
+          "pedidos": 1,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 310.06
+    },
+    {
+      "data": "2026-06-26",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2180.01,
+          "pedidos": 19,
+          "cmv": 483.74
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 703.47,
+          "pedidos": 16,
+          "cmv": 156.1
+        },
+        "letre-site": {
+          "faturamento": 863.86,
+          "pedidos": 8,
+          "cmv": 191.69
+        }
+      },
+      "cmv": 831.53
+    },
+    {
+      "data": "2026-06-27",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1698.04,
+          "pedidos": 16,
+          "cmv": 376.8
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 357.98,
+          "pedidos": 12,
+          "cmv": 79.44
+        },
+        "letre-site": {
+          "faturamento": 1028.96,
+          "pedidos": 7,
+          "cmv": 228.33
+        }
+      },
+      "cmv": 684.57
+    },
+    {
+      "data": "2026-06-28",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1480.51,
+          "pedidos": 16,
+          "cmv": 328.53
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 130.49,
+          "pedidos": 1,
+          "cmv": 28.96
+        },
+        "letre-site": {
+          "faturamento": 703.48,
+          "pedidos": 7,
+          "cmv": 156.1
+        }
+      },
+      "cmv": 513.59
+    },
+    {
+      "data": "2026-06-29",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 948.27,
+          "pedidos": 8,
+          "cmv": 210.42
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 127.2,
+          "pedidos": 1,
+          "cmv": 28.23
+        }
+      },
+      "cmv": 238.65
+    },
+    {
+      "data": "2026-06-30",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 589.4,
+          "pedidos": 6,
+          "cmv": 130.79
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 130.5,
+          "pedidos": 2,
+          "cmv": 28.96
+        },
+        "letre-site": {
+          "faturamento": 363.6,
+          "pedidos": 3,
+          "cmv": 80.68
+        }
+      },
+      "cmv": 240.43
+    },
+    {
+      "data": "2026-07-01",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 918.79,
+          "pedidos": 8,
+          "cmv": 203.88
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 431.19,
+          "pedidos": 3,
+          "cmv": 95.68
+        }
+      },
+      "cmv": 299.56
+    },
+    {
+      "data": "2026-07-02",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 961.56,
+          "pedidos": 8,
+          "cmv": 213.37
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 148.32,
+          "pedidos": 1,
+          "cmv": 32.91
+        }
+      },
+      "cmv": 246.28
+    },
+    {
+      "data": "2026-07-03",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 4818.73,
+          "pedidos": 37,
+          "cmv": 1069.28
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 427.45,
+          "pedidos": 4,
+          "cmv": 94.85
+        },
+        "letre-site": {
+          "faturamento": 505.96,
+          "pedidos": 4,
+          "cmv": 112.27
+        }
+      },
+      "cmv": 1276.4
+    },
+    {
+      "data": "2026-07-04",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3620.02,
+          "pedidos": 29,
+          "cmv": 803.28
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 249.71,
+          "pedidos": 3,
+          "cmv": 55.41
+        },
+        "letre-site": {
+          "faturamento": 701.68,
+          "pedidos": 7,
+          "cmv": 155.7
+        }
+      },
+      "cmv": 1014.39
+    },
+    {
+      "data": "2026-07-05",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1830.67,
+          "pedidos": 20,
+          "cmv": 406.23
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 195.15,
+          "pedidos": 3,
+          "cmv": 43.3
+        },
+        "letre-site": {
+          "faturamento": 174.4,
+          "pedidos": 1,
+          "cmv": 38.7
+        }
+      },
+      "cmv": 488.23
+    },
+    {
+      "data": "2026-07-06",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 626.6,
+          "pedidos": 9,
+          "cmv": 139.04
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 139.04
+    },
+    {
+      "data": "2026-07-07",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 383.95,
+          "pedidos": 4,
+          "cmv": 85.2
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 327.25,
+          "pedidos": 4,
+          "cmv": 72.62
+        },
+        "letre-site": {
+          "faturamento": 173.9,
+          "pedidos": 2,
+          "cmv": 38.59
+        }
+      },
+      "cmv": 196.41
+    },
+    {
+      "data": "2026-07-08",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 314.48,
+          "pedidos": 4,
+          "cmv": 69.78
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 54.0,
+          "pedidos": 1,
+          "cmv": 11.98
+        },
+        "letre-site": {
+          "faturamento": 290.9,
+          "pedidos": 3,
+          "cmv": 64.55
+        }
+      },
+      "cmv": 146.31
+    },
+    {
+      "data": "2026-07-09",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1062.77,
+          "pedidos": 11,
+          "cmv": 235.83
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 148.08,
+          "pedidos": 3,
+          "cmv": 32.86
+        },
+        "letre-site": {
+          "faturamento": 79.0,
+          "pedidos": 1,
+          "cmv": 17.53
+        }
+      },
+      "cmv": 286.22
+    },
+    {
+      "data": "2026-07-10",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3603.17,
+          "pedidos": 37,
+          "cmv": 799.54
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 33.99,
+          "pedidos": 1,
+          "cmv": 7.54
+        },
+        "letre-site": {
+          "faturamento": 797.44,
+          "pedidos": 7,
+          "cmv": 176.95
+        }
+      },
+      "cmv": 984.03
+    },
+    {
+      "data": "2026-07-11",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1982.54,
+          "pedidos": 20,
+          "cmv": 439.93
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 506.78,
+          "pedidos": 7,
+          "cmv": 112.45
+        },
+        "letre-site": {
+          "faturamento": 1532.32,
+          "pedidos": 15,
+          "cmv": 340.02
+        }
+      },
+      "cmv": 892.4
+    },
+    {
+      "data": "2026-07-12",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3231.9,
+          "pedidos": 26,
+          "cmv": 717.16
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 148.95,
+          "pedidos": 2,
+          "cmv": 33.05
+        },
+        "letre-site": {
+          "faturamento": 1330.38,
+          "pedidos": 12,
+          "cmv": 295.21
+        }
+      },
+      "cmv": 1045.42
+    },
+    {
+      "data": "2026-07-13",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 228.92,
+          "pedidos": 3,
+          "cmv": 50.8
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 151.6,
+          "pedidos": 1,
+          "cmv": 33.64
+        }
+      },
+      "cmv": 84.44
+    },
+    {
+      "data": "2026-07-14",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1010.86,
+          "pedidos": 10,
+          "cmv": 224.31
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 251.24,
+          "pedidos": 2,
+          "cmv": 55.75
+        },
+        "letre-site": {
+          "faturamento": 214.9,
+          "pedidos": 2,
+          "cmv": 47.69
+        }
+      },
+      "cmv": 327.75
+    },
+    {
+      "data": "2026-07-15",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1198.73,
+          "pedidos": 11,
+          "cmv": 266.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 276.04,
+          "pedidos": 3,
+          "cmv": 61.25
+        },
+        "letre-site": {
+          "faturamento": 176.4,
+          "pedidos": 1,
+          "cmv": 39.14
+        }
+      },
+      "cmv": 366.39
+    },
+    {
+      "data": "2026-07-16",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 965.05,
+          "pedidos": 8,
+          "cmv": 214.14
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 289.24,
+          "pedidos": 3,
+          "cmv": 64.18
+        },
+        "letre-site": {
+          "faturamento": 304.2,
+          "pedidos": 3,
+          "cmv": 67.5
+        }
+      },
+      "cmv": 345.82
+    },
+    {
+      "data": "2026-07-17",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2285.36,
+          "pedidos": 22,
+          "cmv": 507.12
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 58.99,
+          "pedidos": 1,
+          "cmv": 13.09
+        },
+        "letre-site": {
+          "faturamento": 928.07,
+          "pedidos": 8,
+          "cmv": 205.94
+        }
+      },
+      "cmv": 726.15
+    },
+    {
+      "data": "2026-07-18",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3229.97,
+          "pedidos": 22,
+          "cmv": 716.73
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 493.89,
+          "pedidos": 5,
+          "cmv": 109.59
+        },
+        "letre-site": {
+          "faturamento": 1500.0,
+          "pedidos": 13,
+          "cmv": 332.85
+        }
+      },
+      "cmv": 1159.17
+    },
+    {
+      "data": "2026-07-19",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3761.51,
+          "pedidos": 33,
+          "cmv": 834.68
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 173.8,
+          "pedidos": 3,
+          "cmv": 38.57
+        },
+        "letre-site": {
+          "faturamento": 692.76,
+          "pedidos": 6,
+          "cmv": 153.72
+        }
+      },
+      "cmv": 1026.97
+    },
+    {
+      "data": "2026-07-20",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 524.72,
+          "pedidos": 4,
+          "cmv": 116.44
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 74.8,
+          "pedidos": 1,
+          "cmv": 16.6
+        }
+      },
+      "cmv": 133.04
+    },
+    {
+      "data": "2026-07-21",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 919.35,
+          "pedidos": 6,
+          "cmv": 204.0
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 193.03,
+          "pedidos": 2,
+          "cmv": 42.83
+        },
+        "letre-site": {
+          "faturamento": 350.0,
+          "pedidos": 4,
+          "cmv": 77.66
+        }
+      },
+      "cmv": 324.49
+    },
+    {
+      "data": "2026-07-22",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 739.63,
+          "pedidos": 8,
+          "cmv": 164.12
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 68.99,
+          "pedidos": 1,
+          "cmv": 15.31
+        },
+        "letre-site": {
+          "faturamento": 360.9,
+          "pedidos": 4,
+          "cmv": 80.08
+        }
+      },
+      "cmv": 259.51
+    },
+    {
+      "data": "2026-07-23",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 886.21,
+          "pedidos": 10,
+          "cmv": 196.65
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 305.27,
+          "pedidos": 4,
+          "cmv": 67.74
+        },
+        "letre-site": {
+          "faturamento": 534.0,
+          "pedidos": 4,
+          "cmv": 118.49
+        }
+      },
+      "cmv": 382.88
+    },
+    {
+      "data": "2026-07-24",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3335.18,
+          "pedidos": 27,
+          "cmv": 740.08
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 487.46,
+          "pedidos": 6,
+          "cmv": 108.17
+        },
+        "letre-site": {
+          "faturamento": 1127.54,
+          "pedidos": 10,
+          "cmv": 250.2
+        }
+      },
+      "cmv": 1098.45
+    },
+    {
+      "data": "2026-07-25",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3122.76,
+          "pedidos": 28,
+          "cmv": 692.94
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 162.5,
+          "pedidos": 2,
+          "cmv": 36.06
+        },
+        "letre-site": {
+          "faturamento": 1775.32,
+          "pedidos": 15,
+          "cmv": 393.94
+        }
+      },
+      "cmv": 1122.94
+    },
+    {
+      "data": "2026-07-26",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3870.54,
+          "pedidos": 31,
+          "cmv": 858.87
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 409.26,
+          "pedidos": 6,
+          "cmv": 90.81
+        },
+        "letre-site": {
+          "faturamento": 1096.06,
+          "pedidos": 12,
+          "cmv": 243.22
+        }
+      },
+      "cmv": 1192.9
+    },
+    {
+      "data": "2026-07-27",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1015.49,
+          "pedidos": 6,
+          "cmv": 225.34
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 162.1,
+          "pedidos": 2,
+          "cmv": 35.97
+        }
+      },
+      "cmv": 261.31
+    },
+    {
+      "data": "2026-07-28",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1149.52,
+          "pedidos": 7,
+          "cmv": 255.08
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 75.34,
+          "pedidos": 1,
+          "cmv": 16.72
+        },
+        "letre-site": {
+          "faturamento": 291.6,
+          "pedidos": 3,
+          "cmv": 64.71
+        }
+      },
+      "cmv": 336.51
+    },
+    {
+      "data": "2026-07-29",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1072.22,
+          "pedidos": 9,
+          "cmv": 237.93
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 237.93
+    },
+    {
+      "data": "2026-07-30",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1397.26,
+          "pedidos": 16,
+          "cmv": 310.05
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 267.05,
+          "pedidos": 4,
+          "cmv": 59.26
+        },
+        "letre-site": {
+          "faturamento": 234.88,
+          "pedidos": 2,
+          "cmv": 52.12
+        }
+      },
+      "cmv": 421.43
+    },
+    {
+      "data": "2026-07-31",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1756.97,
+          "pedidos": 16,
+          "cmv": 389.87
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 713.75,
+          "pedidos": 9,
+          "cmv": 158.38
+        },
+        "letre-site": {
+          "faturamento": 1158.5,
+          "pedidos": 9,
+          "cmv": 257.07
+        }
+      },
+      "cmv": 805.32
+    },
+    {
+      "data": "2026-08-01",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2216.39,
+          "pedidos": 24,
+          "cmv": 491.82
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 102.99,
+          "pedidos": 2,
+          "cmv": 22.85
+        },
+        "letre-site": {
+          "faturamento": 1181.68,
+          "pedidos": 10,
+          "cmv": 262.21
+        }
+      },
+      "cmv": 776.88
+    },
+    {
+      "data": "2026-08-02",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2292.69,
+          "pedidos": 24,
+          "cmv": 508.75
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 855.7,
+          "pedidos": 8,
+          "cmv": 189.88
+        }
+      },
+      "cmv": 698.63
+    },
+    {
+      "data": "2026-08-03",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 992.12,
+          "pedidos": 8,
+          "cmv": 220.15
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 164.1,
+          "pedidos": 1,
+          "cmv": 36.41
+        }
+      },
+      "cmv": 256.56
+    },
+    {
+      "data": "2026-08-04",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 566.04,
+          "pedidos": 5,
+          "cmv": 125.6
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 129.0,
+          "pedidos": 2,
+          "cmv": 28.63
+        },
+        "letre-site": {
+          "faturamento": 267.7,
+          "pedidos": 3,
+          "cmv": 59.4
+        }
+      },
+      "cmv": 213.63
+    },
+    {
+      "data": "2026-08-05",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 856.85,
+          "pedidos": 9,
+          "cmv": 190.14
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 133.45,
+          "pedidos": 2,
+          "cmv": 29.61
+        },
+        "letre-site": {
+          "faturamento": 312.8,
+          "pedidos": 3,
+          "cmv": 69.41
+        }
+      },
+      "cmv": 289.16
+    },
+    {
+      "data": "2026-08-06",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 831.19,
+          "pedidos": 8,
+          "cmv": 184.44
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 108.15,
+          "pedidos": 2,
+          "cmv": 24.0
+        },
+        "letre-site": {
+          "faturamento": 348.39,
+          "pedidos": 3,
+          "cmv": 77.31
+        }
+      },
+      "cmv": 285.75
+    },
+    {
+      "data": "2026-08-07",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3231.48,
+          "pedidos": 26,
+          "cmv": 717.07
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 154.84,
+          "pedidos": 2,
+          "cmv": 34.36
+        },
+        "letre-site": {
+          "faturamento": 397.8,
+          "pedidos": 5,
+          "cmv": 88.27
+        }
+      },
+      "cmv": 839.7
+    },
+    {
+      "data": "2026-08-08",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2309.99,
+          "pedidos": 20,
+          "cmv": 512.59
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 354.22,
+          "pedidos": 4,
+          "cmv": 78.6
+        },
+        "letre-site": {
+          "faturamento": 1075.69,
+          "pedidos": 10,
+          "cmv": 238.7
+        }
+      },
+      "cmv": 829.89
+    },
+    {
+      "data": "2026-08-09",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2745.65,
+          "pedidos": 21,
+          "cmv": 609.26
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 87.55,
+          "pedidos": 1,
+          "cmv": 19.43
+        },
+        "letre-site": {
+          "faturamento": 403.69,
+          "pedidos": 4,
+          "cmv": 89.58
+        }
+      },
+      "cmv": 718.27
+    },
+    {
+      "data": "2026-08-10",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 313.94,
+          "pedidos": 4,
+          "cmv": 69.66
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 367.86,
+          "pedidos": 3,
+          "cmv": 81.63
+        }
+      },
+      "cmv": 151.29
+    },
+    {
+      "data": "2026-08-11",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1324.61,
+          "pedidos": 13,
+          "cmv": 293.93
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 298.81,
+          "pedidos": 3,
+          "cmv": 66.31
+        },
+        "letre-site": {
+          "faturamento": 349.9,
+          "pedidos": 3,
+          "cmv": 77.64
+        }
+      },
+      "cmv": 437.88
+    },
+    {
+      "data": "2026-08-12",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 526.66,
+          "pedidos": 5,
+          "cmv": 116.87
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 116.79,
+          "pedidos": 1,
+          "cmv": 25.92
+        },
+        "letre-site": {
+          "faturamento": 183.6,
+          "pedidos": 2,
+          "cmv": 40.74
+        }
+      },
+      "cmv": 183.53
+    },
+    {
+      "data": "2026-08-13",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 549.36,
+          "pedidos": 7,
+          "cmv": 121.9
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 256.16,
+          "pedidos": 2,
+          "cmv": 56.84
+        },
+        "letre-site": {
+          "faturamento": 171.2,
+          "pedidos": 1,
+          "cmv": 37.99
+        }
+      },
+      "cmv": 216.73
+    },
+    {
+      "data": "2026-08-14",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2710.27,
+          "pedidos": 24,
+          "cmv": 601.41
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 434.2,
+          "pedidos": 5,
+          "cmv": 96.35
+        }
+      },
+      "cmv": 697.76
+    },
+    {
+      "data": "2026-08-15",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2692.29,
+          "pedidos": 24,
+          "cmv": 597.42
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 525.95,
+          "pedidos": 8,
+          "cmv": 116.71
+        },
+        "letre-site": {
+          "faturamento": 485.09,
+          "pedidos": 5,
+          "cmv": 107.64
+        }
+      },
+      "cmv": 821.77
+    },
+    {
+      "data": "2026-08-16",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2083.36,
+          "pedidos": 18,
+          "cmv": 462.3
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 58.93,
+          "pedidos": 1,
+          "cmv": 13.08
+        },
+        "letre-site": {
+          "faturamento": 105.38,
+          "pedidos": 1,
+          "cmv": 23.38
+        }
+      },
+      "cmv": 498.76
+    },
+    {
+      "data": "2026-08-17",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 237.56,
+          "pedidos": 3,
+          "cmv": 52.71
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 48.0,
+          "pedidos": 1,
+          "cmv": 10.65
+        }
+      },
+      "cmv": 63.36
+    },
+    {
+      "data": "2026-08-18",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 771.72,
+          "pedidos": 9,
+          "cmv": 171.24
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 134.5,
+          "pedidos": 2,
+          "cmv": 29.85
+        },
+        "letre-site": {
+          "faturamento": 196.9,
+          "pedidos": 2,
+          "cmv": 43.69
+        }
+      },
+      "cmv": 244.78
+    },
+    {
+      "data": "2026-08-19",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1040.17,
+          "pedidos": 9,
+          "cmv": 230.81
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 134.73,
+          "pedidos": 2,
+          "cmv": 29.9
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 260.71
+    },
+    {
+      "data": "2026-08-20",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 682.69,
+          "pedidos": 8,
+          "cmv": 151.49
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 103.15,
+          "pedidos": 2,
+          "cmv": 22.89
+        },
+        "letre-site": {
+          "faturamento": 221.42,
+          "pedidos": 2,
+          "cmv": 49.13
+        }
+      },
+      "cmv": 223.51
+    },
+    {
+      "data": "2026-08-21",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3785.59,
+          "pedidos": 31,
+          "cmv": 840.02
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 111.32,
+          "pedidos": 2,
+          "cmv": 24.7
+        },
+        "letre-site": {
+          "faturamento": 618.4,
+          "pedidos": 6,
+          "cmv": 137.22
+        }
+      },
+      "cmv": 1001.94
+    },
+    {
+      "data": "2026-08-22",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3204.38,
+          "pedidos": 26,
+          "cmv": 711.05
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 157.72,
+          "pedidos": 3,
+          "cmv": 35.0
+        },
+        "letre-site": {
+          "faturamento": 1148.5,
+          "pedidos": 10,
+          "cmv": 254.85
+        }
+      },
+      "cmv": 1000.9
+    },
+    {
+      "data": "2026-08-23",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2380.89,
+          "pedidos": 22,
+          "cmv": 528.32
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 431.9,
+          "pedidos": 4,
+          "cmv": 95.84
+        }
+      },
+      "cmv": 624.16
+    },
+    {
+      "data": "2026-08-24",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 404.99,
+          "pedidos": 3,
+          "cmv": 89.87
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 127.0,
+          "pedidos": 2,
+          "cmv": 28.18
+        }
+      },
+      "cmv": 118.05
+    },
+    {
+      "data": "2026-08-25",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 880.98,
+          "pedidos": 8,
+          "cmv": 195.49
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 48.99,
+          "pedidos": 1,
+          "cmv": 10.87
+        },
+        "letre-site": {
+          "faturamento": 601.1,
+          "pedidos": 6,
+          "cmv": 133.38
+        }
+      },
+      "cmv": 339.74
+    },
+    {
+      "data": "2026-08-26",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1336.61,
+          "pedidos": 13,
+          "cmv": 296.59
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 68.0,
+          "pedidos": 1,
+          "cmv": 15.09
+        }
+      },
+      "cmv": 311.68
+    },
+    {
+      "data": "2026-08-27",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1484.44,
+          "pedidos": 17,
+          "cmv": 329.4
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 102.0,
+          "pedidos": 1,
+          "cmv": 22.63
+        }
+      },
+      "cmv": 352.03
+    },
+    {
+      "data": "2026-08-28",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 4941.86,
+          "pedidos": 44,
+          "cmv": 1096.6
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 187.64,
+          "pedidos": 2,
+          "cmv": 41.64
+        },
+        "letre-site": {
+          "faturamento": 903.2,
+          "pedidos": 8,
+          "cmv": 200.42
+        }
+      },
+      "cmv": 1338.66
+    },
+    {
+      "data": "2026-08-29",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2660.41,
+          "pedidos": 22,
+          "cmv": 590.34
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 49.16,
+          "pedidos": 1,
+          "cmv": 10.91
+        },
+        "letre-site": {
+          "faturamento": 1126.69,
+          "pedidos": 10,
+          "cmv": 250.01
+        }
+      },
+      "cmv": 851.26
+    },
+    {
+      "data": "2026-08-30",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1951.48,
+          "pedidos": 20,
+          "cmv": 433.03
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 824.71,
+          "pedidos": 7,
+          "cmv": 183.0
+        },
+        "letre-site": {
+          "faturamento": 1011.29,
+          "pedidos": 9,
+          "cmv": 224.41
+        }
+      },
+      "cmv": 840.44
+    },
+    {
+      "data": "2026-08-31",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 158.89,
+          "pedidos": 1,
+          "cmv": 35.26
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 125.2,
+          "pedidos": 1,
+          "cmv": 27.78
+        }
+      },
+      "cmv": 63.04
+    },
+    {
+      "data": "2026-09-01",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1365.84,
+          "pedidos": 11,
+          "cmv": 303.08
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 47.16,
+          "pedidos": 1,
+          "cmv": 10.46
+        },
+        "letre-site": {
+          "faturamento": 99.9,
+          "pedidos": 1,
+          "cmv": 22.17
+        }
+      },
+      "cmv": 335.71
+    },
+    {
+      "data": "2026-09-02",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 975.0,
+          "pedidos": 9,
+          "cmv": 216.35
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 216.35
+    },
+    {
+      "data": "2026-09-03",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 822.34,
+          "pedidos": 10,
+          "cmv": 182.48
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 137.13,
+          "pedidos": 3,
+          "cmv": 30.43
+        },
+        "letre-site": {
+          "faturamento": 160.59,
+          "pedidos": 1,
+          "cmv": 35.63
+        }
+      },
+      "cmv": 248.54
+    },
+    {
+      "data": "2026-09-04",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2120.55,
+          "pedidos": 20,
+          "cmv": 470.55
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 187.13,
+          "pedidos": 2,
+          "cmv": 41.52
+        },
+        "letre-site": {
+          "faturamento": 601.19,
+          "pedidos": 6,
+          "cmv": 133.4
+        }
+      },
+      "cmv": 645.47
+    },
+    {
+      "data": "2026-09-05",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2719.63,
+          "pedidos": 25,
+          "cmv": 603.49
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 109.98,
+          "pedidos": 2,
+          "cmv": 24.4
+        },
+        "letre-site": {
+          "faturamento": 216.4,
+          "pedidos": 2,
+          "cmv": 48.02
+        }
+      },
+      "cmv": 675.91
+    },
+    {
+      "data": "2026-09-06",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1543.15,
+          "pedidos": 12,
+          "cmv": 342.42
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 143.97,
+          "pedidos": 3,
+          "cmv": 31.95
+        },
+        "letre-site": {
+          "faturamento": 149.8,
+          "pedidos": 2,
+          "cmv": 33.24
+        }
+      },
+      "cmv": 407.61
+    },
+    {
+      "data": "2026-09-07",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1597.14,
+          "pedidos": 15,
+          "cmv": 354.41
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 158.97,
+          "pedidos": 3,
+          "cmv": 35.28
+        },
+        "letre-site": {
+          "faturamento": 149.6,
+          "pedidos": 1,
+          "cmv": 33.2
+        }
+      },
+      "cmv": 422.89
+    },
+    {
+      "data": "2026-09-08",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 759.33,
+          "pedidos": 5,
+          "cmv": 168.5
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 70.33,
+          "pedidos": 1,
+          "cmv": 15.61
+        },
+        "letre-site": {
+          "faturamento": 94.8,
+          "pedidos": 1,
+          "cmv": 21.04
+        }
+      },
+      "cmv": 205.15
+    },
+    {
+      "data": "2026-09-09",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 702.04,
+          "pedidos": 7,
+          "cmv": 155.78
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 147.68,
+          "pedidos": 1,
+          "cmv": 32.77
+        }
+      },
+      "cmv": 188.55
+    },
+    {
+      "data": "2026-09-10",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 790.34,
+          "pedidos": 6,
+          "cmv": 175.38
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 486.0,
+          "pedidos": 3,
+          "cmv": 107.84
+        }
+      },
+      "cmv": 283.22
+    },
+    {
+      "data": "2026-09-11",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1649.85,
+          "pedidos": 11,
+          "cmv": 366.1
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 136.54,
+          "pedidos": 2,
+          "cmv": 30.3
+        },
+        "letre-site": {
+          "faturamento": 801.41,
+          "pedidos": 6,
+          "cmv": 177.83
+        }
+      },
+      "cmv": 574.23
+    },
+    {
+      "data": "2026-09-12",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1694.95,
+          "pedidos": 15,
+          "cmv": 376.11
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 54.16,
+          "pedidos": 1,
+          "cmv": 12.02
+        },
+        "letre-site": {
+          "faturamento": 1557.69,
+          "pedidos": 11,
+          "cmv": 345.65
+        }
+      },
+      "cmv": 733.78
+    },
+    {
+      "data": "2026-09-13",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1233.27,
+          "pedidos": 14,
+          "cmv": 273.66
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 445.47,
+          "pedidos": 4,
+          "cmv": 98.85
+        },
+        "letre-site": {
+          "faturamento": 248.6,
+          "pedidos": 2,
+          "cmv": 55.16
+        }
+      },
+      "cmv": 427.67
+    },
+    {
+      "data": "2026-09-14",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 570.84,
+          "pedidos": 4,
+          "cmv": 126.67
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 126.67
+    },
+    {
+      "data": "2026-09-15",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 232.92,
+          "pedidos": 3,
+          "cmv": 51.68
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 143.67,
+          "pedidos": 2,
+          "cmv": 31.88
+        },
+        "letre-site": {
+          "faturamento": 318.6,
+          "pedidos": 2,
+          "cmv": 70.7
+        }
+      },
+      "cmv": 154.26
+    },
+    {
+      "data": "2026-09-16",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 300.72,
+          "pedidos": 3,
+          "cmv": 66.73
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 56.89,
+          "pedidos": 1,
+          "cmv": 12.62
+        },
+        "letre-site": {
+          "faturamento": 196.6,
+          "pedidos": 2,
+          "cmv": 43.63
+        }
+      },
+      "cmv": 122.98
+    },
+    {
+      "data": "2026-09-17",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1136.26,
+          "pedidos": 11,
+          "cmv": 252.14
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 202.99,
+          "pedidos": 4,
+          "cmv": 45.04
+        },
+        "letre-site": {
+          "faturamento": 121.2,
+          "pedidos": 1,
+          "cmv": 26.89
+        }
+      },
+      "cmv": 324.07
+    },
+    {
+      "data": "2026-09-18",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 3227.44,
+          "pedidos": 27,
+          "cmv": 716.17
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 379.85,
+          "pedidos": 4,
+          "cmv": 84.29
+        },
+        "letre-site": {
+          "faturamento": 603.3,
+          "pedidos": 6,
+          "cmv": 133.87
+        }
+      },
+      "cmv": 934.33
+    },
+    {
+      "data": "2026-09-19",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2430.36,
+          "pedidos": 19,
+          "cmv": 539.3
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 106.99,
+          "pedidos": 1,
+          "cmv": 23.74
+        },
+        "letre-site": {
+          "faturamento": 413.0,
+          "pedidos": 4,
+          "cmv": 91.64
+        }
+      },
+      "cmv": 654.68
+    },
+    {
+      "data": "2026-09-20",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2338.68,
+          "pedidos": 20,
+          "cmv": 518.95
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 299.96,
+          "pedidos": 3,
+          "cmv": 66.56
+        },
+        "letre-site": {
+          "faturamento": 418.9,
+          "pedidos": 4,
+          "cmv": 92.95
+        }
+      },
+      "cmv": 678.46
+    },
+    {
+      "data": "2026-09-21",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 701.54,
+          "pedidos": 5,
+          "cmv": 155.67
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 224.26,
+          "pedidos": 2,
+          "cmv": 49.76
+        }
+      },
+      "cmv": 205.43
+    },
+    {
+      "data": "2026-09-22",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 269.65,
+          "pedidos": 3,
+          "cmv": 59.84
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 45.99,
+          "pedidos": 1,
+          "cmv": 10.21
+        },
+        "letre-site": {
+          "faturamento": 359.4,
+          "pedidos": 3,
+          "cmv": 79.75
+        }
+      },
+      "cmv": 149.8
+    },
+    {
+      "data": "2026-09-23",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 108.82,
+          "pedidos": 2,
+          "cmv": 24.15
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 195.59,
+          "pedidos": 3,
+          "cmv": 43.4
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 67.55
+    },
+    {
+      "data": "2026-09-24",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 979.22,
+          "pedidos": 8,
+          "cmv": 217.29
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 143.2,
+          "pedidos": 1,
+          "cmv": 31.78
+        }
+      },
+      "cmv": 249.07
+    },
+    {
+      "data": "2026-09-25",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 2366.18,
+          "pedidos": 19,
+          "cmv": 525.06
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 201.0,
+          "pedidos": 3,
+          "cmv": 44.6
+        },
+        "letre-site": {
+          "faturamento": 276.28,
+          "pedidos": 3,
+          "cmv": 61.31
+        }
+      },
+      "cmv": 630.97
+    },
+    {
+      "data": "2026-09-26",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1503.78,
+          "pedidos": 15,
+          "cmv": 333.69
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 392.74,
+          "pedidos": 5,
+          "cmv": 87.15
+        },
+        "letre-site": {
+          "faturamento": 342.4,
+          "pedidos": 2,
+          "cmv": 75.98
+        }
+      },
+      "cmv": 496.82
+    },
+    {
+      "data": "2026-09-27",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 1477.78,
+          "pedidos": 14,
+          "cmv": 327.92
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 105.88,
+          "pedidos": 2,
+          "cmv": 23.49
+        },
+        "letre-site": {
+          "faturamento": 315.6,
+          "pedidos": 3,
+          "cmv": 70.03
+        }
+      },
+      "cmv": 421.44
+    },
+    {
+      "data": "2026-09-28",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 580.98,
+          "pedidos": 4,
+          "cmv": 128.92
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        },
+        "letre-site": {
+          "faturamento": 0.0,
+          "pedidos": 0,
+          "cmv": 0.0
+        }
+      },
+      "cmv": 128.92
+    },
+    {
+      "data": "2026-09-29",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 721.68,
+          "pedidos": 5,
+          "cmv": 160.14
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 88.99,
+          "pedidos": 2,
+          "cmv": 19.75
+        },
+        "letre-site": {
+          "faturamento": 349.4,
+          "pedidos": 3,
+          "cmv": 77.53
+        }
+      },
+      "cmv": 257.42
+    },
+    {
+      "data": "2026-09-30",
+      "canais": {
+        "letre-ifood-pizzaria": {
+          "faturamento": 395.14,
+          "pedidos": 4,
+          "cmv": 87.68
+        },
+        "letre-ifood-pastas": {
+          "faturamento": 44.1,
+          "pedidos": 1,
+          "cmv": 9.79
+        },
+        "letre-site": {
+          "faturamento": 104.0,
+          "pedidos": 1,
+          "cmv": 23.08
+        }
+      },
+      "cmv": 120.55
+    }
+  ]
+}

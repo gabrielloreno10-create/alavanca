@@ -1,0 +1,17 @@
+{
+  "name": "alavanca-db-dev",
+  "private": true,
+  "type": "module",
+  "description": "Postgres embarcado para desenvolvimento, sem Docker. Nao usar em producao.",
+  "scripts": {
+    "start": "node subir.mjs",
+    "zerar": "node subir.mjs --zerar"
+  },
+  "dependencies": {
+    "embedded-postgres": "^17.5.0-beta.15",
+    "pg": "^8.16.3"
+  },
+  "allowScripts": {
+    "@embedded-postgres/windows-x64@17.5.0-beta.15": true
+  }
+}

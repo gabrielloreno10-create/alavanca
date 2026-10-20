@@ -1,0 +1,189 @@
+{
+  "origem": "EXEMPLO",
+  "custoPorMensagem": 0.35,
+  "resumo": {
+    "baseTotal": 3120,
+    "comOptIn": 1874,
+    "novosComOptIn": {
+      "ontem": {
+        "atual": 6,
+        "anterior": 5
+      },
+      "7d": {
+        "atual": 42,
+        "anterior": 35
+      },
+      "30d": {
+        "atual": 180,
+        "anterior": 150
+      },
+      "mes": {
+        "atual": 42,
+        "anterior": 35
+      }
+    },
+    "novosClientes": {
+      "ontem": {
+        "atual": 8,
+        "anterior": 7
+      },
+      "7d": {
+        "atual": 56,
+        "anterior": 49
+      },
+      "30d": {
+        "atual": 240,
+        "anterior": 210
+      },
+      "mes": {
+        "atual": 56,
+        "anterior": 49
+      }
+    }
+  },
+  "segmentos": [
+    {
+      "id": "novos",
+      "nome": "Novos",
+      "criterio": "1º pedido nos últimos 30 dias",
+      "clientes": 214,
+      "comOptIn": 168,
+      "valor90d": 19420,
+      "acao": "Mandar boas-vindas com cupom do 2º pedido no site"
+    },
+    {
+      "id": "recorrentes",
+      "nome": "Recorrentes",
+      "criterio": "2 ou mais pedidos em 90 dias",
+      "clientes": 486,
+      "comOptIn": 402,
+      "valor90d": 88450,
+      "acao": "Avisar lançamentos e o prato da semana"
+    },
+    {
+      "id": "vip",
+      "nome": "VIP",
+      "criterio": "5 ou mais pedidos em 90 dias ou acima de R$ 600",
+      "clientes": 92,
+      "comOptIn": 88,
+      "valor90d": 61230,
+      "acao": "Convite antecipado e mimo na entrega, sem desconto"
+    },
+    {
+      "id": "em-risco",
+      "nome": "Em risco",
+      "criterio": "Sem pedir há 30 a 60 dias",
+      "clientes": 538,
+      "comOptIn": 364,
+      "valor90d": 41210,
+      "acao": "Oferta do prato favorito para voltar esta semana"
+    },
+    {
+      "id": "sumidos",
+      "nome": "Sumidos",
+      "criterio": "Sem pedir há mais de 60 dias",
+      "clientes": 1790,
+      "comOptIn": 852,
+      "valor90d": 0,
+      "acao": "Uma mensagem de reativação por mês, no máximo"
+    }
+  ],
+  "disparos": [
+    {
+      "id": "d1",
+      "data": "2026-08-05",
+      "segmento": "em-risco",
+      "mensagem": "Saudade da 5 Queijos? Hoje com borda recheada grátis no site",
+      "enviados": 290,
+      "respostas": 41,
+      "pedidos": 22,
+      "faturamento": 2310.0
+    },
+    {
+      "id": "d2",
+      "data": "2026-08-14",
+      "segmento": "recorrentes",
+      "mensagem": "Chegou a Parma e Cogumelos: peça pelo site",
+      "enviados": 380,
+      "respostas": 57,
+      "pedidos": 31,
+      "faturamento": 3190.0
+    },
+    {
+      "id": "d3",
+      "data": "2026-08-26",
+      "segmento": "novos",
+      "mensagem": "Seu 2º pedido com R$ 10 de desconto no site",
+      "enviados": 140,
+      "respostas": 25,
+      "pedidos": 14,
+      "faturamento": 1260.0
+    },
+    {
+      "id": "d4",
+      "data": "2026-09-09",
+      "segmento": "em-risco",
+      "mensagem": "Terça em dobro: 2ª pizza pela metade no site",
+      "enviados": 330,
+      "respostas": 39,
+      "pedidos": 19,
+      "faturamento": 1880.0
+    },
+    {
+      "id": "d5",
+      "data": "2026-09-19",
+      "segmento": "vip",
+      "mensagem": "Vocês provam primeiro: pizza nova do mês",
+      "enviados": 85,
+      "respostas": 33,
+      "pedidos": 18,
+      "faturamento": 2240.0
+    },
+    {
+      "id": "d6",
+      "data": "2026-09-24",
+      "segmento": "recorrentes",
+      "mensagem": "Fim de semana com forno aceso: peça pelo site",
+      "enviados": 395,
+      "respostas": 52,
+      "pedidos": 27,
+      "faturamento": 2780.0
+    },
+    {
+      "id": "d7",
+      "data": "2026-09-29",
+      "segmento": "sumidos",
+      "mensagem": "Faz tempo! Sua próxima pizza com frete grátis no site",
+      "enviados": 600,
+      "respostas": 37,
+      "pedidos": 11,
+      "faturamento": 1010.0
+    }
+  ],
+  "proximos": [
+    {
+      "data": "2026-10-02",
+      "hora": "18:30",
+      "segmento": "recorrentes",
+      "mensagem": "Sexta de forno aceso: a pizza da semana"
+    },
+    {
+      "data": "2026-10-06",
+      "hora": "17:00",
+      "segmento": "em-risco",
+      "mensagem": "Terça em dobro: 2ª pizza pela metade"
+    },
+    {
+      "data": "2026-10-09",
+      "hora": "18:00",
+      "segmento": "vip",
+      "mensagem": "Prévia da pizza de outubro"
+    },
+    {
+      "data": "2026-10-15",
+      "hora": "17:30",
+      "segmento": "novos",
+      "mensagem": "Seu 2º pedido com R$ 10 de desconto"
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "nome": "Diversos - Pizza 5 Queijos ao mel Trufado e Parma",
+    "qtde": 151,
+    "valor": 16199.8
+  },
+  {
+    "nome": "Diversos - 2 Pizzas 25cm Le Tre com 20% Off",
+    "qtde": 36,
+    "valor": 5808.2
+  },
+  {
+    "nome": "Diversos - Combo Família | 2 Pizzas Grandes - 35cm + 4 Refrigerantes 350ml",
+    "qtde": 17,
+    "valor": 3571.3
+  },
+  {
+    "nome": "Diversos - Pizza Pepperoni + Coca Cola 350ml",
+    "qtde": 47,
+    "valor": 3370
+  },
+  {
+    "nome": "Diversos - Pizza Parma e Cogumelos | Grande - 35cm",
+    "qtde": 34,
+    "valor": 3287.9
+  },
+  {
+    "nome": "Diversos - Pizza 5 Queijos com Mel Trufado e  Pepperoni",
+    "qtde": 32,
+    "valor": 3044.7
+  },
+  {
+    "nome": "Diversos - Combo Casal | 1 Pizza Grande - 35cm + 2 Refrigerantes 350ml",
+    "qtde": 24,
+    "valor": 2930.2
+  },
+  {
+    "nome": "Diversos - Pizza A Moda Le Tre",
+    "qtde": 28,
+    "valor": 2810.0
+  },
+  {
+    "nome": "Diversos - Pizza Frango com Cream Cheese",
+    "qtde": 31,
+    "valor": 2666.3
+  },
+  {
+    "nome": "Diversos - Pizza Cinco Queijos ao Mel Trufado",
+    "qtde": 27,
+    "valor": 2488.7
+  },
+  {
+    "nome": "Diversos - Pizza de Calabresa Seara com Mel Trufado e Gorgonzola",
+    "qtde": 21,
+    "valor": 2037.7
+  },
+  {
+    "nome": "Diversos - Spaghetti Alla Carbonara",
+    "qtde": 34,
+    "valor": 1972
+  },
+  {
+    "nome": "Diversos - Pizza Carne Seca",
+    "qtde": 20,
+    "valor": 1855.4
+  },
+  {
+    "nome": "Diversos - Pizza Lombinho Canadense",
+    "qtde": 19,
+    "valor": 1809.9
+  },
+  {
+    "nome": "Diversos - Pizza Parma e Rúcula | Grande - 35cm",
+    "qtde": 18,
+    "valor": 1738.7
+  },
+  {
+    "nome": "Diversos - Pizza Parma e Rúcula",
+    "qtde": 17,
+    "valor": 1705.2
+  },
+  {
+    "nome": "Diversos - Combo 2x Pizzas 25cm Le Tre",
+    "qtde": 15,
+    "valor": 1506
+  },
+  {
+    "nome": "Diversos - Combo Amigos | 3 Pizzas Grandes - 35cm + 6 Refrigerantes 350ml",
+    "qtde": 5,
+    "valor": 1497.4
+  },
+  {
+    "nome": "Diversos - Pizza Pepperoni",
+    "qtde": 19,
+    "valor": 1491.3
+  },
+  {
+    "nome": "Diversos - Pizza Aliche",
+    "qtde": 12,
+    "valor": 1464.3
+  },
+  {
+    "nome": "Diversos - Pizza Marguerita",
+    "qtde": 18,
+    "valor": 1364.9
+  },
+  {
+    "nome": "Diversos - Focaccia De Gorgonzola",
+    "qtde": 31,
+    "valor": 1251.59
+  },
+  {
+    "nome": "Diversos - Combo 2 Pizzas 35cm 15% Off",
+    "qtde": 8,
+    "valor": 1204.8
+  },
+  {
+    "nome": "Diversos - Pizza Parma e Cogumelos",
+    "qtde": 12,
+    "valor": 1159.7
+  },
+  {
+    "nome": "Diversos - Pizza Cogumelos Formaggi Trufado",
+    "qtde": 10,
+    "valor": 1079.9
+  },
+  {
+    "nome": "Diversos - Lasanha à Bolonhesa",
+    "qtde": 12,
+    "valor": 1056
+  },
+  {
+    "nome": "Pizza Marguerita",
+    "qtde": 10,
+    "valor": 968
+  },
+  {
+    "nome": "Diversos - Spaghetti à Bolonhesa",
+    "qtde": 14,
+    "valor": 770
+  },
+  {
+    "nome": "Diversos - Pizza Costolette",
+    "qtde": 7,
+    "valor": 717.6
+  },
+  {
+    "nome": "Pizza Doce de Leite Cremoso e Canela - 25 Centímetros",
+    "qtde": 15,
+    "valor": 630
+  },
+  {
+    "nome": "Diversos - Spaghetti Formaggio",
+    "qtde": 12,
+    "valor": 624
+  },
+  {
+    "nome": "Diversos - Terça Specialle Pizza em Dobro 35cm",
+    "qtde": 6,
+    "valor": 599.4
+  },
+  {
+    "nome": "Diversos - Spaghetti Formaggio Trufado",
+    "qtde": 7,
+    "valor": 552.93
+  },
+  {
+    "nome": "Diversos - Pizza Calabresa com Mel Trufado e Gorgonzola",
+    "qtde": 7,
+    "valor": 530
+  },
+  {
+    "nome": "Diversos - Risoto Formaggio ao Cogumelo Trufado",
+    "qtde": 5,
+    "valor": 453.97
+  },
+  {
+    "nome": "Refrigerante Coca Cola Zero Lata 350ml",
+    "qtde": 54,
+    "valor": 426.6
+  },
+  {
+    "nome": "Diversos - Spaghetti Formaggio ao bife de Chorizo",
+    "qtde": 4,
+    "valor": 392
+  },
+  {
+    "nome": "Pizza de Nutella",
+    "qtde": 7,
+    "valor": 364
+  },
+  {
+    "nome": "1 Pizza Média + 2 Coca Cola Lata 350ml",
+    "qtde": 5,
+    "valor": 354.4
+  },
+  {
+    "nome": "Diversos - Pizza de Nutella - 25 Centímetros",
+    "qtde": 5,
+    "valor": 310
+  },
+  {
+    "nome": "Diversos - Coca-Cola Zero 2L ",
+    "qtde": 14,
+    "valor": 278.6
+  },
+  {
+    "nome": "Diversos - Pizza Cinco Queijos ao Mel Trufado ",
+    "qtde": 3,
+    "valor": 277.2
+  },
+  {
+    "nome": "Diversos - Coca-Cola Original 350ml",
+    "qtde": 32,
+    "valor": 252.8
+  },
+  {
+    "nome": "Pizza Mineirita Goiabada com Gorgonzola e Queijo Canastra - 25 Centímetros",
+    "qtde": 4,
+    "valor": 222
+  },
+  {
+    "nome": "Refrigerante Guaraná Antarctica Lata 350ml",
+    "qtde": 28,
+    "valor": 221.2
+  },
+  {
+    "nome": "Diversos - Domingo Especial! Leve uma Pizza 35cm e Ganhe uma Doce de Leite",
+    "qtde": 2,
+    "valor": 198.4
+  },
+  {
+    "nome": "Diversos - Focaccia De Alecrim",
+    "qtde": 7,
+    "valor": 195.93
+  },
+  {
+    "nome": "Diversos - Pizza Calabresa",
+    "qtde": 2,
+    "valor": 179.2
+  },
+  {
+    "nome": "Diversos - Spaghetti Pomodoro",
+    "qtde": 3,
+    "valor": 144
+  },
+  {
+    "nome": "Diversos - 1 Pizza Média + 2 Coca Cola Lata 350ml",
+    "qtde": 2,
+    "valor": 127.6
+  },
+  {
+    "nome": "Diversos - 1 Pizza Média + 2 Guaranás Lata 350ml",
+    "qtde": 1,
+    "valor": 109.7
+  },
+  {
+    "nome": "Diversos - Coca Cola 2l",
+    "qtde": 4,
+    "valor": 79.6
+  },
+  {
+    "nome": "Diversos - Focacia De Gorgonzola",
+    "qtde": 2,
+    "valor": 75.98
+  },
+  {
+    "nome": "Diversos - Foccacia De Alecrim",
+    "qtde": 2,
+    "valor": 55.98
+  }
+]

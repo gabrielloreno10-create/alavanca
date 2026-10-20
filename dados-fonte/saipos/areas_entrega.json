@@ -1,0 +1,357 @@
+[
+  {
+    "local": "Sion",
+    "valor": 18255.72,
+    "qtd": 171
+  },
+  {
+    "local": "Vila da Serra",
+    "valor": 8814.8,
+    "qtd": 71
+  },
+  {
+    "local": "Belvedere",
+    "valor": 7972.08,
+    "qtd": 77
+  },
+  {
+    "local": "Lourdes",
+    "valor": 7383.48,
+    "qtd": 52
+  },
+  {
+    "local": "Funcionários",
+    "valor": 6202.88,
+    "qtd": 62
+  },
+  {
+    "local": "Santo Antônio",
+    "valor": 6170.7,
+    "qtd": 59
+  },
+  {
+    "local": "Serra",
+    "valor": 6059.38,
+    "qtd": 57
+  },
+  {
+    "local": "Anchieta",
+    "valor": 5814.99,
+    "qtd": 67
+  },
+  {
+    "local": "Buritis",
+    "valor": 4362.81,
+    "qtd": 33
+  },
+  {
+    "local": "Cruzeiro",
+    "valor": 4114.14,
+    "qtd": 39
+  },
+  {
+    "local": "Carmo",
+    "valor": 3633.0,
+    "qtd": 30
+  },
+  {
+    "local": "Santa Lúcia",
+    "valor": 3388.38,
+    "qtd": 39
+  },
+  {
+    "local": "São Pedro",
+    "valor": 3083.19,
+    "qtd": 31
+  },
+  {
+    "local": "Savassi",
+    "valor": 2862.64,
+    "qtd": 28
+  },
+  {
+    "local": "Mangabeiras",
+    "valor": 2842.78,
+    "qtd": 24
+  },
+  {
+    "local": "Vale do Sereno",
+    "valor": 2831.48,
+    "qtd": 24
+  },
+  {
+    "local": "Gutierrez",
+    "valor": 2283.91,
+    "qtd": 17
+  },
+  {
+    "local": "Luxemburgo",
+    "valor": 2269.62,
+    "qtd": 20
+  },
+  {
+    "local": "Centro",
+    "valor": 2232.64,
+    "qtd": 24
+  },
+  {
+    "local": "Delivery - Retirada",
+    "valor": 1744.57,
+    "qtd": 15
+  },
+  {
+    "local": "Vila Paris",
+    "valor": 1526.48,
+    "qtd": 14
+  },
+  {
+    "local": "São Bento",
+    "valor": 1292.49,
+    "qtd": 13
+  },
+  {
+    "local": "Santo Agostinho",
+    "valor": 1282.93,
+    "qtd": 12
+  },
+  {
+    "local": "Santa Efigênia",
+    "valor": 1138.21,
+    "qtd": 12
+  },
+  {
+    "local": "Coração de Jesus",
+    "valor": 887.65,
+    "qtd": 7
+  },
+  {
+    "local": "Vila Castela",
+    "valor": 756.98,
+    "qtd": 5
+  },
+  {
+    "local": "Estoril",
+    "valor": 740.23,
+    "qtd": 10
+  },
+  {
+    "local": "Jardim da Torre",
+    "valor": 662.35,
+    "qtd": 5
+  },
+  {
+    "local": "Barro Preto",
+    "valor": 651.23,
+    "qtd": 5
+  },
+  {
+    "local": "Prado",
+    "valor": 573.08,
+    "qtd": 4
+  },
+  {
+    "local": "Salgado Filho",
+    "valor": 540.63,
+    "qtd": 4
+  },
+  {
+    "local": "Vila Castelo",
+    "valor": 504.14,
+    "qtd": 3
+  },
+  {
+    "local": "São Lucas",
+    "valor": 394.19,
+    "qtd": 5
+  },
+  {
+    "local": "Comiteco",
+    "valor": 393.39,
+    "qtd": 3
+  },
+  {
+    "local": "Parque do Engenho",
+    "valor": 372.66,
+    "qtd": 2
+  },
+  {
+    "local": "Nova Granada",
+    "valor": 360.89,
+    "qtd": 2
+  },
+  {
+    "local": "Castelo",
+    "valor": 318.67,
+    "qtd": 2
+  },
+  {
+    "local": "Alto Barroca",
+    "valor": 316.38,
+    "qtd": 3
+  },
+  {
+    "local": "Vale dos Cristais",
+    "valor": 307.2,
+    "qtd": 2
+  },
+  {
+    "local": "Cidade Jardim",
+    "valor": 303.76,
+    "qtd": 3
+  },
+  {
+    "local": "Estrela Dalva",
+    "valor": 297.6,
+    "qtd": 2
+  },
+  {
+    "local": "Sagrada Família",
+    "valor": 256.39,
+    "qtd": 2
+  },
+  {
+    "local": "Carlos Prates",
+    "valor": 246.37,
+    "qtd": 2
+  },
+  {
+    "local": "Ville de Montagne",
+    "valor": 225.07,
+    "qtd": 2
+  },
+  {
+    "local": "Palmares",
+    "valor": 208.94,
+    "qtd": 2
+  },
+  {
+    "local": "Vila das Flores",
+    "valor": 201.56,
+    "qtd": 2
+  },
+  {
+    "local": "Horto",
+    "valor": 197.4,
+    "qtd": 1
+  },
+  {
+    "local": "Marçola",
+    "valor": 194.69,
+    "qtd": 1
+  },
+  {
+    "local": "Grajaú",
+    "valor": 182.3,
+    "qtd": 1
+  },
+  {
+    "local": "Jardim Das - Mangabeiras",
+    "valor": 169.48,
+    "qtd": 1
+  },
+  {
+    "local": "Cinquentenário",
+    "valor": 161.48,
+    "qtd": 1
+  },
+  {
+    "local": "Alto Caiçaras",
+    "valor": 151.27,
+    "qtd": 1
+  },
+  {
+    "local": "Nova Suíssa",
+    "valor": 140.4,
+    "qtd": 2
+  },
+  {
+    "local": "Village Terrasse I",
+    "valor": 139.2,
+    "qtd": 1
+  },
+  {
+    "local": "Pompéia",
+    "valor": 138.15,
+    "qtd": 1
+  },
+  {
+    "local": "São Sebastião das Águas Claras",
+    "valor": 116.79,
+    "qtd": 1
+  },
+  {
+    "local": "Santa Tereza",
+    "valor": 107.11,
+    "qtd": 1
+  },
+  {
+    "local": "Teixeira Dias (Barreiro)",
+    "valor": 106.83,
+    "qtd": 1
+  },
+  {
+    "local": "Saudade",
+    "valor": 93.46,
+    "qtd": 1
+  },
+  {
+    "local": "Vila D'el Rey",
+    "valor": 92.35,
+    "qtd": 1
+  },
+  {
+    "local": "Palmeiras",
+    "valor": 89.11,
+    "qtd": 1
+  },
+  {
+    "local": "Nova Lima",
+    "valor": 88.47,
+    "qtd": 1
+  },
+  {
+    "local": "Cidade Nova",
+    "valor": 86.41,
+    "qtd": 1
+  },
+  {
+    "local": "Coração Eucarístico",
+    "valor": 85.35,
+    "qtd": 1
+  },
+  {
+    "local": "Santa Amélia",
+    "valor": 82.84,
+    "qtd": 1
+  },
+  {
+    "local": "São Jorge",
+    "valor": 73.44,
+    "qtd": 1
+  },
+  {
+    "local": "Ipê",
+    "valor": 71.89,
+    "qtd": 1
+  },
+  {
+    "local": "Floresta",
+    "valor": 56.01,
+    "qtd": 1
+  },
+  {
+    "local": "Piemonte",
+    "valor": 38.0,
+    "qtd": 1
+  },
+  {
+    "local": "Santa Rita de Cássia",
+    "valor": 33.99,
+    "qtd": 1
+  },
+  {
+    "local": "Santana do Cafezal",
+    "valor": 28.99,
+    "qtd": 1
+  }
+]

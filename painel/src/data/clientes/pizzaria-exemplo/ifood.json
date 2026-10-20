@@ -1,0 +1,4016 @@
+{
+  "origem": "EXEMPLO",
+  "comissaoPct": 0.23,
+  "taxaPagamentoPct": 0.032,
+  "embalagemPorItem": 2.5,
+  "pratos": [
+    {
+      "id": "p01",
+      "nome": "Pizza 5 Queijos com Parma",
+      "precoIfood": 109.9,
+      "cmvUnitario": 29.5
+    },
+    {
+      "id": "p02",
+      "nome": "Pizza Margherita",
+      "precoIfood": 79.9,
+      "cmvUnitario": 12.4
+    },
+    {
+      "id": "p03",
+      "nome": "Pizza Calabresa",
+      "precoIfood": 74.9,
+      "cmvUnitario": 14.8
+    },
+    {
+      "id": "p04",
+      "nome": "Pizza Frango com Catupiry",
+      "precoIfood": 84.9,
+      "cmvUnitario": 21.9
+    },
+    {
+      "id": "p05",
+      "nome": "Pizza Parma e Cogumelos",
+      "precoIfood": 99.9,
+      "cmvUnitario": 24.1
+    },
+    {
+      "id": "p06",
+      "nome": "Pizza Pepperoni",
+      "precoIfood": 89.9,
+      "cmvUnitario": 19.7
+    },
+    {
+      "id": "p07",
+      "nome": "Combo 2 Pizzas 25cm",
+      "precoIfood": 99.9,
+      "cmvUnitario": 38.6
+    },
+    {
+      "id": "p08",
+      "nome": "Pizza Portuguesa",
+      "precoIfood": 79.9,
+      "cmvUnitario": 26.3
+    },
+    {
+      "id": "p09",
+      "nome": "Pizza Quatro Queijos",
+      "precoIfood": 84.9,
+      "cmvUnitario": 27.9
+    },
+    {
+      "id": "p10",
+      "nome": "Pizza de Nutella",
+      "precoIfood": 59.9,
+      "cmvUnitario": 16.2
+    },
+    {
+      "id": "p11",
+      "nome": "Refrigerante 2L",
+      "precoIfood": 16.9,
+      "cmvUnitario": 7.9
+    },
+    {
+      "id": "p12",
+      "nome": "Pizza Vegana",
+      "precoIfood": 89.9,
+      "cmvUnitario": 23.5
+    }
+  ],
+  "promocoes": [
+    {
+      "id": "pr1",
+      "nome": "30% off na 5 Queijos com Parma",
+      "tipo": "Desconto em item",
+      "quemBanca": "Restaurante"
+    },
+    {
+      "id": "pr2",
+      "nome": "Cupom R$ 15 primeira compra",
+      "tipo": "Cupom",
+      "quemBanca": "Restaurante"
+    },
+    {
+      "id": "pr3",
+      "nome": "Frete grátis acima de R$ 80",
+      "tipo": "Frete",
+      "quemBanca": "Restaurante"
+    },
+    {
+      "id": "pr4",
+      "nome": "Combo 2 pizzas 25cm",
+      "tipo": "Combo",
+      "quemBanca": "Restaurante"
+    }
+  ],
+  "vendasPratosDia": [
+    {
+      "data": "2026-08-09",
+      "qtd": {
+        "p01": 13,
+        "p02": 8,
+        "p03": 7,
+        "p04": 3,
+        "p05": 3,
+        "p06": 5,
+        "p07": 6,
+        "p08": 2,
+        "p09": 2,
+        "p10": 1,
+        "p11": 5,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-10",
+      "qtd": {
+        "p01": 10,
+        "p02": 1,
+        "p03": 1,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 0,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-11",
+      "qtd": {
+        "p01": 10,
+        "p02": 3,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 2,
+        "p07": 2,
+        "p08": 1,
+        "p09": 0,
+        "p10": 1,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-12",
+      "qtd": {
+        "p01": 11,
+        "p02": 3,
+        "p03": 2,
+        "p04": 2,
+        "p05": 1,
+        "p06": 2,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-13",
+      "qtd": {
+        "p01": 8,
+        "p02": 3,
+        "p03": 3,
+        "p04": 2,
+        "p05": 2,
+        "p06": 2,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-14",
+      "qtd": {
+        "p01": 16,
+        "p02": 8,
+        "p03": 5,
+        "p04": 4,
+        "p05": 4,
+        "p06": 5,
+        "p07": 5,
+        "p08": 2,
+        "p09": 2,
+        "p10": 1,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-08-15",
+      "qtd": {
+        "p01": 19,
+        "p02": 7,
+        "p03": 6,
+        "p04": 4,
+        "p05": 4,
+        "p06": 6,
+        "p07": 4,
+        "p08": 3,
+        "p09": 2,
+        "p10": 2,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-08-16",
+      "qtd": {
+        "p01": 17,
+        "p02": 9,
+        "p03": 9,
+        "p04": 8,
+        "p05": 4,
+        "p06": 4,
+        "p07": 7,
+        "p08": 4,
+        "p09": 2,
+        "p10": 2,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-08-17",
+      "qtd": {
+        "p01": 10,
+        "p02": 2,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-18",
+      "qtd": {
+        "p01": 10,
+        "p02": 3,
+        "p03": 3,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-19",
+      "qtd": {
+        "p01": 9,
+        "p02": 2,
+        "p03": 2,
+        "p04": 3,
+        "p05": 1,
+        "p06": 2,
+        "p07": 2,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-20",
+      "qtd": {
+        "p01": 11,
+        "p02": 4,
+        "p03": 2,
+        "p04": 2,
+        "p05": 1,
+        "p06": 2,
+        "p07": 3,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 3,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-21",
+      "qtd": {
+        "p01": 14,
+        "p02": 5,
+        "p03": 6,
+        "p04": 5,
+        "p05": 4,
+        "p06": 5,
+        "p07": 6,
+        "p08": 2,
+        "p09": 2,
+        "p10": 2,
+        "p11": 4,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-22",
+      "qtd": {
+        "p01": 19,
+        "p02": 8,
+        "p03": 6,
+        "p04": 5,
+        "p05": 5,
+        "p06": 6,
+        "p07": 8,
+        "p08": 2,
+        "p09": 3,
+        "p10": 2,
+        "p11": 5,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-08-23",
+      "qtd": {
+        "p01": 16,
+        "p02": 9,
+        "p03": 6,
+        "p04": 6,
+        "p05": 3,
+        "p06": 4,
+        "p07": 5,
+        "p08": 2,
+        "p09": 3,
+        "p10": 1,
+        "p11": 4,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-24",
+      "qtd": {
+        "p01": 9,
+        "p02": 2,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 0,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-25",
+      "qtd": {
+        "p01": 9,
+        "p02": 3,
+        "p03": 1,
+        "p04": 2,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 0,
+        "p09": 1,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-26",
+      "qtd": {
+        "p01": 10,
+        "p02": 3,
+        "p03": 2,
+        "p04": 2,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 0,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-27",
+      "qtd": {
+        "p01": 11,
+        "p02": 3,
+        "p03": 3,
+        "p04": 3,
+        "p05": 1,
+        "p06": 2,
+        "p07": 3,
+        "p08": 1,
+        "p09": 0,
+        "p10": 1,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-28",
+      "qtd": {
+        "p01": 18,
+        "p02": 6,
+        "p03": 5,
+        "p04": 5,
+        "p05": 3,
+        "p06": 4,
+        "p07": 3,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 3,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-29",
+      "qtd": {
+        "p01": 20,
+        "p02": 11,
+        "p03": 8,
+        "p04": 8,
+        "p05": 5,
+        "p06": 5,
+        "p07": 5,
+        "p08": 3,
+        "p09": 2,
+        "p10": 2,
+        "p11": 7,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-08-30",
+      "qtd": {
+        "p01": 13,
+        "p02": 7,
+        "p03": 7,
+        "p04": 5,
+        "p05": 5,
+        "p06": 6,
+        "p07": 7,
+        "p08": 4,
+        "p09": 2,
+        "p10": 2,
+        "p11": 5,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-08-31",
+      "qtd": {
+        "p01": 8,
+        "p02": 2,
+        "p03": 1,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-01",
+      "qtd": {
+        "p01": 8,
+        "p02": 3,
+        "p03": 3,
+        "p04": 2,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-02",
+      "qtd": {
+        "p01": 7,
+        "p02": 4,
+        "p03": 2,
+        "p04": 2,
+        "p05": 2,
+        "p06": 2,
+        "p07": 1,
+        "p08": 1,
+        "p09": 0,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-03",
+      "qtd": {
+        "p01": 11,
+        "p02": 3,
+        "p03": 3,
+        "p04": 2,
+        "p05": 2,
+        "p06": 2,
+        "p07": 3,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-04",
+      "qtd": {
+        "p01": 11,
+        "p02": 6,
+        "p03": 7,
+        "p04": 6,
+        "p05": 4,
+        "p06": 4,
+        "p07": 3,
+        "p08": 3,
+        "p09": 1,
+        "p10": 1,
+        "p11": 4,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-05",
+      "qtd": {
+        "p01": 18,
+        "p02": 10,
+        "p03": 7,
+        "p04": 7,
+        "p05": 4,
+        "p06": 4,
+        "p07": 6,
+        "p08": 2,
+        "p09": 2,
+        "p10": 2,
+        "p11": 6,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-09-06",
+      "qtd": {
+        "p01": 14,
+        "p02": 9,
+        "p03": 6,
+        "p04": 5,
+        "p05": 4,
+        "p06": 3,
+        "p07": 6,
+        "p08": 3,
+        "p09": 2,
+        "p10": 2,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-09-07",
+      "qtd": {
+        "p01": 10,
+        "p02": 2,
+        "p03": 1,
+        "p04": 1,
+        "p05": 1,
+        "p06": 0,
+        "p07": 1,
+        "p08": 0,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-08",
+      "qtd": {
+        "p01": 9,
+        "p02": 2,
+        "p03": 2,
+        "p04": 2,
+        "p05": 1,
+        "p06": 2,
+        "p07": 2,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-09",
+      "qtd": {
+        "p01": 10,
+        "p02": 2,
+        "p03": 2,
+        "p04": 2,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-10",
+      "qtd": {
+        "p01": 9,
+        "p02": 5,
+        "p03": 3,
+        "p04": 2,
+        "p05": 2,
+        "p06": 2,
+        "p07": 2,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 3,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-11",
+      "qtd": {
+        "p01": 15,
+        "p02": 7,
+        "p03": 5,
+        "p04": 6,
+        "p05": 5,
+        "p06": 5,
+        "p07": 6,
+        "p08": 2,
+        "p09": 2,
+        "p10": 1,
+        "p11": 5,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-09-12",
+      "qtd": {
+        "p01": 18,
+        "p02": 6,
+        "p03": 5,
+        "p04": 6,
+        "p05": 5,
+        "p06": 4,
+        "p07": 6,
+        "p08": 4,
+        "p09": 2,
+        "p10": 1,
+        "p11": 6,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-13",
+      "qtd": {
+        "p01": 14,
+        "p02": 7,
+        "p03": 7,
+        "p04": 8,
+        "p05": 6,
+        "p06": 5,
+        "p07": 5,
+        "p08": 2,
+        "p09": 3,
+        "p10": 2,
+        "p11": 4,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-14",
+      "qtd": {
+        "p01": 9,
+        "p02": 3,
+        "p03": 3,
+        "p04": 3,
+        "p05": 2,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-15",
+      "qtd": {
+        "p01": 11,
+        "p02": 2,
+        "p03": 1,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 0,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-16",
+      "qtd": {
+        "p01": 10,
+        "p02": 5,
+        "p03": 3,
+        "p04": 3,
+        "p05": 2,
+        "p06": 2,
+        "p07": 2,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-17",
+      "qtd": {
+        "p01": 12,
+        "p02": 3,
+        "p03": 3,
+        "p04": 3,
+        "p05": 3,
+        "p06": 2,
+        "p07": 3,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-18",
+      "qtd": {
+        "p01": 15,
+        "p02": 7,
+        "p03": 4,
+        "p04": 3,
+        "p05": 2,
+        "p06": 3,
+        "p07": 3,
+        "p08": 1,
+        "p09": 2,
+        "p10": 2,
+        "p11": 3,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-09-19",
+      "qtd": {
+        "p01": 20,
+        "p02": 6,
+        "p03": 8,
+        "p04": 5,
+        "p05": 6,
+        "p06": 4,
+        "p07": 6,
+        "p08": 4,
+        "p09": 3,
+        "p10": 2,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-09-20",
+      "qtd": {
+        "p01": 16,
+        "p02": 5,
+        "p03": 7,
+        "p04": 6,
+        "p05": 4,
+        "p06": 3,
+        "p07": 4,
+        "p08": 2,
+        "p09": 3,
+        "p10": 2,
+        "p11": 4,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-21",
+      "qtd": {
+        "p01": 9,
+        "p02": 2,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-22",
+      "qtd": {
+        "p01": 9,
+        "p02": 3,
+        "p03": 3,
+        "p04": 2,
+        "p05": 2,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-23",
+      "qtd": {
+        "p01": 9,
+        "p02": 3,
+        "p03": 3,
+        "p04": 2,
+        "p05": 2,
+        "p06": 2,
+        "p07": 2,
+        "p08": 2,
+        "p09": 0,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-24",
+      "qtd": {
+        "p01": 10,
+        "p02": 5,
+        "p03": 3,
+        "p04": 2,
+        "p05": 2,
+        "p06": 2,
+        "p07": 3,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-25",
+      "qtd": {
+        "p01": 14,
+        "p02": 6,
+        "p03": 7,
+        "p04": 3,
+        "p05": 4,
+        "p06": 4,
+        "p07": 5,
+        "p08": 3,
+        "p09": 1,
+        "p10": 2,
+        "p11": 3,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-26",
+      "qtd": {
+        "p01": 13,
+        "p02": 7,
+        "p03": 4,
+        "p04": 4,
+        "p05": 5,
+        "p06": 5,
+        "p07": 6,
+        "p08": 3,
+        "p09": 2,
+        "p10": 2,
+        "p11": 5,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-27",
+      "qtd": {
+        "p01": 13,
+        "p02": 6,
+        "p03": 7,
+        "p04": 4,
+        "p05": 3,
+        "p06": 5,
+        "p07": 5,
+        "p08": 2,
+        "p09": 2,
+        "p10": 2,
+        "p11": 4,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "qtd": {
+        "p01": 8,
+        "p02": 2,
+        "p03": 1,
+        "p04": 2,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-29",
+      "qtd": {
+        "p01": 10,
+        "p02": 2,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 2,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-09-30",
+      "qtd": {
+        "p01": 9,
+        "p02": 3,
+        "p03": 2,
+        "p04": 3,
+        "p05": 1,
+        "p06": 2,
+        "p07": 2,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-10-01",
+      "qtd": {
+        "p01": 11,
+        "p02": 4,
+        "p03": 3,
+        "p04": 3,
+        "p05": 3,
+        "p06": 3,
+        "p07": 3,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-10-02",
+      "qtd": {
+        "p01": 13,
+        "p02": 7,
+        "p03": 4,
+        "p04": 5,
+        "p05": 4,
+        "p06": 5,
+        "p07": 5,
+        "p08": 2,
+        "p09": 1,
+        "p10": 2,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-10-03",
+      "qtd": {
+        "p01": 18,
+        "p02": 9,
+        "p03": 8,
+        "p04": 9,
+        "p05": 6,
+        "p06": 7,
+        "p07": 7,
+        "p08": 3,
+        "p09": 3,
+        "p10": 2,
+        "p11": 4,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-10-04",
+      "qtd": {
+        "p01": 13,
+        "p02": 8,
+        "p03": 8,
+        "p04": 6,
+        "p05": 5,
+        "p06": 4,
+        "p07": 5,
+        "p08": 3,
+        "p09": 2,
+        "p10": 1,
+        "p11": 6,
+        "p12": 1
+      }
+    },
+    {
+      "data": "2026-10-05",
+      "qtd": {
+        "p01": 9,
+        "p02": 3,
+        "p03": 2,
+        "p04": 1,
+        "p05": 2,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 1,
+        "p10": 1,
+        "p11": 2,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-10-06",
+      "qtd": {
+        "p01": 11,
+        "p02": 2,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    },
+    {
+      "data": "2026-10-07",
+      "qtd": {
+        "p01": 8,
+        "p02": 2,
+        "p03": 2,
+        "p04": 1,
+        "p05": 1,
+        "p06": 1,
+        "p07": 1,
+        "p08": 1,
+        "p09": 0,
+        "p10": 0,
+        "p11": 1,
+        "p12": 0
+      }
+    }
+  ],
+  "promocoesDia": [
+    {
+      "data": "2026-08-09",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 237.9,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 186.31,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 272.67,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 276.09,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-10",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 1,
+          "faturamento": 96.28,
+          "custo": 33.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 97.27,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 191.99,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 81.6,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-11",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 1,
+          "faturamento": 89.87,
+          "custo": 33.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 92.01,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 1,
+          "faturamento": 100.8,
+          "custo": 7.9
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 94.41,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-12",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 170.71,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 84.71,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 158.49,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 94.97,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-13",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 165.0,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 95.57,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 1,
+          "faturamento": 93.01,
+          "custo": 7.9
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 186.75,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-14",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 5,
+          "faturamento": 449.59,
+          "custo": 165.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 347.84,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 331.88,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 363.87,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-15",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 274.81,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 174.17,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 6,
+          "faturamento": 550.35,
+          "custo": 47.4
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 275.89,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-16",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 328.31,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 168.04,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 5,
+          "faturamento": 479.49,
+          "custo": 39.5
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 288.16,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-17",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 181.41,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 101.72,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 1,
+          "faturamento": 97.86,
+          "custo": 7.9
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 101.17,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-18",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 189.35,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 89.8,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 166.99,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 92.27,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-19",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 1,
+          "faturamento": 80.33,
+          "custo": 33.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 79.07,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 161.36,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 158.22,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-20",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 198.94,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 173.61,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 289.48,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 183.52,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-21",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 6,
+          "faturamento": 541.82,
+          "custo": 198.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 238.59,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 6,
+          "faturamento": 564.45,
+          "custo": 47.4
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 236.85,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-22",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 367.14,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 5,
+          "faturamento": 421.23,
+          "custo": 75.0
+        },
+        "pr3": {
+          "pedidos": 7,
+          "faturamento": 678.78,
+          "custo": 55.3
+        },
+        "pr4": {
+          "pedidos": 6,
+          "faturamento": 515.19,
+          "custo": 108.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-23",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 6,
+          "faturamento": 578.46,
+          "custo": 198.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 292.94,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 7,
+          "faturamento": 656.67,
+          "custo": 55.3
+        },
+        "pr4": {
+          "pedidos": 5,
+          "faturamento": 437.49,
+          "custo": 90.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-24",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 1,
+          "faturamento": 87.79,
+          "custo": 33.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 80.67,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 162.81,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 93.76,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-25",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 202.78,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 89.18,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 280.26,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 191.94,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-26",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 174.0,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 86.32,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 169.04,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 195.05,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-27",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 188.86,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 174.76,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 277.23,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 201.97,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-28",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 6,
+          "faturamento": 504.46,
+          "custo": 198.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 282.46,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 358.82,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 375.58,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-29",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 8,
+          "faturamento": 774.52,
+          "custo": 264.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 375.53,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 785.93,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 6,
+          "faturamento": 531.14,
+          "custo": 108.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-30",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 301.25,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 297.33,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 720.27,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 5,
+          "faturamento": 466.15,
+          "custo": 90.0
+        }
+      }
+    },
+    {
+      "data": "2026-08-31",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 1,
+          "faturamento": 84.25,
+          "custo": 33.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 81.19,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 190.21,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 95.34,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-01",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 158.68,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 181.93,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 265.57,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 1,
+          "faturamento": 86.11,
+          "custo": 18.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-02",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 189.93,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 191.45,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 358.77,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 177.0,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-03",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 291.45,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 169.28,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 281.6,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 251.91,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-04",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 396.41,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 374.65,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 7,
+          "faturamento": 650.75,
+          "custo": 55.3
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 286.79,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-05",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 5,
+          "faturamento": 428.03,
+          "custo": 165.0
+        },
+        "pr2": {
+          "pedidos": 5,
+          "faturamento": 445.24,
+          "custo": 75.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 719.85,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 8,
+          "faturamento": 651.39,
+          "custo": 144.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-06",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 357.4,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 6,
+          "faturamento": 559.12,
+          "custo": 90.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 732.45,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 347.99,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-07",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 196.7,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 181.3,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 291.13,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 194.82,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-08",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 242.36,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 178.73,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 157.08,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 269.29,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-09",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 162.63,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 79.18,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 233.4,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 158.53,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-10",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 288.96,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 172.71,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 339.09,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 189.04,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-11",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 8,
+          "faturamento": 688.7,
+          "custo": 264.0
+        },
+        "pr2": {
+          "pedidos": 6,
+          "faturamento": 612.73,
+          "custo": 90.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 690.17,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 5,
+          "faturamento": 427.23,
+          "custo": 90.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-12",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 9,
+          "faturamento": 705.63,
+          "custo": 297.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 352.25,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 11,
+          "faturamento": 871.0,
+          "custo": 86.9
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 305.61,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-13",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 356.92,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 376.38,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 6,
+          "faturamento": 554.57,
+          "custo": 47.4
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 311.07,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-14",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 180.3,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 282.9,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 340.53,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 277.22,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-15",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 184.02,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 182.08,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 285.73,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 198.17,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-16",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 5,
+          "faturamento": 407.69,
+          "custo": 165.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 165.99,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 5,
+          "faturamento": 459.95,
+          "custo": 39.5
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 229.35,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-17",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 266.09,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 305.45,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 294.46,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 289.97,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-18",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 7,
+          "faturamento": 564.83,
+          "custo": 231.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 346.32,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 5,
+          "faturamento": 482.57,
+          "custo": 39.5
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 358.14,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-19",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 5,
+          "faturamento": 398.34,
+          "custo": 165.0
+        },
+        "pr2": {
+          "pedidos": 7,
+          "faturamento": 604.07,
+          "custo": 105.0
+        },
+        "pr3": {
+          "pedidos": 9,
+          "faturamento": 786.23,
+          "custo": 71.1
+        },
+        "pr4": {
+          "pedidos": 7,
+          "faturamento": 578.18,
+          "custo": 126.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-20",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 6,
+          "faturamento": 547.77,
+          "custo": 198.0
+        },
+        "pr2": {
+          "pedidos": 5,
+          "faturamento": 439.77,
+          "custo": 75.0
+        },
+        "pr3": {
+          "pedidos": 6,
+          "faturamento": 485.88,
+          "custo": 47.4
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 357.68,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-21",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 269.3,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 1,
+          "faturamento": 86.25,
+          "custo": 15.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 178.01,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 169.71,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-22",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 270.35,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 169.79,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 375.78,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 275.08,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-23",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 287.45,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 322.54,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 334.77,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 381.89,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-24",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 349.72,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 268.81,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 277.43,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 4,
+          "faturamento": 313.12,
+          "custo": 72.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-25",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 6,
+          "faturamento": 579.6,
+          "custo": 198.0
+        },
+        "pr2": {
+          "pedidos": 6,
+          "faturamento": 580.08,
+          "custo": 90.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 794.12,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 5,
+          "faturamento": 443.37,
+          "custo": 90.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-26",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 8,
+          "faturamento": 727.22,
+          "custo": 264.0
+        },
+        "pr2": {
+          "pedidos": 6,
+          "faturamento": 546.29,
+          "custo": 90.0
+        },
+        "pr3": {
+          "pedidos": 9,
+          "faturamento": 931.19,
+          "custo": 71.1
+        },
+        "pr4": {
+          "pedidos": 7,
+          "faturamento": 634.29,
+          "custo": 126.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-27",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 7,
+          "faturamento": 621.31,
+          "custo": 231.0
+        },
+        "pr2": {
+          "pedidos": 4,
+          "faturamento": 333.97,
+          "custo": 60.0
+        },
+        "pr3": {
+          "pedidos": 9,
+          "faturamento": 748.38,
+          "custo": 71.1
+        },
+        "pr4": {
+          "pedidos": 8,
+          "faturamento": 656.6,
+          "custo": 144.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 255.01,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 175.85,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 362.67,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 258.3,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-29",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 309.03,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 187.11,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 285.17,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 275.68,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-09-30",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 176.03,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 266.45,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 356.2,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 274.07,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-01",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 6,
+          "faturamento": 519.6,
+          "custo": 198.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 304.72,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 7,
+          "faturamento": 650.57,
+          "custo": 55.3
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 300.06,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-02",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 7,
+          "faturamento": 592.07,
+          "custo": 231.0
+        },
+        "pr2": {
+          "pedidos": 3,
+          "faturamento": 249.94,
+          "custo": 45.0
+        },
+        "pr3": {
+          "pedidos": 7,
+          "faturamento": 678.39,
+          "custo": 55.3
+        },
+        "pr4": {
+          "pedidos": 7,
+          "faturamento": 691.55,
+          "custo": 126.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-03",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 13,
+          "faturamento": 1200.52,
+          "custo": 429.0
+        },
+        "pr2": {
+          "pedidos": 5,
+          "faturamento": 397.66,
+          "custo": 75.0
+        },
+        "pr3": {
+          "pedidos": 14,
+          "faturamento": 1072.6,
+          "custo": 110.6
+        },
+        "pr4": {
+          "pedidos": 7,
+          "faturamento": 580.97,
+          "custo": 126.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-04",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 10,
+          "faturamento": 881.9,
+          "custo": 330.0
+        },
+        "pr2": {
+          "pedidos": 5,
+          "faturamento": 451.64,
+          "custo": 75.0
+        },
+        "pr3": {
+          "pedidos": 8,
+          "faturamento": 813.82,
+          "custo": 63.2
+        },
+        "pr4": {
+          "pedidos": 6,
+          "faturamento": 564.63,
+          "custo": 108.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-05",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 4,
+          "faturamento": 345.41,
+          "custo": 132.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 171.84,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 4,
+          "faturamento": 373.77,
+          "custo": 31.6
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 262.18,
+          "custo": 54.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-06",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 3,
+          "faturamento": 256.84,
+          "custo": 99.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 199.79,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 3,
+          "faturamento": 289.14,
+          "custo": 23.7
+        },
+        "pr4": {
+          "pedidos": 2,
+          "faturamento": 189.0,
+          "custo": 36.0
+        }
+      }
+    },
+    {
+      "data": "2026-10-07",
+      "promocoes": {
+        "pr1": {
+          "pedidos": 2,
+          "faturamento": 200.5,
+          "custo": 66.0
+        },
+        "pr2": {
+          "pedidos": 2,
+          "faturamento": 192.33,
+          "custo": 30.0
+        },
+        "pr3": {
+          "pedidos": 2,
+          "faturamento": 173.07,
+          "custo": 15.8
+        },
+        "pr4": {
+          "pedidos": 3,
+          "faturamento": 294.42,
+          "custo": 54.0
+        }
+      }
+    }
+  ],
+  "funilDia": [
+    {
+      "data": "2026-08-09",
+      "visitas": 390,
+      "cardapio": 176,
+      "sacola": 56,
+      "pedidos": 39
+    },
+    {
+      "data": "2026-08-10",
+      "visitas": 138,
+      "cardapio": 54,
+      "sacola": 19,
+      "pedidos": 13
+    },
+    {
+      "data": "2026-08-11",
+      "visitas": 178,
+      "cardapio": 77,
+      "sacola": 26,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-08-12",
+      "visitas": 204,
+      "cardapio": 88,
+      "sacola": 30,
+      "pedidos": 19
+    },
+    {
+      "data": "2026-08-13",
+      "visitas": 183,
+      "cardapio": 81,
+      "sacola": 25,
+      "pedidos": 18
+    },
+    {
+      "data": "2026-08-14",
+      "visitas": 498,
+      "cardapio": 209,
+      "sacola": 63,
+      "pedidos": 41
+    },
+    {
+      "data": "2026-08-15",
+      "visitas": 443,
+      "cardapio": 201,
+      "sacola": 70,
+      "pedidos": 44
+    },
+    {
+      "data": "2026-08-16",
+      "visitas": 547,
+      "cardapio": 244,
+      "sacola": 80,
+      "pedidos": 51
+    },
+    {
+      "data": "2026-08-17",
+      "visitas": 150,
+      "cardapio": 64,
+      "sacola": 23,
+      "pedidos": 15
+    },
+    {
+      "data": "2026-08-18",
+      "visitas": 186,
+      "cardapio": 73,
+      "sacola": 25,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-08-19",
+      "visitas": 210,
+      "cardapio": 84,
+      "sacola": 27,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-08-20",
+      "visitas": 277,
+      "cardapio": 111,
+      "sacola": 35,
+      "pedidos": 22
+    },
+    {
+      "data": "2026-08-21",
+      "visitas": 357,
+      "cardapio": 154,
+      "sacola": 56,
+      "pedidos": 39
+    },
+    {
+      "data": "2026-08-22",
+      "visitas": 458,
+      "cardapio": 210,
+      "sacola": 79,
+      "pedidos": 50
+    },
+    {
+      "data": "2026-08-23",
+      "visitas": 424,
+      "cardapio": 190,
+      "sacola": 64,
+      "pedidos": 42
+    },
+    {
+      "data": "2026-08-24",
+      "visitas": 148,
+      "cardapio": 62,
+      "sacola": 19,
+      "pedidos": 13
+    },
+    {
+      "data": "2026-08-25",
+      "visitas": 177,
+      "cardapio": 70,
+      "sacola": 23,
+      "pedidos": 15
+    },
+    {
+      "data": "2026-08-26",
+      "visitas": 180,
+      "cardapio": 73,
+      "sacola": 25,
+      "pedidos": 16
+    },
+    {
+      "data": "2026-08-27",
+      "visitas": 273,
+      "cardapio": 106,
+      "sacola": 33,
+      "pedidos": 21
+    },
+    {
+      "data": "2026-08-28",
+      "visitas": 371,
+      "cardapio": 159,
+      "sacola": 53,
+      "pedidos": 36
+    },
+    {
+      "data": "2026-08-29",
+      "visitas": 534,
+      "cardapio": 212,
+      "sacola": 80,
+      "pedidos": 55
+    },
+    {
+      "data": "2026-08-30",
+      "visitas": 604,
+      "cardapio": 235,
+      "sacola": 71,
+      "pedidos": 45
+    },
+    {
+      "data": "2026-08-31",
+      "visitas": 144,
+      "cardapio": 56,
+      "sacola": 18,
+      "pedidos": 12
+    },
+    {
+      "data": "2026-09-01",
+      "visitas": 168,
+      "cardapio": 74,
+      "sacola": 24,
+      "pedidos": 16
+    },
+    {
+      "data": "2026-09-02",
+      "visitas": 186,
+      "cardapio": 84,
+      "sacola": 27,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-09-03",
+      "visitas": 268,
+      "cardapio": 109,
+      "sacola": 35,
+      "pedidos": 22
+    },
+    {
+      "data": "2026-09-04",
+      "visitas": 338,
+      "cardapio": 153,
+      "sacola": 55,
+      "pedidos": 36
+    },
+    {
+      "data": "2026-09-05",
+      "visitas": 477,
+      "cardapio": 196,
+      "sacola": 71,
+      "pedidos": 49
+    },
+    {
+      "data": "2026-09-06",
+      "visitas": 483,
+      "cardapio": 219,
+      "sacola": 67,
+      "pedidos": 42
+    },
+    {
+      "data": "2026-09-07",
+      "visitas": 125,
+      "cardapio": 50,
+      "sacola": 18,
+      "pedidos": 12
+    },
+    {
+      "data": "2026-09-08",
+      "visitas": 215,
+      "cardapio": 84,
+      "sacola": 26,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-09-09",
+      "visitas": 154,
+      "cardapio": 65,
+      "sacola": 22,
+      "pedidos": 15
+    },
+    {
+      "data": "2026-09-10",
+      "visitas": 222,
+      "cardapio": 94,
+      "sacola": 34,
+      "pedidos": 22
+    },
+    {
+      "data": "2026-09-11",
+      "visitas": 418,
+      "cardapio": 179,
+      "sacola": 67,
+      "pedidos": 43
+    },
+    {
+      "data": "2026-09-12",
+      "visitas": 426,
+      "cardapio": 193,
+      "sacola": 67,
+      "pedidos": 45
+    },
+    {
+      "data": "2026-09-13",
+      "visitas": 465,
+      "cardapio": 204,
+      "sacola": 65,
+      "pedidos": 45
+    },
+    {
+      "data": "2026-09-14",
+      "visitas": 195,
+      "cardapio": 89,
+      "sacola": 28,
+      "pedidos": 19
+    },
+    {
+      "data": "2026-09-15",
+      "visitas": 182,
+      "cardapio": 73,
+      "sacola": 22,
+      "pedidos": 14
+    },
+    {
+      "data": "2026-09-16",
+      "visitas": 241,
+      "cardapio": 102,
+      "sacola": 35,
+      "pedidos": 23
+    },
+    {
+      "data": "2026-09-17",
+      "visitas": 281,
+      "cardapio": 129,
+      "sacola": 39,
+      "pedidos": 24
+    },
+    {
+      "data": "2026-09-18",
+      "visitas": 293,
+      "cardapio": 127,
+      "sacola": 48,
+      "pedidos": 33
+    },
+    {
+      "data": "2026-09-19",
+      "visitas": 546,
+      "cardapio": 224,
+      "sacola": 74,
+      "pedidos": 49
+    },
+    {
+      "data": "2026-09-20",
+      "visitas": 420,
+      "cardapio": 189,
+      "sacola": 59,
+      "pedidos": 40
+    },
+    {
+      "data": "2026-09-21",
+      "visitas": 135,
+      "cardapio": 53,
+      "sacola": 20,
+      "pedidos": 14
+    },
+    {
+      "data": "2026-09-22",
+      "visitas": 201,
+      "cardapio": 88,
+      "sacola": 27,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-09-23",
+      "visitas": 183,
+      "cardapio": 78,
+      "sacola": 29,
+      "pedidos": 20
+    },
+    {
+      "data": "2026-09-24",
+      "visitas": 252,
+      "cardapio": 106,
+      "sacola": 36,
+      "pedidos": 23
+    },
+    {
+      "data": "2026-09-25",
+      "visitas": 431,
+      "cardapio": 169,
+      "sacola": 55,
+      "pedidos": 37
+    },
+    {
+      "data": "2026-09-26",
+      "visitas": 392,
+      "cardapio": 179,
+      "sacola": 60,
+      "pedidos": 40
+    },
+    {
+      "data": "2026-09-27",
+      "visitas": 408,
+      "cardapio": 156,
+      "sacola": 57,
+      "pedidos": 38
+    },
+    {
+      "data": "2026-09-28",
+      "visitas": 154,
+      "cardapio": 61,
+      "sacola": 19,
+      "pedidos": 13
+    },
+    {
+      "data": "2026-09-29",
+      "visitas": 163,
+      "cardapio": 67,
+      "sacola": 23,
+      "pedidos": 15
+    },
+    {
+      "data": "2026-09-30",
+      "visitas": 181,
+      "cardapio": 75,
+      "sacola": 27,
+      "pedidos": 19
+    },
+    {
+      "data": "2026-10-01",
+      "visitas": 213,
+      "cardapio": 98,
+      "sacola": 36,
+      "pedidos": 25
+    },
+    {
+      "data": "2026-10-02",
+      "visitas": 404,
+      "cardapio": 158,
+      "sacola": 54,
+      "pedidos": 38
+    },
+    {
+      "data": "2026-10-03",
+      "visitas": 676,
+      "cardapio": 260,
+      "sacola": 79,
+      "pedidos": 55
+    },
+    {
+      "data": "2026-10-04",
+      "visitas": 497,
+      "cardapio": 204,
+      "sacola": 70,
+      "pedidos": 44
+    },
+    {
+      "data": "2026-10-05",
+      "visitas": 176,
+      "cardapio": 79,
+      "sacola": 25,
+      "pedidos": 17
+    },
+    {
+      "data": "2026-10-06",
+      "visitas": 168,
+      "cardapio": 68,
+      "sacola": 23,
+      "pedidos": 15
+    },
+    {
+      "data": "2026-10-07",
+      "visitas": 164,
+      "cardapio": 63,
+      "sacola": 19,
+      "pedidos": 13
+    }
+  ],
+  "pedidosPorFaixaDia": [
+    {
+      "data": "2026-08-09",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 9,
+        "20–22h": 19,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-08-10",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 3,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-11",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 3,
+        "20–22h": 10,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-08-12",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 9,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-08-13",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 9,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-08-14",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 9,
+        "20–22h": 21,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-08-15",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 12,
+        "20–22h": 20,
+        "22–24h": 8
+      }
+    },
+    {
+      "data": "2026-08-16",
+      "faixas": {
+        "11–14h": 3,
+        "14–18h": 3,
+        "18–20h": 11,
+        "20–22h": 26,
+        "22–24h": 8
+      }
+    },
+    {
+      "data": "2026-08-17",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 3,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-18",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 9,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-19",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 9,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-20",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 12,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-08-21",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 12,
+        "20–22h": 18,
+        "22–24h": 5
+      }
+    },
+    {
+      "data": "2026-08-22",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 15,
+        "20–22h": 22,
+        "22–24h": 9
+      }
+    },
+    {
+      "data": "2026-08-23",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 3,
+        "18–20h": 11,
+        "20–22h": 19,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-08-24",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 2,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-25",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 3,
+        "20–22h": 9,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-26",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 9,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-08-27",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 6,
+        "20–22h": 10,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-08-28",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 9,
+        "20–22h": 19,
+        "22–24h": 6
+      }
+    },
+    {
+      "data": "2026-08-29",
+      "faixas": {
+        "11–14h": 4,
+        "14–18h": 3,
+        "18–20h": 14,
+        "20–22h": 24,
+        "22–24h": 10
+      }
+    },
+    {
+      "data": "2026-08-30",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 13,
+        "20–22h": 23,
+        "22–24h": 5
+      }
+    },
+    {
+      "data": "2026-08-31",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 3,
+        "20–22h": 7,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-01",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 3,
+        "20–22h": 9,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-09-02",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-03",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 11,
+        "22–24h": 4
+      }
+    },
+    {
+      "data": "2026-09-04",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 10,
+        "20–22h": 17,
+        "22–24h": 5
+      }
+    },
+    {
+      "data": "2026-09-05",
+      "faixas": {
+        "11–14h": 3,
+        "14–18h": 4,
+        "18–20h": 11,
+        "20–22h": 24,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-09-06",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 3,
+        "18–20h": 12,
+        "20–22h": 18,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-09-07",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 3,
+        "20–22h": 8,
+        "22–24h": 1
+      }
+    },
+    {
+      "data": "2026-09-08",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 9,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-09-09",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 0,
+        "18–20h": 4,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-10",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 6,
+        "20–22h": 11,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-09-11",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 3,
+        "18–20h": 12,
+        "20–22h": 19,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-09-12",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 12,
+        "20–22h": 23,
+        "22–24h": 6
+      }
+    },
+    {
+      "data": "2026-09-13",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 12,
+        "20–22h": 21,
+        "22–24h": 8
+      }
+    },
+    {
+      "data": "2026-09-14",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 11,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-09-15",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 3,
+        "20–22h": 10,
+        "22–24h": 1
+      }
+    },
+    {
+      "data": "2026-09-16",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 6,
+        "20–22h": 12,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-09-17",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 6,
+        "20–22h": 12,
+        "22–24h": 4
+      }
+    },
+    {
+      "data": "2026-09-18",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 2,
+        "18–20h": 7,
+        "20–22h": 17,
+        "22–24h": 6
+      }
+    },
+    {
+      "data": "2026-09-19",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 3,
+        "18–20h": 13,
+        "20–22h": 24,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-09-20",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 9,
+        "20–22h": 19,
+        "22–24h": 8
+      }
+    },
+    {
+      "data": "2026-09-21",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 3,
+        "20–22h": 9,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-22",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 3,
+        "20–22h": 11,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-23",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 11,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-09-24",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 6,
+        "20–22h": 11,
+        "22–24h": 4
+      }
+    },
+    {
+      "data": "2026-09-25",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 11,
+        "20–22h": 18,
+        "22–24h": 4
+      }
+    },
+    {
+      "data": "2026-09-26",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 12,
+        "20–22h": 17,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-09-27",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 2,
+        "18–20h": 9,
+        "20–22h": 21,
+        "22–24h": 5
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 4,
+        "20–22h": 7,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-29",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 4,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-09-30",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 10,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-10-01",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 6,
+        "20–22h": 13,
+        "22–24h": 4
+      }
+    },
+    {
+      "data": "2026-10-02",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 9,
+        "20–22h": 19,
+        "22–24h": 6
+      }
+    },
+    {
+      "data": "2026-10-03",
+      "faixas": {
+        "11–14h": 3,
+        "14–18h": 3,
+        "18–20h": 13,
+        "20–22h": 28,
+        "22–24h": 8
+      }
+    },
+    {
+      "data": "2026-10-04",
+      "faixas": {
+        "11–14h": 2,
+        "14–18h": 2,
+        "18–20h": 10,
+        "20–22h": 23,
+        "22–24h": 7
+      }
+    },
+    {
+      "data": "2026-10-05",
+      "faixas": {
+        "11–14h": 1,
+        "14–18h": 1,
+        "18–20h": 5,
+        "20–22h": 8,
+        "22–24h": 2
+      }
+    },
+    {
+      "data": "2026-10-06",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 1,
+        "18–20h": 3,
+        "20–22h": 8,
+        "22–24h": 3
+      }
+    },
+    {
+      "data": "2026-10-07",
+      "faixas": {
+        "11–14h": 0,
+        "14–18h": 0,
+        "18–20h": 3,
+        "20–22h": 9,
+        "22–24h": 1
+      }
+    }
+  ],
+  "operacaoDia": [
+    {
+      "data": "2026-08-09",
+      "nota": 4.61,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-10",
+      "nota": 4.62,
+      "tempoEntregaMin": 36,
+      "cancelados": 2
+    },
+    {
+      "data": "2026-08-11",
+      "nota": 4.63,
+      "tempoEntregaMin": 41,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-12",
+      "nota": 4.63,
+      "tempoEntregaMin": 47,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-13",
+      "nota": 4.66,
+      "tempoEntregaMin": 44,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-14",
+      "nota": 4.62,
+      "tempoEntregaMin": 36,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-15",
+      "nota": 4.63,
+      "tempoEntregaMin": 41,
+      "cancelados": 2
+    },
+    {
+      "data": "2026-08-16",
+      "nota": 4.67,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-17",
+      "nota": 4.66,
+      "tempoEntregaMin": 42,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-18",
+      "nota": 4.65,
+      "tempoEntregaMin": 48,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-19",
+      "nota": 4.63,
+      "tempoEntregaMin": 47,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-20",
+      "nota": 4.67,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-21",
+      "nota": 4.64,
+      "tempoEntregaMin": 37,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-22",
+      "nota": 4.68,
+      "tempoEntregaMin": 46,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-23",
+      "nota": 4.67,
+      "tempoEntregaMin": 42,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-24",
+      "nota": 4.69,
+      "tempoEntregaMin": 46,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-25",
+      "nota": 4.7,
+      "tempoEntregaMin": 39,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-26",
+      "nota": 4.7,
+      "tempoEntregaMin": 39,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-27",
+      "nota": 4.66,
+      "tempoEntregaMin": 44,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-28",
+      "nota": 4.69,
+      "tempoEntregaMin": 42,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-08-29",
+      "nota": 4.73,
+      "tempoEntregaMin": 45,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-30",
+      "nota": 4.68,
+      "tempoEntregaMin": 44,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-08-31",
+      "nota": 4.68,
+      "tempoEntregaMin": 39,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-01",
+      "nota": 4.74,
+      "tempoEntregaMin": 43,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-02",
+      "nota": 4.72,
+      "tempoEntregaMin": 45,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-03",
+      "nota": 4.73,
+      "tempoEntregaMin": 37,
+      "cancelados": 2
+    },
+    {
+      "data": "2026-09-04",
+      "nota": 4.74,
+      "tempoEntregaMin": 47,
+      "cancelados": 2
+    },
+    {
+      "data": "2026-09-05",
+      "nota": 4.74,
+      "tempoEntregaMin": 47,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-06",
+      "nota": 4.73,
+      "tempoEntregaMin": 47,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-07",
+      "nota": 4.75,
+      "tempoEntregaMin": 46,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-08",
+      "nota": 4.76,
+      "tempoEntregaMin": 38,
+      "cancelados": 2
+    },
+    {
+      "data": "2026-09-09",
+      "nota": 4.75,
+      "tempoEntregaMin": 46,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-10",
+      "nota": 4.74,
+      "tempoEntregaMin": 40,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-11",
+      "nota": 4.76,
+      "tempoEntregaMin": 44,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-12",
+      "nota": 4.77,
+      "tempoEntregaMin": 41,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-13",
+      "nota": 4.77,
+      "tempoEntregaMin": 37,
+      "cancelados": 2
+    },
+    {
+      "data": "2026-09-14",
+      "nota": 4.78,
+      "tempoEntregaMin": 41,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-15",
+      "nota": 4.79,
+      "tempoEntregaMin": 46,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-16",
+      "nota": 4.79,
+      "tempoEntregaMin": 40,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-17",
+      "nota": 4.77,
+      "tempoEntregaMin": 47,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-18",
+      "nota": 4.76,
+      "tempoEntregaMin": 36,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-19",
+      "nota": 4.81,
+      "tempoEntregaMin": 46,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-20",
+      "nota": 4.78,
+      "tempoEntregaMin": 38,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-21",
+      "nota": 4.81,
+      "tempoEntregaMin": 47,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-22",
+      "nota": 4.82,
+      "tempoEntregaMin": 46,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-23",
+      "nota": 4.77,
+      "tempoEntregaMin": 46,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-24",
+      "nota": 4.83,
+      "tempoEntregaMin": 38,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-09-25",
+      "nota": 4.78,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-26",
+      "nota": 4.84,
+      "tempoEntregaMin": 42,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-27",
+      "nota": 4.84,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-28",
+      "nota": 4.85,
+      "tempoEntregaMin": 48,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-29",
+      "nota": 4.81,
+      "tempoEntregaMin": 40,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-09-30",
+      "nota": 4.8,
+      "tempoEntregaMin": 39,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-10-01",
+      "nota": 4.83,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-10-02",
+      "nota": 4.81,
+      "tempoEntregaMin": 37,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-10-03",
+      "nota": 4.81,
+      "tempoEntregaMin": 46,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-10-04",
+      "nota": 4.83,
+      "tempoEntregaMin": 38,
+      "cancelados": 0
+    },
+    {
+      "data": "2026-10-05",
+      "nota": 4.88,
+      "tempoEntregaMin": 42,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-10-06",
+      "nota": 4.84,
+      "tempoEntregaMin": 41,
+      "cancelados": 1
+    },
+    {
+      "data": "2026-10-07",
+      "nota": 4.84,
+      "tempoEntregaMin": 44,
+      "cancelados": 0
+    }
+  ]
+}

@@ -1,0 +1,1325 @@
+{
+  "origem": "EXEMPLO",
+  "dias": [
+    {
+      "data": "2026-08-09",
+      "canais": {
+        "ifood": {
+          "faturamento": 3331.38,
+          "pedidos": 39
+        },
+        "proprio": {
+          "faturamento": 1305.63,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1519.46,
+          "pedidos": 20
+        }
+      },
+      "cmv": 1738.1,
+      "producao": {
+        "pizzas": 97,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-08-10",
+      "canais": {
+        "ifood": {
+          "faturamento": 1165.36,
+          "pedidos": 13
+        },
+        "proprio": {
+          "faturamento": 361.07,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 487.87,
+          "pedidos": 6
+        }
+      },
+      "cmv": 640.34,
+      "producao": {
+        "pizzas": 32,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-11",
+      "canais": {
+        "ifood": {
+          "faturamento": 1635.57,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 521.97,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 564.81,
+          "pedidos": 7
+        }
+      },
+      "cmv": 793.79,
+      "producao": {
+        "pizzas": 38,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-08-12",
+      "canais": {
+        "ifood": {
+          "faturamento": 1650.15,
+          "pedidos": 19
+        },
+        "proprio": {
+          "faturamento": 591.64,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 515.65,
+          "pedidos": 7
+        }
+      },
+      "cmv": 782.83,
+      "producao": {
+        "pizzas": 45,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-13",
+      "canais": {
+        "ifood": {
+          "faturamento": 1571.86,
+          "pedidos": 18
+        },
+        "proprio": {
+          "faturamento": 614.13,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 678.01,
+          "pedidos": 9
+        }
+      },
+      "cmv": 853.84,
+      "producao": {
+        "pizzas": 43,
+        "perdas": 4
+      }
+    },
+    {
+      "data": "2026-08-14",
+      "canais": {
+        "ifood": {
+          "faturamento": 3583.01,
+          "pedidos": 41
+        },
+        "proprio": {
+          "faturamento": 948.45,
+          "pedidos": 10
+        },
+        "salao": {
+          "faturamento": 1163.3,
+          "pedidos": 15
+        }
+      },
+      "cmv": 1696.77,
+      "producao": {
+        "pizzas": 91,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-08-15",
+      "canais": {
+        "ifood": {
+          "faturamento": 3739.41,
+          "pedidos": 44
+        },
+        "proprio": {
+          "faturamento": 1425.68,
+          "pedidos": 15
+        },
+        "salao": {
+          "faturamento": 1298.48,
+          "pedidos": 18
+        }
+      },
+      "cmv": 1982.56,
+      "producao": {
+        "pizzas": 108,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-16",
+      "canais": {
+        "ifood": {
+          "faturamento": 4482.43,
+          "pedidos": 51
+        },
+        "proprio": {
+          "faturamento": 1322.4,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1258.9,
+          "pedidos": 15
+        }
+      },
+      "cmv": 1997.27,
+      "producao": {
+        "pizzas": 100,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-08-17",
+      "canais": {
+        "ifood": {
+          "faturamento": 1398.9,
+          "pedidos": 15
+        },
+        "proprio": {
+          "faturamento": 376.22,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 507.01,
+          "pedidos": 6
+        }
+      },
+      "cmv": 714.03,
+      "producao": {
+        "pizzas": 33,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-18",
+      "canais": {
+        "ifood": {
+          "faturamento": 1523.04,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 630.16,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 525.47,
+          "pedidos": 7
+        }
+      },
+      "cmv": 773.41,
+      "producao": {
+        "pizzas": 39,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-08-19",
+      "canais": {
+        "ifood": {
+          "faturamento": 1434.29,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 573.27,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 488.02,
+          "pedidos": 6
+        }
+      },
+      "cmv": 786.94,
+      "producao": {
+        "pizzas": 41,
+        "perdas": 4
+      }
+    },
+    {
+      "data": "2026-08-20",
+      "canais": {
+        "ifood": {
+          "faturamento": 2073.13,
+          "pedidos": 22
+        },
+        "proprio": {
+          "faturamento": 800.31,
+          "pedidos": 8
+        },
+        "salao": {
+          "faturamento": 476.29,
+          "pedidos": 6
+        }
+      },
+      "cmv": 949.04,
+      "producao": {
+        "pizzas": 46,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-08-21",
+      "canais": {
+        "ifood": {
+          "faturamento": 3407.44,
+          "pedidos": 39
+        },
+        "proprio": {
+          "faturamento": 1200.53,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1188.04,
+          "pedidos": 16
+        }
+      },
+      "cmv": 1708.49,
+      "producao": {
+        "pizzas": 93,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-08-22",
+      "canais": {
+        "ifood": {
+          "faturamento": 4569.87,
+          "pedidos": 50
+        },
+        "proprio": {
+          "faturamento": 1616.03,
+          "pedidos": 17
+        },
+        "salao": {
+          "faturamento": 1531.27,
+          "pedidos": 18
+        }
+      },
+      "cmv": 2401.58,
+      "producao": {
+        "pizzas": 121,
+        "perdas": 4
+      }
+    },
+    {
+      "data": "2026-08-23",
+      "canais": {
+        "ifood": {
+          "faturamento": 3808.79,
+          "pedidos": 42
+        },
+        "proprio": {
+          "faturamento": 1267.08,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1539.71,
+          "pedidos": 21
+        }
+      },
+      "cmv": 2112.93,
+      "producao": {
+        "pizzas": 102,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-08-24",
+      "canais": {
+        "ifood": {
+          "faturamento": 1154.73,
+          "pedidos": 13
+        },
+        "proprio": {
+          "faturamento": 350.38,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 684.53,
+          "pedidos": 9
+        }
+      },
+      "cmv": 615.33,
+      "producao": {
+        "pizzas": 37,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-25",
+      "canais": {
+        "ifood": {
+          "faturamento": 1406.91,
+          "pedidos": 15
+        },
+        "proprio": {
+          "faturamento": 546.38,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 357.6,
+          "pedidos": 5
+        }
+      },
+      "cmv": 692.16,
+      "producao": {
+        "pizzas": 38,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-26",
+      "canais": {
+        "ifood": {
+          "faturamento": 1429.5,
+          "pedidos": 16
+        },
+        "proprio": {
+          "faturamento": 451.87,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 805.54,
+          "pedidos": 10
+        }
+      },
+      "cmv": 769.68,
+      "producao": {
+        "pizzas": 39,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-27",
+      "canais": {
+        "ifood": {
+          "faturamento": 1950.42,
+          "pedidos": 21
+        },
+        "proprio": {
+          "faturamento": 737.43,
+          "pedidos": 8
+        },
+        "salao": {
+          "faturamento": 475.29,
+          "pedidos": 6
+        }
+      },
+      "cmv": 897.19,
+      "producao": {
+        "pizzas": 50,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-08-28",
+      "canais": {
+        "ifood": {
+          "faturamento": 3286.43,
+          "pedidos": 36
+        },
+        "proprio": {
+          "faturamento": 1341.19,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1420.44,
+          "pedidos": 19
+        }
+      },
+      "cmv": 1747.42,
+      "producao": {
+        "pizzas": 96,
+        "perdas": 4
+      }
+    },
+    {
+      "data": "2026-08-29",
+      "canais": {
+        "ifood": {
+          "faturamento": 5108.54,
+          "pedidos": 55
+        },
+        "proprio": {
+          "faturamento": 1820.02,
+          "pedidos": 19
+        },
+        "salao": {
+          "faturamento": 1143.7,
+          "pedidos": 15
+        }
+      },
+      "cmv": 2375.04,
+      "producao": {
+        "pizzas": 112,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-08-30",
+      "canais": {
+        "ifood": {
+          "faturamento": 4141.32,
+          "pedidos": 45
+        },
+        "proprio": {
+          "faturamento": 1239.97,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1684.43,
+          "pedidos": 21
+        }
+      },
+      "cmv": 2182.78,
+      "producao": {
+        "pizzas": 104,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-08-31",
+      "canais": {
+        "ifood": {
+          "faturamento": 1074.25,
+          "pedidos": 12
+        },
+        "proprio": {
+          "faturamento": 397.3,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 539.02,
+          "pedidos": 6
+        }
+      },
+      "cmv": 612.04,
+      "producao": {
+        "pizzas": 28,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-09-01",
+      "canais": {
+        "ifood": {
+          "faturamento": 1395.58,
+          "pedidos": 16
+        },
+        "proprio": {
+          "faturamento": 518.78,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 373.33,
+          "pedidos": 5
+        }
+      },
+      "cmv": 658.79,
+      "producao": {
+        "pizzas": 37,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-02",
+      "canais": {
+        "ifood": {
+          "faturamento": 1662.38,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 657.45,
+          "pedidos": 7
+        },
+        "salao": {
+          "faturamento": 614.37,
+          "pedidos": 8
+        }
+      },
+      "cmv": 932.7,
+      "producao": {
+        "pizzas": 45,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-03",
+      "canais": {
+        "ifood": {
+          "faturamento": 1984.46,
+          "pedidos": 22
+        },
+        "proprio": {
+          "faturamento": 785.16,
+          "pedidos": 8
+        },
+        "salao": {
+          "faturamento": 1018.56,
+          "pedidos": 13
+        }
+      },
+      "cmv": 1150.98,
+      "producao": {
+        "pizzas": 58,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-04",
+      "canais": {
+        "ifood": {
+          "faturamento": 3371.5,
+          "pedidos": 36
+        },
+        "proprio": {
+          "faturamento": 913.62,
+          "pedidos": 9
+        },
+        "salao": {
+          "faturamento": 1364.56,
+          "pedidos": 19
+        }
+      },
+      "cmv": 1751.29,
+      "producao": {
+        "pizzas": 82,
+        "perdas": 4
+      }
+    },
+    {
+      "data": "2026-09-05",
+      "canais": {
+        "ifood": {
+          "faturamento": 4259.8,
+          "pedidos": 49
+        },
+        "proprio": {
+          "faturamento": 1075.91,
+          "pedidos": 11
+        },
+        "salao": {
+          "faturamento": 1295.91,
+          "pedidos": 16
+        }
+      },
+      "cmv": 1943.33,
+      "producao": {
+        "pizzas": 103,
+        "perdas": 4
+      }
+    },
+    {
+      "data": "2026-09-06",
+      "canais": {
+        "ifood": {
+          "faturamento": 3742.37,
+          "pedidos": 42
+        },
+        "proprio": {
+          "faturamento": 1088.5,
+          "pedidos": 11
+        },
+        "salao": {
+          "faturamento": 949.72,
+          "pedidos": 11
+        }
+      },
+      "cmv": 1715.83,
+      "producao": {
+        "pizzas": 92,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-07",
+      "canais": {
+        "ifood": {
+          "faturamento": 1106.99,
+          "pedidos": 12
+        },
+        "proprio": {
+          "faturamento": 410.77,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 527.46,
+          "pedidos": 7
+        }
+      },
+      "cmv": 636.15,
+      "producao": {
+        "pizzas": 29,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-08",
+      "canais": {
+        "ifood": {
+          "faturamento": 1479.8,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 486.94,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 414.17,
+          "pedidos": 5
+        }
+      },
+      "cmv": 741.35,
+      "producao": {
+        "pizzas": 34,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-09",
+      "canais": {
+        "ifood": {
+          "faturamento": 1280.03,
+          "pedidos": 15
+        },
+        "proprio": {
+          "faturamento": 382.47,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 678.53,
+          "pedidos": 10
+        }
+      },
+      "cmv": 739.2,
+      "producao": {
+        "pizzas": 37,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-10",
+      "canais": {
+        "ifood": {
+          "faturamento": 2015.38,
+          "pedidos": 22
+        },
+        "proprio": {
+          "faturamento": 685.6,
+          "pedidos": 7
+        },
+        "salao": {
+          "faturamento": 710.42,
+          "pedidos": 9
+        }
+      },
+      "cmv": 1020.42,
+      "producao": {
+        "pizzas": 55,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-09-11",
+      "canais": {
+        "ifood": {
+          "faturamento": 4076.8,
+          "pedidos": 43
+        },
+        "proprio": {
+          "faturamento": 1485.89,
+          "pedidos": 14
+        },
+        "salao": {
+          "faturamento": 781.17,
+          "pedidos": 11
+        }
+      },
+      "cmv": 1889.84,
+      "producao": {
+        "pizzas": 91,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-12",
+      "canais": {
+        "ifood": {
+          "faturamento": 3802.94,
+          "pedidos": 45
+        },
+        "proprio": {
+          "faturamento": 1285.81,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 2084.49,
+          "pedidos": 25
+        }
+      },
+      "cmv": 2265.89,
+      "producao": {
+        "pizzas": 106,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-09-13",
+      "canais": {
+        "ifood": {
+          "faturamento": 3873.03,
+          "pedidos": 45
+        },
+        "proprio": {
+          "faturamento": 1222.04,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1684.67,
+          "pedidos": 21
+        }
+      },
+      "cmv": 1923.85,
+      "producao": {
+        "pizzas": 113,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-14",
+      "canais": {
+        "ifood": {
+          "faturamento": 1679.21,
+          "pedidos": 19
+        },
+        "proprio": {
+          "faturamento": 456.16,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 502.65,
+          "pedidos": 7
+        }
+      },
+      "cmv": 759.3,
+      "producao": {
+        "pizzas": 41,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-09-15",
+      "canais": {
+        "ifood": {
+          "faturamento": 1306.81,
+          "pedidos": 14
+        },
+        "proprio": {
+          "faturamento": 453.08,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 543.6,
+          "pedidos": 7
+        }
+      },
+      "cmv": 672.2,
+      "producao": {
+        "pizzas": 37,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-09-16",
+      "canais": {
+        "ifood": {
+          "faturamento": 1949.68,
+          "pedidos": 23
+        },
+        "proprio": {
+          "faturamento": 735.3,
+          "pedidos": 8
+        },
+        "salao": {
+          "faturamento": 407.94,
+          "pedidos": 6
+        }
+      },
+      "cmv": 962.39,
+      "producao": {
+        "pizzas": 48,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-17",
+      "canais": {
+        "ifood": {
+          "faturamento": 2310.79,
+          "pedidos": 24
+        },
+        "proprio": {
+          "faturamento": 774.23,
+          "pedidos": 8
+        },
+        "salao": {
+          "faturamento": 531.56,
+          "pedidos": 7
+        }
+      },
+      "cmv": 1087.11,
+      "producao": {
+        "pizzas": 53,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-18",
+      "canais": {
+        "ifood": {
+          "faturamento": 2917.01,
+          "pedidos": 33
+        },
+        "proprio": {
+          "faturamento": 1187.99,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1419.08,
+          "pedidos": 17
+        }
+      },
+      "cmv": 1686.93,
+      "producao": {
+        "pizzas": 89,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-09-19",
+      "canais": {
+        "ifood": {
+          "faturamento": 4153.87,
+          "pedidos": 49
+        },
+        "proprio": {
+          "faturamento": 1365.36,
+          "pedidos": 15
+        },
+        "salao": {
+          "faturamento": 2017.68,
+          "pedidos": 24
+        }
+      },
+      "cmv": 2236.28,
+      "producao": {
+        "pizzas": 126,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-20",
+      "canais": {
+        "ifood": {
+          "faturamento": 3430.19,
+          "pedidos": 40
+        },
+        "proprio": {
+          "faturamento": 1034.51,
+          "pedidos": 11
+        },
+        "salao": {
+          "faturamento": 1312.28,
+          "pedidos": 19
+        }
+      },
+      "cmv": 1664.18,
+      "producao": {
+        "pizzas": 92,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-21",
+      "canais": {
+        "ifood": {
+          "faturamento": 1274.06,
+          "pedidos": 14
+        },
+        "proprio": {
+          "faturamento": 454.2,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 593.18,
+          "pedidos": 7
+        }
+      },
+      "cmv": 742.35,
+      "producao": {
+        "pizzas": 33,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-09-22",
+      "canais": {
+        "ifood": {
+          "faturamento": 1533.36,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 449.77,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 584.68,
+          "pedidos": 8
+        }
+      },
+      "cmv": 803.1,
+      "producao": {
+        "pizzas": 39,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-23",
+      "canais": {
+        "ifood": {
+          "faturamento": 1763.9,
+          "pedidos": 20
+        },
+        "proprio": {
+          "faturamento": 650.42,
+          "pedidos": 7
+        },
+        "salao": {
+          "faturamento": 322.86,
+          "pedidos": 4
+        }
+      },
+      "cmv": 788.16,
+      "producao": {
+        "pizzas": 44,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-09-24",
+      "canais": {
+        "ifood": {
+          "faturamento": 1980.6,
+          "pedidos": 23
+        },
+        "proprio": {
+          "faturamento": 645.04,
+          "pedidos": 7
+        },
+        "salao": {
+          "faturamento": 808.98,
+          "pedidos": 11
+        }
+      },
+      "cmv": 1063.48,
+      "producao": {
+        "pizzas": 53,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-25",
+      "canais": {
+        "ifood": {
+          "faturamento": 3347.52,
+          "pedidos": 37
+        },
+        "proprio": {
+          "faturamento": 1039.91,
+          "pedidos": 10
+        },
+        "salao": {
+          "faturamento": 1072.27,
+          "pedidos": 14
+        }
+      },
+      "cmv": 1679.99,
+      "producao": {
+        "pizzas": 77,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-26",
+      "canais": {
+        "ifood": {
+          "faturamento": 3814.82,
+          "pedidos": 40
+        },
+        "proprio": {
+          "faturamento": 1185.94,
+          "pedidos": 11
+        },
+        "salao": {
+          "faturamento": 1549.24,
+          "pedidos": 20
+        }
+      },
+      "cmv": 1898.04,
+      "producao": {
+        "pizzas": 102,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-27",
+      "canais": {
+        "ifood": {
+          "faturamento": 3246.32,
+          "pedidos": 38
+        },
+        "proprio": {
+          "faturamento": 1111.59,
+          "pedidos": 12
+        },
+        "salao": {
+          "faturamento": 1591.93,
+          "pedidos": 20
+        }
+      },
+      "cmv": 1725.02,
+      "producao": {
+        "pizzas": 98,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "canais": {
+        "ifood": {
+          "faturamento": 1138.24,
+          "pedidos": 13
+        },
+        "proprio": {
+          "faturamento": 410.27,
+          "pedidos": 4
+        },
+        "salao": {
+          "faturamento": 588.76,
+          "pedidos": 8
+        }
+      },
+      "cmv": 618.34,
+      "producao": {
+        "pizzas": 34,
+        "perdas": 2
+      }
+    },
+    {
+      "data": "2026-09-29",
+      "canais": {
+        "ifood": {
+          "faturamento": 1437.95,
+          "pedidos": 15
+        },
+        "proprio": {
+          "faturamento": 614.28,
+          "pedidos": 6
+        },
+        "salao": {
+          "faturamento": 602.11,
+          "pedidos": 7
+        }
+      },
+      "cmv": 819.73,
+      "producao": {
+        "pizzas": 38,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-09-30",
+      "canais": {
+        "ifood": {
+          "faturamento": 1757.9,
+          "pedidos": 19
+        },
+        "proprio": {
+          "faturamento": 471.14,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 652.52,
+          "pedidos": 8
+        }
+      },
+      "cmv": 891.42,
+      "producao": {
+        "pizzas": 45,
+        "perdas": 1
+      }
+    },
+    {
+      "data": "2026-10-01",
+      "canais": {
+        "ifood": {
+          "faturamento": 2317.61,
+          "pedidos": 25
+        },
+        "proprio": {
+          "faturamento": 761.46,
+          "pedidos": 8
+        },
+        "salao": {
+          "faturamento": 626.72,
+          "pedidos": 8
+        }
+      },
+      "cmv": 1155.9,
+      "producao": {
+        "pizzas": 57,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-10-02",
+      "canais": {
+        "ifood": {
+          "faturamento": 3494.7,
+          "pedidos": 38
+        },
+        "proprio": {
+          "faturamento": 1073.21,
+          "pedidos": 10
+        },
+        "salao": {
+          "faturamento": 2002.15,
+          "pedidos": 26
+        }
+      },
+      "cmv": 1958.24,
+      "producao": {
+        "pizzas": 93,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-10-03",
+      "canais": {
+        "ifood": {
+          "faturamento": 4661.73,
+          "pedidos": 55
+        },
+        "proprio": {
+          "faturamento": 1508.8,
+          "pedidos": 15
+        },
+        "salao": {
+          "faturamento": 1405.91,
+          "pedidos": 17
+        }
+      },
+      "cmv": 2273.83,
+      "producao": {
+        "pizzas": 118,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-10-04",
+      "canais": {
+        "ifood": {
+          "faturamento": 4090.26,
+          "pedidos": 44
+        },
+        "proprio": {
+          "faturamento": 1296.44,
+          "pedidos": 13
+        },
+        "salao": {
+          "faturamento": 1163.99,
+          "pedidos": 16
+        }
+      },
+      "cmv": 2032.4,
+      "producao": {
+        "pizzas": 95,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-10-05",
+      "canais": {
+        "ifood": {
+          "faturamento": 1548.45,
+          "pedidos": 17
+        },
+        "proprio": {
+          "faturamento": 500.96,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 578.85,
+          "pedidos": 7
+        }
+      },
+      "cmv": 800.77,
+      "producao": {
+        "pizzas": 40,
+        "perdas": 0
+      }
+    },
+    {
+      "data": "2026-10-06",
+      "canais": {
+        "ifood": {
+          "faturamento": 1400.14,
+          "pedidos": 15
+        },
+        "proprio": {
+          "faturamento": 524.32,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 547.33,
+          "pedidos": 8
+        }
+      },
+      "cmv": 739.8,
+      "producao": {
+        "pizzas": 38,
+        "perdas": 3
+      }
+    },
+    {
+      "data": "2026-10-07",
+      "canais": {
+        "ifood": {
+          "faturamento": 1218.76,
+          "pedidos": 13
+        },
+        "proprio": {
+          "faturamento": 440.96,
+          "pedidos": 5
+        },
+        "salao": {
+          "faturamento": 554.28,
+          "pedidos": 7
+        }
+      },
+      "cmv": 687.86,
+      "producao": {
+        "pizzas": 36,
+        "perdas": 2
+      }
+    }
+  ]
+}

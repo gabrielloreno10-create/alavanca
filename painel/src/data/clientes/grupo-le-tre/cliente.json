@@ -1,0 +1,40 @@
+{
+  "origem": "REAL",
+  "slug": "grupo-le-tre",
+  "nome": "Le Tre Farine",
+  "segmento": "Delivery multimarca: Le Tre Farine",
+  "fonte": "Vendas reais do Saipos de 01/05 a 30/09/2026, loja por loja.",
+  "metaPorDiaSemana": null,
+  "impostoPct": 0,
+  "canais": {
+    "letre-ifood-pizzaria": {
+      "nome": "iFood Pizzaria",
+      "tipo": "ifood",
+      "operacao": "Le Tre Farine",
+      "taxaPct": 0.2462,
+      "custoPorPedido": 0
+    },
+    "letre-ifood-pastas": {
+      "nome": "iFood Pastas",
+      "tipo": "ifood",
+      "operacao": "Le Tre Farine",
+      "taxaPct": 0.3794,
+      "custoPorPedido": 0
+    },
+    "letre-site": {
+      "nome": "Site",
+      "tipo": "proprio",
+      "operacao": "Le Tre Farine",
+      "taxaPct": 0.0108,
+      "custoPorPedido": 0
+    }
+  },
+  "notaMargem": "Margem estimada: CMV estimado pela média das fichas técnicas de 90 dias (Le Tre 22,2%); a Pastas não tem ficha e usa a média das pizzas. Taxa de cada loja pelo fechamento de agosto (o que não chegou na conta). Ainda sem imposto e sem custo de entrega: [PREENCHER].",
+  "limites": {
+    "metaMinimaPct": 0.8,
+    "margemMinimaPct": 0.35,
+    "quedaPedidosPct": 0.2,
+    "ifoodMaximoPct": 0.6,
+    "quedaTicketPct": 0.1
+  }
+}

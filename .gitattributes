@@ -1,0 +1,7 @@
+# O repositorio nasce no Windows e roda no Linux (Vercel, VPS). Sem isto, um script .sh
+# commitado com CRLF quebra no servidor com "bad interpreter".
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.xlsx binary
