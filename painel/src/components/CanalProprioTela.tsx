@@ -95,24 +95,32 @@ export function CanalProprioTela({ visao }: { visao: VisaoCanalProprio }) {
               rotulo="Investimento"
               valor={semAnuncios ? NAO_MEDIDO : formatarBRLInteiro(t.investimento.atual)}
               comparacao={semAnuncios ? undefined : t.investimento}
-              detalhe={semAnuncios ? "nenhum anúncio com investimento no período" : undefined}
+              detalhe={
+                !semAnuncios ? undefined
+                : t.naoAtribuido ? "há investimento gravado que o painel ainda não sabe atribuir"
+                : "nenhum anúncio com investimento no período"
+              }
             />
             <Indicador
               rotulo="Alcance"
               valor={semAnuncios ? NAO_MEDIDO : formatarInteiro(t.alcance.atual)}
               comparacao={semAnuncios ? undefined : t.alcance}
-              detalhe={semAnuncios ? "sem anúncio rodando não há alcance" : "pessoas"}
+              detalhe={!semAnuncios ? "pessoas" : t.naoAtribuido ? "anúncio houve; o alcance do período é que não foi medido" : "sem anúncio rodando não há alcance"}
             />
             <Indicador
               rotulo="Cliques"
               valor={semAnuncios ? NAO_MEDIDO : formatarInteiro(t.cliques)}
-              detalhe={semAnuncios ? "sem anúncio rodando não há clique" : `${ouNaoMedido(ctr, (x) => formatarPct(x, 1))} de quem viu`}
+              detalhe={!semAnuncios ? `${ouNaoMedido(ctr, (x) => formatarPct(x, 1))} de quem viu` : t.naoAtribuido ? "anúncio houve; os cliques é que não vieram atribuídos" : "sem anúncio rodando não há clique"}
             />
             <Indicador
               rotulo="Pedidos atribuídos"
               valor={semAnuncios ? NAO_MEDIDO : formatarInteiro(t.pedidos.atual)}
               comparacao={semAnuncios ? undefined : t.pedidos}
-              detalhe={semAnuncios ? "o pixel não atribuiu nenhum pedido" : undefined}
+              detalhe={
+                !semAnuncios ? undefined
+                : t.naoAtribuido ? "há pedido gravado que o painel ainda não sabe atribuir"
+                : "o pixel não atribuiu nenhum pedido"
+              }
             />
             {/* custoPorPedido mudou de Comparacao para duas pontas nullable: só vira
                 comparação quando as duas foram medidas. */}
@@ -126,15 +134,28 @@ export function CanalProprioTela({ visao }: { visao: VisaoCanalProprio }) {
             <Indicador
               rotulo="Retorno em vendas (ROAS)"
               valor={ouNaoMedido(t.roas, (x) => `${x.toLocaleString("pt-BR", { maximumFractionDigits: 1 })}x`)}
-              detalhe={t.roas === null ? "sem investimento no período" : `${formatarBRLInteiro(t.faturamento)} vendidos`}
+              detalhe={t.roas !== null ? `${formatarBRLInteiro(t.faturamento)} vendidos` : t.naoAtribuido ? "há investimento no período, mas o painel não consegue ligá-lo a venda" : "sem investimento no período"}
             />
           </GradeIndicadores>
           {t.roasMargem === null ? (
             <div className="mt-5">
-              <SemDado>
-                Não houve investimento em anúncio neste período, então não há retorno a medir. Isto não é um retorno de zero: é a ausência de
-                campanha rodando.
-              </SemDado>
+              {/* Dizer "não houve investimento" quando HÁ investimento gravado é a
+                  mentira da fase 0 virada do avesso. Enquanto a leitura agregar por
+                  criativo e o criativo_id vier nulo, a tela declara o valor que existe
+                  e diz por que ele não aparece nos indicadores acima. */}
+              {t.naoAtribuido ? (
+                <SemDado>
+                  O retorno não pode ser calculado, mas isto não é ausência de campanha: há{" "}
+                  {formatarBRLInteiro(t.naoAtribuido.investimento)} de investimento e {formatarInteiro(t.naoAtribuido.pedidos)} pedidos gravados
+                  no período sem criativo identificado. O painel agrega o tráfego por criativo, então esse dinheiro não entra em nenhum número
+                  desta tela — está no banco, e é só o painel que ainda não sabe onde pendurá-lo.
+                </SemDado>
+              ) : (
+                <SemDado>
+                  Não houve investimento em anúncio neste período, então não há retorno a medir. Isto não é um retorno de zero: é a ausência de
+                  campanha rodando.
+                </SemDado>
+              )}
             </div>
           ) : (
             <div className="mt-5 grid gap-3 rounded-botao bg-bancada p-4 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-6">
@@ -162,10 +183,22 @@ export function CanalProprioTela({ visao }: { visao: VisaoCanalProprio }) {
         <div className="grid gap-5 lg:grid-cols-2">
           <Painel origem={b.anuncios} titulo="Ranking de criativos" descricao="Do menor para o maior custo por pedido. Melhor e pior só entre quem teve 3 pedidos ou mais.">
             {!v.criativos.length ? (
-              <SemDado>
-                Nenhum criativo com investimento no período: a tabela de criativos está vazia para este filtro. Um ranking em branco não quer dizer
-                que os anúncios foram mal — quer dizer que não há anúncio registrado.
-              </SemDado>
+              // A lista é agregada por criativo e filtrada por investimento > 0; com o
+              // criativo_id nulo na fonte ela sai vazia mesmo havendo anúncio gravado.
+              // Afirmar "não há anúncio registrado" nesse caso é o zero fabricado do
+              // avesso: a tela nega o que o banco tem.
+              t.naoAtribuido ? (
+                <SemDado>
+                  O ranking está vazio porque nenhuma linha de anúncio do período veio com criativo identificado — não porque não houve anúncio:
+                  há {formatarBRLInteiro(t.naoAtribuido.investimento)} de investimento e {formatarInteiro(t.naoAtribuido.pedidos)} pedidos
+                  gravados no período. O painel agrega o tráfego por criativo, então esse dinheiro não aparece em nenhuma linha desta lista.
+                </SemDado>
+              ) : (
+                <SemDado>
+                  Nenhum criativo com investimento no período: a tabela de criativos está vazia para este filtro. Um ranking em branco não quer
+                  dizer que os anúncios foram mal — quer dizer que não há anúncio registrado.
+                </SemDado>
+              )
             ) : (
               <ol className="grid grid-cols-[minmax(0,1fr)] gap-2">
                 {v.criativos.map((k, idx) => {

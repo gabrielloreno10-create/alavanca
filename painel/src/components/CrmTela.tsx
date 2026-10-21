@@ -85,20 +85,25 @@ export function CrmTela({ visao }: { visao: VisaoCrm }) {
                   <dl className="num mt-3 grid grid-cols-3 gap-2 text-sm">
                     <div>
                       <dt className="text-grafite-2">Clientes</dt>
-                      <dd className="text-base">{formatarInteiro(s.clientes)}</dd>
+                      <dd className="text-base">{ouNaoMedido(s.clientes, formatarInteiro)}</dd>
                     </div>
                     <div>
                       <dt className="text-grafite-2">Disparáveis</dt>
-                      <dd className="text-base font-medium">{formatarInteiro(s.comOptIn)}</dd>
+                      <dd className="text-base font-medium">{ouNaoMedido(s.comOptIn, formatarInteiro)}</dd>
                     </div>
                     <div>
                       <dt className="text-grafite-2">Valor</dt>
-                      <dd className="text-base">{s.valor90d ? formatarBRLInteiro(s.valor90d) : NAO_MEDIDO}</dd>
+                      <dd className="text-base">{ouNaoMedido(s.valor90d, formatarBRLInteiro)}</dd>
                     </div>
                   </dl>
-                  {/* pctOptIn null = segmento sem cliente: a barra de 0% afirmaria que
-                      todo mundo recusou receber mensagem. Sem gente não há percentual. */}
-                  {s.pctOptIn === null ? (
+                  {/* Dois motivos diferentes para não haver percentual, e eles não podem
+                      sair com a mesma frase: o segmento foi contado e está vazio, ou o
+                      segmento nunca foi contado (há definição em crm_segmento, não há
+                      linha em crm_segmento_snapshot). Dizer "sem nenhum cliente" no
+                      segundo caso afirmaria uma contagem que ninguém fez. */}
+                  {s.clientes === null ? (
+                    <p className="mt-2 text-sm text-grafite-2">{NAO_MEDIDO}: este segmento tem definição, mas nunca foi apurado — não existe contagem de clientes nem de opt-in.</p>
+                  ) : s.pctOptIn === null ? (
                     <p className="mt-2 text-sm text-grafite-2">{NAO_MEDIDO}: segmento sem nenhum cliente, não há percentual de opt-in.</p>
                   ) : (
                     <>
@@ -195,7 +200,7 @@ export function CrmTela({ visao }: { visao: VisaoCrm }) {
                     </span>
                     <span className="mt-0.5 block font-medium">{d.mensagem}</span>
                     <span className="num mt-1 block text-sm text-grafite-2">
-                      {formatarInteiro(d.disparaveis)} vão receber · {formatarInteiro(d.foraDoDisparo)} ficam de fora (sem opt-in)
+                      {ouNaoMedido(d.disparaveis, formatarInteiro)} vão receber · {ouNaoMedido(d.foraDoDisparo, formatarInteiro)} ficam de fora (sem opt-in)
                     </span>
                   </span>
                 </li>

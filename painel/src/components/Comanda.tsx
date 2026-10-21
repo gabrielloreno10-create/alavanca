@@ -5,20 +5,31 @@ import clsx from "clsx";
 import { Check, CheckCircle2, CircleDashed, OctagonAlert } from "lucide-react";
 import { canaisDo, isoDe, lerData, operacoesDo, somarDias, tiposDo } from "@/lib/calculos";
 import { MarcaExemplo } from "./FaixaExemplo";
-import { NAO_MEDIDO, formatarBRL, formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
-import { NOME_TIPO, type Cliente, type ComandaDoDia, type TipoCanal } from "@/lib/types";
+import { NAO_MEDIDO, formatarBRL, formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct, ouNaoMedido } from "@/lib/formato";
+import { NOME_TIPO, type CanalId, type Cliente, type ComandaDoDia, type TipoCanal } from "@/lib/types";
 
 const COR_TIPO: Record<TipoCanal, string> = { proprio: "bg-comanda", ifood: "bg-cinza-grafico", salao: "bg-linha" };
 import { Sinal } from "./Sinal";
 
 function Linha({ rotulo, valor, detalhe }: { rotulo: string; valor: string; detalhe?: string }) {
+  // Mesma convenção do Indicador (ui.tsx): "não medido" sai do tratamento de número
+  // para não ser lido de relance como se fosse um valor.
+  const ausente = valor === NAO_MEDIDO;
   return (
     <div className="flex items-baseline gap-2 py-1">
       <dt className="text-grafite-2">{rotulo}</dt>
       <span aria-hidden className="pontilhado" />
-      <dd className="num text-right font-medium">
-        {valor}
-        {detalhe && <span className="ml-1.5 text-sm font-normal text-grafite-2">{detalhe}</span>}
+      <dd className={clsx("flex items-baseline justify-end gap-1.5 text-right", ausente ? "text-grafite-2" : "num font-medium")}>
+        <span>{valor}</span>
+        {/* O ponto é um separador de verdade, igual ao da linha da meta: valor e detalhe
+            eram irmãos imediatos e o JSX comia a quebra entre eles, então o texto do DOM
+            saía colado ("R$ 30856,6%") — e o leitor de tela lia a mesma coisa. */}
+        {detalhe && (
+          <>
+            <span className="font-normal text-grafite-2">·</span>
+            <span className="text-sm font-normal text-grafite-2">{detalhe}</span>
+          </>
+        )}
       </dd>
     </div>
   );
@@ -42,6 +53,17 @@ export function Comanda({ comanda, cliente }: { comanda: ComandaDoDia; cliente: 
   const brl = (v: number) => (semVenda ? NAO_MEDIDO : formatarBRLInteiro(v));
   const canais = canaisDo(cliente);
   const tipos = tiposDo(cliente);
+  /**
+   * `resumir` SEMEIA o resumo com zero para todo canal e todo tipo CONFIGURADO, antes de
+   * somar dia nenhum (calculos.ts). Então "R$ 0" e "0%" aqui não são medição: são a
+   * semente, e escrevê-los afirma que alguém olhou aquele canal e não achou venda.
+   * Foi o que a tela fez com a Jerry's, que não tem uma linha sequer em venda_dia.
+   * Daqui não dá para separar "não tem linha" de "tem linha e vendeu zero" — o resumo
+   * não guarda quais canais tiveram linha (ver pendência). Mas nos dois casos não há
+   * faturamento a dividir, e o honesto é não escrever número nenhum.
+   */
+  const canalMedido = (c: CanalId) => !!r.porCanal[c] && (r.porCanal[c].faturamento > 0 || r.porCanal[c].pedidos > 0);
+  const tipoMedido = (t: TipoCanal) => r.faturamentoCanal[t] > 0 || r.pedidosCanal[t] > 0;
   // "Ontem" só quando o último dia com dados é mesmo ontem; senão, deixa claro que é o último dia fechado
   const ehOntem = useSyncExternalStore(
     () => () => {},
@@ -53,9 +75,18 @@ export function Comanda({ comanda, cliente }: { comanda: ComandaDoDia; cliente: 
   return (
     <section aria-labelledby="comanda-titulo" className="comanda-borda">
       <div className="comanda px-5 sm:px-6">
+        {/* Sem dia de venda não houve comanda: nem número sequencial, nem hora de
+            emissão. "nº 0000 · emitida às 07:00" carimbava de ofício um documento que
+            nunca foi emitido. */}
         <div className="flex items-center justify-between text-sm text-grafite-2">
-          <span className="num">Comanda nº {String(comanda.numero).padStart(4, "0")}</span>
-          <span className="num">Emitida às {comanda.emitidaEm}</span>
+          {semVenda ? (
+            <span>Nenhuma comanda emitida</span>
+          ) : (
+            <>
+              <span className="num">Comanda nº {String(comanda.numero).padStart(4, "0")}</span>
+              <span className="num">Emitida às {comanda.emitidaEm}</span>
+            </>
+          )}
         </div>
         {/* Sem dia de venda não existe "último dia com dados": a data que sobra é a do
             grupo, não a deste filtro, e carimbá-la aqui seria datar um dia que não houve. */}
@@ -116,33 +147,55 @@ export function Comanda({ comanda, cliente }: { comanda: ComandaDoDia; cliente: 
           </p>
         ) : (
           <>
+            {/* A barra só soma o que foi medido: um tipo sem venda no período não vira
+                segmento de largura 0, porque largura 0 afirmaria uma fatia apurada. */}
             <div className="mt-2 flex h-2.5 gap-[2px] overflow-hidden rounded-full" aria-hidden>
-              {tipos.map((t) => (
+              {tipos.filter(tipoMedido).map((t) => (
                 <div key={t} className={COR_TIPO[t]} style={{ width: `${r.canalPct[t] * 100}%` }} />
               ))}
             </div>
             <ul className={clsx("mt-2 grid gap-2 text-sm", tipos.length === 3 ? "grid-cols-3" : "grid-cols-2")}>
-              {tipos.map((t) => (
-                <li key={t}>
-                  <span className="flex items-center gap-1.5 text-grafite-2">
-                    <span aria-hidden className={clsx("size-2 rounded-full", COR_TIPO[t])} />
-                    {NOME_TIPO[t]}
-                  </span>
-                  <span className="num text-base font-medium">{formatarPct(r.canalPct[t])}</span>
-                </li>
-              ))}
+              {tipos.map((t) => {
+                const medido = tipoMedido(t);
+                return (
+                  <li key={t}>
+                    <span className="flex items-center gap-1.5 text-grafite-2">
+                      <span aria-hidden className={clsx("size-2 rounded-full", COR_TIPO[t])} />
+                      {NOME_TIPO[t]}
+                    </span>
+                    <span className={clsx("text-base", medido ? "num font-medium" : "text-grafite-2")}>
+                      {medido ? formatarPct(r.canalPct[t]) : NAO_MEDIDO}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
+            {!tipos.every(tipoMedido) && (
+              <p className="mt-2 text-sm text-grafite-2">
+                Tipo de canal sem venda registrada no período fica fora da barra e da divisão: não há faturamento dele para dividir.
+              </p>
+            )}
             {canais.length > tipos.length && (
-              <dl className="mt-3">
-                {canais.map((c) => (
-                  <Linha
-                    key={c}
-                    rotulo={cliente.canais[c].operacao && operacoesDo(cliente).length > 1 ? `${cliente.canais[c].operacao} · ${cliente.canais[c].nome}` : cliente.canais[c].nome}
-                    valor={formatarBRLInteiro(r.porCanal[c]?.faturamento ?? 0)}
-                    detalhe={formatarPct(r.faturamento ? (r.porCanal[c]?.faturamento ?? 0) / r.faturamento : 0)}
-                  />
-                ))}
-              </dl>
+              <>
+                <dl className="mt-3">
+                  {canais.map((c) => {
+                    const v = canalMedido(c) ? r.porCanal[c] : null;
+                    return (
+                      <Linha
+                        key={c}
+                        rotulo={cliente.canais[c].operacao && operacoesDo(cliente).length > 1 ? `${cliente.canais[c].operacao} · ${cliente.canais[c].nome}` : cliente.canais[c].nome}
+                        valor={ouNaoMedido(v, (x) => formatarBRLInteiro(x.faturamento))}
+                        detalhe={v && r.faturamento ? formatarPct(v.faturamento / r.faturamento) : undefined}
+                      />
+                    );
+                  })}
+                </dl>
+                {!canais.every(canalMedido) && (
+                  <p className="mt-1 text-sm text-grafite-2">
+                    Canal sem venda registrada no período não entra na divisão: não há faturamento dele para dividir.
+                  </p>
+                )}
+              </>
             )}
           </>
         )}
@@ -174,7 +227,7 @@ export function Comanda({ comanda, cliente }: { comanda: ComandaDoDia; cliente: 
           <p className="mt-1 text-grafite-2">
             {semDiaParaAvaliar
               ? "Sem dia de venda não há o que recomendar para hoje: nenhuma ação saiu de número nenhum."
-              : "Nenhuma ação sugerida para hoje."}
+              : "Nenhuma ação combinada ainda. As que estavam aqui eram exemplo nosso e saíram; entram as que o dono ditar. Lista vazia não quer dizer que não haja o que fazer."}
           </p>
         ) : (
           semDiaParaAvaliar && (

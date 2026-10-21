@@ -555,7 +555,14 @@ export async function getCanalProprio(slug: string, periodo: Periodo, operacao: 
 
   const somaAnuncios = (iv2: [string, string]) => {
     const porCriativo: Record<string, { investimento: number; impressoes: number; cliques: number; pedidos: number; faturamento: number }> = {};
+    // Linha de anuncio_dia sem criativo não entra em nenhum total acima (a agregação é
+    // por criativo), mas EXISTE. Somada aqui só para a tela poder declarar que existe.
+    const orfao = { investimento: 0, pedidos: 0 };
     for (const d of porData(cp.anunciosDia, iv2)) {
+      if (d.semCriativo) {
+        orfao.investimento += d.semCriativo.investimento;
+        orfao.pedidos += d.semCriativo.pedidos;
+      }
       for (const [id, r] of Object.entries(d.criativos)) {
         const acc = (porCriativo[id] ??= { investimento: 0, impressoes: 0, cliques: 0, pedidos: 0, faturamento: 0 });
         acc.investimento += r.investimento; acc.impressoes += r.impressoes; acc.cliques += r.cliques; acc.pedidos += r.pedidos; acc.faturamento += r.faturamento;
@@ -565,7 +572,7 @@ export async function getCanalProprio(slug: string, periodo: Periodo, operacao: 
       (s, r) => ({ investimento: s.investimento + r.investimento, impressoes: s.impressoes + r.impressoes, cliques: s.cliques + r.cliques, pedidos: s.pedidos + r.pedidos, faturamento: s.faturamento + r.faturamento }),
       { investimento: 0, impressoes: 0, cliques: 0, pedidos: 0, faturamento: 0 },
     );
-    return { porCriativo, tot };
+    return { porCriativo, tot, orfao };
   };
   const anAt = somaAnuncios(iv.atual);
   const anAn = somaAnuncios(iv.anterior);
@@ -625,6 +632,7 @@ export async function getCanalProprio(slug: string, periodo: Periodo, operacao: 
       margem,
       roasMargem: razao(margem, anAt.tot.investimento),
       sobraDepoisDoAnuncio: margem - anAt.tot.investimento,
+      naoAtribuido: anAt.orfao.investimento > 0 || anAt.orfao.pedidos > 0 ? anAt.orfao : null,
     },
     criativos,
     campanhas,
@@ -638,8 +646,8 @@ export async function getCrm(slug: string, periodo: Periodo, operacao: string = 
   const { crm } = p;
   const iv = intervalos(periodo, ultimoDia(p));
   const nomeSeg = (id: string) => crm.segmentos.find((s) => s.id === id)?.nome ?? id;
-  const optInSeg = (id: string) => crm.segmentos.find((s) => s.id === id)?.comOptIn ?? 0;
-  const clientesSeg = (id: string) => crm.segmentos.find((s) => s.id === id)?.clientes ?? 0;
+  const optInSeg = (id: string) => crm.segmentos.find((s) => s.id === id)?.comOptIn ?? null;
+  const clientesSeg = (id: string) => crm.segmentos.find((s) => s.id === id)?.clientes ?? null;
 
   const disparos = porData(crm.disparos, iv.atual)
     // taxaResposta null quando enviados = 0: a divisão respostas/enviados virava NaN
@@ -650,14 +658,24 @@ export async function getCrm(slug: string, periodo: Periodo, operacao: string = 
     (s, d) => ({ enviados: s.enviados + d.enviados, respostas: s.respostas + d.respostas, pedidos: s.pedidos + d.pedidos, faturamento: s.faturamento + d.faturamento, custo: s.custo + d.custo }),
     { enviados: 0, respostas: 0, pedidos: 0, faturamento: 0, custo: 0 },
   );
-  const segmentos = crm.segmentos.map((s) => ({ ...s, pctOptIn: razao(s.comOptIn, s.clientes) }));
-  const maior = [...segmentos].filter((s) => s.id !== "sumidos").sort((a, b) => b.comOptIn - a.comOptIn)[0];
+  const segmentos = crm.segmentos.map((s) => ({ ...s, pctOptIn: s.comOptIn === null || s.clientes === null ? null : razao(s.comOptIn, s.clientes) }));
+  // Só entra na frase o segmento que foi CONTADO. Sem snapshot não há "maior grupo":
+  // o maior de uma lista de ausências é uma ausência.
+  const contados = segmentos.filter((s): s is typeof s & { comOptIn: number } => s.comOptIn !== null);
+  const maior = contados.filter((s) => s.id !== "sumidos").sort((a, b) => b.comOptIn - a.comOptIn)[0];
   const ultimo = [...crm.disparos].sort((a, b) => b.data.localeCompare(a.data))[0];
 
   // Base vazia é ausência de base, não uma base de zero pessoas que recusaram.
   const origemBase: Origem = crm.resumo.baseTotal > 0 ? crm.origem : "SEM_DADO";
   return {
-    ...origemTela({ base: origemBase, segmentos: crm.segmentos.length ? crm.origem : "SEM_DADO", disparos: crm.disparos.length ? crm.origem : "SEM_DADO" }),
+    // A origem de um bloco de NÚMEROS tem que vir da tabela que guarda os números.
+    // Ter definição de segmento (crm_segmento) sem nenhum snapshot (crm_segmento_snapshot)
+    // é exatamente o caso do grupo-le-tre hoje: 5 definições, zero contagem.
+    ...origemTela({
+      base: origemBase,
+      segmentos: crm.segmentos.length && contados.length ? crm.origem : "SEM_DADO",
+      disparos: crm.disparos.length ? crm.origem : "SEM_DADO",
+    }),
     frase:
       origemBase === "SEM_DADO"
         ? fraseSemDado("cliente na base de CRM")
@@ -669,7 +687,16 @@ export async function getCrm(slug: string, periodo: Periodo, operacao: string = 
     disparos,
     totaisDisparos: { ...totais, taxaResposta: razao(totais.respostas, totais.enviados) },
     ultimoDisparo: ultimo?.data ?? null,
-    proximos: crm.proximos.map((d) => ({ ...d, nomeSegmento: nomeSeg(d.segmento), disparaveis: optInSeg(d.segmento), foraDoDisparo: clientesSeg(d.segmento) - optInSeg(d.segmento) })),
+    proximos: crm.proximos.map((d) => {
+      const disparaveis = optInSeg(d.segmento);
+      const naBase = clientesSeg(d.segmento);
+      return {
+        ...d,
+        nomeSegmento: nomeSeg(d.segmento),
+        disparaveis,
+        foraDoDisparo: naBase === null || disparaveis === null ? null : naBase - disparaveis,
+      };
+    }),
   };
 }
 

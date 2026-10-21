@@ -407,15 +407,19 @@ export function montarMensagemDiaria(cliente: Cliente, c: ComandaDoDia): string 
   const d = lerData(c.data);
   const r = c.resumo;
   const brl0 = (v: number) => fmtBRL(Math.round(v)).replace(/,\d{2}$/, "");
-  const linhas = [`*${cliente.nome} · ${DIA_MSG[d.getDay()]} ${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}*`];
   // Sem dia de venda, a mensagem das 7h não inventa R$ 0: ela diz que não mediu.
   // Esta mensagem sai do painel e chega no WhatsApp do dono, onde não existe etiqueta
-  // visual nenhuma para avisar que o número é fabricado.
+  // visual nenhuma para avisar que o número é fabricado. E NÃO LEVA DATA: `c.data` é o
+  // último dia do tenant, não deste filtro — carimbar "qua 30/09" numa marca que não
+  // vendeu nenhum dia seria datar um dia que não houve.
   if (c.origem === "SEM_DADO") {
-    linhas.push("⚠️ Nenhum dia de venda registrado para este filtro.");
-    linhas.push("Nada aqui foi medido — não é zero, é ausência de dado.");
-    return linhas.join("\n");
+    return [
+      `*${cliente.nome}*`,
+      "⚠️ Nenhum dia de venda registrado para este filtro.",
+      "Nada aqui foi medido — não é zero, é ausência de dado.",
+    ].join("\n");
   }
+  const linhas = [`*${cliente.nome} · ${DIA_MSG[d.getDay()]} ${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}*`];
   if (c.meta && c.metaPct !== null) {
     const sem = c.situacaoMeta === "bom" ? "🟢" : c.situacaoMeta === "atencao" ? "🟡" : "🔴";
     linhas.push(`💰 Faturou ${brl0(r.faturamento)} · meta ${brl0(c.meta)} (${fmtPct(c.metaPct)}) ${sem}`);
@@ -430,7 +434,17 @@ export function montarMensagemDiaria(cliente: Cliente, c: ComandaDoDia): string 
   linhas.push(c.alerta ? `⚠️ ${c.alerta.texto}` : "⚠️ Sem dia de venda fechado: nada a avaliar.");
   // A ação fabricada vai selada aqui também: a mensagem das 7h é lida fora do painel,
   // onde não existe etiqueta visual para avisar.
-  linhas.push("", "*Hoje:*", ...c.acoes.map((a, i) => `${i + 1}. ${a.texto}${a.origem === "REAL" ? "" : " (exemplo)"}`));
+  // Sem ação combinada, "*Hoje:*" seguido de NADA é uma afirmação: o dono lê o vazio
+  // como "não tem nada para fazer hoje". Depois da migration 017 as 13 ações de
+  // exemplo do cliente real saíram, e a lista chega vazia de verdade — então o vazio
+  // precisa virar frase. Mensagem de WhatsApp não tem onde pendurar um estado vazio.
+  linhas.push(
+    "",
+    "*Hoje:*",
+    ...(c.acoes.length
+      ? c.acoes.map((a, i) => `${i + 1}. ${a.texto}${a.origem === "REAL" ? "" : " (exemplo)"}`)
+      : ["Nenhuma ação combinada ainda — e isso não quer dizer que não haja o que fazer."]),
+  );
   return linhas.slice(0, 12).join("\n");
 }
 

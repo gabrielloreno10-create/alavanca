@@ -81,7 +81,12 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
 
         <div className="grid gap-5 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
           <Painel origem={b.taxa} titulo="Taxa efetiva do iFood" descricao="Comissão + taxa de pagamento + promoções bancadas por você.">
-            {te ? (
+            {/* te existe assim que comissao e taxa de pagamento foram medidas, MESMO sem
+                venda nenhuma: nesse caso taxaEfetiva devolve faturamento, comissao e
+                total zero, pct = dividir(0,0) = 0, e a tela dizia "sobram R$ 100,00"
+                sobre um periodo em que ninguem vendeu. Exigir faturamento medido tambem
+                garante o denominador das larguras e dos percentuais abaixo. */}
+            {te && !semVendas && te.faturamento > 0 ? (
               <>
                 <p className="text-base">
                   De cada <span className="num font-medium">R$ 100</span> vendidos no iFood, sobram{" "}
@@ -119,8 +124,13 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
                     <dd className="num ml-auto">{formatarBRLInteiro(te.faturamento - te.total)}</dd>
                   </div>
                 </dl>
+                {/* pctAnterior vem do mesmo calculo sobre o faturamento do periodo
+                    anterior: sem venda de iFood la atras, "era 0,0%" e o mesmo zero
+                    fabricado, so que no passado. */}
                 <p className="mt-3 text-sm text-grafite-2">
-                  No período anterior, a taxa efetiva era {formatarPct(te.pctAnterior, 1)}.
+                  {i.faturamento.anterior > 0
+                    ? `No período anterior, a taxa efetiva era ${formatarPct(te.pctAnterior, 1)}.`
+                    : `No período anterior não houve venda de iFood, então a taxa efetiva anterior é ${NAO_MEDIDO}.`}
                 </p>
               </>
             ) : v.takeRateMedido ? (
@@ -145,8 +155,18 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
               </>
             ) : (
               <SemDado>
-                A taxa efetiva do iFood ainda não foi medida para este filtro: comissão, taxa de pagamento e take-rate estão todos ausentes na fonte.
-                Não é uma taxa de zero — é a ausência do número.
+                {te ? (
+                  /* As taxas existem; o que falta e a venda sobre a qual aplica-las. */
+                  <>
+                    Não há venda de iFood neste filtro, então não existe taxa efetiva a calcular — dizer que sobram R$ 100,00 afirmaria uma venda que
+                    não houve.
+                  </>
+                ) : (
+                  <>
+                    A taxa efetiva do iFood ainda não foi medida para este filtro: comissão, taxa de pagamento e take-rate estão todos ausentes na
+                    fonte. Não é uma taxa de zero — é a ausência do número.
+                  </>
+                )}
               </SemDado>
             )}
           </Painel>
@@ -200,7 +220,15 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
           titulo="Os 10 pratos que mais vendem"
           descricao={`Margem de contribuição no iFood: preço − imposto − comissão − taxa de pagamento − CMV − embalagem. Margem mínima: ${formatarPct(v.margemMinimaPct)}.`}
         >
-          {!v.pratos.length ? (
+          {/* A lista de pratos vem da ficha, sem filtro de operacao; a quantidade vem de
+              venda. Sem dia de venda, `qtd[pr.id] ?? 0` zera tudo e o ranking passa a
+              afirmar duas coisas nao medidas: que cada prato vendeu zero e que estes sao
+              os mais vendidos do periodo. */}
+          {semVendas ? (
+            <SemDado>
+              Não há dia de venda de iFood neste filtro, então nenhum prato tem quantidade medida: a tabela zerada diria que cada prato vendeu zero.
+            </SemDado>
+          ) : !v.pratos.length ? (
             <SemDado>Nenhum prato de iFood cadastrado para este filtro, então não há o que ranquear nem margem que calcular.</SemDado>
           ) : (
           <TabelaRolavel legenda="Os 10 pratos que mais vendem no iFood, com margem">
@@ -251,6 +279,11 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
               // resultado null = sem as taxas do iFood nao da para dizer se a promocao
               // ganhou ou perdeu; dizer "Ganhou" por falta de custo seria o pior erro.
               const ganhou = p.resultado !== null && p.resultado >= 0;
+              // As promocoes vem de `where ativo`, sem filtro de periodo: uma que nao
+              // teve NENHUMA linha no periodo soma tudo zero e cai em resultado 0, e
+              // "0 >= 0" pintaria de verde um cupom que ninguem usou. Ausencia de
+              // pedido nao e empate.
+              const semMedida = p.pedidos === 0 && p.faturamento === 0 && p.custo === 0;
               return (
                 <li key={p.id} className="rounded-botao border border-linha p-3">
                   <div className="flex items-start justify-between gap-2">
@@ -258,7 +291,7 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
                       <p className="font-medium">{p.nome}</p>
                       <p className="text-sm text-grafite-2">{p.tipo}</p>
                     </div>
-                    {p.resultado === null ? (
+                    {p.resultado === null || semMedida ? (
                       <Etiqueta icone={AlertTriangle} cor="text-grafite-2">Resultado {NAO_MEDIDO}</Etiqueta>
                     ) : (
                       <Etiqueta icone={ganhou ? CircleCheck : CircleX} cor={ganhou ? "text-manjericao" : "text-tomate"}>
@@ -269,17 +302,24 @@ export function IfoodTela({ visao }: { visao: VisaoIfood }) {
                   <dl className="num mt-3 grid grid-cols-3 gap-2 text-sm">
                     <div>
                       <dt className="text-grafite-2">Pedidos</dt>
-                      <dd className="text-base">{formatarInteiro(p.pedidos)}</dd>
+                      <dd className="text-base">{semMedida ? NAO_MEDIDO : formatarInteiro(p.pedidos)}</dd>
                     </div>
                     <div>
                       <dt className="text-grafite-2">Você bancou</dt>
-                      <dd className="text-base">{formatarBRLInteiro(p.custo)}</dd>
+                      <dd className="text-base">{semMedida ? NAO_MEDIDO : formatarBRLInteiro(p.custo)}</dd>
                     </div>
                     <div>
                       <dt className="text-grafite-2">Margem dos pedidos</dt>
-                      <dd className="text-base">{ouNaoMedido(p.margemDosPedidos, formatarBRLInteiro)}</dd>
+                      <dd className="text-base">{semMedida ? NAO_MEDIDO : ouNaoMedido(p.margemDosPedidos, formatarBRLInteiro)}</dd>
                     </div>
                   </dl>
+                  {(semMedida || p.resultado === null) && (
+                    <p className="mt-2 text-sm text-grafite-2">
+                      {semMedida
+                        ? "Nenhum pedido com esta promoção no período: não há resultado a apurar."
+                        : "Sem comissão e taxa de pagamento medidas, não dá para dizer se esta promoção ganhou ou perdeu."}
+                    </p>
+                  )}
                 </li>
               );
             })}

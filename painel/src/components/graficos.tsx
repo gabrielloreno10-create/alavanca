@@ -2,7 +2,7 @@
 
 import { Bar, BarChart, CartesianGrid, Cell, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from "recharts";
 import { lerData, maiorDe } from "@/lib/calculos";
-import { formatarBRL, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
+import { NAO_MEDIDO, formatarBRL, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
 import type { CanalId, Quadrante } from "@/lib/types";
 import { SemDado } from "./ui";
 
@@ -139,6 +139,20 @@ export function PedidosPorFaixa({ dados }: { dados: { faixa: string; pedidos: nu
 
 const CORES_CANAL = { proprio: "var(--comanda)", ifood: "var(--cinza-grafico)", salao: "var(--linha)" };
 
+/** Uma semana do gráfico; participação null = a fonte já declara que ninguém mediu */
+type SemanaCanal = { inicio: string; ifood: number | null; proprio: number | null; salao: number | null };
+
+/**
+ * Semana que tem divisão para mostrar. Além do null, barra o zero: `canalPct` sai de
+ * `dividir` (calculos.ts), que devolve 0 sem denominador, então a semana sem nenhuma
+ * linha em venda_dia chega aqui com 0% nos três canais. Numa semana com venda as três
+ * participações somam 1 — as três em zero não são divisão medida, são ausência.
+ */
+function medida(s: SemanaCanal | undefined): s is { inicio: string; ifood: number; proprio: number; salao: number } {
+  if (!s || s.ifood === null || s.proprio === null || s.salao === null) return false;
+  return s.ifood + s.proprio + s.salao > 0;
+}
+
 /** Divisão das vendas por canal, semana a semana, com a meta do canal próprio */
 export function CanaisPorSemana({
   dados,
@@ -146,7 +160,7 @@ export function CanaisPorSemana({
   canais,
   semDado,
 }: {
-  dados: { inicio: string; ifood: number; proprio: number; salao: number }[];
+  dados: SemanaCanal[];
   meta: number | null;
   canais: CanalId[];
   /** sem venda medida nas 8 semanas: as participações são zero estrutural, não divisão */
@@ -156,10 +170,12 @@ export function CanaisPorSemana({
   const primeira = dados[0];
   const temSalao = canais.includes("salao");
   const series = (["proprio", "ifood", "salao"] as const).filter((c) => canais.includes(c));
+  const semanasSemVenda = dados.filter((s) => !medida(s)).length;
   // As 8 semanas são fixas, então `dados` nunca é vazio — mas sem venda nenhuma todas as
   // participações saem 0, e "o canal próprio ficou com 0% das vendas" afirmaria uma
-  // divisão que não houve.
-  if (semDado || !ultima || !primeira) {
+  // divisão que não houve. Vale para a lista vazia também: every/filter de vazio diz que
+  // nenhuma semana foi medida, que é a verdade.
+  if (semDado || semanasSemVenda === dados.length) {
     return (
       <SemDado>
         Não há venda medida nas últimas 8 semanas para este filtro, então não existe divisão entre canais. Barras zeradas diriam que a loja vendeu e
@@ -170,7 +186,18 @@ export function CanaisPorSemana({
   return (
     <figure>
       <figcaption className="text-sm text-grafite-2">
-        Na última semana, o canal próprio ficou com {formatarPct(ultima.proprio)} das vendas; 8 semanas atrás eram {formatarPct(primeira.proprio)}. Meta: {meta === null ? "[PREENCHER]" : formatarPct(meta)}.
+        {medida(ultima)
+          ? `Na última semana, o canal próprio ficou com ${formatarPct(ultima.proprio)} das vendas`
+          : `Na última semana, ${NAO_MEDIDO}: não há venda registrada`}
+        ;{" "}
+        {/* "8 semanas atrás eram 0%" era a afirmação mais cara do gráfico: o histórico de
+            quem começou no meio da janela sai zerado, e o zero dizia que houve venda e que
+            nada veio do canal próprio. */}
+        {medida(primeira)
+          ? `${dados.length} semanas atrás eram ${formatarPct(primeira.proprio)}`
+          : `${dados.length} semanas atrás, ${NAO_MEDIDO}: não havia venda registrada`}
+        . Meta: {meta === null ? "[PREENCHER]" : formatarPct(meta)}.
+        {semanasSemVenda > 0 && ` Semana sem venda registrada não aparece no gráfico: ${semanasSemVenda} de ${dados.length}.`}
       </figcaption>
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-grafite-2" aria-hidden>
         {series.map((c) => (
@@ -194,14 +221,21 @@ export function CanaisPorSemana({
             <Tooltip
               cursor={{ fill: "var(--bancada)" }}
               content={({ active, payload }: PropsDica) => {
-                const p = payload?.[0]?.payload as (typeof dados)[number] | undefined;
-                return active && p ? (
+                const p = payload?.[0]?.payload as SemanaCanal | undefined;
+                if (!active || !p) return null;
+                return (
                   <Caixa>
                     <p className="font-medium">Semana de {diaCurto(p.inicio)}</p>
-                    <p className="num">Canal próprio {formatarPct(p.proprio)}</p>
-                    <p className="num text-grafite-2">iFood {formatarPct(p.ifood)}{temSalao && ` · Salão ${formatarPct(p.salao)}`}</p>
+                    {medida(p) ? (
+                      <>
+                        <p className="num">Canal próprio {formatarPct(p.proprio)}</p>
+                        <p className="num text-grafite-2">iFood {formatarPct(p.ifood)}{temSalao && ` · Salão ${formatarPct(p.salao)}`}</p>
+                      </>
+                    ) : (
+                      <p className="text-grafite-2">{NAO_MEDIDO}: não há venda registrada nesta semana.</p>
+                    )}
                   </Caixa>
-                ) : null;
+                );
               }}
             />
             <Bar dataKey="proprio" stackId="c" fill={CORES_CANAL.proprio} stroke="var(--papel)" strokeWidth={1} isAnimationActive={false} />
@@ -214,7 +248,11 @@ export function CanaisPorSemana({
       <VerNumeros
         legenda="Divisão das vendas por canal, por semana"
         cabecalho={["Semana de", "Próprio", "iFood", ...(temSalao ? ["Salão"] : [])]}
-        linhas={dados.map((d) => [diaCurto(d.inicio), formatarPct(d.proprio), formatarPct(d.ifood), ...(temSalao ? [formatarPct(d.salao)] : [])])}
+        linhas={dados.map((d) =>
+          medida(d)
+            ? [diaCurto(d.inicio), formatarPct(d.proprio), formatarPct(d.ifood), ...(temSalao ? [formatarPct(d.salao)] : [])]
+            : [diaCurto(d.inicio), NAO_MEDIDO, NAO_MEDIDO, ...(temSalao ? [NAO_MEDIDO] : [])],
+        )}
       />
     </figure>
   );

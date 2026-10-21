@@ -204,6 +204,10 @@ describe("tenant sem nenhuma linha", () => {
     expect(m.mensagem).not.toMatch(/R\$\s*0/);
     expect(m.mensagem).not.toContain("dia dentro do plano");
     expect(m.mensagem).toContain("não é zero");
+    // E não leva DATA: `comanda.data` é o último dia do tenant, não deste filtro.
+    // Carimbar "qua 30/09" numa marca que não vendeu nenhum dia seria datar um dia
+    // que não houve.
+    expect(m.mensagem).not.toMatch(/\d{2}\/\d{2}/);
   });
 
   it("iFood: taxa, take-rate, funil, nota, tempo e cancelamento chegam como ausência", async () => {

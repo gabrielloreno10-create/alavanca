@@ -467,8 +467,19 @@ async function lerMidia(
 
   const anunciosDia = (() => {
     const m = new Map<string, Record<string, { investimento: number; impressoes: number; cliques: number; pedidos: number; faturamento: number }>>();
+    const orfaos = new Map<string, { investimento: number; pedidos: number }>();
     for (const a of anuncios) {
-      if (!a.criativo) continue;
+      // criativo_id NULO não é linha vazia: é investimento gravado que a agregação por
+      // criativo não sabe onde pendurar. Guardado à parte para a tela poder DIZER que
+      // existe, em vez de afirmar que não houve anúncio. Medido: 27 de 27 linhas do
+      // grupo-le-tre estão assim.
+      if (!a.criativo) {
+        const o = orfaos.get(a.data) ?? { investimento: 0, pedidos: 0 };
+        o.investimento += num(a.investimento);
+        o.pedidos += num(a.pedidos);
+        orfaos.set(a.data, o);
+        continue;
+      }
       const d = m.get(a.data) ?? {};
       d[a.criativo] = {
         investimento: num(a.investimento),
@@ -479,7 +490,10 @@ async function lerMidia(
       };
       m.set(a.data, d);
     }
-    return [...m.entries()].map(([data, criativos]) => ({ data, criativos }));
+    const datas = new Set([...m.keys(), ...orfaos.keys()]);
+    return [...datas]
+      .sort()
+      .map((data) => ({ data, criativos: m.get(data) ?? {}, semCriativo: orfaos.get(data) }));
   })();
 
   const metaPct = config["canal_proprio.meta_pct"];
@@ -630,9 +644,13 @@ async function lerCrm(
       id: s.codigo,
       nome: s.nome,
       criterio: s.criterio,
-      clientes: num(s.clientes),
-      comOptIn: num(s.com_opt_in),
-      valor90d: num(s.valor_90d),
+      // O `left join lateral` acima devolve NULL quando NÃO HÁ snapshot para o
+      // segmento. Medido no grupo-le-tre: crm_segmento 5 linhas, crm_segmento_snapshot
+      // ZERO. Com num() isso virava "0 clientes · 0 disparáveis" na tela — uma
+      // contagem que ninguém fez.
+      clientes: numOuNulo(s.clientes),
+      comOptIn: numOuNulo(s.com_opt_in),
+      valor90d: numOuNulo(s.valor_90d),
       acao: s.acao_sugerida ?? "",
     })),
     disparos: disparos.map((d) => ({

@@ -310,6 +310,7 @@ describe("o vocabulário visual da ausência", () => {
         margem: 0,
         roasMargem: null,
         sobraDepoisDoAnuncio: 0,
+        naoAtribuido: null,
       },
       criativos: [],
       campanhas: [
@@ -322,6 +323,88 @@ describe("o vocabulário visual da ausência", () => {
     expect(html).not.toContain("text-manjericao");
     // e a tela avisa que a lista não respeita o filtro de marca ainda
     expect(texto(html)).toContain("não é filtrada por marca");
+  });
+
+  it("plano sem nenhuma ação não diz que as ações valem R$ 0 por mês", async () => {
+    // Medido em 20/10/2026: `plano_acao` tem ZERO linhas no grupo-le-tre, e a tela
+    // escrevia "0 de 0 ações feitas. Juntas, as ações valem R$ 0 por mês em margem".
+    // Plano que ninguém escreveu é diferente de plano que não vale nada.
+    const { PlanoTela } = await import("./PlanoTela");
+    const vazio: import("@/lib/types").Plano = {
+      origem: "SEM_DADO",
+      acoesPorAlerta: { meta: [], margem: [], pedidos: [], ifood: [], ticket: [] },
+      acoesPadrao: [],
+      acoes: [],
+    };
+    const html = renderToStaticMarkup(createElement(PlanoTela, { plano: vazio, hoje: "2026-10-20" }));
+    expect(mentiras(html)).toEqual([]);
+    expect(texto(html)).not.toContain("ações valem");
+    expect(texto(html)).toContain("o plano ainda não foi escrito");
+  });
+
+  it("investimento de anúncio gravado sem criativo é declarado, não negado", async () => {
+    // Medido em 20/10/2026: anuncio_dia tem 27 linhas no grupo-le-tre, R$ 16.901,43,
+    // com criativo_id NULO em 27 de 27. A leitura agrega por criativo e descartava
+    // tudo, e a tela afirmava "nenhum anúncio com investimento no período". Afirmar
+    // ausência onde há medição é a mentira da fase 0 virada do avesso.
+    const { CanalProprioTela } = await import("./CanalProprioTela");
+    const visao: import("@/lib/types").VisaoCanalProprio = {
+      origem: "MISTO",
+      exemplo: {},
+      blocos: { vendas: "REAL", economia: "REAL", anuncios: "SEM_DADO" },
+      canais: ["ifood", "proprio"],
+      frase: "Sem retorno medido.",
+      metaPct: null,
+      proprioPct: { atual: 0.15, anterior: 0.16 },
+      semanas: [],
+      economia: { pedidos: 0, faturamento: 0, custoSeFosseIfood: 0, custoNoCanalProprio: 0, economia: 0 },
+      trafego: {
+        investimento: { atual: 0, anterior: 0 },
+        alcance: { atual: 0, anterior: 0 },
+        impressoes: 0,
+        cliques: 0,
+        pedidos: { atual: 0, anterior: 0 },
+        custoPorPedido: { atual: null, anterior: null },
+        faturamento: 0,
+        roas: null,
+        margem: 0,
+        roasMargem: null,
+        sobraDepoisDoAnuncio: 0,
+        naoAtribuido: { investimento: 1497.94, pedidos: 61 },
+      },
+      criativos: [],
+      campanhas: [],
+    };
+    const t = texto(renderToStaticMarkup(createElement(CanalProprioTela, { visao })));
+    expect(t).not.toContain("nenhum anúncio com investimento no período");
+    expect(t).not.toContain("Não houve investimento em anúncio neste período");
+    expect(t).toContain("R$ 1.498");
+    expect(t).toContain("sem criativo identificado");
+  });
+
+  it("segmento com definição e sem apuração não mostra 0 clientes", async () => {
+    // Medido em 20/10/2026: crm_segmento tem 5 linhas no grupo-le-tre e
+    // crm_segmento_snapshot tem ZERO. "Clientes 0 · Disparáveis 0" era uma contagem
+    // que ninguém fez — e o bloco ainda ia selado como "Exemplo".
+    const { CrmTela } = await import("./CrmTela");
+    const visao: import("@/lib/types").VisaoCrm = {
+      origem: "SEM_DADO",
+      blocos: { base: "SEM_DADO", segmentos: "EXEMPLO", disparos: "SEM_DADO" },
+      frase: "Sem base medida.",
+      base: { total: 0, comOptIn: 0, pctOptIn: null },
+      novos: { atual: 0, anterior: 0 },
+      novosComOptIn: { atual: 0, anterior: 0 },
+      segmentos: [{ id: "novos", nome: "Novos", criterio: "1o pedido nos últimos 30 dias", clientes: null, comOptIn: null, valor90d: null, acao: "Mandar boas-vindas", pctOptIn: null }],
+      disparos: [],
+      totaisDisparos: { enviados: 0, respostas: 0, pedidos: 0, faturamento: 0, custo: 0, taxaResposta: null },
+      ultimoDisparo: null,
+      proximos: [{ data: "2026-10-22", hora: "18:00", segmento: "novos", mensagem: "Oi", nomeSegmento: "Novos", disparaveis: null, foraDoDisparo: null }],
+    };
+    const t = texto(renderToStaticMarkup(createElement(CrmTela, { visao })));
+    expect(mentiras(renderToStaticMarkup(createElement(CrmTela, { visao })))).toEqual([]);
+    expect(t).toContain("nunca foi apurado");
+    expect(t).not.toContain("segmento sem nenhum cliente");
+    expect(t).toContain(`${NAO_MEDIDO} vão receber`);
   });
 
   it("Indicador com 'não medido' deixa de parecer número e não mostra variação", async () => {

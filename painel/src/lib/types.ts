@@ -204,7 +204,16 @@ export interface CanalProprio {
   metaPctCanalProprio: number | null;
   campanhas: Campanha[];
   criativos: Criativo[];
-  anunciosDia: { data: string; criativos: Record<string, ResultadoAnuncio> }[];
+  /**
+   * `semCriativo` = o que foi gravado em anuncio_dia SEM criativo_id. Não é sobra
+   * decorativa: medido em 20/10/2026 no grupo-le-tre, criativo_id é NULO em 27 de 27
+   * linhas, somando R$ 16.901,43 e 650 pedidos. Como a leitura agrega por criativo,
+   * esse dinheiro ficava de fora em silêncio e a tela escrevia "nenhum anúncio com
+   * investimento no período" — afirmar ausência onde há medição é a mesma mentira da
+   * fase 0, só do outro lado. Atribuir isso a campanha é a fase 2; declarar que existe
+   * é a fase 0.
+   */
+  anunciosDia: { data: string; criativos: Record<string, ResultadoAnuncio>; semCriativo?: { investimento: number; pedidos: number } }[];
   /** alcance não se soma dia a dia (a mesma pessoa conta uma vez), por isso vem pronto por período */
   alcance: Record<Periodo, Comparacao>;
 }
@@ -245,10 +254,16 @@ export interface Segmento {
   id: string;
   nome: string;
   criterio: string;
-  clientes: number;
-  comOptIn: number;
-  /** faturamento do segmento nos últimos 90 dias */
-  valor90d: number;
+  /**
+   * A DEFINIÇÃO do segmento mora em `crm_segmento`; o NÚMERO mora em
+   * `crm_segmento_snapshot`. São tabelas diferentes e podem discordar: medido no
+   * grupo-le-tre em 20/10/2026, há 5 definições e ZERO snapshot. Sem snapshot não
+   * existe contagem, e `0` aqui afirmaria que alguém contou e não achou ninguém.
+   */
+  clientes: number | null;
+  comOptIn: number | null;
+  /** faturamento do segmento nos últimos 90 dias; null = o segmento nunca foi apurado */
+  valor90d: number | null;
   acao: string;
 }
 
@@ -522,6 +537,13 @@ export interface VisaoCanalProprio {
     margem: number;
     roasMargem: number | null;
     sobraDepoisDoAnuncio: number;
+    /**
+     * Investimento e pedidos que ESTÃO gravados em anuncio_dia mas não têm criativo,
+     * e por isso não entram em nenhum número acima. null = não há nada nessa situação.
+     * Enquanto for diferente de null, a tela NÃO pode dizer "nenhum anúncio com
+     * investimento no período": tem.
+     */
+    naoAtribuido: { investimento: number; pedidos: number } | null;
   };
   criativos: {
     id: string;
@@ -549,7 +571,8 @@ export interface VisaoCrm {
   disparos: (Disparo & { nomeSegmento: string; custo: number; taxaResposta: number | null })[];
   totaisDisparos: { enviados: number; respostas: number; pedidos: number; faturamento: number; custo: number; taxaResposta: number | null };
   ultimoDisparo: string | null;
-  proximos: (DisparoAgendado & { nomeSegmento: string; disparaveis: number; foraDoDisparo: number })[];
+  /** disparaveis/foraDoDisparo null = o segmento do agendamento nunca foi contado (Segmento.clientes) */
+  proximos: (DisparoAgendado & { nomeSegmento: string; disparaveis: number | null; foraDoDisparo: number | null })[];
 }
 
 export interface VisaoWhatsapp {

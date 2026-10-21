@@ -28,7 +28,15 @@ export function PlanoTela({ plano, hoje }: { plano: Plano; hoje: string }) {
   const feito = acoes.filter((a) => a.situacao === "feito").reduce((s, a) => s + a.resultadoEsperadoMes, 0);
   const nFeitas = acoes.filter((a) => a.situacao === "feito").length;
   const atrasadas = acoes.filter((a) => a.situacao !== "feito" && a.prazo < hoje).length;
-  const frase = `${nFeitas} de ${acoes.length} ações feitas. Juntas, as ações valem ${formatarBRLInteiro(total)} por mês em margem; ${formatarBRLInteiro(feito)} disso já está em ações concluídas.${atrasadas ? ` ${atrasadas === 1 ? "1 ação está atrasada" : `${atrasadas} ações estão atrasadas`}.` : ""}`;
+  /**
+   * Sem nenhuma ação no plano não existe "R$ 0 por mês em margem": existe um plano que
+   * ninguém escreveu ainda. Medido em 20/10/2026 no grupo-le-tre: `plano_acao` tem ZERO
+   * linhas, e a tela afirmava "0 de 0 ações feitas. Juntas, as ações valem R$ 0 por mês
+   * em margem" — um R$ 0,00 que quer dizer "não há plano".
+   */
+  const frase = acoes.length
+    ? `${nFeitas} de ${acoes.length} ações feitas. Juntas, as ações valem ${formatarBRLInteiro(total)} por mês em margem; ${formatarBRLInteiro(feito)} disso já está em ações concluídas.${atrasadas ? ` ${atrasadas === 1 ? "1 ação está atrasada" : `${atrasadas} ações estão atrasadas`}.` : ""}`
+    : "Nenhuma ação no plano para este filtro. Não há resultado esperado a somar — o plano ainda não foi escrito, e isso é diferente de um plano que não vale nada.";
 
   // Desmarcar volta para a situação original (ou "fazendo", se ela já veio como feita)
   const alternar = (id: string) =>

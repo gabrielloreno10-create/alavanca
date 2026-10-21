@@ -182,13 +182,19 @@ for (const SLUG of ["grupo-le-tre", "pizzaria-exemplo"])
 
     it("CRM: segmentos somam a base e ninguém sem opt-in recebe disparo", async () => {
       const crm = await getCrm(SLUG, "30d");
-      expect(crm.segmentos.reduce((s, x) => s + x.clientes, 0)).toBe(crm.base.total);
-      expect(crm.segmentos.reduce((s, x) => s + x.comOptIn, 0)).toBe(crm.base.comOptIn);
+      // Na semente TODO segmento tem contagem. Null aqui seria regressão da fonte, não
+      // ausência legítima — por isso a asserção explícita antes de somar.
+      for (const s of crm.segmentos) {
+        expect(s.clientes).not.toBeNull();
+        expect(s.comOptIn).not.toBeNull();
+      }
+      expect(crm.segmentos.reduce((s, x) => s + (x.clientes ?? 0), 0)).toBe(crm.base.total);
+      expect(crm.segmentos.reduce((s, x) => s + (x.comOptIn ?? 0), 0)).toBe(crm.base.comOptIn);
       for (const d of crm.disparos) {
         const seg = crm.segmentos.find((s) => s.nome === d.nomeSegmento)!;
-        expect(d.enviados).toBeLessThanOrEqual(seg.comOptIn);
+        expect(d.enviados).toBeLessThanOrEqual(seg.comOptIn ?? 0);
       }
-      for (const p of crm.proximos) expect(p.disparaveis + p.foraDoDisparo).toBe(crm.segmentos.find((s) => s.nome === p.nomeSegmento)!.clientes);
+      for (const p of crm.proximos) expect((p.disparaveis ?? 0) + (p.foraDoDisparo ?? 0)).toBe(crm.segmentos.find((s) => s.nome === p.nomeSegmento)!.clientes);
     });
 
     it("pilares 4 a 6: totais batem e a mensagem cabe em 12 linhas", async () => {
