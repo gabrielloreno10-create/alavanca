@@ -17,7 +17,9 @@ function Linha({ rotulo, valor, detalhe }: { rotulo: string; valor: string; deta
   const ausente = valor === NAO_MEDIDO;
   return (
     <div className="flex items-baseline gap-2 py-1">
-      <dt className="text-grafite-2">{rotulo}</dt>
+      {/* Rótulo em mono e um degrau abaixo do corpo: é etiqueta, não conteúdo.
+          O valor continua em Bricolage — número grande em mono fica frio e largo. */}
+      <dt className="font-mono text-xs text-grafite-2">{rotulo}</dt>
       <span aria-hidden className="pontilhado" />
       <dd className={clsx("flex items-baseline justify-end gap-1.5 text-right", ausente ? "text-grafite-2" : "num font-medium")}>
         <span>{valor}</span>
@@ -83,8 +85,12 @@ export function Comanda({ comanda, cliente }: { comanda: ComandaDoDia; cliente: 
             <span>Nenhuma comanda emitida</span>
           ) : (
             <>
-              <span className="num">Comanda nº {String(comanda.numero).padStart(4, "0")}</span>
-              <span className="num">Emitida às {comanda.emitidaEm}</span>
+              {/* O folio é o que faz isto parecer uma comanda impressa e não um card:
+                  mono, pequeno, com o espaçamento aberto de máquina de cupom. */}
+              <span className="num font-mono text-xs tracking-[0.04em]">
+                Comanda nº {String(comanda.numero).padStart(4, "0")}
+              </span>
+              <span className="num font-mono text-xs tracking-[0.04em]">Emitida às {comanda.emitidaEm}</span>
             </>
           )}
         </div>

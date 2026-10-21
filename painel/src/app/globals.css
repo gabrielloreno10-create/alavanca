@@ -45,6 +45,8 @@
 
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-instrument), sans-serif;
+  /* Só na Comanda: rótulo, folio e unidade. Nunca no valor. */
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Escala 32 / 24 / 18 / 15 / 13 / 11,5 / 10.
      Ela parava em 13px, e era por isso que legenda, unidade e rótulo de eixo
