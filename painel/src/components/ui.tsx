@@ -24,7 +24,7 @@ export function CabecalhoArea({
       <FaixaExemplo origem={origem} blocos={blocos} />
       <header className="mb-6 lg:mb-8">
         {numero && <p className="num text-sm text-grafite-2">Pilar {numero}</p>}
-        <h1 className="font-display text-3xl font-semibold tracking-tight">{nome}</h1>
+        <h1 className="font-display text-3xl font-semibold">{nome}</h1>
         <p className="mt-3 max-w-[68ch] text-lg leading-snug text-grafite" aria-live="polite">
           {frase}
         </p>
@@ -124,7 +124,7 @@ export function Indicador({
       </p>
       <p
         className={clsx(
-          ausente ? "text-lg leading-snug text-grafite-2" : "num font-display font-semibold tracking-tight",
+          ausente ? "text-lg leading-snug text-grafite-2" : "num font-display font-semibold",
           !ausente && (destaque ? "text-3xl" : "text-2xl"),
         )}
       >

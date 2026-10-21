@@ -97,7 +97,7 @@ export function Comanda({ comanda, cliente }: { comanda: ComandaDoDia; cliente: 
         <Corte />
 
         <p className="text-sm text-grafite-2">Faturamento</p>
-        <p className={semVenda ? "text-lg leading-snug text-grafite-2" : "num font-display text-3xl font-semibold tracking-tight"}>
+        <p className={semVenda ? "text-lg leading-snug text-grafite-2" : "num font-display text-3xl font-semibold"}>
           {brl(r.faturamento)}
         </p>
         {semVenda && (

@@ -40,7 +40,7 @@ async function Conteudo() {
       </header>
 
       <div className="grid gap-1">
-        <h1 className="font-display text-3xl font-semibold tracking-tight text-grafite">Todos os restaurantes</h1>
+        <h1 className="font-display text-3xl font-semibold text-grafite">Todos os restaurantes</h1>
         <p className="text-base text-grafite-2">
           O último dia fechado de cada grupo, o alerta mais grave e como estão os 6 pilares.
         </p>

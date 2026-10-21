@@ -23,7 +23,7 @@ export function Saudacao({ nome }: { nome: string }) {
   return (
     <div className="mb-5 min-h-[62px] lg:mb-7">
       <p className="text-sm text-grafite-2">{ola ? `${ola}, ${nome}` : " "}</p>
-      <h1 className="font-display text-3xl font-semibold tracking-tight">{data || " "}</h1>
+      <h1 className="font-display text-3xl font-semibold">{data || " "}</h1>
     </div>
   );
 }

@@ -2,8 +2,17 @@
 
 /* Tokens da Plataforma Alavanca. Regras em DESIGN.md. */
 :root {
-  --bancada: #f2f3ef;
-  --papel: #ffffff;
+  /* Quatro superfícies, não duas.
+     Antes eram só bancada (#F2F3EF) e papel (#FFFFFF), e era essa a causa do
+     acabamento "de ferramenta interna": sem degraus intermediários, tudo que
+     precisa se destacar vira borda, e a tela fica riscada.
+     Os quatro degraus ficam separados por cerca de 2 pontos de L*, na mesma
+     matiz da bancada — o olho lê profundidade sem perceber cor.
+     O branco puro sai de propósito: papel de comanda não é branco de monitor. */
+  --fundo: #e6e8e1; /* trilho de barra, hover de linha, fundo de cursor de gráfico */
+  --chrome: #eceee7; /* cabeçalho, menu lateral, barra inferior do celular */
+  --bancada: #f2f3ef; /* fundo da página */
+  --papel: #fafbf8; /* painéis e a Comanda */
   --grafite: #18222b;
   --grafite-2: #5b6670;
   --comanda: #2b4acb;
@@ -18,6 +27,8 @@
 }
 
 @theme inline {
+  --color-fundo: var(--fundo);
+  --color-chrome: var(--chrome);
   --color-bancada: var(--bancada);
   --color-papel: var(--papel);
   --color-grafite: var(--grafite);
@@ -35,17 +46,31 @@
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-instrument), sans-serif;
 
-  /* escala 32 / 24 / 18 / 15 / 13 */
+  /* Escala 32 / 24 / 18 / 15 / 13 / 11,5 / 10.
+     Ela parava em 13px, e era por isso que legenda, unidade e rótulo de eixo
+     disputavam o mesmo tamanho do texto corrido: sem degrau abaixo do corpo,
+     tudo que é secundário parece conteúdo. Os dois passos novos são o que faz
+     a tela parecer desenhada em vez de montada. */
   --text-3xl: 32px;
   --text-3xl--line-height: 1.15;
+  --text-3xl--letter-spacing: -0.02em;
   --text-2xl: 24px;
   --text-2xl--line-height: 1.25;
+  --text-2xl--letter-spacing: -0.01em;
   --text-lg: 18px;
   --text-lg--line-height: 1.35;
   --text-base: 15px;
   --text-base--line-height: 1.5;
   --text-sm: 13px;
   --text-sm--line-height: 1.45;
+  /* legenda de gráfico, unidade, folio da Comanda */
+  --text-xs: 11.5px;
+  --text-xs--line-height: 1.4;
+  --text-xs--letter-spacing: 0.005em;
+  /* micro: só carimbo e rótulo de eixo */
+  --text-2xs: 10px;
+  --text-2xs--line-height: 1.3;
+  --text-2xs--letter-spacing: 0.01em;
 
   --radius-painel: 10px;
   --radius-botao: 6px;

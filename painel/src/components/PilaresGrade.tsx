@@ -58,7 +58,7 @@ export function PilaresGrade({ slug, pilares, marcarBlocos }: { slug: string; pi
                 </span>
                 <span
                   className={
-                    semDado ? "mt-0.5 text-base leading-snug text-grafite-2" : "num font-display text-2xl font-semibold tracking-tight"
+                    semDado ? "mt-0.5 text-base leading-snug text-grafite-2" : "num font-display text-2xl font-semibold"
                   }
                 >
                   {ind.valor}

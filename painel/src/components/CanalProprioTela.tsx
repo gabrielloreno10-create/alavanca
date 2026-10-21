@@ -59,7 +59,7 @@ export function CanalProprioTela({ visao }: { visao: VisaoCanalProprio }) {
             ) : (
               <>
                 <p className="text-sm text-grafite-2">Você deixou de pagar</p>
-                <p className="num font-display text-3xl font-semibold tracking-tight">{formatarBRLInteiro(e.economia)}</p>
+                <p className="num font-display text-3xl font-semibold">{formatarBRLInteiro(e.economia)}</p>
                 <p className="mt-1 text-base">
                   em <span className="num font-medium">{formatarInteiro(e.pedidos)}</span> pedidos que vieram pelo canal próprio ({formatarBRLInteiro(e.faturamento)} em vendas).
                 </p>
