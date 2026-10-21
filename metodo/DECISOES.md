@@ -24,6 +24,57 @@ uma decisão anterior, citando a data dela).
 
 ---
 
+## 2026-10-21 · REGRA · A Jerry's vendeu; o export do Saipos e que veio incompleto
+
+O banco tem ZERO linha de venda da Jerry's. Nao e que ela nao vendeu: o Helio confirmou
+em 21/10 que ela vendeu de maio a setembro, com ROAS de 2,9x no iFood em agosto.
+
+**Por que:** comparando a referencia de julho do Helio (media por noite, todas as marcas)
+com julho medido no banco (so Pizzaria e Pastas), a **segunda-feira bate exatamente**
+(R$ 696 contra R$ 696) e os outros seis dias faltam de 28% a 40%, somando R$ 9.211 por
+semana. Se fosse erro de medicao, a segunda erraria junto. O encaixe da segunda prova que
+o que falta e uma marca que nao abre segunda.
+**Afeta:** a visao de grupo inteira, e o modulo 1. Enquanto nao entrar, o painel diz
+"nao medido" na Jerry's -- o que esta certo, mas deixa o grupo subestimado em um terco.
+**Fonte:** medicao no banco em 21/10/2026, contra metodo/metas/referencia-julho-2026.md.
+Para: Gabriel. Urgencia: alta. Resolve-se com um export completo do Saipos, ou pelo
+relatorio de Pedidos do iFood em "Todas as lojas", que cobre agosto a outubro.
+
+## 2026-10-21 · REGRA · Provisorio nao e fechado: o dia do iFood fecha depois
+
+Toda linha de venda nasce 'provisorio' e so vira 'fechado' quando a fonte entrega o valor
+apurado. A tela e a mensagem das 7h tem que dizer qual dos dois e.
+
+**Por que:** o Helio apontou que o pedido do iFood "demora um dia para ser computado,
+validado e taxado com as devidas taxas". O banco nao sabia disso: canal_taxa_mes tem
+take_rate_pct preenchido e comissao_pct, taxa_pagamento_pct e embalagem_por_item NULOS
+nas 5 linhas, e o relatorio do dono estima comissao com take fixo de 41%.
+**Afeta:** venda_dia (migration 018), o importador e a mensagem das 7h.
+**Fonte:** medicao no banco em 20/10/2026; fala do Helio em 21/10/2026.
+
+## 2026-10-21 · PEDIDO · O site grava tudo como "letre": falta a marca
+
+A tabela pedidos_site tem a coluna `loja`, mas o n8n grava sempre 'letre'. Medido pelo
+Helio em 21/10: 46 pedidos de 07/10 a 20/10, uma unica loja.
+
+**Por que:** sem a marca na origem, nao da para separar a venda da Pastas da venda da
+Pizzaria no canal proprio, e a margem da Pastas segue invisivel justamente no canal de
+maior margem.
+**Afeta:** modulo 1, e a leitura por marca do canal proprio.
+**Fonte:** Helio, 21/10/2026.
+Para: Helio. Urgencia: media. Resolve-se fazendo o fluxo do n8n gravar a marca ao inserir.
+
+## 2026-10-21 · META · Referencia de julho registrada; meta de verdade ainda nao existe
+
+As medias por noite de julho entraram em metodo/metas/referencia-julho-2026.md marcadas
+como referencia, nao como meta.
+
+**Por que:** sao do grupo todo, nao da Pizzaria, e o Helio disse que define a meta depois.
+Media do que foi e linha de base; meta e onde se quer chegar. Enquanto as duas forem a
+mesma coisa, bater a meta nao significa nada.
+**Afeta:** o painel segue dizendo "sem meta cadastrada", que e o correto.
+**Fonte:** Helio, 21/10/2026.
+
 ## 2026-10-20 · REGRA · Método mora no repositório, não no chat
 
 Toda decisão de método passa a ser arquivo nesta pasta. A IA do Hélio trabalha dentro do
