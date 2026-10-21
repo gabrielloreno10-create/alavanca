@@ -15,15 +15,42 @@
   --papel: #fafbf8; /* painéis e a Comanda */
   --grafite: #18222b;
   --grafite-2: #5b6670;
+  /* O degrau para BAIXO: poço de campo, trilho de barra, área de plotagem
+     recuada. A escada só subia; o Primer é o único sistema que faz os dois
+     sentidos, e é o que dá profundidade sem desenhar borda. */
+  --poco: #dcdfd6;
+  /* E o que FLUTUA: tooltip, dropdown, dialog. Hoje eles usam a mesma cor do
+     painel atrás deles e só se separam pela sombra. */
+  --elevado: #ffffff;
+  /* O azul se divide em dois papéis, porque pintar barra com cor de texto é o
+     erro mais comum em tema escuro. LER vs PREENCHER. No claro são iguais. */
   --comanda: #2b4acb;
+  --comanda-cheio: #2b4acb;
   --comanda-claro: #e9edfb;
   --manjericao: #2f7d57;
   --acafrao: #c98a12;
   --acafrao-texto: #7a5208;
   --acafrao-fundo: #fbf3e1;
   --tomate: #c93b2b;
-  --linha: #daddd6;
-  --cinza-grafico: #a3aaa1;
+  --cinza-grafico: #889187; /* era #A3AAA1, que dava 2,29:1 sobre o papel e
+                               reprovava em AA para objeto gráfico (exige 3:1).
+                               Agora 3,1:1. Grade e eixo são objeto gráfico. */
+
+  /* Borda deixa de ser cor e vira UMA base com três alfas.
+     Cor sólida acerta numa superfície e erra nas outras três: a mesma linha fica
+     forte sobre a bancada e some sobre o fundo. Com alfa ela se resolve sozinha
+     em cima de qualquer uma. É o que shadcn e Grafana fazem. */
+  --borda-base: 24 34 43;
+  --linha: rgb(var(--borda-base) / 0.14);
+  --linha-forte: rgb(var(--borda-base) / 0.24);
+  --linha-grade: rgb(var(--borda-base) / 0.07); /* metade da borda */
+
+  --sombra-base: 24 34 43;
+  --sombra-z1: 0 1px 2px rgb(var(--sombra-base) / 0.2);
+  --sombra-z2: 0 4px 8px rgb(var(--sombra-base) / 0.2);
+  --sombra-z3: 0 13px 20px 1px rgb(var(--sombra-base) / 0.18);
+  --comanda-rim: rgb(var(--borda-base) / 0.16);
+  --comanda-pe: rgb(var(--sombra-base) / 0.18);
 }
 
 /* ---------------------------------------------------------------------------
@@ -52,15 +79,38 @@
   --papel: #171e27; /* painéis e a Comanda */
   --grafite: #e9edf2; /* texto */
   --grafite-2: #99a5b4; /* texto secundário */
-  --comanda: #6d8cff;
+  --elevado: #232b37; /* L* 17,8 — o que flutua ganha degrau próprio */
+  --poco: #080c11; /* L* 3,5 — e o que afunda fica ABAIXO da página */
+  /* O acento que para de vibrar.
+     O #6D8CFF é cor de TEXTO (3,3:1 lendo), e a gente estava pintando BARRA com
+     ele. Mesma matiz, mais escura e menos saturada para preencher. O Grafana
+     separa os dois exatamente assim. */
+  --comanda: #6d8cff; /* LER: texto, link, traço de 2px, foco */
+  --comanda-cheio: #4967d4; /* PREENCHER: barra, segmento, célula */
   --comanda-claro: #1b2444;
   --manjericao: #43b87a;
   --acafrao: #e0a43a;
   --acafrao-texto: #f0c165;
   --acafrao-fundo: #2a2114;
   --tomate: #f2705f;
-  --linha: #2a3440;
-  --cinza-grafico: #5a6673;
+  --cinza-grafico: #626e7c; /* era #5A6673, 2,87:1 — reprovava por pouco */
+
+  /* Branco-azulado translúcido em vez de cinza sólido: o mesmo token resolve
+     para ~#272D35 na bancada e ~#353D49 no fundo, de graça. */
+  --borda-base: 205 216 233;
+  --linha: rgb(var(--borda-base) / 0.14);
+  --linha-forte: rgb(var(--borda-base) / 0.24);
+  --linha-grade: rgb(var(--borda-base) / 0.07);
+
+  /* Sombra no escuro não enfraquece: INVERTE. Deixa de ser borrão cinza e vira
+     buraco quase opaco. O Grafana usa 0.2 no claro e 0.75 no escuro — não é
+     exagero, é o que faz o elevado parecer elevado sem contorno. */
+  --sombra-base: 2 6 12;
+  --sombra-z1: 0 1px 2px rgb(var(--sombra-base) / 0.7);
+  --sombra-z2: 0 6px 16px rgb(var(--sombra-base) / 0.72), 0 1px 2px rgb(var(--sombra-base) / 0.6);
+  --sombra-z3: 0 18px 48px rgb(var(--sombra-base) / 0.92);
+  --comanda-rim: rgb(var(--borda-base) / 0.16);
+  --comanda-pe: rgb(var(--sombra-base) / 0.75);
 }
 
 @theme inline {
@@ -78,7 +128,15 @@
   --color-acafrao-fundo: var(--acafrao-fundo);
   --color-tomate: var(--tomate);
   --color-linha: var(--linha);
+  --color-linha-forte: var(--linha-forte);
+  --color-linha-grade: var(--linha-grade);
   --color-cinza-grafico: var(--cinza-grafico);
+  --color-poco: var(--poco);
+  --color-elevado: var(--elevado);
+  --color-comanda-cheio: var(--comanda-cheio);
+  --shadow-z1: var(--sombra-z1);
+  --shadow-z2: var(--sombra-z2);
+  --shadow-z3: var(--sombra-z3);
 
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-instrument), sans-serif;
@@ -164,8 +222,10 @@ body,
 
 /* A Comanda do dia: o único elemento com tratamento especial.
    Papel com borda serrilhada em cima e embaixo, recortada por máscara. */
+/* Os dois hex claros estavam cravados aqui: no modo escuro viravam um halo
+   claro em volta do papel, que é o oposto do que uma comanda impressa faz. */
 .comanda-borda {
-  filter: drop-shadow(0 0 0.5px #b5bab1) drop-shadow(0 1px 0 #d3d6cf);
+  filter: drop-shadow(0 0 0.5px var(--comanda-rim)) drop-shadow(0 2px 6px var(--comanda-pe));
 }
 .comanda {
   --dente: 12px;
@@ -190,4 +250,11 @@ body,
 
 dialog::backdrop {
   background: rgb(24 34 43 / 0.35);
+}
+
+/* O Recharts desenha o ponto da linha com stroke="#fff" por padrão. Sobre a
+   bancada escura isso vira um pontinho branco em cada dado. Uma regra mata
+   todos, sem tocar em componente nenhum. */
+.recharts-dot[stroke="#fff"] {
+  stroke: transparent;
 }

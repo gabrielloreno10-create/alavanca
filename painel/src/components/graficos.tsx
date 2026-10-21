@@ -16,7 +16,7 @@ interface PropsDica {
 }
 
 function Caixa({ children }: { children: React.ReactNode }) {
-  return <div className="rounded-botao border border-linha bg-papel px-3 py-2 text-sm shadow-sm">{children}</div>;
+  return <div className="rounded-botao border border-linha-forte bg-elevado px-3 py-2 text-sm shadow-z2">{children}</div>;
 }
 
 /** Tabela escondida atrás de "Ver os números", para leitor de tela e para quem quer o número exato */
@@ -72,7 +72,7 @@ export function PedidosPorDia({ dados }: { dados: { data: string; pedidos: numbe
       <div className="mt-3 h-52" aria-hidden>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={dados} margin={{ top: 4, right: 0, bottom: 0, left: 0 }} barCategoryGap={2}>
-            <CartesianGrid vertical={false} stroke="var(--linha)" strokeOpacity={0.7} />
+            <CartesianGrid vertical={false} stroke="var(--linha-grade)" />
             <XAxis dataKey="data" tickFormatter={diaCurto} tick={eixo} tickLine={false} axisLine={{ stroke: "var(--linha)" }} minTickGap={20} />
             <YAxis tick={eixo} tickLine={false} axisLine={false} width={32} allowDecimals={false} />
             <Tooltip
@@ -114,7 +114,7 @@ export function PedidosPorFaixa({ dados }: { dados: { faixa: string; pedidos: nu
       <div className="mt-3 h-52" aria-hidden>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={dados} margin={{ top: 4, right: 0, bottom: 0, left: 0 }}>
-            <CartesianGrid vertical={false} stroke="var(--linha)" strokeOpacity={0.7} />
+            <CartesianGrid vertical={false} stroke="var(--linha-grade)" />
             <XAxis dataKey="faixa" tick={eixo} tickLine={false} axisLine={{ stroke: "var(--linha)" }} interval={0} />
             <YAxis tick={eixo} tickLine={false} axisLine={false} width={32} allowDecimals={false} />
             <Tooltip
@@ -215,7 +215,7 @@ export function CanaisPorSemana({
       <div className="mt-3 h-60" aria-hidden>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={dados} margin={{ top: 8, right: 0, bottom: 0, left: 0 }} barCategoryGap="22%">
-            <CartesianGrid vertical={false} stroke="var(--linha)" strokeOpacity={0.7} />
+            <CartesianGrid vertical={false} stroke="var(--linha-grade)" />
             <XAxis dataKey="inicio" tickFormatter={diaCurto} tick={eixo} tickLine={false} axisLine={{ stroke: "var(--linha)" }} minTickGap={8} />
             <YAxis domain={[0, 1]} ticks={[0, 0.25, 0.5, 0.75, 1]} tickFormatter={(v: number) => formatarPct(v)} tick={eixo} tickLine={false} axisLine={false} width={44} />
             <Tooltip
@@ -290,7 +290,7 @@ export function MapaCardapio({ pratos, cortes }: { pratos: PontoCardapio[]; cort
         <span className={`${canto} bottom-[60px] right-2`}>Cavalos de batalha</span>
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 24, right: 8, bottom: 8, left: 0 }}>
-            <CartesianGrid stroke="var(--linha)" strokeOpacity={0.6} />
+            <CartesianGrid stroke="var(--linha-grade)" />
             <XAxis type="number" dataKey="qtd" name="Vendidos" tick={eixo} tickLine={false} axisLine={{ stroke: "var(--linha)" }} label={{ value: "Vendidos no período", position: "insideBottom", offset: -4, fill: "var(--grafite-2)", fontSize: 13 }} height={44} />
             <YAxis type="number" dataKey="margem" name="Margem" tickFormatter={(v: number) => `R$ ${v}`} tick={eixo} tickLine={false} axisLine={false} width={56} />
             <ZAxis range={[90, 90]} />

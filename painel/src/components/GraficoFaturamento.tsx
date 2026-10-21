@@ -20,7 +20,7 @@ function Dica({ active, payload }: PropsDica) {
   if (!p) return null;
   const d = lerData(p.data);
   return (
-    <div className="rounded-botao border border-linha bg-papel px-3 py-2 text-sm shadow-sm">
+    <div className="rounded-botao border border-linha-forte bg-elevado px-3 py-2 text-sm shadow-z2">
       <p className="font-medium">
         {formatarDiaSemanaCurto(d)} {formatarDataCurta(d)}
       </p>
@@ -93,7 +93,7 @@ export function GraficoFaturamento({ pontos }: { pontos: PontoGrafico[] }) {
       <div className="mt-4 h-60 sm:h-72" aria-hidden>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={pontos} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
-            <CartesianGrid vertical={false} stroke="var(--linha)" strokeOpacity={0.7} />
+            <CartesianGrid vertical={false} stroke="var(--linha-grade)" />
             <XAxis
               dataKey="data"
               tickFormatter={(v: string) => formatarDataCurta(lerData(v))}
