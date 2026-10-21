@@ -3,11 +3,11 @@
 import { useRef, useState } from "react";
 import clsx from "clsx";
 import { Bot, Check, ChevronRight, Headset, Lock, RotateCcw, ShoppingBag, UserRound } from "lucide-react";
-import { formatarBRL, formatarBRLInteiro, formatarInteiro, formatarPct } from "@/lib/formato";
+import { NAO_MEDIDO, formatarBRL, formatarBRLInteiro, formatarInteiro, formatarPct, ouNaoMedido } from "@/lib/formato";
 import { PERIODOS, type Conversa, type VisaoWhatsapp } from "@/lib/types";
-import { MarcaExemplo } from "./FaixaExemplo";
+import { MarcaOrigem } from "./FaixaExemplo";
 import { usePeriodo } from "./PeriodoContexto";
-import { CabecalhoArea, Etiqueta, GradeIndicadores, Indicador, Painel } from "./ui";
+import { CabecalhoArea, Etiqueta, GradeIndicadores, Indicador, Painel, SemDado } from "./ui";
 
 const DESFECHO: Record<Conversa["desfecho"], { rotulo: string; icone: typeof ShoppingBag; cor: string }> = {
   pedido: { rotulo: "Virou pedido", icone: ShoppingBag, cor: "text-manjericao" },
@@ -63,63 +63,118 @@ export function WhatsappTela({ visao }: { visao: VisaoWhatsapp }) {
   const conversa = v.conversasRecentes.find((c) => c.id === aberta);
   const vs = v.vendaSugestiva;
   const fu = v.followups;
-  const ex = v.exemplo.conversas;
+  const b = v.blocos;
+  /**
+   * Achado F: `whatsapp_dia` da Le Tre tem ZERO linha (medido), e a tela levava o selo
+   * "Exemplo" estando vazia. Agora o bloco inteiro é SEM_DADO, e nenhum contador deste
+   * painel pode sair como zero: ninguém contou conversa nenhuma.
+   */
+  const semConversas = b.conversas === "SEM_DADO";
 
   return (
     <>
-      <CabecalhoArea numero={4} nome="Vendedor IA no WhatsApp" frase={v.frase} origem={v.origem} />
+      <CabecalhoArea numero={4} nome="Vendedor IA no WhatsApp" frase={v.frase} origem={v.origem} blocos={b} />
 
       <div className="grid gap-5">
-        <Painel exemplo={ex} titulo="Resumo do período" descricao={`Variações ${comparacao}.`}>
+        <Painel origem={b.conversas} titulo="Resumo do período" descricao={`Variações ${comparacao}.`}>
+          {semConversas && (
+            <div className="mb-4">
+              <SemDado>
+                Não há nenhum dia de WhatsApp registrado para este filtro. Os números abaixo seriam zeros de contagem, e o vendedor IA pode nem
+                estar ligado nesta operação.
+              </SemDado>
+            </div>
+          )}
           <GradeIndicadores>
-            <Indicador rotulo="Conversas" valor={formatarInteiro(v.conversas.atual)} comparacao={v.conversas} />
-            <Indicador rotulo="Pedidos fechados" valor={formatarInteiro(v.pedidos.atual)} comparacao={v.pedidos} />
-            <Indicador rotulo="Conversão" valor={formatarPct(v.conversao.atual)} comparacao={v.conversao} emPontos />
-            <Indicador rotulo="Faturamento" valor={formatarBRLInteiro(v.faturamento)} />
-            <Indicador rotulo="Ticket no WhatsApp" valor={formatarBRL(v.ticketWhatsapp)} detalhe={`geral ${formatarBRL(v.ticketGeral)}`} />
+            <Indicador
+              rotulo="Conversas"
+              valor={semConversas ? NAO_MEDIDO : formatarInteiro(v.conversas.atual)}
+              comparacao={semConversas ? undefined : v.conversas}
+              detalhe={semConversas ? "nenhum dia de WhatsApp na fonte" : undefined}
+            />
+            <Indicador
+              rotulo="Pedidos fechados"
+              valor={semConversas ? NAO_MEDIDO : formatarInteiro(v.pedidos.atual)}
+              comparacao={semConversas ? undefined : v.pedidos}
+              detalhe={semConversas ? "sem conversa não há pedido pelo canal" : undefined}
+            />
+            {/* conversao null = nenhuma conversa no período; 0% afirmaria que houve */}
+            <Indicador
+              rotulo="Conversão"
+              valor={ouNaoMedido(v.conversao, (c) => formatarPct(c.atual))}
+              comparacao={v.conversao ?? undefined}
+              emPontos
+              detalhe={v.conversao === null ? "sem conversa não há taxa de conversão" : undefined}
+            />
+            <Indicador
+              rotulo="Faturamento"
+              valor={semConversas ? NAO_MEDIDO : formatarBRLInteiro(v.faturamento)}
+              detalhe={semConversas ? "nenhuma venda pelo WhatsApp registrada" : undefined}
+            />
+            <Indicador
+              rotulo="Ticket no WhatsApp"
+              valor={ouNaoMedido(v.ticketWhatsapp, formatarBRL)}
+              detalhe={v.ticketWhatsapp === null ? "sem pedido pelo WhatsApp não há ticket" : `geral ${formatarBRL(v.ticketGeral)}`}
+            />
           </GradeIndicadores>
         </Painel>
 
         <div className="grid gap-5 lg:grid-cols-3">
-          <Painel exemplo={ex} titulo="Venda sugestiva" descricao="Adicionais que a IA ofereceu: borda, bebida, sobremesa.">
-            <dl className="num grid grid-cols-2 gap-4">
-              <div>
-                <dt className="text-sm text-grafite-2">Sugestões</dt>
-                <dd className="font-display text-2xl font-semibold">{formatarInteiro(vs.sugestoes)}</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-grafite-2">Aceitas</dt>
-                <dd className="font-display text-2xl font-semibold">{formatarInteiro(vs.aceitas)}</dd>
-                <dd className="text-sm text-grafite-2">{formatarPct(vs.taxaAceite)} das sugestões</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-grafite-2">Somou em vendas</dt>
-                <dd className="text-lg font-medium">{formatarBRL(vs.valor)}</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-grafite-2">Em margem</dt>
-                <dd className="text-lg font-medium">{formatarBRL(vs.margem)}</dd>
-              </div>
-            </dl>
+          <Painel origem={b.conversas} titulo="Venda sugestiva" descricao="Adicionais que a IA ofereceu: borda, bebida, sobremesa.">
+            {semConversas ? (
+              <SemDado>A IA não registrou nenhuma sugestão neste filtro. Um contador zerado diria que ela conversou e não ofereceu nada.</SemDado>
+            ) : (
+              <dl className="num grid grid-cols-2 gap-4">
+                <div>
+                  <dt className="text-sm text-grafite-2">Sugestões</dt>
+                  <dd className="font-display text-2xl font-semibold">{formatarInteiro(vs.sugestoes)}</dd>
+                </div>
+                <div>
+                  <dt className="text-sm text-grafite-2">Aceitas</dt>
+                  <dd className="font-display text-2xl font-semibold">{formatarInteiro(vs.aceitas)}</dd>
+                  <dd className="text-sm text-grafite-2">
+                    {vs.taxaAceite === null ? "nenhuma sugestão feita: não há taxa de aceite" : `${formatarPct(vs.taxaAceite)} das sugestões`}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-sm text-grafite-2">Somou em vendas</dt>
+                  <dd className="text-lg font-medium">{formatarBRL(vs.valor)}</dd>
+                </div>
+                <div>
+                  <dt className="text-sm text-grafite-2">Em margem</dt>
+                  <dd className="text-lg font-medium">{formatarBRL(vs.margem)}</dd>
+                </div>
+              </dl>
+            )}
           </Painel>
 
-          <Painel exemplo={ex} titulo="Follow-ups" descricao="Mensagem para quem conversou e não fechou, dentro de 24 horas.">
-            <ol className="num grid gap-2">
-              {[
-                ["Enviados", fu.enviados],
-                ["Respondidos", fu.respondidos],
-                ["Pedidos recuperados", fu.recuperados],
-              ].map(([rotulo, n], i) => (
-                <li key={rotulo as string} className="flex items-center justify-between gap-2 border-b border-linha pb-2 last:border-0">
-                  <span className={clsx(i === 2 && "font-medium")}>{rotulo}</span>
-                  <span className={clsx("text-lg", i === 2 && "font-display font-semibold")}>{formatarInteiro(n as number)}</span>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-2 text-sm text-grafite-2">Cerca de {formatarBRLInteiro(fu.faturamentoRecuperado)} em pedidos recuperados, pelo ticket médio do WhatsApp.</p>
+          <Painel origem={b.conversas} titulo="Follow-ups" descricao="Mensagem para quem conversou e não fechou, dentro de 24 horas.">
+            {semConversas ? (
+              <SemDado>Nenhum follow-up registrado neste filtro, porque não há conversa registrada para seguir.</SemDado>
+            ) : (
+              <>
+                <ol className="num grid gap-2">
+                  {[
+                    ["Enviados", fu.enviados],
+                    ["Respondidos", fu.respondidos],
+                    ["Pedidos recuperados", fu.recuperados],
+                  ].map(([rotulo, n], i) => (
+                    <li key={rotulo as string} className="flex items-center justify-between gap-2 border-b border-linha pb-2 last:border-0">
+                      <span className={clsx(i === 2 && "font-medium")}>{rotulo}</span>
+                      <span className={clsx("text-lg", i === 2 && "font-display font-semibold")}>{formatarInteiro(n as number)}</span>
+                    </li>
+                  ))}
+                </ol>
+                <p className="mt-2 text-sm text-grafite-2">
+                  {v.ticketWhatsapp === null
+                    ? "Sem ticket médio no WhatsApp não dá para estimar o faturamento recuperado."
+                    : `Cerca de ${formatarBRLInteiro(fu.faturamentoRecuperado)} em pedidos recuperados, pelo ticket médio do WhatsApp.`}
+                </p>
+              </>
+            )}
           </Painel>
 
-          <Painel exemplo={ex} titulo="Passou para atendente" descricao="Quando a IA chama uma pessoa da equipe, e por quê.">
+          <Painel origem={b.conversas} titulo="Passou para atendente" descricao="Quando a IA chama uma pessoa da equipe, e por quê.">
             {v.transferencias.length ? (
               <ul className="grid gap-2">
                 {v.transferencias.map((t) => (
@@ -133,12 +188,21 @@ export function WhatsappTela({ visao }: { visao: VisaoWhatsapp }) {
                 ))}
               </ul>
             ) : (
-              <p className="text-grafite-2">Nenhuma transferência no período.</p>
+              <SemDado>
+                {semConversas
+                  ? "Sem conversa registrada não há transferência para contar."
+                  : "Nenhuma transferência para atendente no período: a IA deu conta sozinha."}
+              </SemDado>
             )}
           </Painel>
         </div>
 
-        <Painel exemplo={ex} titulo="Conversas recentes" descricao="Para revisão do consultor. Clientes sempre anonimizados.">
+        <Painel origem={b.conversas} titulo="Conversas recentes" descricao="Para revisão do consultor. Clientes sempre anonimizados.">
+          {!v.conversasRecentes.length && (
+            <div className="mb-4">
+              <SemDado>Nenhuma conversa registrada para este filtro. Não há transcrição para o consultor revisar.</SemDado>
+            </div>
+          )}
           <div className="grid grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
             <ul className="grid grid-cols-[minmax(0,1fr)] content-start gap-2">
               {v.conversasRecentes.map((c) => {
@@ -163,7 +227,8 @@ export function WhatsappTela({ visao }: { visao: VisaoWhatsapp }) {
                           <span className="font-medium">{c.cliente}</span>
                           <span className="num shrink-0 text-sm text-grafite-2">{hora(c.inicio)}</span>
                         </span>
-                        <span className="block truncate text-sm text-grafite-2">{c.mensagens[c.mensagens.length - 1].texto}</span>
+                        {/* conversa pode chegar SEM mensagem nenhuma: mensagens[length-1] era undefined */}
+                        <span className="block truncate text-sm text-grafite-2">{c.mensagens.at(-1)?.texto ?? "sem mensagem registrada"}</span>
                         <span className="mt-1 block">
                           <Etiqueta icone={d.icone} cor={d.cor}>{d.rotulo}</Etiqueta>
                         </span>
@@ -180,7 +245,7 @@ export function WhatsappTela({ visao }: { visao: VisaoWhatsapp }) {
         </Painel>
 
         <Painel
-          exemplo={v.exemplo.cardapio}
+          origem={b.cardapio}
           titulo="O que a IA sabe"
           descricao={
             <span className="inline-flex items-center gap-1">
@@ -191,6 +256,7 @@ export function WhatsappTela({ visao }: { visao: VisaoWhatsapp }) {
           <div className="grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
             <div>
               <h3 className="mb-2 font-medium">Cardápio, do mais para o menos lucrativo</h3>
+              {!v.cardapio.length && <SemDado>Nenhuma ficha técnica cadastrada para este filtro: não há cardápio para a IA conhecer.</SemDado>}
               <ul className="num divide-y divide-linha">
                 {v.cardapio.map((i) => (
                   <li key={i.nome} className="flex items-baseline gap-3 py-2">
@@ -209,8 +275,9 @@ export function WhatsappTela({ visao }: { visao: VisaoWhatsapp }) {
             <div>
               <h3 className="mb-2 font-medium">
                 Regras de venda ativas
-                {ex && !v.exemplo.cardapio && <MarcaExemplo className="ml-2" />}
+                {b.conversas !== b.cardapio && <MarcaOrigem origem={b.conversas} className="ml-2" />}
               </h3>
+              {!v.regras.length && <SemDado>Nenhuma regra de venda cadastrada para este filtro.</SemDado>}
               <ul className="grid gap-2">
                 {v.regras.map((r) => (
                   <li key={r} className="flex items-start gap-2">

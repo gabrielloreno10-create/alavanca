@@ -21,6 +21,8 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+import psycopg
+
 import importar_le_tre as imp
 from alavanca_db import RAIZ, SemBanco, conectar, tenant, tenant_id_por_slug
 
@@ -330,6 +332,44 @@ def t_idempotente(conn, tenant_id):
     return " · ".join(f"{t}={depois[t]}" for t in ("venda_dia", "ficha_tecnica", "anuncio_dia"))
 
 
+class _Desfazer(Exception):
+    """Sentinela: desfaz o savepoint da tentativa de reativação, dê no que der."""
+
+
+@checar("ação sugerida de exemplo não fica ativa no cliente real, e o gatilho da 017 impede que volte")
+def t_acao_sugerida_nao_validada(conn, tenant_id):
+    # Achado A (20/10/2026): as 13 linhas de acao_sugerida da Le Tre têm
+    # origem EXEMPLO, vieram da seed 014 e apareciam na Comanda e na mensagem
+    # das 7h. A migration 017 desativou as 13 e instalou o gatilho
+    # trg_acao_sugerida_so_real_ativa. Esta verificação cobre as duas pontas:
+    # o estado de hoje e a regra que impede o problema de voltar.
+    with tenant(conn, tenant_id) as cur:
+        cur.execute("select count(*) from alavanca.acao_sugerida where ativo and origem <> 'REAL'")
+        ativas = cur.fetchone()[0]
+        assert ativas == 0, (
+            f"{ativas} ação(ões) de exemplo ativas na Comanda de um cliente real — "
+            "o dono leria recomendação fabricada como método da casa")
+
+        cur.execute("select count(*) from alavanca.acao_sugerida where origem <> 'REAL'")
+        guardadas = cur.fetchone()[0]
+
+        barrou = False
+        try:
+            with conn.transaction():  # savepoint: nada daqui fica gravado
+                cur.execute("update alavanca.acao_sugerida set ativo = true where origem <> 'REAL'")
+                raise _Desfazer
+        except _Desfazer:
+            barrou = False
+        except psycopg.errors.RaiseException:
+            barrou = True
+        assert barrou, "o gatilho trg_acao_sugerida_so_real_ativa deixou reativar ação de exemplo"
+
+        cur.execute("select count(*) from alavanca.acao_sugerida where ativo and origem = 'REAL'")
+        reais = cur.fetchone()[0]
+    return (f"0 ativas de exemplo · {guardadas} guardadas inativas · {reais} ativas do próprio dono · "
+            "gatilho barrou a reativação")
+
+
 @checar("o painel consegue ler pelas views (vw_venda_dia_painel e vw_guardrail_efetivo)")
 def t_views(conn, tenant_id):
     with tenant(conn, tenant_id) as cur:
@@ -385,6 +425,7 @@ def main() -> int:
                 t_bruto_nao_liquido(conn, tenant_id)
                 t_anuncio_mensal(conn, tenant_id)
                 t_jerrys(conn, tenant_id)
+                t_acao_sugerida_nao_validada(conn, tenant_id)
                 t_views(conn, tenant_id)
                 t_idempotente(conn, tenant_id)
 

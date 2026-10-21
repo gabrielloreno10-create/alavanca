@@ -58,6 +58,25 @@ O resumo do dia aparece como uma comanda de cozinha (`src/components/Comanda.tsx
 
 ## Dados e honestidade
 
+**Zero é uma medição; ausência não é zero.** São três origens, e duas delas precisam aparecer na tela (`Origem` em `src/lib/types.ts`):
+
+| Origem | O que é | Como aparece |
+|---|---|---|
+| `REAL` | há linha, e é do cliente | sem selo; é o caso normal |
+| `EXEMPLO` | HÁ número, mas nós o semeamos | selo **açafrão sólido** `Exemplo` (`MarcaExemplo`) |
+| `SEM_DADO` | NÃO há linha: não existe número | selo **cinza tracejado** `não medido` (`MarcaSemDado`) |
+
+Regras da ausência, nesta ordem:
+
+1. **Nenhuma cor nova.** Açafrão continua sendo só "exemplo". A ausência não ganha cor: ganha **forma** — borda tracejada em `border-linha`, texto em `grafite-2`, ícone `CircleDashed`. É o mesmo tracejado que o calendário de Métricas já usava para o dia sem registro.
+2. **Nunca um número.** No lugar do valor vai `NAO_MEDIDO` (`"não medido"`, de `src/lib/formato.ts`), via `ouNaoMedido(v, formatar)`. Se você está prestes a escrever "R$ 0,00", "0%", "0,0x" ou "nota 0,0", pergunte se é medição ou ausência. Nada de barra, largura, gráfico ou projeção derivados de um número que não existe.
+3. **Nunca um número disfarçado de texto.** O `Indicador` tira o `font-display` e o tamanho de display quando o valor é `NAO_MEDIDO`: ausência não pode ser lida de relance como se fosse valor.
+4. **Sempre o motivo.** Toda ausência vem com uma frase curta dizendo POR QUE não há número ("não há linha de operação do iFood na fonte"), no `detalhe` do indicador ou num bloco `SemDado`. Traço solto não explica nada.
+5. **Semáforo nenhum.** `situacao` é `null` sempre que o insumo não foi medido — a condição é `meta === null || valor === null ? null : …`. E `<Sinal situacao={null} semDado />` diz **"Não medido"**, não "Sem meta": "sem meta" afirma que existe número e falta só a régua.
+6. **Verde só significa bom.** Nada colorido de manjericão por falta de dado, por falta de meta ou por estado ligado/desligado (campanha "Ativa" é azul comanda, não verde).
+
+A faixa do topo (`FaixaExemplo`) só fica açafrão quando existe mesmo bloco `EXEMPLO`. `REAL` + `SEM_DADO` também é `MISTO`, mas não tem exemplo nenhum: a faixa fica neutra e tracejada, e o selo de cada painel diz qual bloco é qual.
+
 - Dado com `"origem": "EXEMPLO"` faz aparecer a faixa açafrão (`FaixaExemplo`): "Dados de exemplo. Os números reais da Le Tre Farine entram na próxima etapa."
 - Telas nunca leem JSON direto: só `src/lib/dados.ts`. Cálculos só em `src/lib/calculos.ts`, com teste.
 - Moeda com `Intl.NumberFormat("pt-BR")` (`src/lib/formato.ts`). Datas no formato brasileiro.

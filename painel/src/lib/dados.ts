@@ -47,7 +47,6 @@ import {
 import { carregar, listarTenants, type Acesso, type Bloco, type Pacote } from "./fonte";
 import { formatarBRLInteiro, formatarInteiro, formatarPct } from "./formato";
 import type {
-  AcaoSugerida,
   BlocosExemplo,
   BlocosOrigem,
   Cliente,
@@ -95,24 +94,35 @@ export class ClienteDesconhecido extends Error {
 
 /* ---------- carga ---------- */
 
-/** Recorta o pacote para uma operação só: canais, vendas e fichas daquela operação */
+/**
+ * Recorta o pacote para uma operação só: canais, vendas e fichas daquela operação.
+ *
+ * O dia que NÃO tem nenhum canal daquela operação é descartado, não zerado. Antes ele
+ * sobrevivia com `canais: {}`, e aí a marca sem venda nenhuma virava uma série longa de
+ * dias medidos em R$ 0. Foi assim que o filtro em "Jerry's Burger" (zero linhas em
+ * venda_dia, medido em 20/10/2026) produzia pilar verde, "ticket R$ 0,00" e a comanda
+ * dizendo "Nenhum alerta: dia dentro do plano". Linha que não existe não é zero.
+ */
 function recortar(p: Pacote, operacao: string): Pacote {
   const canais = Object.fromEntries(Object.entries(p.cliente.canais).filter(([, c]) => c.operacao === operacao));
   const ids = Object.keys(canais);
-  const dias = p.metricas.dias.map((d) => {
-    const sub = Object.fromEntries(ids.filter((c) => d.canais[c]).map((c) => [c, d.canais[c]]));
-    const fatTotal = Object.values(d.canais).reduce((s, v) => s + v.faturamento, 0);
-    const fatSub = Object.values(sub).reduce((s, v) => s + v.faturamento, 0);
-    const cmv = Object.values(sub).every((v) => v.cmv !== undefined)
-      ? Object.values(sub).reduce((s, v) => s + (v.cmv ?? 0), 0)
-      : d.cmv * dividir(fatSub, fatTotal);
-    return { ...d, canais: sub, cmv };
-  });
+  const dias = p.metricas.dias
+    .map((d) => {
+      const sub = Object.fromEntries(ids.filter((c) => d.canais[c]).map((c) => [c, d.canais[c]]));
+      const fatTotal = Object.values(d.canais).reduce((s, v) => s + v.faturamento, 0);
+      const fatSub = Object.values(sub).reduce((s, v) => s + v.faturamento, 0);
+      const cmv = Object.values(sub).every((v) => v.cmv !== undefined)
+        ? Object.values(sub).reduce((s, v) => s + (v.cmv ?? 0), 0)
+        : d.cmv * dividir(fatSub, fatTotal);
+      return { ...d, canais: sub, cmv };
+    })
+    .filter((d) => Object.keys(d.canais).length > 0);
   return {
     ...p,
     // metas são do grupo; por operação ainda não há meta cadastrada
     cliente: { ...p.cliente, canais, metaPorDiaSemana: null },
-    metricas: { ...p.metricas, dias },
+    // Sem nenhum dia sobrando, a operação não tem venda MEDIDA — e isso não é venda zero.
+    metricas: { ...p.metricas, dias, origem: dias.length ? p.metricas.origem : "SEM_DADO" },
     lucro: { ...p.lucro, fichas: p.lucro.fichas.filter((f) => !f.operacao || f.operacao === operacao) },
   };
 }
@@ -205,7 +215,9 @@ function comandaDoDia(p: Pacote, iso: string): ComandaDoDia {
   const metaPct = meta ? resumo.faturamento / meta : null;
   const alertas = alertasDoDia(metricas.dias, iso, cliente);
   const indice = metricas.dias.findIndex((d) => d.data === iso);
+  const origem = real(metricas.origem, cliente.origem);
   return {
+    origem,
     // offsetDias conta os dias anteriores à janela carregada: a numeração é a mesma
     // de quando a série inteira ficava na memória.
     numero: indice < 0 ? 0 : p.offsetDias + indice + 1,
@@ -267,7 +279,10 @@ export async function getHoje(slug: string, periodo: Periodo, operacao: string =
       situacao: metaCanal === null ? null : situacaoPorFaixa(atual.canalPct.proprio, metaCanal, metaCanal * 0.7),
     },
     {
-      pilar: "crm", rotulo: "Novos clientes com opt-in", origem: crm.origem,
+      // Base vazia = o numero nao existe. `novosComOptIn` ainda nao e consultado no
+      // Postgres (chega zerado de fabrica), entao sem base seria um zero inventado
+      // ganhando semaforo. Com base vazia o pilar vira SEM_DADO e nao afirma nada.
+      pilar: "crm", rotulo: "Novos clientes com opt-in", origem: crm.resumo.baseTotal > 0 ? crm.origem : "SEM_DADO",
       valor: formatarInteiro(optIn.atual),
       variacao: variacao(optIn.atual, optIn.anterior),
       situacao: situacaoPorFaixa(dividir(optIn.atual, optIn.anterior), 1, 0.8),
@@ -393,8 +408,12 @@ export async function getIfood(slug: string, periodo: Periodo, operacao: string 
   const te = temTaxas ? taxaEfetiva(at.fat, ifood.comissaoPct!, ifood.taxaPagamentoPct!, promoAt) : null;
   const teAn = temTaxas ? taxaEfetiva(an.fat, ifood.comissaoPct!, ifood.taxaPagamentoPct!, promoAn) : null;
   /** O take-rate do fechamento mensal É verdadeiro, mesmo sem o detalhamento. */
+  // ATENÇÃO (dívida da fase 1): canal_taxa_mes ainda NÃO é filtrado por marca, então
+  // este take-rate é o das lojas de iFood do GRUPO, não o da marca escolhida. Enquanto
+  // o filtro não atravessa a consulta, ele só aparece quando a marca escolhida tem
+  // venda de iFood no período — senão seria atribuir a uma marca um número de outra.
   const takeRateMedido =
-    ifood.takeRatePct !== null && ifood.takeRateMes !== null
+    ifood.takeRatePct !== null && ifood.takeRateMes !== null && metricas.origem !== "SEM_DADO"
       ? { pct: ifood.takeRatePct, mes: ifood.takeRateMes, vendasBrutas: ifood.takeRateVendasBrutas ?? 0 }
       : null;
 

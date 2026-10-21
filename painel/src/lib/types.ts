@@ -361,6 +361,11 @@ export interface Alerta {
 }
 
 export interface ComandaDoDia {
+  /**
+   * SEM_DADO = não existe dia de venda para este filtro. Tudo em `resumo` é zero
+   * estrutural, não medição: a tela NÃO pode escrever "R$ 0,00" nem "ticket R$ 0,00".
+   */
+  origem: Origem;
   numero: number;
   data: string;
   emitidaEm: string;

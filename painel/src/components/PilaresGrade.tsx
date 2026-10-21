@@ -3,7 +3,7 @@ import { ArrowDownRight, ArrowRight, ArrowUpRight, Minus } from "lucide-react";
 import { formatarVariacao } from "@/lib/formato";
 import { PILARES } from "@/lib/pilares";
 import type { IndicadorPilar } from "@/lib/types";
-import { MarcaExemplo } from "./FaixaExemplo";
+import { MarcaOrigem } from "./FaixaExemplo";
 import { Sinal } from "./Sinal";
 
 function Variacao({ v, emPontos }: { v: number | null; emPontos?: boolean }) {
@@ -18,7 +18,7 @@ function Variacao({ v, emPontos }: { v: number | null; emPontos?: boolean }) {
   );
 }
 
-export function PilaresGrade({ slug, pilares, marcarExemplo }: { slug: string; pilares: IndicadorPilar[]; marcarExemplo?: boolean }) {
+export function PilaresGrade({ slug, pilares, marcarBlocos }: { slug: string; pilares: IndicadorPilar[]; marcarBlocos?: boolean }) {
   return (
     <section aria-labelledby="pilares-titulo">
       <div className="mb-3 flex items-baseline justify-between">
@@ -30,6 +30,13 @@ export function PilaresGrade({ slug, pilares, marcarExemplo }: { slug: string; p
       <ul className="grid grid-cols-2 gap-3 xl:grid-cols-3">
         {pilares.map((ind) => {
           const info = PILARES.find((p) => p.id === ind.pilar)!;
+          /**
+           * Pilar sem nenhuma linha na fonte: a camada de dados já troca o valor por
+           * "não medido" e zera o semáforo. Aqui a tela fecha o resto do buraco — o
+           * semáforo precisa DIZER "Não medido" e não "Sem meta", e o cartão precisa
+           * explicar por que não há número. Critério 1 da fase: nenhum pilar verde.
+           */
+          const semDado = ind.origem === "SEM_DADO";
           return (
             <li key={ind.pilar}>
               <Link
@@ -44,12 +51,25 @@ export function PilaresGrade({ slug, pilares, marcarExemplo }: { slug: string; p
                 </span>
                 <span className="mt-2 text-sm text-grafite-2">
                   {ind.rotulo}
-                  {marcarExemplo && ind.origem === "EXEMPLO" && <MarcaExemplo className="ml-1.5" />}
+                  {/* O selo só vale a pena quando ele DISTINGUE este pilar dos outros.
+                      Com a tela inteira sem dado, a faixa do topo já disse, e o valor
+                      "não medido" repetiria o selo palavra por palavra. */}
+                  {marcarBlocos && <MarcaOrigem origem={ind.origem} className="ml-1.5" />}
                 </span>
-                <span className="num font-display text-2xl font-semibold tracking-tight">{ind.valor}</span>
+                <span
+                  className={
+                    semDado ? "mt-0.5 text-base leading-snug text-grafite-2" : "num font-display text-2xl font-semibold tracking-tight"
+                  }
+                >
+                  {ind.valor}
+                </span>
                 <span className="mt-auto flex flex-wrap items-center justify-between gap-x-2 gap-y-1 pt-2">
-                  <Variacao v={ind.variacao} emPontos={ind.variacaoEmPontos} />
-                  <Sinal situacao={ind.situacao} />
+                  {semDado ? (
+                    <span className="text-sm text-grafite-2">nenhuma linha neste filtro</span>
+                  ) : (
+                    <Variacao v={ind.variacao} emPontos={ind.variacaoEmPontos} />
+                  )}
+                  <Sinal situacao={ind.situacao} semDado={semDado} />
                 </span>
               </Link>
             </li>

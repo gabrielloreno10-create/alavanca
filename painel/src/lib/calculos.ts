@@ -408,6 +408,14 @@ export function montarMensagemDiaria(cliente: Cliente, c: ComandaDoDia): string 
   const r = c.resumo;
   const brl0 = (v: number) => fmtBRL(Math.round(v)).replace(/,\d{2}$/, "");
   const linhas = [`*${cliente.nome} · ${DIA_MSG[d.getDay()]} ${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}*`];
+  // Sem dia de venda, a mensagem das 7h não inventa R$ 0: ela diz que não mediu.
+  // Esta mensagem sai do painel e chega no WhatsApp do dono, onde não existe etiqueta
+  // visual nenhuma para avisar que o número é fabricado.
+  if (c.origem === "SEM_DADO") {
+    linhas.push("⚠️ Nenhum dia de venda registrado para este filtro.");
+    linhas.push("Nada aqui foi medido — não é zero, é ausência de dado.");
+    return linhas.join("\n");
+  }
   if (c.meta && c.metaPct !== null) {
     const sem = c.situacaoMeta === "bom" ? "🟢" : c.situacaoMeta === "atencao" ? "🟡" : "🔴";
     linhas.push(`💰 Faturou ${brl0(r.faturamento)} · meta ${brl0(c.meta)} (${fmtPct(c.metaPct)}) ${sem}`);

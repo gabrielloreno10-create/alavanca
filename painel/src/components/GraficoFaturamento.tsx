@@ -4,6 +4,7 @@ import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YA
 import { lerData } from "@/lib/calculos";
 import { formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto } from "@/lib/formato";
 import type { PontoGrafico } from "@/lib/types";
+import { SemDado } from "./ui";
 
 const milhar = (v: number) => (v >= 1000 ? `${(v / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mil` : String(v));
 
@@ -35,6 +36,20 @@ function Dica({ active, payload }: PropsDica) {
 }
 
 export function GraficoFaturamento({ pontos }: { pontos: PontoGrafico[] }) {
+  // Sem nenhum ponto o resumo saía "Nos últimos 0 dias, o faturamento somou R$ 0" — um
+  // R$ 0,00 que na verdade quer dizer "não sei", que é o que a fase 0 mata.
+  if (!pontos.length) {
+    return (
+      <section aria-labelledby="grafico-titulo" className="rounded-painel border border-linha bg-papel p-4 sm:p-5">
+        <h2 id="grafico-titulo" className="font-display text-lg font-semibold">
+          Faturamento dos últimos 30 dias
+        </h2>
+        <div className="mt-4">
+          <SemDado>Não há nenhum dia de venda neste filtro. Uma linha rente ao zero afirmaria 30 dias sem vender; o que existe é ausência de registro.</SemDado>
+        </div>
+      </section>
+    );
+  }
   const temMeta = pontos.some((p) => p.meta !== null);
   const batidos = pontos.filter((p) => p.meta !== null && p.faturamento >= p.meta).length;
   const total = pontos.reduce((s, p) => s + p.faturamento, 0);

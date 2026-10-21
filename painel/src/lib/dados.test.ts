@@ -53,7 +53,9 @@ describe("camada de dados", () => {
     expect(linhas.length).toBe(2);
     for (const l of linhas) {
       expect(l.pilares.map((p) => p.pilar)).toEqual(["ifood", "canal-proprio", "crm", "whatsapp", "lucro", "metricas"]);
-      expect(l.alerta.texto.length).toBeGreaterThan(0);
+      // alerta pode ser null (tenant sem nenhum dia de venda); aqui os dois têm dia.
+      expect(l.alerta).not.toBeNull();
+      expect(l.alerta!.texto.length).toBeGreaterThan(0);
     }
   });
 });
@@ -65,7 +67,13 @@ describe("Le Tre: dados reais importados", () => {
     const m = await getMetricas(SLUG, "mes");
     const total = m.tabela.reduce((s, l) => s + l.faturamento, 0);
     expect(total).toBeCloseTo(49970.7, 2); // saipos_faturamento_mensal: PZ + PA + LCF em 2026-09
-    expect(m.origem).toBe("REAL");
+    // A tela de Métricas é MISTO, não REAL: o calendário e a tabela são reais, mas a
+    // mensagem das 7h carrega as 3 ações sugeridas, que têm origem EXEMPLO (achado A).
+    // Declarar a tela inteira REAL era apresentar recomendação fabricada como método.
+    expect(m.origem).toBe("MISTO");
+    expect(m.blocos.vendas).toBe("REAL");
+    expect(m.blocos.calendario).toBe("REAL");
+    expect(m.blocos.mensagem).toBe("EXEMPLO");
     expect(m.temMeta).toBe(false);
     expect(m.tabela.every((l) => l.meta === null)).toBe(true);
     const hoje = await getHoje(SLUG, "mes");
@@ -153,15 +161,21 @@ for (const SLUG of ["grupo-le-tre", "pizzaria-exemplo"])
 
         const ifood = await getIfood(SLUG, id);
         const te = ifood.taxaEfetiva;
-        expect(te.comissao + te.taxaPagamento + te.promocoes).toBeCloseTo(te.total, 6);
+        // taxaEfetiva só existe quando comissão E taxa de pagamento foram medidas.
+        if (te) expect(te.comissao + te.taxaPagamento + te.promocoes).toBeCloseTo(te.total, 6);
         expect(ifood.pratos.length).toBeLessThanOrEqual(10);
-        const etapas = ifood.funil.etapas.map((e) => e.valor);
+        expect(ifood.funil).not.toBeNull();
+        const etapas = ifood.funil!.etapas.map((e) => e.valor);
         expect([...etapas].sort((a, b) => b - a)).toEqual(etapas); // funil só diminui
         expect(etapas[3]).toBe(ifood.indicadores.pedidos.atual);
 
         const cp = await getCanalProprio(SLUG, id);
         for (const s of cp.semanas) expect(s.ifood + s.proprio + s.salao).toBeCloseTo(1, 6);
         expect(cp.trafego.pedidos.atual).toBeLessThanOrEqual(cp.economia.pedidos); // anúncio não atribui mais pedidos do que o site fez
+        // nenhuma razão desta tela pode chegar como NaN ou Infinity
+        for (const n of [cp.trafego.roas, cp.trafego.roasMargem, cp.trafego.custoPorPedido.atual]) {
+          expect(n === null || Number.isFinite(n)).toBe(true);
+        }
         expect(cp.criativos.filter((c) => c.marca === "melhor").length).toBeLessThanOrEqual(1);
       });
     }
@@ -189,7 +203,7 @@ for (const SLUG of ["grupo-le-tre", "pizzaria-exemplo"])
         expect(wa.conversasRecentes.every((c) => /^Cliente \d+$/.test(c.cliente))).toBe(true); // nunca nome real
         const m = await getMetricas(SLUG, id);
         expect(m.mensagem.split("\n").length).toBeLessThanOrEqual(12);
-        expect(m.mensagem).toContain(hoje.comanda.alerta.texto);
+        expect(m.mensagem).toContain(hoje.comanda.alerta!.texto);
       }
     });
 

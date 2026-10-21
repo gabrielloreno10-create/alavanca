@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { acoesDoDia, alertasDoDia, intervalos, margemDoDia, resumir, situacaoMeta, variacao } from "./calculos";
-import type { Cliente, DiaVendas, Plano } from "./types";
+import type { AcaoSugerida, Cliente, DiaVendas, Plano } from "./types";
 
 const cliente: Cliente = {
   origem: "EXEMPLO",
@@ -69,10 +69,12 @@ describe("períodos", () => {
 });
 
 describe("alertas e ações", () => {
+  // Cada acao carrega a sua origem: e isso que permite a tela selar a fabricada.
+  const ex = (t: string): AcaoSugerida => ({ texto: t, origem: "EXEMPLO" });
   const plano: Plano = {
     origem: "EXEMPLO",
-    acoesPorAlerta: { meta: ["A1", "A2"], margem: [], pedidos: ["P1"], ifood: ["I1"], ticket: [] },
-    acoesPadrao: ["D1", "D2", "D3"],
+    acoesPorAlerta: { meta: [ex("A1"), ex("A2")], margem: [], pedidos: [ex("P1")], ifood: [ex("I1")], ticket: [] },
+    acoesPadrao: [ex("D1"), ex("D2"), ex("D3")],
     acoes: [],
   };
   it("meta abaixo de 80% vem primeiro e puxa as ações dela", () => {
@@ -81,10 +83,13 @@ describe("alertas e ações", () => {
     expect(alertas[0].tipo).toBe("meta");
     expect(alertas.map((a) => a.tipo)).toContain("pedidos");
     expect(alertas.map((a) => a.tipo)).toContain("ifood");
-    expect(acoesDoDia(alertas, plano)).toEqual(["A1", "A2", "P1"]);
+    expect(acoesDoDia(alertas, plano).map((a) => a.texto)).toEqual(["A1", "A2", "P1"]);
+  });
+  it("a origem de cada ação viaja junto, para a tela não ter como esquecer o selo", () => {
+    expect(acoesDoDia([], plano).every((a) => a.origem === "EXEMPLO")).toBe(true);
   });
   it("sem alerta, usa as ações padrão", () => {
-    expect(acoesDoDia([], plano)).toEqual(["D1", "D2", "D3"]);
+    expect(acoesDoDia([], plano).map((a) => a.texto)).toEqual(["D1", "D2", "D3"]);
   });
   it("semáforo da meta", () => {
     expect(situacaoMeta(1.02, cliente)).toBe("bom");

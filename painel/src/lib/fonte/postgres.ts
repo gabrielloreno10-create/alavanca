@@ -60,7 +60,7 @@ const PERIODOS_ZERO = (): Record<Periodo, Comparacao> => ({
  *  - toda linha REAL    -> REAL
  *  - qualquer EXEMPLO   -> EXEMPLO (há número, mas fomos nós que o semeamos)
  */
-function origemDe(linhas: { origem?: string }[]): Origem {
+export function origemDe(linhas: { origem?: string }[]): Origem {
   if (linhas.length === 0) return "SEM_DADO";
   return linhas.every((l) => l.origem === "REAL") ? "REAL" : "EXEMPLO";
 }
@@ -70,7 +70,7 @@ function origemDe(linhas: { origem?: string }[]): Origem {
  * Os conjuntos SEM_DADO não "contaminam" os que têm dado: eles apenas não contam.
  * Se nenhum tem dado, o bloco inteiro é SEM_DADO.
  */
-function origemDeVarios(...origens: Origem[]): Origem {
+export function origemDeVarios(...origens: Origem[]): Origem {
   const comDado = origens.filter((o) => o !== "SEM_DADO");
   if (!comDado.length) return "SEM_DADO";
   return comDado.every((o) => o === "REAL") ? "REAL" : "EXEMPLO";
@@ -620,6 +620,10 @@ async function lerCrm(
       baseTotal: num(base?.total),
       comOptIn: num(optIn?.total),
       novosClientes: novosComparacao,
+      // PENDENCIA conhecida: `novosComOptIn` NAO e consultado ainda. Este zero e de
+      // fabrica, nao medicao. Enquanto a consulta nao existe, a tela Hoje so mostra
+      // este pilar quando ha base (dados.ts), para nao dar semaforo a um zero inventado.
+      // Quando a consulta entrar, trocar por uma leitura real de alavanca.consents.
       novosComOptIn: PERIODOS_ZERO(),
     },
     segmentos: segLinhas.map((s) => ({

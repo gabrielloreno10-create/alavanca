@@ -1,14 +1,27 @@
 import clsx from "clsx";
-import { ArrowDownRight, ArrowUpRight, Minus } from "lucide-react";
-import { formatarVariacao } from "@/lib/formato";
+import { ArrowDownRight, ArrowUpRight, CircleDashed, Minus } from "lucide-react";
+import { NAO_MEDIDO, formatarVariacao } from "@/lib/formato";
 import { variacao as calcVariacao } from "@/lib/calculos";
-import type { Comparacao, OrigemTela } from "@/lib/types";
-import { FaixaExemplo, MarcaExemplo } from "./FaixaExemplo";
+import type { BlocosOrigem, Comparacao, Origem, OrigemTela } from "@/lib/types";
+import { FaixaExemplo, MarcaOrigem } from "./FaixaExemplo";
 
-export function CabecalhoArea({ numero, nome, frase, origem }: { numero?: number; nome: string; frase: string; origem: OrigemTela }) {
+export function CabecalhoArea({
+  numero,
+  nome,
+  frase,
+  origem,
+  blocos,
+}: {
+  numero?: number;
+  nome: string;
+  frase: string;
+  origem: OrigemTela;
+  /** estado de cada bloco: é o que deixa a faixa dizer "exemplo" só quando há exemplo */
+  blocos?: BlocosOrigem;
+}) {
   return (
     <>
-      <FaixaExemplo origem={origem} />
+      <FaixaExemplo origem={origem} blocos={blocos} />
       <header className="mb-6 lg:mb-8">
         {numero && <p className="num text-sm text-grafite-2">Pilar {numero}</p>}
         <h1 className="font-display text-3xl font-semibold tracking-tight">{nome}</h1>
@@ -26,26 +39,42 @@ export function Painel({
   children,
   className,
   id,
-  exemplo,
+  origem,
 }: {
   titulo: string;
   descricao?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
   id?: string;
-  /** bloco ainda com dados de exemplo */
-  exemplo?: boolean;
+  /** origem DESTE bloco: EXEMPLO ganha selo açafrão, SEM_DADO ganha selo tracejado */
+  origem?: Origem;
 }) {
   const tid = id ?? `p-${titulo.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
   return (
     <section aria-labelledby={tid} className={clsx("min-w-0 rounded-painel border border-linha bg-papel p-4 sm:p-5", className)}>
       <h2 id={tid} className="font-display text-lg font-semibold">
         {titulo}
-        {exemplo && <MarcaExemplo className="ml-2" />}
+        <MarcaOrigem origem={origem} className="ml-2" />
       </h2>
       {descricao && <p className="mt-1 text-sm text-grafite-2">{descricao}</p>}
       <div className="mt-4">{children}</div>
     </section>
+  );
+}
+
+/**
+ * O que o painel inteiro mostra quando não há nada para mostrar.
+ *
+ * É um bloco, não um número cinza: borda tracejada (a mesma forma do selo SEM_DADO) e o
+ * MOTIVO escrito por extenso. A regra da fase: quem lê precisa entender POR QUE não há
+ * número, e não só que ele falta.
+ */
+export function SemDado({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="flex items-start gap-2 rounded-botao border border-dashed border-linha bg-bancada px-3 py-2.5 text-base text-grafite-2">
+      <CircleDashed aria-hidden className="mt-1 size-4 shrink-0" />
+      <span>{children}</span>
+    </p>
   );
 }
 
@@ -60,7 +89,14 @@ export function Variacao({ v, emPontos, className }: { v: number | null; emPonto
   );
 }
 
-/** Número com rótulo e variação contra o período anterior */
+/**
+ * Número com rótulo e variação contra o período anterior.
+ *
+ * Quando `valor` é a string NAO_MEDIDO (o que `ouNaoMedido` devolve para null), o
+ * indicador deixa de parecer número: sai do display grande e tabular e vira texto cinza,
+ * sem variação e sem comparação. Assim "não medido" nunca é lido de relance como se
+ * fosse um valor. Nesse caso `detalhe` carrega o motivo, e é obrigatório na prática.
+ */
 export function Indicador({
   rotulo,
   valor,
@@ -68,9 +104,9 @@ export function Indicador({
   emPontos,
   detalhe,
   destaque,
-  exemplo,
+  origem,
 }: {
-  exemplo?: boolean;
+  origem?: Origem;
   rotulo: string;
   valor: string;
   comparacao?: Comparacao;
@@ -78,14 +114,22 @@ export function Indicador({
   detalhe?: string;
   destaque?: boolean;
 }) {
-  const v = comparacao ? (emPontos ? comparacao.atual - comparacao.anterior : calcVariacao(comparacao.atual, comparacao.anterior)) : undefined;
+  const ausente = valor === NAO_MEDIDO;
+  const v = !ausente && comparacao ? (emPontos ? comparacao.atual - comparacao.anterior : calcVariacao(comparacao.atual, comparacao.anterior)) : undefined;
   return (
     <div className="min-w-0">
       <p className="text-sm text-grafite-2">
         {rotulo}
-        {exemplo && <MarcaExemplo className="ml-1.5" />}
+        <MarcaOrigem origem={origem} className="ml-1.5" />
       </p>
-      <p className={clsx("num font-display font-semibold tracking-tight", destaque ? "text-3xl" : "text-2xl")}>{valor}</p>
+      <p
+        className={clsx(
+          ausente ? "text-lg leading-snug text-grafite-2" : "num font-display font-semibold tracking-tight",
+          !ausente && (destaque ? "text-3xl" : "text-2xl"),
+        )}
+      >
+        {valor}
+      </p>
       <p className="flex flex-wrap items-center gap-x-2">
         {v !== undefined && <Variacao v={v} emPontos={emPontos} />}
         {detalhe && <span className="text-sm text-grafite-2">{detalhe}</span>}

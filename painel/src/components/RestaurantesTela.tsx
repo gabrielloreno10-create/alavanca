@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { AlertTriangle, ChevronRight, OctagonAlert } from "lucide-react";
+import { ChevronRight, CircleDashed, OctagonAlert } from "lucide-react";
 import { lerData } from "@/lib/calculos";
-import { formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
+import { NAO_MEDIDO, formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
 import { PILARES } from "@/lib/pilares";
 import type { LinhaRestaurante } from "@/lib/types";
 import { Sinal } from "./Sinal";
@@ -11,10 +11,12 @@ const NOME_CURTO = Object.fromEntries(PILARES.map((p) => [p.rota, p.nomeCurto]))
 function Semaforo({ pilares }: { pilares: LinhaRestaurante["pilares"] }) {
   return (
     <ul className="grid gap-x-6 gap-y-1.5 border-t border-linha pt-3 sm:grid-cols-2">
+      {/* `valor` já chega como "não medido" quando o pilar é SEM_DADO: sem isso o
+          semáforo dizia "Sem meta", que afirma existir número e faltar só a régua. */}
       {pilares.map((p) => (
         <li key={p.pilar} className="flex items-center justify-between gap-3 text-sm">
           <span className="truncate text-grafite-2">{NOME_CURTO[p.pilar] ?? p.rotulo}</span>
-          <Sinal situacao={p.situacao} className="shrink-0 whitespace-nowrap" />
+          <Sinal situacao={p.situacao} semDado={p.valor === NAO_MEDIDO} className="shrink-0 whitespace-nowrap" />
         </li>
       ))}
     </ul>
@@ -34,7 +36,7 @@ export function RestaurantesTela({ restaurantes }: { restaurantes: LinhaRestaura
   return (
     <ul className="grid gap-4 lg:grid-cols-2">
       {restaurantes.map((r) => {
-        const temAlerta = r.alerta.tipo !== "nenhum";
+        const temAlerta = r.alerta !== null && r.alerta.tipo !== "nenhum";
         return (
           <li key={r.slug}>
             <Link
@@ -71,9 +73,11 @@ export function RestaurantesTela({ restaurantes }: { restaurantes: LinhaRestaura
                 {temAlerta ? (
                   <OctagonAlert aria-hidden className="mt-0.5 size-4 shrink-0 text-tomate" />
                 ) : (
-                  <AlertTriangle aria-hidden className="mt-0.5 size-4 shrink-0 text-grafite-2" />
+                  <CircleDashed aria-hidden className="mt-0.5 size-4 shrink-0 text-grafite-2" />
                 )}
-                <span>{r.alerta.texto}</span>
+                <span className={r.alerta ? undefined : "text-grafite-2"}>
+                  {r.alerta ? r.alerta.texto : "Sem dia de venda fechado: não há nada a avaliar, e isso não quer dizer que esteja tudo certo."}
+                </span>
               </p>
 
               <Semaforo pilares={r.pilares} />

@@ -1,9 +1,10 @@
 "use client";
 
 import { Bar, BarChart, CartesianGrid, Cell, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from "recharts";
-import { lerData } from "@/lib/calculos";
+import { lerData, maiorDe } from "@/lib/calculos";
 import { formatarBRL, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
 import type { CanalId, Quadrante } from "@/lib/types";
+import { SemDado } from "./ui";
 
 const eixo = { fill: "var(--grafite-2)", fontSize: 13 };
 const diaCurto = (iso: string) => formatarDataCurta(lerData(iso));
@@ -56,6 +57,13 @@ export function VerNumeros({ cabecalho, linhas, legenda }: { cabecalho: string[]
 export function PedidosPorDia({ dados }: { dados: { data: string; pedidos: number }[] }) {
   const total = dados.reduce((s, d) => s + d.pedidos, 0);
   const pico = dados.reduce((m, d) => (d.pedidos > m.pedidos ? d : m), dados[0]);
+  // Lista vazia: `pico` é undefined e a legenda saía "Dia mais forte: , com  pedidos".
+  // Sem nenhum dia não há "0 pedidos em 0 dias" para afirmar: não houve medição.
+  if (!dados.length) {
+    return (
+      <SemDado>Nenhum dia com pedido medido neste período. Um gráfico vazio diria que não houve pedido; a verdade é que não há registro.</SemDado>
+    );
+  }
   return (
     <figure>
       <figcaption className="text-sm text-grafite-2">
@@ -86,12 +94,22 @@ export function PedidosPorDia({ dados }: { dados: { data: string; pedidos: numbe
 /** Pedidos por faixa de horário: cinza, com a faixa mais forte em azul */
 export function PedidosPorFaixa({ dados }: { dados: { faixa: string; pedidos: number }[] }) {
   const total = dados.reduce((s, d) => s + d.pedidos, 0);
-  const max = Math.max(...dados.map((d) => d.pedidos));
-  const pico = dados.find((d) => d.pedidos === max);
+  // maiorDe em vez de Math.max(...): com a lista vazia Math.max() devolve -Infinity, e
+  // a legenda saía "A faixa das undefined concentra 0% dos pedidos".
+  const max = maiorDe(dados.map((d) => d.pedidos));
+  const pico = max === null ? undefined : dados.find((d) => d.pedidos === max);
+  if (!pico || max === null || total <= 0) {
+    return (
+      <SemDado>
+        Nenhum pedido por faixa de horário foi medido neste período. Sem linha na fonte não há faixa mais forte — e todas em zero diriam que a loja
+        não vendeu a nenhuma hora.
+      </SemDado>
+    );
+  }
   return (
     <figure>
       <figcaption className="text-sm text-grafite-2">
-        A faixa das {pico?.faixa} concentra {formatarPct(total ? max / total : 0)} dos pedidos.
+        A faixa das {pico.faixa} concentra {formatarPct(max / total)} dos pedidos.
       </figcaption>
       <div className="mt-3 h-52" aria-hidden>
         <ResponsiveContainer width="100%" height="100%">
@@ -122,11 +140,33 @@ export function PedidosPorFaixa({ dados }: { dados: { faixa: string; pedidos: nu
 const CORES_CANAL = { proprio: "var(--comanda)", ifood: "var(--cinza-grafico)", salao: "var(--linha)" };
 
 /** Divisão das vendas por canal, semana a semana, com a meta do canal próprio */
-export function CanaisPorSemana({ dados, meta, canais }: { dados: { inicio: string; ifood: number; proprio: number; salao: number }[]; meta: number | null; canais: CanalId[] }) {
+export function CanaisPorSemana({
+  dados,
+  meta,
+  canais,
+  semDado,
+}: {
+  dados: { inicio: string; ifood: number; proprio: number; salao: number }[];
+  meta: number | null;
+  canais: CanalId[];
+  /** sem venda medida nas 8 semanas: as participações são zero estrutural, não divisão */
+  semDado?: boolean;
+}) {
   const ultima = dados[dados.length - 1];
   const primeira = dados[0];
   const temSalao = canais.includes("salao");
   const series = (["proprio", "ifood", "salao"] as const).filter((c) => canais.includes(c));
+  // As 8 semanas são fixas, então `dados` nunca é vazio — mas sem venda nenhuma todas as
+  // participações saem 0, e "o canal próprio ficou com 0% das vendas" afirmaria uma
+  // divisão que não houve.
+  if (semDado || !ultima || !primeira) {
+    return (
+      <SemDado>
+        Não há venda medida nas últimas 8 semanas para este filtro, então não existe divisão entre canais. Barras zeradas diriam que a loja vendeu e
+        que nada veio do canal próprio.
+      </SemDado>
+    );
+  }
   return (
     <figure>
       <figcaption className="text-sm text-grafite-2">

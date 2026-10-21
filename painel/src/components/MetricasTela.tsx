@@ -6,7 +6,7 @@ import { AlertTriangle, Check, CheckCircle2, ChevronLeft, ChevronRight, Copy, Oc
 import { lerData } from "@/lib/calculos";
 import { formatarBRL, formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto, formatarInteiro, formatarPct } from "@/lib/formato";
 import type { Situacao, VisaoMetricas } from "@/lib/types";
-import { CabecalhoArea, Painel, TabelaRolavel, td, th } from "./ui";
+import { CabecalhoArea, Painel, SemDado, TabelaRolavel, td, th } from "./ui";
 
 const SEMANA = ["seg", "ter", "qua", "qui", "sex", "sáb", "dom"];
 const SIT: Record<Situacao, { rotulo: string; icone: typeof Check; cor: string; fundo: string }> = {
@@ -22,7 +22,17 @@ const milhar = (v: number) => `${(v / 1000).toLocaleString("pt-BR", { maximumFra
 
 function Calendario({ meses, temMeta }: { meses: VisaoMetricas["meses"]; temMeta: boolean }) {
   const [i, setI] = useState(meses.length - 1);
-  const m = meses[i];
+  // Sem nenhum mês, `meses[-1]` é undefined e a linha seguinte estourava
+  // "Cannot read properties of undefined (reading 'mes')". Medido com o filtro em
+  // Jerry's Burger, que não tem nenhuma linha em venda_dia.
+  const m = meses[i] ?? meses[meses.length - 1];
+  if (!m) {
+    return (
+      <SemDado>
+        Não há nenhum dia de venda neste filtro, então não há calendário para montar. Um mês todo em branco diria que a loja abriu e não vendeu.
+      </SemDado>
+    );
+  }
   const primeiro = lerData(`${m.mes}-01`);
   const offset = (primeiro.getDay() + 6) % 7; // semana começa na segunda
   const total = new Date(primeiro.getFullYear(), primeiro.getMonth() + 1, 0).getDate();
@@ -136,22 +146,40 @@ export function MetricasTela({ visao }: { visao: VisaoMetricas }) {
   const v = visao;
   const dia = (iso: string) => `${formatarDiaSemanaCurto(lerData(iso))} ${formatarDataCurta(lerData(iso))}`;
   const temProducao = v.tabela.some((l) => l.pizzas !== null || l.perdas !== null);
+  const b = v.blocos;
+  const semVendas = b.vendas === "SEM_DADO";
 
   return (
     <>
-      <CabecalhoArea numero={6} nome="Métricas diárias" frase={v.frase} origem={v.origem} />
+      <CabecalhoArea numero={6} nome="Métricas diárias" frase={v.frase} origem={v.origem} blocos={b} />
 
       <div className="grid gap-5">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-          <Painel titulo="Calendário da meta" descricao="Cada dia comparado com a meta do seu dia da semana.">
+          <Painel origem={b.calendario} titulo="Calendário da meta" descricao="Cada dia comparado com a meta do seu dia da semana.">
             <Calendario meses={v.meses} temMeta={v.temMeta} />
           </Painel>
-          <Painel titulo="Mensagem de hoje no WhatsApp" descricao="Exatamente como o dono recebe às 7h, com os números de ontem.">
+          {/**
+            * Achado G: o rótulo dizia "Exatamente como o dono recebe às 7h". Não é. O que
+            * o dono recebe hoje sai do relatorio_le_tre.py e traz comissão, gasto de
+            * mídia, custo de WhatsApp e sobra depois do fixo — nada disso está aqui.
+            * Esta é a prévia da mensagem QUE O PAINEL gera.
+            */}
+          <Painel
+            origem={b.mensagem}
+            titulo="Prévia da mensagem diária do painel"
+            descricao="Esta é a mensagem que o painel monta, não a que o dono recebe hoje às 7h. A de hoje vem do relatorio_le_tre.py e inclui comissão, mídia, custo de WhatsApp e sobra depois do fixo — nada disso entra aqui ainda."
+          >
             <Mensagem texto={v.mensagem} />
           </Painel>
         </div>
 
-        <Painel titulo="Dia a dia" descricao={`Do mais recente para o mais antigo, no período escolhido.${temProducao ? "" : " Pizzas produzidas e perdas: [PREENCHER] (ainda não há registro diário)."}`}>
+        <Painel origem={b.vendas} titulo="Dia a dia" descricao={`Do mais recente para o mais antigo, no período escolhido.${temProducao ? "" : " Pizzas produzidas e perdas: [PREENCHER] (ainda não há registro diário)."}`}>
+          {!v.tabela.length ? (
+            <SemDado>
+              Nenhum dia de venda no período para este filtro. Uma tabela vazia é o certo aqui: inventar linhas zeradas seria afirmar dias que
+              ninguém registrou.
+            </SemDado>
+          ) : (
           <TabelaRolavel legenda="Faturamento, meta, pedidos, ticket, margem e produção por dia">
             <thead>
               <tr>
@@ -188,9 +216,10 @@ export function MetricasTela({ visao }: { visao: VisaoMetricas }) {
               })}
             </tbody>
           </TabelaRolavel>
+          )}
         </Painel>
 
-        <Painel titulo="Histórico de alertas" descricao="Últimos 30 dias. Um alerta por dia: o mais grave.">
+        <Painel origem={b.vendas} titulo="Histórico de alertas" descricao="Últimos 30 dias. Um alerta por dia: o mais grave.">
           {v.alertas.length ? (
             <ol className="grid gap-2">
               {v.alertas.map((a) => (
@@ -202,7 +231,13 @@ export function MetricasTela({ visao }: { visao: VisaoMetricas }) {
               ))}
             </ol>
           ) : (
-            <p className="text-grafite-2">Nenhum alerta nos últimos 30 dias.</p>
+            /* "Nenhum alerta" sobre 30 dias que não existem é a mesma mentira da
+               Comanda dizendo "dia dentro do plano" sem dia nenhum. */
+            <SemDado>
+              {semVendas
+                ? "Não há dia de venda nos últimos 30 dias para este filtro, então não houve nada a alertar. Isto não quer dizer que esteja tudo bem."
+                : "Nenhum alerta nos últimos 30 dias: todos os dias medidos ficaram dentro dos limites."}
+            </SemDado>
           )}
         </Painel>
       </div>
