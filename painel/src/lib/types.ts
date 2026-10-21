@@ -427,16 +427,24 @@ export interface LinhaRestaurante {
 export interface VisaoIfood {
   origem: OrigemTela;
   exemplo: BlocosExemplo;
+  /** estado completo por bloco; e aqui que SEM_DADO aparece */
+  blocos: BlocosOrigem;
   frase: string;
   margemMinimaPct: number;
   indicadores: {
     faturamento: Comparacao;
     pedidos: Comparacao;
     ticket: Comparacao;
-    nota: Comparacao;
-    tempoEntregaMin: Comparacao;
-    cancelamentoPct: Comparacao;
+    /** null = ifood_operacao_dia nao tem linha no periodo (achado D). Nunca "nota 0,0". */
+    nota: Comparacao | null;
+    tempoEntregaMin: Comparacao | null;
+    cancelamentoPct: Comparacao | null;
   };
+  /**
+   * O detalhamento comissao + taxa de pagamento + promocoes.
+   * null = comissao e taxa de pagamento nao foram medidas, entao NAO da para afirmar
+   * "de cada R$ 100 sobram R$ 100,00". Quando e null, use `takeRateMedido` (achado C).
+   */
   taxaEfetiva: {
     faturamento: number;
     comissao: number;
@@ -445,15 +453,21 @@ export interface VisaoIfood {
     total: number;
     pct: number;
     pctAnterior: number;
-  };
+  } | null;
+  /** O take-rate medido no fechamento mensal. Verdadeiro mesmo com `taxaEfetiva` null. */
+  takeRateMedido: { pct: number; mes: string; vendasBrutas: number } | null;
   pratos: {
     id: string;
     nome: string;
     qtd: number;
     faturamento: number;
-    margemUnitaria: number;
-    margemPct: number;
-    margemTotal: number;
+    /**
+     * null quando comissao/taxa de pagamento/embalagem nao foram medidas: sem elas a
+     * margem sairia INFLADA, nao zerada, que e o erro mais caro dos dois.
+     */
+    margemUnitaria: number | null;
+    margemPct: number | null;
+    margemTotal: number | null;
     vendeMuitoMargemBaixa: boolean;
   }[];
   promocoes: {
@@ -463,10 +477,12 @@ export interface VisaoIfood {
     pedidos: number;
     faturamento: number;
     custo: number;
-    margemDosPedidos: number;
-    resultado: number;
+    /** null pelo mesmo motivo da margem do prato: depende das taxas nao medidas */
+    margemDosPedidos: number | null;
+    resultado: number | null;
   }[];
-  funil: { etapas: { rotulo: string; valor: number }[]; conversao: number; conversaoAnterior: number };
+  /** null = ifood_funil_dia sem linha no periodo. Mata a largura "NaN%" do funil zerado. */
+  funil: { etapas: { rotulo: string; valor: number }[]; conversao: number | null; conversaoAnterior: number | null } | null;
   pedidosDia: { data: string; pedidos: number }[];
   faixas: { faixa: string; pedidos: number }[];
 }
@@ -474,6 +490,7 @@ export interface VisaoIfood {
 export interface VisaoCanalProprio {
   origem: OrigemTela;
   exemplo: BlocosExemplo;
+  blocos: BlocosOrigem;
   canais: TipoCanal[];
   frase: string;
   metaPct: number | null;
@@ -492,11 +509,13 @@ export interface VisaoCanalProprio {
     impressoes: number;
     cliques: number;
     pedidos: Comparacao;
-    custoPorPedido: Comparacao;
+    /** null em cada ponta = nao houve pedido atribuido, entao nao ha custo por pedido */
+    custoPorPedido: { atual: number | null; anterior: number | null };
     faturamento: number;
-    roas: number;
+    /** null = investimento zero no periodo; "0,0x" afirmaria um retorno nulo medido */
+    roas: number | null;
     margem: number;
-    roasMargem: number;
+    roasMargem: number | null;
     sobraDepoisDoAnuncio: number;
   };
   criativos: {
@@ -514,13 +533,16 @@ export interface VisaoCanalProprio {
 
 export interface VisaoCrm {
   origem: OrigemTela;
+  blocos: BlocosOrigem;
   frase: string;
-  base: { total: number; comOptIn: number; pctOptIn: number };
+  /** pctOptIn null = base vazia, nao existe percentual */
+  base: { total: number; comOptIn: number; pctOptIn: number | null };
   novos: Comparacao;
   novosComOptIn: Comparacao;
-  segmentos: (Segmento & { pctOptIn: number })[];
-  disparos: (Disparo & { nomeSegmento: string; custo: number })[];
-  totaisDisparos: { enviados: number; respostas: number; pedidos: number; faturamento: number; custo: number };
+  segmentos: (Segmento & { pctOptIn: number | null })[];
+  /** taxaResposta null = nenhum enviado; protege a divisao respostas/enviados (achado E) */
+  disparos: (Disparo & { nomeSegmento: string; custo: number; taxaResposta: number | null })[];
+  totaisDisparos: { enviados: number; respostas: number; pedidos: number; faturamento: number; custo: number; taxaResposta: number | null };
   ultimoDisparo: string | null;
   proximos: (DisparoAgendado & { nomeSegmento: string; disparaveis: number; foraDoDisparo: number })[];
 }
@@ -528,14 +550,17 @@ export interface VisaoCrm {
 export interface VisaoWhatsapp {
   origem: OrigemTela;
   exemplo: BlocosExemplo;
+  blocos: BlocosOrigem;
   frase: string;
   conversas: Comparacao;
   pedidos: Comparacao;
-  conversao: Comparacao;
-  ticketWhatsapp: number;
+  /** null = nenhuma conversa no periodo: nao ha conversao, e 0% afirmaria que houve */
+  conversao: Comparacao | null;
+  /** null = nenhum pedido pelo WhatsApp: nao ha ticket */
+  ticketWhatsapp: number | null;
   ticketGeral: number;
   faturamento: number;
-  vendaSugestiva: { sugestoes: number; aceitas: number; taxaAceite: number; valor: number; margem: number };
+  vendaSugestiva: { sugestoes: number; aceitas: number; taxaAceite: number | null; valor: number; margem: number };
   followups: { enviados: number; respondidos: number; recuperados: number; faturamentoRecuperado: number };
   transferencias: { motivo: string; quantidade: number }[];
   conversasRecentes: Conversa[];
@@ -548,14 +573,16 @@ export type Quadrante = "estrela" | "cavalo" | "joia" | "rever";
 export interface VisaoLucro {
   origem: OrigemTela;
   exemplo: BlocosExemplo;
+  blocos: BlocosOrigem;
   frase: string;
   notaMargem: string | null;
   cmvEstimado: boolean;
   /** "03/07 a 01/10" quando as quantidades vêm de uma janela fixa, não do período escolhido */
   janelaVendas: string | null;
-  cmv: { valor: number; pct: number; pctAnterior: number; meta: number | null };
-  margem: { valor: number; pct: number; pctAnterior: number; meta: number | null };
-  porCanal: { canal: CanalId; nome: string; tipo: TipoCanal; operacao: string | null; faturamento: number; margem: number; margemPct: number }[];
+  /** pct null = nao houve faturamento no periodo: nao existe percentual a afirmar */
+  cmv: { valor: number; pct: number | null; pctAnterior: number | null; meta: number | null };
+  margem: { valor: number; pct: number | null; pctAnterior: number | null; meta: number | null };
+  porCanal: { canal: CanalId; nome: string; tipo: TipoCanal; operacao: string | null; faturamento: number; margem: number; margemPct: number | null }[];
   pratos: {
     id: string;
     nome: string;
@@ -591,6 +618,7 @@ export interface LinhaDiaria {
 
 export interface VisaoMetricas {
   origem: OrigemTela;
+  blocos: BlocosOrigem;
   temMeta: boolean;
   margemEstimada: boolean;
   frase: string;

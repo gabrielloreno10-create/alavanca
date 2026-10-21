@@ -172,3 +172,61 @@ separa: o campo de marca na fila do sniper só tem "letre" e "jerrys", a chave d
 só distingue letre de jerrys, e o canal do Cliente Fiel da Le Tre cobre as duas marcas,
 estando hoje atribuído inteiro à Pizzaria. São R$ 76.327,98 e 699 pedidos, no canal de
 maior margem. Melhor escrever isso na tela do que fingir precisão que a fonte não tem.
+
+---
+
+## Gestão do grupo, e o piloto que vira produto
+
+Acrescentado em 20/10 depois de o Gabriel descrever como quer ver a operação.
+
+### A hierarquia já existe no banco
+
+Grupo → loja → canal de venda. Medido hoje, série de 01/05 a 30/09/2026:
+
+| Loja | Canal | Dias | Faturamento | Pedidos |
+|---|---|---:|---:|---:|
+| Le Tre Farine Pizzaria | iFood Pizzaria | 153 | 251.377,05 | 2.304 |
+| Le Tre Farine Pizzaria | Site | 153 | 76.327,98 | 699 |
+| Le Tre Farine Pastas | iFood Pastas | 153 | 18.936,33 | 256 |
+| Jerry's Burger | iFood Jerry's | 0 | 0,00 | 0 |
+| Jerry's Burger | Site Jerry's | 0 | 0,00 | 0 |
+| **Grupo** | | | **346.641,36** | **3.259** |
+
+A visão de grupo e a visão por loja e canal não precisam ser construídas: já estão no
+modelo e o painel já tem o seletor. O que falta é dado em dois lugares.
+
+### As duas falhas, nomeadas
+
+**1. O Jerry's não tem uma linha de venda.** Os dois canais estão cadastrados e vazios.
+Enquanto ficar assim, ele piora a leitura em vez de ajudar: tem 10 fichas técnicas e
+1.612 unidades vendidas registradas, que entram no mapa de cardápio do grupo, e zero
+faturamento. Pesa onde não devia e some onde devia pesar.
+
+**2. O canal próprio da Le Tre mistura Pizzaria e Pastas.** São R$ 76.327,98 e 699
+pedidos hoje atribuídos inteiros à Pizzaria, no canal de maior margem. O site do Cliente
+Fiel é um só e vende as duas marcas.
+
+A consequência é direta para o que o Gabriel pediu: **a visão "Le Tre Farine Pastas pelo
+Cliente Fiel" não existe hoje e não tem como existir** enquanto a fonte for o resumo
+diário do Saipos, que já vem somado. Ela passa a existir no módulo 1, quando os pedidos
+vierem do Cliente Fiel com os itens: pizza vai para Pizzaria, massa vai para Pastas, e o
+canal próprio se divide sozinho.
+
+É mais um motivo, e talvez o mais prático de todos, para puxar pedido em vez de resumo.
+
+### O piloto é o produto
+
+A Le Tre é o laboratório e o primeiro cliente ao mesmo tempo. A ordem combinada:
+Pizzaria completa, depois Jerry's, depois a leitura do grupo inteiro, depois vender.
+
+Isso impõe uma regra, e ela vale para cada linha de código daqui para frente: **nada
+específico de cliente dentro do sistema.** Tudo que varia entre restaurantes mora em
+tabela, não em código. Hoje o painel já respeita isso, porque lê tudo do banco. Quem
+ainda não respeita é a camada de automação: os fluxos do n8n são um por marca, com
+cardápio, prompt, número e token colados dentro de cada um. Enquanto for assim, cada
+restaurante novo é um clone feito à mão, e clone feito à mão não é produto, é serviço
+artesanal com cara de software.
+
+O momento de consertar isso é o módulo 2, quando o CRM e o WhatsApp entrarem. Não antes,
+porque não adianta parametrizar o que ainda não tem dado, e não depois, porque aí já
+serão três clones.

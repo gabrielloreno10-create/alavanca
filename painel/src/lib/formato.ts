@@ -35,3 +35,14 @@ export const formatarDataCurta = (d: Date) => dataCurta.format(d);
 
 /** "qua" */
 export const formatarDiaSemanaCurto = (d: Date) => diaSemanaCurto.format(d).replace(".", "");
+
+/**
+ * O que a tela escreve no lugar de um número que ninguém mediu.
+ * Zero é uma medição; ausência não é zero, e "R$ 0,00" nunca pode significar "não sei".
+ */
+export const NAO_MEDIDO = "não medido";
+
+/** Formata o valor, ou diz que ele não foi medido. Nunca inventa zero. */
+export function ouNaoMedido<T>(v: T | null | undefined, formatar: (x: T) => string): string {
+  return v === null || v === undefined ? NAO_MEDIDO : formatar(v);
+}

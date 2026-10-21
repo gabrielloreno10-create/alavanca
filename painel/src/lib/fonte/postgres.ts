@@ -11,6 +11,7 @@
 import { intervalos, somarDias } from "@/lib/calculos";
 import { comTenant, comUsuario, type Tx } from "@/lib/db";
 import type {
+  AcaoSugerida,
   Campanha,
   CanalProprio,
   Cliente,
@@ -46,9 +47,33 @@ const PERIODOS_ZERO = (): Record<Periodo, Comparacao> => ({
   mes: { atual: 0, anterior: 0 },
 });
 
-/** REAL só quando há linha e todas são REAL. Sem linha nenhuma, o bloco é exemplo/vazio. */
+/**
+ * De onde veio o conjunto de linhas, em TRÊS estados.
+ *
+ * Antes eram dois, e "zero linha" caía em EXEMPLO. Medido em 20/10/2026 na Le Tre:
+ * whatsapp_dia e conversation_state têm ZERO linhas e a tela levava o selo "Exemplo"
+ * sem ter exemplo nenhum; e Canal próprio, com 20 campanhas REAIS e zero criativo,
+ * se declarava REAL enquanto mostrava investimento R$ 0 e ROAS 0,0x — a tela que mais
+ * enganava era a única sem aviso.
+ *
+ *  - sem linha          -> SEM_DADO (não existe número, nem real nem fabricado)
+ *  - toda linha REAL    -> REAL
+ *  - qualquer EXEMPLO   -> EXEMPLO (há número, mas fomos nós que o semeamos)
+ */
 function origemDe(linhas: { origem?: string }[]): Origem {
-  return linhas.length > 0 && linhas.every((l) => l.origem === "REAL") ? "REAL" : "EXEMPLO";
+  if (linhas.length === 0) return "SEM_DADO";
+  return linhas.every((l) => l.origem === "REAL") ? "REAL" : "EXEMPLO";
+}
+
+/**
+ * Combina a origem de vários conjuntos num bloco só.
+ * Os conjuntos SEM_DADO não "contaminam" os que têm dado: eles apenas não contam.
+ * Se nenhum tem dado, o bloco inteiro é SEM_DADO.
+ */
+function origemDeVarios(...origens: Origem[]): Origem {
+  const comDado = origens.filter((o) => o !== "SEM_DADO");
+  if (!comDado.length) return "SEM_DADO";
+  return comDado.every((o) => o === "REAL") ? "REAL" : "EXEMPLO";
 }
 
 const num = (v: unknown): number => (v === null || v === undefined ? 0 : Number(v));
@@ -130,6 +155,8 @@ async function lerCliente(tx: Tx, slug: string): Promise<Cliente | null> {
     : null;
 
   return {
+    // O cadastro sempre tem linha aqui (lerCliente devolve null quando não tem), então
+    // SEM_DADO não cabe: ou o cadastro é do cliente, ou foi semeado por nós.
     origem: c.origem === "REAL" ? "REAL" : "EXEMPLO",
     slug: c.slug,
     nome: c.nome,
@@ -208,12 +235,16 @@ async function lerVendas(tx: Tx, [inicio, fim]: [string, string]): Promise<Metri
 
 /* ------------------------------------------------------------------- iFood */
 
+/** Bloco que a tela NÃO pediu. Não é exemplo: é ausência, e a tela precisa saber disso. */
 function ifoodVazio(): Ifood {
   return {
-    origem: "EXEMPLO",
-    comissaoPct: 0,
-    taxaPagamentoPct: 0,
-    embalagemPorItem: 0,
+    origem: "SEM_DADO",
+    comissaoPct: null,
+    taxaPagamentoPct: null,
+    embalagemPorItem: null,
+    takeRatePct: null,
+    takeRateMes: null,
+    takeRateVendasBrutas: null,
     pratos: [],
     promocoes: [],
     vendasPratosDia: [],
@@ -228,7 +259,23 @@ async function lerIfood(tx: Tx, [inicio, fim]: [string, string]): Promise<Ifood>
   // Taxas do mês mais recente fechado no canal_taxa_mes das lojas de iFood.
   // ATENÇÃO: canais.taxa_pct é a taxa de CADASTRO (projeção); isto aqui é o que
   // de fato aconteceu. Não são a mesma coisa e a tela precisa rotular.
-  const [taxas] = await tx<{ comissao_pct: number | null; taxa_pagamento_pct: number | null; embalagem_por_item: number | null }[]>`
+  //
+  // O take_rate_pct vem junto porque ele EXISTE mesmo quando o detalhamento não existe.
+  // Medido em 20/10/2026: nas 5 linhas de canal_taxa_mes da Le Tre, comissao_pct,
+  // taxa_pagamento_pct e embalagem_por_item são NULOS, e o take_rate_pct está lá
+  // (34,45% na Pizzaria). Coagir esses nulos para 0 fazia a tela afirmar que de cada
+  // R$ 100 sobravam R$ 100,00. Agora o nulo chega como nulo e o take-rate medido vai
+  // junto, para a tela mostrar o número verdadeiro em vez do zero falso.
+  const [taxas] = await tx<
+    {
+      comissao_pct: number | null;
+      taxa_pagamento_pct: number | null;
+      embalagem_por_item: number | null;
+      take_rate_pct: number | null;
+      vendas_brutas: number | null;
+      mes: string | null;
+    }[]
+  >`
     with ultimo as (
       select max(t.mes) as mes
         from alavanca.canal_taxa_mes t
@@ -238,7 +285,10 @@ async function lerIfood(tx: Tx, [inicio, fim]: [string, string]): Promise<Ifood>
     select
       sum(t.comissao_pct       * t.vendas_brutas)::float8 / nullif(sum(t.vendas_brutas), 0)::float8 as comissao_pct,
       sum(t.taxa_pagamento_pct * t.vendas_brutas)::float8 / nullif(sum(t.vendas_brutas), 0)::float8 as taxa_pagamento_pct,
-      avg(t.embalagem_por_item)::float8 as embalagem_por_item
+      avg(t.embalagem_por_item)::float8 as embalagem_por_item,
+      sum(t.take_rate_pct      * t.vendas_brutas)::float8 / nullif(sum(t.vendas_brutas), 0)::float8 as take_rate_pct,
+      nullif(sum(t.vendas_brutas), 0)::float8 as vendas_brutas,
+      to_char(min(t.mes), 'YYYY-MM') as mes
       from alavanca.canal_taxa_mes t
       join alavanca.canais c on c.id = t.canal_id
       join ultimo u on u.mes = t.mes
@@ -329,11 +379,18 @@ async function lerIfood(tx: Tx, [inicio, fim]: [string, string]): Promise<Ifood>
     return [...m.entries()].map(([data, promocoes]) => ({ data, promocoes }));
   })();
 
+  const takeRatePct = numOuNulo(taxas?.take_rate_pct);
+  const takeRateVendasBrutas = numOuNulo(taxas?.vendas_brutas);
+
   return {
-    origem: origemDe([...pratosLinhas, ...promoLinhas, ...funil, ...operacao]),
-    comissaoPct: num(taxas?.comissao_pct),
-    taxaPagamentoPct: num(taxas?.taxa_pagamento_pct),
-    embalagemPorItem: num(taxas?.embalagem_por_item),
+    origem: origemDeVarios(origemDe(pratosLinhas), origemDe(promoLinhas), origemDe(funil), origemDe(operacao)),
+    // Nulo vira nulo. Nunca zero: zero afirmaria que o iFood não cobra nada.
+    comissaoPct: numOuNulo(taxas?.comissao_pct),
+    taxaPagamentoPct: numOuNulo(taxas?.taxa_pagamento_pct),
+    embalagemPorItem: numOuNulo(taxas?.embalagem_por_item),
+    takeRatePct,
+    takeRateMes: takeRatePct === null ? null : (taxas?.mes ?? null),
+    takeRateVendasBrutas,
     pratos,
     promocoes: promoLinhas.map((p) => ({ id: p.codigo, nome: p.nome, tipo: p.tipo ?? "", quemBanca: p.quem_banca ?? "" })),
     vendasPratosDia: agrupar(vendasPratoDia, (l) => l.codigo, (l) => num(l.qtd)).map(([data, qtd]) => ({ data, qtd })),
@@ -346,11 +403,13 @@ async function lerIfood(tx: Tx, [inicio, fim]: [string, string]): Promise<Ifood>
       pedidos: num(f.pedidos),
     })),
     pedidosPorFaixaDia: agrupar(faixas, (l) => l.faixa, (l) => num(l.pedidos)).map(([data, faixas2]) => ({ data, faixas: faixas2 })),
+    // Achado D: sem fonte, nota/tempo/cancelamentos viram null, não 0. "Nota da loja 0,0"
+    // não é uma loja mal avaliada, é uma loja que ninguém avaliou.
     operacaoDia: operacao.map((o) => ({
       data: o.data,
-      nota: num(o.nota),
-      tempoEntregaMin: num(o.tempo),
-      cancelados: num(o.cancelados),
+      nota: numOuNulo(o.nota),
+      tempoEntregaMin: numOuNulo(o.tempo),
+      cancelados: numOuNulo(o.cancelados),
     })),
   };
 }
@@ -358,7 +417,7 @@ async function lerIfood(tx: Tx, [inicio, fim]: [string, string]): Promise<Ifood>
 /* ------------------------------------------------- canal próprio / mídia */
 
 function canalProprioVazio(): CanalProprio {
-  return { origem: "EXEMPLO", metaPctCanalProprio: 0, campanhas: [], criativos: [], anunciosDia: [], alcance: PERIODOS_ZERO() };
+  return { origem: "SEM_DADO", metaPctCanalProprio: null, campanhas: [], criativos: [], anunciosDia: [], alcance: PERIODOS_ZERO() };
 }
 
 async function lerMidia(
@@ -428,8 +487,12 @@ async function lerMidia(
   if (alcance) alcancePeriodo[periodo] = { atual: num(alcance.alcance), anterior: 0 };
 
   return {
-    origem: origemDe([...campanhasLinhas, ...criativosLinhas]),
-    metaPctCanalProprio: typeof metaPct === "number" ? metaPct : 0,
+    origem: origemDeVarios(origemDe(campanhasLinhas), origemDe(criativosLinhas)),
+    // Achado B: a chave 'canal_proprio.meta_pct' NÃO existe no grupo-le-tre (as chaves
+    // são canal.cliente_fiel_le_tre, comanda.hora_envio, consentimento.base_legada,
+    // crm.custo_por_mensagem e midia.marca_padrao). Devolver 0 fazia 16% >= 0 virar
+    // bolinha verde na tela Hoje e "meta 0,0%" no Lucro. Sem chave, não há meta.
+    metaPctCanalProprio: typeof metaPct === "number" ? metaPct : null,
     campanhas: campanhasLinhas.map(
       (c): Campanha => ({
         id: c.external_id,
@@ -451,7 +514,7 @@ async function lerMidia(
 
 function crmVazio(): Crm {
   return {
-    origem: "EXEMPLO",
+    origem: "SEM_DADO",
     custoPorMensagem: 0,
     resumo: { baseTotal: 0, comOptIn: 0, novosComOptIn: PERIODOS_ZERO(), novosClientes: PERIODOS_ZERO() },
     segmentos: [],
@@ -585,7 +648,7 @@ async function lerCrm(
 /* ---------------------------------------------------------------- WhatsApp */
 
 function whatsappVazio(): Whatsapp {
-  return { origem: "EXEMPLO", dias: [], conversas: [], regras: [] };
+  return { origem: "SEM_DADO", dias: [], conversas: [], regras: [] };
 }
 
 async function lerWhatsapp(tx: Tx, [inicio, fim]: [string, string]): Promise<Whatsapp> {
@@ -685,7 +748,7 @@ async function lerWhatsapp(tx: Tx, [inicio, fim]: [string, string]): Promise<Wha
 /* ------------------------------------------------------------------- lucro */
 
 function lucroVazio(): Lucro {
-  return { origem: "EXEMPLO", metaCmvPct: null, metaMargemPct: null, metaFaturamentoMes: null, fichas: [], vendasPratosDia: [] };
+  return { origem: "SEM_DADO", metaCmvPct: null, metaMargemPct: null, metaFaturamentoMes: null, fichas: [], vendasPratosDia: [] };
 }
 
 async function lerLucro(tx: Tx, [inicio, fim]: [string, string], config: Record<string, unknown>): Promise<Lucro> {
@@ -806,15 +869,18 @@ async function lerPlano(tx: Tx): Promise<Plano> {
     select gatilho, texto, origem from alavanca.acao_sugerida where ativo order by gatilho, ordem
   `;
 
-  const porAlerta: Record<TipoAlerta, string[]> = { meta: [], margem: [], pedidos: [], ifood: [], ticket: [] };
-  const padrao: string[] = [];
+  // Achado A: cada ação carrega a SUA origem. Medido: as 13 linhas de acao_sugerida da
+  // Le Tre são EXEMPLO, e chegavam na Comanda e na mensagem das 7h como texto puro.
+  const porAlerta: Record<TipoAlerta, AcaoSugerida[]> = { meta: [], margem: [], pedidos: [], ifood: [], ticket: [] };
+  const padrao: AcaoSugerida[] = [];
   for (const s of sugeridas) {
-    if (s.gatilho === "padrao") padrao.push(s.texto);
-    else if (s.gatilho in porAlerta) porAlerta[s.gatilho as TipoAlerta].push(s.texto);
+    const item: AcaoSugerida = { texto: s.texto, origem: s.origem === "REAL" ? "REAL" : "EXEMPLO" };
+    if (s.gatilho === "padrao") padrao.push(item);
+    else if (s.gatilho in porAlerta) porAlerta[s.gatilho as TipoAlerta].push(item);
   }
 
   return {
-    origem: origemDe([...acoes, ...sugeridas]),
+    origem: origemDeVarios(origemDe(acoes), origemDe(sugeridas)),
     acoesPorAlerta: porAlerta,
     acoesPadrao: padrao,
     acoes: acoes.map((a) => ({
@@ -875,13 +941,13 @@ export const fontePostgres: Fonte = {
         cliente,
         ultimoDia: ultimo,
         offsetDias: num(antes),
-        metricas: quer(b, "vendas") ? await lerVendas(tx, janela) : { origem: "EXEMPLO" as Origem, dias: [] },
+        metricas: quer(b, "vendas") ? await lerVendas(tx, janela) : { origem: "SEM_DADO" as Origem, dias: [] },
         ifood: quer(b, "ifood") ? await lerIfood(tx, janela) : ifoodVazio(),
         canalProprio: quer(b, "midia") ? await lerMidia(tx, janela, pedido.periodo, iv.atual, config) : canalProprioVazio(),
         crm: quer(b, "crm") ? await lerCrm(tx, pedido.periodo, iv, config) : crmVazio(),
         whatsapp: quer(b, "whatsapp") ? await lerWhatsapp(tx, janela) : whatsappVazio(),
         lucro: quer(b, "cardapio") ? await lerLucro(tx, janela, config) : lucroVazio(),
-        plano: quer(b, "plano") ? await lerPlano(tx) : { origem: "EXEMPLO" as Origem, acoesPorAlerta: { meta: [], margem: [], pedidos: [], ifood: [], ticket: [] }, acoesPadrao: [], acoes: [] },
+        plano: quer(b, "plano") ? await lerPlano(tx) : { origem: "SEM_DADO" as Origem, acoesPorAlerta: { meta: [], margem: [], pedidos: [], ifood: [], ticket: [] }, acoesPadrao: [], acoes: [] },
       } satisfies Pacote;
     });
   },

@@ -11,7 +11,20 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { somarDias } from "@/lib/calculos";
-import type { CanalProprio, Cliente, Crm, DiaVendas, Ifood, Lucro, Metricas, Plano, Whatsapp } from "@/lib/types";
+import type {
+  AcaoSugerida,
+  CanalProprio,
+  Cliente,
+  Crm,
+  DiaVendas,
+  Ifood,
+  Lucro,
+  Metricas,
+  Origem,
+  Plano,
+  TipoAlerta,
+  Whatsapp,
+} from "@/lib/types";
 import type { Acesso, Fonte, Pacote, Pedido, TenantResumo } from "./tipos";
 
 /*
@@ -46,6 +59,51 @@ function ler<T>(dir: string, arquivo: string): T {
   return JSON.parse(readFileSync(/*turbopackIgnore: true*/ join(dir, arquivo), "utf-8")) as T;
 }
 
+/**
+ * Os JSON de semente foram escritos quando ausencia nao existia: campo que falta vinha
+ * como `undefined`, e `undefined` nao e `null` — ele passa batido pelas checagens
+ * `=== null` e reaparece como NaN la na frente. Aqui tudo que falta vira `null`
+ * explicito, para o modo de semente obedecer ao mesmo contrato do Postgres.
+ */
+const ouNulo = (v: unknown): number | null => (typeof v === "number" && Number.isFinite(v) ? v : null);
+
+function normalizarIfood(j: Ifood): Ifood {
+  return {
+    ...j,
+    comissaoPct: ouNulo(j.comissaoPct),
+    taxaPagamentoPct: ouNulo(j.taxaPagamentoPct),
+    embalagemPorItem: ouNulo(j.embalagemPorItem),
+    takeRatePct: ouNulo(j.takeRatePct),
+    takeRateMes: j.takeRateMes ?? null,
+    takeRateVendasBrutas: ouNulo(j.takeRateVendasBrutas),
+    operacaoDia: (j.operacaoDia ?? []).map((o) => ({
+      data: o.data,
+      nota: ouNulo(o.nota),
+      tempoEntregaMin: ouNulo(o.tempoEntregaMin),
+      cancelados: ouNulo(o.cancelados),
+    })),
+  };
+}
+
+/**
+ * As acoes sugeridas sao string nos JSON; o contrato agora pede { texto, origem }.
+ * A origem de cada uma e a do arquivo inteiro, que e o que a semente sabe dizer.
+ */
+function normalizarPlano(j: Plano): Plano {
+  const origem: Origem = j.origem === "REAL" ? "REAL" : "EXEMPLO";
+  const acao = (x: string | AcaoSugerida): AcaoSugerida => (typeof x === "string" ? { texto: x, origem } : x);
+  const vazio: Record<TipoAlerta, AcaoSugerida[]> = { meta: [], margem: [], pedidos: [], ifood: [], ticket: [] };
+  const porAlerta = { ...vazio };
+  for (const k of Object.keys(vazio) as TipoAlerta[]) {
+    porAlerta[k] = ((j.acoesPorAlerta?.[k] ?? []) as (string | AcaoSugerida)[]).map(acao);
+  }
+  return {
+    ...j,
+    acoesPorAlerta: porAlerta,
+    acoesPadrao: ((j.acoesPadrao ?? []) as (string | AcaoSugerida)[]).map(acao),
+  };
+}
+
 function carregarBruto(slug: string): PacoteBruto | null {
   const guardado = cache.get(slug);
   if (guardado) return guardado;
@@ -56,12 +114,15 @@ function carregarBruto(slug: string): PacoteBruto | null {
   const p: PacoteBruto = {
     cliente: ler<Cliente>(dir, "cliente.json"),
     metricas: ler<Metricas>(dir, "metricas.json"),
-    ifood: ler<Ifood>(dir, "ifood.json"),
-    canalProprio: ler<CanalProprio>(dir, "canal-proprio.json"),
+    ifood: normalizarIfood(ler<Ifood>(dir, "ifood.json")),
+    canalProprio: (() => {
+      const cp = ler<CanalProprio>(dir, "canal-proprio.json");
+      return { ...cp, metaPctCanalProprio: ouNulo(cp.metaPctCanalProprio) };
+    })(),
     crm: ler<Crm>(dir, "crm.json"),
     whatsapp: ler<Whatsapp>(dir, "whatsapp.json"),
     lucro: ler<Lucro>(dir, "lucro.json"),
-    plano: ler<Plano>(dir, "plano.json"),
+    plano: normalizarPlano(ler<Plano>(dir, "plano.json")),
   };
   cache.set(slug, p);
   return p;

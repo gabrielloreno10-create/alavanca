@@ -1,6 +1,7 @@
 import {
   NOME_TIPO,
   TIPOS_CANAL,
+  type AcaoSugerida,
   type Alerta,
   type CanalId,
   type TipoCanal,
@@ -41,6 +42,27 @@ export function diaSemana(iso: string): DiaSemana {
 
 export function dividir(a: number, b: number): number {
   return b === 0 ? 0 : a / b;
+}
+
+/**
+ * Divisao que admite NAO TER resposta.
+ *
+ * `dividir` devolve 0 sem denominador, e esse 0 vira afirmacao na tela ("ROAS 0,0x",
+ * "conversao 0%", "taxa 0,0%") sobre algo que ninguem mediu. Onde o numero vai para a
+ * tela, use esta: null nao e zero, e so o null faz a tela escrever "ainda nao medido".
+ * Tambem barra NaN e Infinity, que nunca podem chegar na tela.
+ */
+export function razao(a: number, b: number): number | null {
+  if (b === 0) return null;
+  const r = a / b;
+  return Number.isFinite(r) ? r : null;
+}
+
+/** Maior valor da lista; null quando ela esta vazia, porque Math.max() de vazio e -Infinity. */
+export function maiorDe(valores: number[]): number | null {
+  if (!valores.length) return null;
+  const m = Math.max(...valores);
+  return Number.isFinite(m) ? m : null;
 }
 
 /** variação relativa; null quando não há base de comparação */
@@ -209,13 +231,24 @@ export function alertasDoDia(dias: DiaVendas[], iso: string, cliente: Cliente): 
   return out;
 }
 
-export function acoesDoDia(alertas: Alerta[], plano: Plano): string[] {
-  const acoes: string[] = [];
+/**
+ * As 3 acoes da comanda, cada uma COM a sua origem.
+ *
+ * Achado A: as 13 linhas de acao_sugerida da Le Tre tem origem EXEMPLO e chegavam na
+ * Comanda e na mensagem do WhatsApp como texto puro, sem selo. O dono lia recomendacao
+ * fabricada como se fosse o metodo da casa. A origem viaja junto justamente para a tela
+ * nao ter como esquecer de marcar.
+ */
+export function acoesDoDia(alertas: Alerta[], plano: Plano): AcaoSugerida[] {
+  const acoes: AcaoSugerida[] = [];
+  const juntar = (lista: AcaoSugerida[]) => {
+    for (const acao of lista) if (!acoes.some((x) => x.texto === acao.texto)) acoes.push(acao);
+  };
   for (const a of alertas) {
     if (a.tipo === "nenhum") continue;
-    for (const acao of plano.acoesPorAlerta[a.tipo] ?? []) if (!acoes.includes(acao)) acoes.push(acao);
+    juntar(plano.acoesPorAlerta[a.tipo] ?? []);
   }
-  for (const acao of plano.acoesPadrao) if (!acoes.includes(acao)) acoes.push(acao);
+  juntar(plano.acoesPadrao);
   return acoes.slice(0, 3);
 }
 
@@ -243,10 +276,15 @@ export function taxaEfetiva(faturamento: number, comissaoPct: number, taxaPagame
 }
 
 /** Itens que estão entre os mais vendidos (metade de cima) e abaixo da margem mínima */
-export function marcarVendeMuitoMargemBaixa<T extends { qtd: number; margemPct: number }>(itens: T[], margemMinimaPct: number): (T & { vendeMuitoMargemBaixa: boolean })[] {
+export function marcarVendeMuitoMargemBaixa<T extends { qtd: number; margemPct: number | null }>(
+  itens: T[],
+  margemMinimaPct: number,
+): (T & { vendeMuitoMargemBaixa: boolean })[] {
   const qtds = [...itens].map((i) => i.qtd).sort((a, b) => a - b);
   const mediana = qtds.length ? qtds[Math.floor((qtds.length - 1) / 2)] : 0;
-  return itens.map((i) => ({ ...i, vendeMuitoMargemBaixa: i.qtd >= mediana && i.margemPct < margemMinimaPct }));
+  // margemPct null = a margem nao foi medida (taxas do iFood ausentes). Nao da para
+  // acusar um prato de margem baixa sem saber a margem dele.
+  return itens.map((i) => ({ ...i, vendeMuitoMargemBaixa: i.margemPct !== null && i.qtd >= mediana && i.margemPct < margemMinimaPct }));
 }
 
 /** Melhor e pior criativo por custo por pedido, só entre os que têm pedidos suficientes para comparar */
@@ -269,8 +307,9 @@ const pp = (v: number) => `${new Intl.NumberFormat("pt-BR", { maximumFractionDig
 export function fraseIfood(a: {
   faturamento: number;
   faturamentoAnterior: number;
-  taxaPct: number;
-  taxaPctAnterior: number;
+  /** null = comissao/taxa de pagamento nao foram medidas: a frase nao cita taxa nenhuma */
+  taxaPct: number | null;
+  taxaPctAnterior: number | null;
   promocoes: number;
   promocoesAnterior: number;
   piorPromo?: { nome: string; resultado: number };
@@ -280,14 +319,14 @@ export function fraseIfood(a: {
     v === null ? "Ainda não há período anterior para comparar as vendas do iFood"
     : Math.abs(v) < 0.01 ? "Seu iFood vendeu o mesmo que no período anterior"
     : `Seu iFood vendeu ${pctFrase(v)} ${v > 0 ? "mais" : "menos"} que no período anterior`;
-  const dt = a.taxaPct - a.taxaPctAnterior;
+  const dt = a.taxaPct === null || a.taxaPctAnterior === null ? null : a.taxaPct - a.taxaPctAnterior;
   let parte2 = "";
-  if (Math.abs(dt) >= 0.005) {
+  if (dt !== null && Math.abs(dt) >= 0.005) {
     const vendasBoas = v === null || v > -0.01;
     const taxaBoa = dt < 0;
     const conector = vendasBoas === taxaBoa ? ", e" : ", mas";
     const motivo = dt > 0 && a.promocoes - a.promocoesAnterior > 0 ? ", por causa das promoções" : "";
-    parte2 = `${conector} a taxa efetiva ${dt > 0 ? "subiu" : "caiu"} ${pp(dt)}, para ${fmtPct(a.taxaPct, 1)}${motivo}`;
+    parte2 = `${conector} a taxa efetiva ${dt > 0 ? "subiu" : "caiu"} ${pp(dt)}, para ${fmtPct(a.taxaPct ?? 0, 1)}${motivo}`;
   }
   const parte3 = a.piorPromo && a.piorPromo.resultado < 0 ? ` A promoção "${a.piorPromo.nome}" deu prejuízo: custou mais do que a margem dos pedidos que trouxe.` : "";
   return `${parte1}${parte2}.${parte3}`;
@@ -378,8 +417,12 @@ export function montarMensagemDiaria(cliente: Cliente, c: ComandaDoDia): string 
   linhas.push(`🧾 ${r.pedidos} pedidos · ticket ${fmtBRL(r.ticket)}`);
   linhas.push(`📈 Margem estimada ${brl0(r.margem)} (${fmtPct(r.margemPct, 1)})`);
   linhas.push("📊 " + tiposDo(cliente).map((t) => `${NOME_TIPO[t]} ${fmtPct(r.canalPct[t])}`).join(" · "));
-  linhas.push(`⚠️ ${c.alerta.texto}`);
-  linhas.push("", "*Hoje:*", ...c.acoes.map((a, i) => `${i + 1}. ${a}`));
+  // alerta null = não houve dia de venda para avaliar. Dizer "dia dentro do plano" aqui
+  // seria tranquilizar o dono sobre um dia que não existe.
+  linhas.push(c.alerta ? `⚠️ ${c.alerta.texto}` : "⚠️ Sem dia de venda fechado: nada a avaliar.");
+  // A ação fabricada vai selada aqui também: a mensagem das 7h é lida fora do painel,
+  // onde não existe etiqueta visual para avisar.
+  linhas.push("", "*Hoje:*", ...c.acoes.map((a, i) => `${i + 1}. ${a.texto}${a.origem === "REAL" ? "" : " (exemplo)"}`));
   return linhas.slice(0, 12).join("\n");
 }
 
