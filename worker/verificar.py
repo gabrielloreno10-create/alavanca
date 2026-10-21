@@ -229,13 +229,23 @@ def t_sem_telefone_no_banco(conn, tenant_id):
     return "7 colunas de texto varridas"
 
 
-@checar("venda_dia no banco bate, mês a mês, com o total mensal do Saipos")
+@checar("venda_dia bate com o Saipos onde o Saipos é a fonte, e corrobora onde o iFood assumiu")
 def t_venda_dia_no_banco(conn, tenant_id):
+    # Até 21/10/2026 o Saipos era a única fonte e isto era uma igualdade. Depois
+    # da carga do iFood (importar_ifood.py), o canal de iFood de agosto em diante
+    # passou a vir do extrato do próprio iFood, que é quem tem a taxa real.
+    #
+    # Então são duas perguntas diferentes, e misturá-las esconderia as duas:
+    #   onde a fonte ainda é o Saipos  -> tem que bater no centavo;
+    #   onde o iFood assumiu           -> são dois sistemas independentes medindo
+    #                                     a mesma venda, e o que se checa é se
+    #                                     corroboram. Divergência grande é notícia.
     mensal = imp.ler_csv(imp.ARQ_MENSAL)
     with tenant(conn, tenant_id) as cur:
         cur.execute("""
             select c.ext_saipos_marca, to_char(v.data, 'YYYY-MM'),
-                   sum(v.faturamento)::numeric, sum(v.pedidos)::int
+                   sum(v.faturamento)::numeric, sum(v.pedidos)::int,
+                   bool_or(v.fonte ilike '%%iFood%%')
               from alavanca.venda_dia v
               join alavanca.canais c on c.id = v.canal_id
              where v.origem = 'REAL'
@@ -243,13 +253,38 @@ def t_venda_dia_no_banco(conn, tenant_id):
         """)
         linhas = cur.fetchall()
     assert linhas, "nenhuma linha REAL em venda_dia"
-    for sigla, mes, valor, pedidos in linhas:
-        esperado = next(m for m in mensal if m["mes"] == mes and m["canal"] == "todos" and m["marca"] == sigla)
-        assert abs(float(valor) - float(esperado["valor_vendas"])) < 0.01, \
-            f"{sigla} {mes}: banco {valor} x Saipos {esperado['valor_vendas']}"
-        assert pedidos == int(esperado["pedidos"]), \
-            f"{sigla} {mes}: banco {pedidos} pedidos x Saipos {esperado['pedidos']}"
-    return f"{len(linhas)} combinações loja×mês conferidas contra o CSV"
+
+    exatas = 0
+    divergencias = []
+    for sigla, mes, valor, pedidos, tem_ifood in linhas:
+        esperado = next(
+            (m for m in mensal if m["mes"] == mes and m["canal"] == "todos" and m["marca"] == sigla),
+            None,
+        )
+        if esperado is None:
+            continue  # mês que o CSV mensal do Saipos não cobre (outubro)
+        saipos = float(esperado["valor_vendas"])
+        banco = float(valor)
+        if not tem_ifood:
+            assert abs(banco - saipos) < 0.01, f"{sigla} {mes}: banco {banco} x Saipos {saipos}"
+            assert pedidos == int(esperado["pedidos"]), \
+                f"{sigla} {mes}: banco {pedidos} pedidos x Saipos {esperado['pedidos']}"
+            exatas += 1
+            continue
+        pct = 100 * (banco - saipos) / saipos if saipos else 0.0
+        divergencias.append((sigla, mes, pct))
+        assert abs(pct) < 15, (
+            f"{sigla} {mes}: iFood {banco:,.2f} x Saipos {saipos:,.2f} ({pct:+.1f}%). "
+            "Divergência grande demais entre as duas fontes para ser arredondamento — "
+            "confira antes de confiar na margem desse mês.")
+
+    if divergencias:
+        pior = max(divergencias, key=lambda d: abs(d[2]))
+        extra = (f"; {len(divergencias)} com iFood como fonte corroboram o Saipos "
+                 f"(pior: {pior[0]} {pior[1]} {pior[2]:+.1f}%)")
+    else:
+        extra = ""
+    return f"{exatas} combinações loja×mês batem no centavo com o CSV{extra}"
 
 
 @checar("faturamento gravado é o BRUTO do Saipos, não o líquido do fechamento")
@@ -287,26 +322,38 @@ def t_anuncio_mensal(conn, tenant_id):
     return f"{total} linhas mensais"
 
 
-@checar("Jerry's: marca e canais existem, venda_dia continua vazia (não foi inventado número)")
+@checar("Jerry's existe no banco COM venda: o buraco do export do Saipos está tapado")
 def t_jerrys(conn, tenant_id):
+    # Esta checagem já afirmou o contrário. Até 20/10/2026 ela guardava um buraco
+    # conhecido — "venda_dia continua vazia, não foi inventado número" — porque o
+    # CSV diário do Saipos veio sem a Jerry's e o certo era o painel dizer "não
+    # medido" em vez de zero.
+    #
+    # Em 21/10 o Hélio confirmou que a loja vendeu, a aritmética de julho provou
+    # (a segunda-feira batia no centavo e os outros seis dias faltavam 28% a 40%),
+    # e o extrato do iFood trouxe os números. Agora o invariante é o oposto: se a
+    # venda da Jerry's sumir de novo, é regressão, não pendência.
     with tenant(conn, tenant_id) as cur:
         cur.execute("select count(*) from alavanca.marcas where slug = 'jerrys-burger'")
         assert cur.fetchone()[0] == 1, "marca do Jerry's não existe"
         cur.execute("select count(*) from alavanca.canais where slug like 'jerrys-%'")
         canais = cur.fetchone()[0]
         cur.execute("""
-            select count(*) from alavanca.venda_dia v join alavanca.canais c on c.id = v.canal_id
+            select count(*), coalesce(sum(v.faturamento), 0)::numeric, min(v.data), max(v.data)
+              from alavanca.venda_dia v join alavanca.canais c on c.id = v.canal_id
              where c.slug like 'jerrys-%'
         """)
-        vendas = cur.fetchone()[0]
+        dias, faturamento, de, ate = cur.fetchone()
         cur.execute("""
             select count(*) from alavanca.ficha_tecnica f join alavanca.marcas m on m.id = f.marca_id
              where m.slug = 'jerrys-burger'
         """)
         fichas = cur.fetchone()[0]
-    assert vendas == 0, f"apareceram {vendas} linhas de venda do Jerry's — de onde?"
+    assert dias > 0, "a Jerry's voltou a ficar sem nenhuma linha de venda — regressão da carga"
+    assert float(faturamento) > 0, f"a Jerry's tem {dias} dias gravados somando zero"
     assert fichas > 0, "o Jerry's deveria ter fichas técnicas"
-    return f"{canais} canais, {fichas} fichas, 0 venda_dia (pendência conhecida)"
+    return (f"{canais} canais, {fichas} fichas, {dias} dias de venda "
+            f"({de} a {ate}) somando R$ {float(faturamento):,.2f}")
 
 
 @checar("rodar o importador de novo não duplica nem muda nenhuma contagem")
@@ -370,6 +417,34 @@ def t_acao_sugerida_nao_validada(conn, tenant_id):
             "gatilho barrou a reativação")
 
 
+@checar("tempo de entrega do iFood está em minutos de gente, não em número corrompido")
+def t_tempo_entrega_plausivel(conn, tenant_id):
+    # Na primeira carga de 21/10/2026 o tempo médio saiu 2.630 minutos — 44 horas.
+    # Causa: a exportação do iFood manda as colunas de DINHEIRO como número e as de
+    # TEMPO como texto com ponto decimal ('31.83'), e o conversor normalizava tudo
+    # como formato brasileiro, tirando o ponto por achar que era separador de milhar.
+    # 31,83 virou 3.183. O número era absurdo e ninguém teria notado numa média.
+    # Esta verificação existe para que a próxima corrupção morra aqui, e não na tela.
+    with tenant(conn, tenant_id) as cur:
+        cur.execute(
+            """
+            select count(*), min(tempo_entrega_min), max(tempo_entrega_min),
+                   round(avg(tempo_entrega_min), 1)
+              from alavanca.ifood_operacao_dia
+             where tenant_id = %s and tempo_entrega_min is not null
+            """,
+            (tenant_id,),
+        )
+        n, menor, maior, media = cur.fetchone()
+    if not n:
+        return "nenhuma linha de operação com tempo gravado (nada a conferir)"
+    assert 5 <= menor, f"entrega em {menor} min é rápida demais para ser verdade"
+    assert maior <= 180, (
+        f"entrega em {maior} min (={maior / 60:.1f} h): número corrompido ou "
+        "unidade trocada na importação")
+    return f"{n} dias · de {menor} a {maior} min · média {media} min"
+
+
 @checar("o painel consegue ler pelas views (vw_venda_dia_painel e vw_guardrail_efetivo)")
 def t_views(conn, tenant_id):
     with tenant(conn, tenant_id) as cur:
@@ -426,6 +501,7 @@ def main() -> int:
                 t_anuncio_mensal(conn, tenant_id)
                 t_jerrys(conn, tenant_id)
                 t_acao_sugerida_nao_validada(conn, tenant_id)
+                t_tempo_entrega_plausivel(conn, tenant_id)
                 t_views(conn, tenant_id)
                 t_idempotente(conn, tenant_id)
 
