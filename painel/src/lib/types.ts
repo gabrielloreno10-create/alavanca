@@ -1,8 +1,36 @@
-export type Origem = "EXEMPLO" | "REAL";
-/** Origem de uma tela inteira: MISTO quando parte dos blocos é real e parte é exemplo */
+/**
+ * De onde veio o que a tela mostra. São TRÊS estados, e não dois, porque
+ * "não medimos" e "medimos zero" são coisas diferentes — e zero é uma medição.
+ *
+ *  - REAL      a fonte entregou linha, e toda linha é do cliente.
+ *  - EXEMPLO   HÁ linha, mas fomos nós que a semeamos. O número existe e é fabricado:
+ *              a tela mostra COM SELO, para o dono não confundir com a casa dele.
+ *  - SEM_DADO  NÃO HÁ linha nenhuma. Não existe número para mostrar, nem real nem
+ *              fabricado. A tela diz "ainda não medido" e NUNCA desenha zero.
+ *
+ * O terceiro estado nasceu de um erro medido: `origemDe([])` devolvia "EXEMPLO", então
+ * o CRM e o WhatsApp vazios da Le Tre levavam o selo de exemplo sem ter exemplo nenhum,
+ * enquanto o Canal próprio (20 campanhas REAIS, zero criativo) se declarava REAL e
+ * mostrava investimento R$ 0 e ROAS 0,0x sem aviso. A tela que mais enganava era a única
+ * sem selo.
+ */
+export type Origem = "REAL" | "EXEMPLO" | "SEM_DADO";
+/** Origem de uma tela inteira: MISTO quando os blocos não concordam entre si */
 export type OrigemTela = Origem | "MISTO";
-/** Blocos da tela que ainda são exemplo, para marcar só eles */
+/**
+ * Blocos da tela que são EXEMPLO, para marcar só eles.
+ * ATENÇÃO: isto é `false` tanto para REAL quanto para SEM_DADO. Para distinguir os dois
+ * a tela precisa de `blocos` (BlocosOrigem), não deste booleano.
+ */
 export type BlocosExemplo = Record<string, boolean>;
+/** Estado completo de cada bloco da tela. É o que permite marcar SEM_DADO. */
+export type BlocosOrigem = Record<string, Origem>;
+
+/** Ação recomendada ao dono, carregando de onde ela veio (achado A: as 13 da Le Tre são EXEMPLO) */
+export interface AcaoSugerida {
+  texto: string;
+  origem: Origem;
+}
 
 /** Tipo do canal: é o que as telas comparam (iFood x canal próprio x salão) */
 export type TipoCanal = "ifood" | "proprio" | "salao";
@@ -113,16 +141,32 @@ export interface FunilDia {
 
 export interface Ifood {
   origem: Origem;
-  comissaoPct: number;
-  taxaPagamentoPct: number;
-  embalagemPorItem: number;
+  /**
+   * Taxas DETALHADAS do fechamento mensal. null = a coluna veio nula no banco, ou seja
+   * ninguém mediu — nunca 0. Medido em 20/10/2026: as 5 linhas de canal_taxa_mes da
+   * Le Tre têm comissao_pct, taxa_pagamento_pct e embalagem_por_item NULOS.
+   */
+  comissaoPct: number | null;
+  taxaPagamentoPct: number | null;
+  embalagemPorItem: number | null;
+  /**
+   * O take-rate que o fechamento mensal MEDIU de verdade (take_rate_pct de
+   * canal_taxa_mes, ponderado pelas vendas brutas). Existe mesmo quando o detalhamento
+   * acima não existe: é o número verdadeiro a mostrar no lugar do zero que era falso.
+   */
+  takeRatePct: number | null;
+  /** mês do fechamento de onde saiu o take-rate, "AAAA-MM". NÃO é o período da tela. */
+  takeRateMes: string | null;
+  /** vendas brutas do fechamento que serviu de base ao take-rate */
+  takeRateVendasBrutas: number | null;
   pratos: Prato[];
   promocoes: Promocao[];
   vendasPratosDia: { data: string; qtd: Record<string, number> }[];
   promocoesDia: { data: string; promocoes: Record<string, ResultadoPromoDia> }[];
   funilDia: FunilDia[];
   pedidosPorFaixaDia: { data: string; faixas: Record<string, number> }[];
-  operacaoDia: { data: string; nota: number; tempoEntregaMin: number; cancelados: number }[];
+  /** null em cada campo = sem fonte para aquele indicador naquele dia (achado D) */
+  operacaoDia: { data: string; nota: number | null; tempoEntregaMin: number | null; cancelados: number | null }[];
 }
 
 export type StatusCampanha = "ativa" | "pausada" | "em_analise";
@@ -153,7 +197,11 @@ export interface ResultadoAnuncio {
 
 export interface CanalProprio {
   origem: Origem;
-  metaPctCanalProprio: number;
+  /**
+   * null = a chave tenant_config 'canal_proprio.meta_pct' NÃO existe (achado B).
+   * Antes devolvia 0, e aí 16% >= 0 pintava o pilar de verde e o Lucro dizia "meta 0,0%".
+   */
+  metaPctCanalProprio: number | null;
   campanhas: Campanha[];
   criativos: Criativo[];
   anunciosDia: { data: string; criativos: Record<string, ResultadoAnuncio> }[];
@@ -285,8 +333,9 @@ export interface AcaoPlano {
 
 export interface Plano {
   origem: Origem;
-  acoesPorAlerta: Record<TipoAlerta, string[]>;
-  acoesPadrao: string[];
+  /** cada ação carrega a SUA origem: a tela precisa selar a fabricada uma a uma (achado A) */
+  acoesPorAlerta: Record<TipoAlerta, AcaoSugerida[]>;
+  acoesPadrao: AcaoSugerida[];
   acoes: AcaoPlano[];
 }
 
@@ -319,8 +368,13 @@ export interface ComandaDoDia {
   metaPct: number | null;
   situacaoMeta: Situacao | null;
   resumo: ResumoVendas;
-  alerta: Alerta;
-  acoes: string[];
+  /**
+   * null = NÃO HÁ dia de venda para avaliar. Diferente de { tipo: "nenhum" }, que afirma
+   * "dia dentro do plano". Com o filtro no Jerry's (zero linhas em venda_dia, medido) a
+   * Comanda dizia "Nenhum alerta: dia dentro do plano" sobre um dia que não existe.
+   */
+  alerta: Alerta | null;
+  acoes: AcaoSugerida[];
 }
 
 export type PilarId = "ifood" | "canal-proprio" | "crm" | "whatsapp" | "lucro" | "metricas";
@@ -362,7 +416,8 @@ export interface LinhaRestaurante {
   pedidos: number;
   meta: number | null;
   metaPct: number | null;
-  alerta: Alerta;
+  /** null = sem dia de venda para avaliar; ver ComandaDoDia.alerta */
+  alerta: Alerta | null;
   pilares: { pilar: PilarId; rotulo: string; valor: string; situacao: Situacao | null }[];
   origem: OrigemTela;
 }

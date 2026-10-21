@@ -100,7 +100,49 @@ base de disparo**, e isso não é escolha nossa, é como o dado chega.
 
 ## Cliente Fiel
 
-**Não deu para apurar nesta rodada: a conta pediu login.**
+Apurado na segunda rodada, com a conta logada. O painel novo fica em
+`painel.clientefiel.app` (versão 5.11.16), não no `sistema.appclientefiel.com.br` que
+estava no material antigo.
+
+**O campo de consentimento existe.** Na lista de clientes (`/clientes`), entre os filtros
+de busca, há **"Receber notificações manuais"**. É o campo que o cliente marca no
+checkout, e dá para filtrar a base por ele. Isso confirma o que o Gabriel disse.
+
+**Mas falta a data do aceite.** As colunas da lista são Nome, E-mail, Telefone,
+**Cadastro**, Nascimento e Selos. "Cadastro" é a data em que a pessoa entrou na base, não
+a data em que ela aceitou receber promoção. Para LGPD, as duas podem ser diferentes, e é
+a segunda que vale. Ou a API expõe esse campo, ou o aceite fica provado só por política
+("o checkout sempre pediu"), que é mais fraco.
+
+**Não há botão de exportar.** São 3.190 clientes paginados de 25 em 25, ou seja 128
+páginas. Puxar a base à mão está fora de cogitação: ou sai por API, ou não sai.
+
+**Onde estão os dados, no menu Consultas:**
+
+| Caminho | O que tem |
+|---|---|
+| `/clientes` | a base, com o filtro de aceite |
+| `/servicos/modulo/historico-pedidos` | histórico de pedidos, a venda do canal próprio |
+| `/servicos/modulo/listar-produtos` | produtos |
+| `/cartelas` | fidelidade |
+| `/servicos/modulo/comparativo-unidades` | comparativo entre lojas |
+| `/avaliacao-delivery` | avaliações |
+
+**Um detalhe que diz muito:** boa parte dos e-mails da base não é e-mail, é um endereço
+derivado do WhatsApp (terminado em `@c.us`). São clientes que entraram pelo robô, não
+pelo site. Isso afeta qualquer segmentação por e-mail e confirma que o WhatsApp é o canal
+de entrada real.
+
+**Privacidade:** a lista mostra nome, e-mail e telefone de clientes reais. Nada disso foi
+copiado para o projeto, para arquivo ou para o banco. O banco da Alavanca segue com zero
+dado pessoal de cliente final.
+
+### O que ficou sem apurar
+
+O painel travou ao tirar print (o renderizador não respondia) e os submenus de Financeiro
+e Estratégias não chegaram a ser abertos. Também não foi possível contar quantos dos
+3.190 aceitam notificação: o controle do filtro não respondeu pela árvore de
+acessibilidade. Esse número sai melhor por API do que brigando com a tela.
 
 O Saipos e o iFood vieram logados no Chrome, o Cliente Fiel não
 (`sistema.appclientefiel.com.br`, versão 7.1.4 do painel). Fica para a próxima.
