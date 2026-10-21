@@ -90,6 +90,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* A hachura da ausência.
+   A regra 1 do DESIGN.md diz que a ausência ganha FORMA, não cor — e até aqui
+   isso existia só como borda tracejada, que some numa captura de tela. A hachura
+   é a mesma ideia com textura: o bloco sem dado fica visivelmente diferente de
+   um bloco vazio, sem usar cor nenhuma e sem inventar número.
+   45 graus, no cinza de gráfico, bem apagada: é fundo, não desenho. */
+.hachura {
+  background-image: repeating-linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--cinza-grafico) 55%, transparent) 0 1.5px,
+    transparent 1.5px 5px
+  );
+}
+
 /* números sempre tabulares */
 body,
 .num {

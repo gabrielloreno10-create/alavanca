@@ -71,9 +71,15 @@ export function Painel({
  */
 export function SemDado({ children }: { children: React.ReactNode }) {
   return (
-    <p className="flex items-start gap-2 rounded-botao border border-dashed border-linha bg-bancada px-3 py-2.5 text-base text-grafite-2">
-      <CircleDashed aria-hidden className="mt-1 size-4 shrink-0" />
-      <span>{children}</span>
+    <p className="flex items-stretch gap-0 overflow-hidden rounded-botao border border-dashed border-linha bg-bancada text-base text-grafite-2">
+      {/* O trilho hachurado é o que faz a ausência aparecer numa captura de tela.
+          aria-hidden porque ele não acrescenta nada a quem ouve: o motivo já vem
+          escrito no texto, que é onde a informação tem que estar. */}
+      <span aria-hidden className="hachura w-1.5 shrink-0 self-stretch" />
+      <span className="flex items-start gap-2 px-3 py-2.5">
+        <CircleDashed aria-hidden className="mt-1 size-4 shrink-0" />
+        <span>{children}</span>
+      </span>
     </p>
   );
 }
@@ -118,7 +124,9 @@ export function Indicador({
   const v = !ausente && comparacao ? (emPontos ? comparacao.atual - comparacao.anterior : calcVariacao(comparacao.atual, comparacao.anterior)) : undefined;
   return (
     <div className="min-w-0">
-      <p className="text-sm text-grafite-2">
+      {/* Rótulo em mono, um degrau abaixo do corpo: é etiqueta do número, não
+          texto corrido. Mesma convenção da Comanda. */}
+      <p className="font-mono text-xs text-grafite-2">
         {rotulo}
         <MarcaOrigem origem={origem} className="ml-1.5" />
       </p>
@@ -130,6 +138,10 @@ export function Indicador({
       >
         {valor}
       </p>
+      {/* O fio é pontuação de medição: ele separa o número do que vem depois e dá
+          ao bloco a terceira camada que faltava. Só existe quando HÁ número —
+          sobre ausência ele sumiria de significado e viraria enfeite. */}
+      {!ausente && <span aria-hidden className="mt-1.5 mb-1 block h-0.5 w-[18px] bg-grafite" />}
       <p className="flex flex-wrap items-center gap-x-2">
         {v !== undefined && <Variacao v={v} emPontos={emPontos} />}
         {detalhe && <span className="text-sm text-grafite-2">{detalhe}</span>}
