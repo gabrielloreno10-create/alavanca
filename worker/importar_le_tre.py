@@ -333,11 +333,34 @@ def importar_venda_dia(conn, tenant_id: str, canais: dict, cmv: dict[str, float]
               arquivo=ARQ_DIARIO.name, arquivo_hash=sha256(ARQ_DIARIO),
               coletado_em=COLETA_SAIPOS,
               periodo=(PERIODO_DIARIO[0].isoformat(), PERIODO_DIARIO[1].isoformat())) as (cur, reg):
+        # Canal tem data de nascimento (migration 019). O relatório do Saipos traz
+        # uma coluna por loja em TODOS os dias do período, inclusive nos dias em que
+        # a loja ainda não existia — e ali a coluna vem zerada. Gravar isso seria
+        # afirmar que a loja vendeu zero, quando na verdade ela não existia.
+        # Medido: a Le Tre Farine Pastas só ganhou canal próprio em 03/06/2026 (antes
+        # a pasta era vendida dentro do canal da pizzaria), e o CSV trazia 31 dias de
+        # maio zerados para ela. O gatilho da 019 barra; aqui a linha nem nasce.
+        cur.execute(
+            "select slug, inicio_operacao from alavanca.canais"
+            " where tenant_id = %s and inicio_operacao is not null",
+            (tenant_id,),
+        )
+        inicio_por_slug = dict(cur.fetchall())
+        inicio_por_sigla = {
+            sigla: inicio_por_slug[c["slug"]]
+            for sigla, c in canais.items()
+            if c.get("slug") in inicio_por_slug
+        }
+
         linhas = []
         for registro in diario:
             reg.lidas += 1
             for sigla, (col_ped, col_val) in COLUNAS_DIARIO.items():
                 canal = canais[sigla]
+                inicio = inicio_por_sigla.get(sigla)
+                if inicio is not None and registro["data"] < inicio.isoformat():
+                    reg.ignoradas += 1
+                    continue
                 faturamento = round(float(registro[col_val]), 2)
                 pct = cmv[MARCA_CMV_POR_SIGLA[sigla]]
                 linhas.append((
