@@ -1,8 +1,9 @@
 "use client";
 
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import clsx from "clsx";
 import { lerData } from "@/lib/calculos";
-import { formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto } from "@/lib/formato";
+import { NAO_MEDIDO, formatarBRLInteiro, formatarDataCurta, formatarDiaSemanaCurto } from "@/lib/formato";
 import type { PontoGrafico } from "@/lib/types";
 import { SemDado } from "./ui";
 
@@ -23,9 +24,13 @@ function Dica({ active, payload }: PropsDica) {
       <p className="font-medium">
         {formatarDiaSemanaCurto(d)} {formatarDataCurta(d)}
       </p>
-      <p className="num flex items-center gap-1.5">
-        <span aria-hidden className="h-0.5 w-3 bg-comanda" /> Faturamento {formatarBRLInteiro(p.faturamento)}
-      </p>
+      {p.faturamento === null ? (
+        <p className="text-grafite-2">{NAO_MEDIDO}: não há linha de venda neste dia.</p>
+      ) : (
+        <p className="num flex items-center gap-1.5">
+          <span aria-hidden className="h-0.5 w-3 bg-comanda" /> Faturamento {formatarBRLInteiro(p.faturamento)}
+        </p>
+      )}
       {p.meta !== null && (
         <p className="num flex items-center gap-1.5 text-grafite-2">
           <span aria-hidden className="h-0 w-3 border-t-2 border-dashed border-cinza-grafico" /> Meta {formatarBRLInteiro(p.meta)}
@@ -51,11 +56,21 @@ export function GraficoFaturamento({ pontos }: { pontos: PontoGrafico[] }) {
     );
   }
   const temMeta = pontos.some((p) => p.meta !== null);
-  const batidos = pontos.filter((p) => p.meta !== null && p.faturamento >= p.meta).length;
-  const total = pontos.reduce((s, p) => s + p.faturamento, 0);
-  const resumo = temMeta
-    ? `Nos últimos ${pontos.length} dias, o faturamento somou ${formatarBRLInteiro(total)} e bateu a meta em ${batidos} dias.`
-    : `Nos últimos ${pontos.length} dias, o faturamento somou ${formatarBRLInteiro(total)}. Meta diária: [PREENCHER].`;
+  // Dia sem medição não conta em lugar nenhum desta frase: não é meta não batida,
+  // não soma zero no total, e não entra na contagem de dias. Dizer "30 dias" quando
+  // quatro não foram medidos é afirmar medição que não houve.
+  const medidos = pontos.filter((p) => p.faturamento !== null);
+  const naoMedidos = pontos.length - medidos.length;
+  const batidos = medidos.filter((p) => p.meta !== null && p.faturamento! >= p.meta).length;
+  const total = medidos.reduce((s, p) => s + p.faturamento!, 0);
+  const ressalva = naoMedidos ? ` ${naoMedidos} ${naoMedidos === 1 ? "dia não foi medido" : "dias não foram medidos"} e ficaram de fora da conta.` : "";
+  // Nenhum dia medido não soma R$ 0: não há soma. Somar um conjunto vazio dá zero
+  // em aritmética e dá mentira na tela — foi o que o teste de ausência pegou aqui.
+  const resumo = !medidos.length
+    ? `Nenhum dia do período tem linha de venda na fonte, então não há faturamento a somar.`
+    : temMeta
+      ? `Em ${medidos.length} dias medidos, o faturamento somou ${formatarBRLInteiro(total)} e bateu a meta em ${batidos}.${ressalva}`
+      : `Em ${medidos.length} dias medidos, o faturamento somou ${formatarBRLInteiro(total)}. Meta diária: [PREENCHER].${ressalva}`;
 
   return (
     <section aria-labelledby="grafico-titulo" className="rounded-painel border border-linha bg-papel p-4 sm:p-5">
@@ -119,7 +134,9 @@ export function GraficoFaturamento({ pontos }: { pontos: PontoGrafico[] }) {
                 return (
                   <tr key={p.data} className="border-t border-linha">
                     <td className="py-1">{formatarDiaSemanaCurto(d)} {formatarDataCurta(d)}</td>
-                    <td className="py-1 text-right">{formatarBRLInteiro(p.faturamento)}</td>
+                    <td className={clsx("py-1 text-right", p.faturamento === null && "text-grafite-2")}>
+                      {p.faturamento === null ? NAO_MEDIDO : formatarBRLInteiro(p.faturamento)}
+                    </td>
                     {temMeta && <td className="py-1 text-right">{p.meta === null ? "—" : formatarBRLInteiro(p.meta)}</td>}
                   </tr>
                 );

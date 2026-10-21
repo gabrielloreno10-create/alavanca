@@ -23,12 +23,21 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F2F3EF",
+  // A barra do navegador no celular acompanha a bancada escura; com a cor clara
+  // antiga ficava uma faixa branca em cima do painel preto.
+  themeColor: "#0E131A",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${bricolage.variable} ${instrument.variable} ${mono.variable}`}>
+    // data-theme fixo em "dark": o painel é escuro por decisão de produto, não por
+    // preferência do sistema. O atributo fica para o dia em que houver um seletor —
+    // trocar para "light" devolve a paleta clara inteira, que continua definida.
+    <html
+      lang="pt-BR"
+      data-theme="dark"
+      className={`${bricolage.variable} ${instrument.variable} ${mono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

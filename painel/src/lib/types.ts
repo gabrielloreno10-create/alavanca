@@ -413,7 +413,12 @@ export interface IndicadorPilar {
 
 export interface PontoGrafico {
   data: string;
-  faturamento: number;
+  /**
+   * null = não há linha de venda neste dia na fonte. NÃO é R$ 0.
+   * O dia entra na série mesmo assim, com null, porque omitir o dia faz a linha
+   * do gráfico atravessar o vazio como se fosse crescimento.
+   */
+  faturamento: number | null;
   meta: number | null;
 }
 

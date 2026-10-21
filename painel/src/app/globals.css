@@ -26,6 +26,43 @@
   --cinza-grafico: #a3aaa1;
 }
 
+/* ---------------------------------------------------------------------------
+   Modo escuro — o padrão do painel.
+
+   Três coisas NÃO mudam aqui, porque são o produto e não a aparência:
+   1. cor só significa estado. Açafrão continua sendo só "exemplo", manjericão
+      continua sendo só "bom", e a ausência continua ganhando FORMA (tracejado,
+      hachura), nunca cor;
+   2. a escada de quatro superfícies continua existindo, só que descendo em vez
+      de subindo: no claro o papel é a superfície mais alta, no escuro ele é a
+      mais clara do conjunto. A leitura de profundidade é a mesma;
+   3. nada de preto puro (#000). Preto absoluto com texto branco causa halation
+      — o texto "vibra" e cansa em leitura longa, que é exatamente o uso: o dono
+      abre isto de madrugada depois de fechar o caixa. O fundo é um quase-preto
+      com viés azul, da mesma família da bancada clara.
+
+   Os acentos sobem de luminosidade porque o mesmo azul que tem contraste de
+   sobra sobre papel claro some sobre fundo escuro. Não é outra paleta: é a
+   mesma matiz recalibrada.
+   --------------------------------------------------------------------------- */
+:root[data-theme="dark"] {
+  --fundo: #1e2631; /* trilho de barra, hover de linha, cursor de gráfico */
+  --chrome: #141a23; /* cabeçalho, menu lateral, barra inferior */
+  --bancada: #0e131a; /* fundo da página */
+  --papel: #171e27; /* painéis e a Comanda */
+  --grafite: #e9edf2; /* texto */
+  --grafite-2: #99a5b4; /* texto secundário */
+  --comanda: #6d8cff;
+  --comanda-claro: #1b2444;
+  --manjericao: #43b87a;
+  --acafrao: #e0a43a;
+  --acafrao-texto: #f0c165;
+  --acafrao-fundo: #2a2114;
+  --tomate: #f2705f;
+  --linha: #2a3440;
+  --cinza-grafico: #5a6673;
+}
+
 @theme inline {
   --color-fundo: var(--fundo);
   --color-chrome: var(--chrome);

@@ -66,6 +66,7 @@ import type {
   VisaoLucro,
   VisaoMetricas,
   VisaoWhatsapp,
+  PontoGrafico,
   WhatsappDia,
 } from "./types";
 
@@ -316,11 +317,29 @@ export async function getHoje(slug: string, periodo: Periodo, operacao: string =
     x.origem === "SEM_DADO" ? { ...x, valor: NAO_MEDIDO, variacao: null, situacao: null } : x,
   );
 
-  const grafico = filtrar(dias, [intervalos("30d", ontem).atual[0], ontem]).map((d) => ({
-    data: d.data,
-    faturamento: Math.round(resumir([d], cliente).faturamento),
-    meta: temMeta ? metaDoDia(cliente, d.data) : null,
-  }));
+  /**
+   * O gráfico percorre TODOS os dias do intervalo, não só os que têm linha.
+   *
+   * Antes isto era um `filtrar(...).map(...)`: o dia sem linha na fonte não
+   * entrava no array, e aí o eixo categórico do Recharts punha 05/10 ao lado de
+   * 09/10 e ligava os dois com uma reta. O buraco de quatro dias virava uma
+   * subida suave, e nada na tela avisava. O `connectNulls={false}` nunca
+   * disparava porque não havia null nenhum para ele respeitar.
+   *
+   * Filtrar não é nulificar: filtrar interpola por cima do vazio. O dia sem
+   * medição entra com `faturamento: null`, e é o null que abre o buraco.
+   */
+  const inicio = intervalos("30d", ontem).atual[0];
+  const medidos = new Map(filtrar(dias, [inicio, ontem]).map((d) => [d.data, d]));
+  const grafico: PontoGrafico[] = [];
+  for (let iso = inicio; iso <= ontem; iso = somarDias(iso, 1)) {
+    const d = medidos.get(iso);
+    grafico.push({
+      data: iso,
+      faturamento: d ? Math.round(resumir([d], cliente).faturamento) : null,
+      meta: temMeta ? metaDoDia(cliente, iso) : null,
+    });
+  }
 
   return {
     cliente,
