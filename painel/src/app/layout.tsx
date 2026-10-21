@@ -6,8 +6,8 @@ const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-br
 const instrument = Instrument_Sans({ subsets: ["latin"], variable: "--font-instrument" });
 
 export const metadata: Metadata = {
-  title: { default: "Alavanca", template: "%s · Alavanca" },
-  description: "Painel diário de vendas, dados e lucro do restaurante. Alavanca Food Lab.",
+  title: { default: "Mordomo", template: "%s · Mordomo" },
+  description: "Painel diário de vendas, dados e lucro do restaurante. Mordomo App.",
 };
 
 export const viewport: Viewport = {
