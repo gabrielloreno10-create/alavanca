@@ -30,11 +30,35 @@ function exigir(nome) {
   return v;
 }
 
+/**
+ * Senha curta só é aceita contra um banco LOCAL, e mesmo assim avisando.
+ *
+ * O mínimo de 12 caracteres existe para produção e não sai do lugar. Mas exigir senha
+ * forte no banco de desenvolvimento da própria máquina só faz a pessoa colar senha em
+ * arquivo. Quem decide é o destino da conexão, não um argumento: se a URL não apontar
+ * para localhost, o mínimo vale sempre.
+ */
+function bancoEhLocal() {
+  const url = process.env.ALAVANCA_ADMIN_DATABASE_URL || process.env.DATABASE_URL || "";
+  try {
+    const h = new URL(url).hostname;
+    return h === "localhost" || h === "127.0.0.1" || h === "::1" || h === "[::1]";
+  } catch {
+    return false;
+  }
+}
+
 const args = process.argv.slice(2);
 const senha = exigir("ALAVANCA_ADMIN_SENHA");
 if (senha.length < 12) {
-  console.error("ALAVANCA_ADMIN_SENHA: use pelo menos 12 caracteres.");
-  process.exit(1);
+  if (!bancoEhLocal()) {
+    console.error("ALAVANCA_ADMIN_SENHA: use pelo menos 12 caracteres.");
+    process.exit(1);
+  }
+  console.warn(
+    `AVISO: senha de ${senha.length} caractere(s), aceita só porque o banco é local.\n` +
+      "       Em qualquer banco que não seja localhost o mínimo de 12 volta a valer.",
+  );
 }
 const senhaHash = await hash(senha, CUSTO);
 

@@ -27,8 +27,24 @@ declare module "next-auth/jwt" {
   }
 }
 
+/**
+ * Cookie de sessão com `Secure` (e prefixo `__Secure-`) em produção.
+ *
+ * O Auth.js já liga isso sozinho quando enxerga uma URL https, mas aí a segurança do
+ * cookie passaria a depender de um cabeçalho de proxy chegar certo. Preso ao NODE_ENV
+ * não depende. `AUTH_COOKIE_SEGURO=0` desliga, e serve para um caso só: rodar o build de
+ * produção em http://localhost para conferir alguma coisa.
+ */
+function cookieSeguro(): boolean {
+  const forcado = process.env.AUTH_COOKIE_SEGURO?.trim().toLowerCase();
+  if (forcado === "0" || forcado === "false") return false;
+  if (forcado === "1" || forcado === "true") return true;
+  return process.env.NODE_ENV === "production";
+}
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
+  useSecureCookies: cookieSeguro(),
   session: { strategy: "jwt", maxAge: 60 * 60 * 8 },
   pages: { signIn: "/entrar", error: "/entrar" },
   providers: [

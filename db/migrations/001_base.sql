@@ -43,7 +43,20 @@ begin
 end
 $$;
 
-alter role alavanca_app nosuperuser nocreatedb nocreaterole nobypassrls noreplication inherit;
+-- Sem `nosuperuser` e sem `nobypassrls` de proposito.
+--
+-- Em Postgres gerenciado (Neon, Supabase, RDS) NAO existe superusuario para o cliente, e
+-- so superusuario pode mexer nos atributos SUPERUSER e BYPASSRLS, ainda que seja para
+-- negar. Com aquelas duas palavras aqui, a 001 inteira falhava com "permission denied to
+-- alter role" e, como ela roda numa transacao so, o banco ficava vazio e as outras
+-- catorze caiam atras. Medido em 20/10/2026 contra um Postgres 17 com um dono sem
+-- SUPERUSER, igual ao que um provedor entrega.
+--
+-- A garantia nao se perde: uma role criada por quem nao e superusuario ja nasce sem
+-- SUPERUSER e sem BYPASSRLS. A linha so afirmava em voz alta o que o banco garante
+-- sozinho. Quem passou a conferir isso de verdade e a migration 016, que levanta excecao
+-- se a role aparecer com qualquer um dos dois.
+alter role alavanca_app nocreatedb nocreaterole inherit;
 
 grant usage on schema alavanca to alavanca_app;
 grant usage on schema public   to alavanca_app;

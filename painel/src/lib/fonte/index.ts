@@ -4,8 +4,13 @@
  * O fallback é EXPLÍCITO de propósito: `modoDaFonte()` é mostrado no painel e avisado no
  * console uma vez por processo. Ninguém deve descobrir por acidente que está olhando a
  * semente em vez do banco.
+ *
+ * E em PRODUÇÃO ele não existe: sem DATABASE_URL, pedir dado lança. A inicialização já
+ * teria derrubado o servidor (src/instrumentation.ts); esta é a segunda tranca, para o
+ * caso de alguém apagar a variável com o processo no ar.
  */
-import { temBanco } from "@/lib/db";
+import { emProducao } from "@/lib/ambiente";
+import { SemBanco, temBanco } from "@/lib/db";
 import { fontePostgres } from "./postgres";
 import { fonteSeed } from "./seed";
 import type { Acesso, Fonte, ModoFonte, Pacote, Pedido, TenantResumo } from "./tipos";
@@ -20,12 +25,20 @@ export function modoDaFonte(): ModoFonte {
 
 function fonte(): Fonte {
   const modo = modoDaFonte();
-  if (modo === "seed" && !avisou) {
-    avisou = true;
-    console.warn(
-      "[alavanca] DATABASE_URL não definida: o painel está lendo os JSON de semente em src/data/clientes/, não o Postgres. " +
-        "Isto é um modo de fallback para desenvolvimento e teste.",
-    );
+  if (modo === "seed") {
+    if (emProducao()) {
+      throw new SemBanco(
+        "DATABASE_URL não está definida e o modo de semente é proibido em produção — " +
+          "servir os JSON de exemplo como dado de cliente seria pior do que não responder.",
+      );
+    }
+    if (!avisou) {
+      avisou = true;
+      console.warn(
+        "[alavanca] DATABASE_URL não definida: o painel está lendo os JSON de semente em src/data/clientes/, não o Postgres. " +
+          "Isto é um modo de fallback para desenvolvimento e teste.",
+      );
+    }
   }
   return modo === "postgres" ? fontePostgres : fonteSeed;
 }

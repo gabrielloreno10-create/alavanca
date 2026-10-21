@@ -66,6 +66,44 @@ ALAVANCA_ADMIN_DATABASE_URL=...  npm run criar-admin -- grupo-le-tre
 A senha vem de variável de ambiente, nunca de argumento nem de arquivo. Ligar o usuário a
 um tenant precisa da conexão da role dona: a RLS esconde `tenants` da role de aplicação.
 
+## Rodar em função serverless (Vercel)
+
+O painel serve os dois mundos pelo mesmo código; quem decide é o ambiente.
+
+| opção do driver | local | serverless | variável                   |
+| --------------- | ----- | ---------- | -------------------------- |
+| `max` (pool)    | 5     | **1**      | `DATABASE_POOL_MAX`        |
+| `prepare`       | sim   | **não**    | `DATABASE_PREPARE`         |
+| `connect_timeout` | 10s | 5s         | `DATABASE_CONNECT_TIMEOUT` |
+| `idle_timeout`  | 20s   | 10s        | `DATABASE_IDLE_TIMEOUT`    |
+| `ssl`           | não   | `require`  | `DATABASE_SSL`             |
+
+Serverless é detectado por `VERCEL` / `AWS_LAMBDA_FUNCTION_NAME` / `NETLIFY`, e
+`ALAVANCA_SERVERLESS=1|0` força. Os dois ajustes que importam:
+
+- **pool de 1.** Cada instância da função tem o pool dela. Quem multiplexa de verdade é o
+  pooler do provedor; um pool de 5 por instância estoura o teto de conexões do plano
+  gratuito assim que a Vercel subir meia dúzia de instâncias.
+- **sem prepared statement.** A string "pooled" dos provedores é um PgBouncer em modo
+  *transaction*: o statement preparado não sobrevive de uma transação para a outra.
+  Use a string **pooled**, não a conexão direta.
+
+TLS é obrigatório em qualquer host que não seja local, e isso vale **acima** do `sslmode`
+que vier na URL — provedor nenhum nos rebaixa para texto em claro por um parâmetro de
+query. `DATABASE_SSL` é o único jeito de mudar isso.
+
+Em produção **não existe modo de semente**. `src/instrumentation.ts` roda antes do
+primeiro request e derruba a inicialização se faltar `DATABASE_URL` ou `AUTH_SECRET`;
+e `src/lib/fonte/index.ts` lança se alguém apagar a variável com o processo no ar.
+Servir JSON de exemplo como faturamento de cliente é pior do que não responder.
+
+`GET /api/saude` responde `{ ok, banco, ms }` — 200 só quando o banco responde, 503 no
+resto. Não pede sessão e não conta nada além disso (nem versão, nem host, nem linhas).
+
+`vercel.json` fixa a região em `gru1` (São Paulo). O **Root Directory** do projeto na
+Vercel tem que ser `painel`. A lista completa das variáveis de produção está em
+`.env.example`.
+
 ## Filtros na URL
 
 Período e marca são `?periodo=ontem|7d|30d|mes` e `?marca=<nome da marca>`, lidos no

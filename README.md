@@ -54,6 +54,9 @@ A ideia do projeto é tirar isso do n8n e colocar em três peças com fronteira 
 
 ## Como rodar
 
+Isto aqui é a sua máquina. Para colocar o painel **no ar**, com banco gerenciado
+e Vercel, o caminho completo está em [docs/deploy.md](docs/deploy.md).
+
 ### 1) Banco
 
 Dois caminhos. O resultado é o mesmo Postgres 17, com as mesmas roles e a mesma RLS.
@@ -110,6 +113,13 @@ npm run dev                   # http://localhost:3000
 Sem `DATABASE_URL` o painel entra em **modo de semente**: lê os JSON de
 `painel/src/data/clientes/` em vez do banco. É fallback de desenvolvimento, avisa
 no console e marca a tela. Não é produção.
+
+### 3) No ar
+
+Repositório privado no GitHub, Postgres gerenciado, painel na Vercel: o caminho
+inteiro, passo a passo, com o que pode dar errado e quanto custa, está em
+[docs/deploy.md](docs/deploy.md). Leia a primeira seção antes de começar — há um
+bloqueio conhecido na migration `001` que precisa de decisão sua.
 
 ## Regras da casa
 

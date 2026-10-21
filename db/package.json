@@ -1,0 +1,14 @@
+{
+  "name": "alavanca-db",
+  "private": true,
+  "type": "module",
+  "description": "Aplicador de migrations do Alavanca em Node: funciona contra qualquer Postgres 17, sem psql e sem Docker.",
+  "scripts": {
+    "aplicar": "node aplicar.mjs",
+    "status": "node aplicar.mjs --status",
+    "dry-run": "node aplicar.mjs --dry-run"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

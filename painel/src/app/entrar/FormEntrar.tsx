@@ -11,11 +11,20 @@ export function FormEntrar({ de }: { de: string }) {
       <input type="hidden" name="de" value={de} />
 
       <label className="grid gap-1.5">
-        <span className="text-sm font-medium text-grafite">E-mail</span>
+        <span className="text-sm font-medium text-grafite">E-mail ou usuário</span>
+        {/*
+          type="text", não "email": com type="email" o próprio navegador barra o envio de
+          qualquer coisa sem arroba, e contas internas de serviço (ex.: "admin") nunca
+          chegariam ao servidor para serem recusadas com uma mensagem nossa. A validação
+          de quem pode entrar é do servidor, não do atributo do input.
+        */}
         <input
           name="email"
-          type="email"
+          type="text"
+          inputMode="email"
           autoComplete="username"
+          autoCapitalize="none"
+          spellCheck={false}
           required
           className="h-11 rounded-botao border border-linha bg-papel px-3 text-base text-grafite"
         />
